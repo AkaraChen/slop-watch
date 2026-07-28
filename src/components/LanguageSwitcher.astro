@@ -1,5 +1,5 @@
 ---
-import { defaultLocale, localeLabels, localePath, locales, type Locale } from '../i18n/config';
+import { localeLabels, localePath, locales, type Locale } from '../i18n/config';
 import { t } from '../i18n/ui';
 
 interface Props {
@@ -9,65 +9,61 @@ interface Props {
 }
 
 const { locale, path } = Astro.props;
+
+const options = locales.map((code) => ({
+	code,
+	label: localeLabels[code],
+	href: localePath(code, path),
+}));
 ---
 
-<nav class="lang-switch" aria-label={t(locale, 'language')}>
-	<span class="label">{t(locale, 'language')}</span>
-	<ul>
+<div class="lang-switch">
+	<label class="sr-only" for="lang-select">{t(locale, 'language')}</label>
+	<select
+		id="lang-select"
+		name="language"
+		aria-label={t(locale, 'language')}
+		onchange="if (this.value) window.location.href = this.value"
+	>
 		{
-			locales.map((code) => (
-				<li>
-					<a
-						href={localePath(code, path)}
-						hreflang={code}
-						aria-current={code === locale ? 'page' : undefined}
-						class:list={[{ active: code === locale }]}
-					>
-						{localeLabels[code]}
-					</a>
-				</li>
+			options.map((opt) => (
+				<option value={opt.href} selected={opt.code === locale}>
+					{opt.label}
+				</option>
 			))
 		}
-	</ul>
-</nav>
+	</select>
+</div>
 <style>
 	.lang-switch {
 		display: flex;
 		align-items: center;
-		gap: 0.5rem;
-		flex-wrap: wrap;
-		font-size: 0.8rem;
 	}
-	.label {
-		color: rgb(var(--gray));
-		margin-right: 0.15rem;
-	}
-	ul {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.35rem;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-	a {
-		padding: 0.15rem 0.45rem;
-		border-radius: 6px;
-		border: 1px solid rgba(var(--gray), 0.25);
+	select {
+		font: inherit;
+		font-size: 0.85rem;
+		padding: 0.3rem 1.75rem 0.3rem 0.55rem;
+		border: 1px solid rgba(var(--gray), 0.35);
+		border-radius: 8px;
+		background-color: white;
+		background-image: linear-gradient(45deg, transparent 50%, rgb(var(--gray)) 50%),
+			linear-gradient(135deg, rgb(var(--gray)) 50%, transparent 50%);
+		background-position:
+			calc(100% - 12px) calc(50% - 2px),
+			calc(100% - 7px) calc(50% - 2px);
+		background-size:
+			5px 5px,
+			5px 5px;
+		background-repeat: no-repeat;
 		color: rgb(var(--gray-dark));
-		text-decoration: none;
+		cursor: pointer;
+		appearance: none;
+		-webkit-appearance: none;
+		min-width: 7.5rem;
 	}
-	a.active {
+	select:hover,
+	select:focus {
 		border-color: var(--accent);
-		color: var(--accent-dark);
-		font-weight: 700;
-	}
-	a:hover {
-		border-color: var(--accent);
-	}
-	@media (max-width: 720px) {
-		.label {
-			display: none;
-		}
+		outline: none;
 	}
 </style>
