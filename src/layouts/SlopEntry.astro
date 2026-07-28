@@ -29,6 +29,7 @@ const {
 	featuredImage,
 	icon,
 	publishedAt,
+	lastVerifiedAt,
 	tags,
 	status,
 	references,
@@ -170,6 +171,31 @@ const jsonLd = {
 				font-size: 0.98rem;
 				line-height: 1.5;
 			}
+			.verified {
+				font-size: 0.8rem;
+				color: rgb(var(--gray));
+			}
+			.actions {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.65rem 1rem;
+				align-items: center;
+			}
+			.copy-link {
+				font: inherit;
+				font-size: 0.9rem;
+				padding: 0.25rem 0.65rem;
+				border-radius: 6px;
+				border: 1px solid rgba(var(--gray), 0.35);
+				background: transparent;
+				color: rgb(var(--gray-dark));
+				cursor: pointer;
+			}
+			.copy-link:hover,
+			.copy-link:focus-visible {
+				border-color: var(--accent);
+				outline: none;
+			}
 			.external {
 				display: inline-flex;
 				align-items: center;
@@ -244,6 +270,19 @@ const jsonLd = {
 						<span class:list={['badge', status]}>{status}</span>
 						<span><FormattedDate date={publishedAt} locale={locale} /></span>
 						{
+							lastVerifiedAt && (
+								<span class="verified">
+									{t(locale, 'lastVerified', {
+										date: lastVerifiedAt.toLocaleDateString(undefined, {
+											year: 'numeric',
+											month: 'short',
+											day: 'numeric',
+										}),
+									})}
+								</span>
+							)
+						}
+						{
 							tags.length > 0 && (
 								<span class="tags">
 									{tags.map((tag) => (
@@ -254,10 +293,13 @@ const jsonLd = {
 						}
 					</div>
 					<p class="lead">{description}</p>
-					<p>
+					<p class="actions">
 						<a class="external" href={link} target="_blank" rel="noopener noreferrer">
 							{t(locale, 'openPrimaryLink')}
 						</a>
+						<button type="button" class="copy-link" data-url={pageUrl} data-copied={t(locale, 'copied')}>
+							{t(locale, 'copyLink')}
+						</button>
 					</p>
 				</div>
 
@@ -303,5 +345,21 @@ const jsonLd = {
 			</article>
 		</main>
 		<Footer locale={locale} />
+		<script is:inline>
+			document.querySelectorAll('button.copy-link').forEach((btn) => {
+				btn.addEventListener('click', async () => {
+					const url = btn.getAttribute('data-url') || location.href;
+					const done = btn.getAttribute('data-copied') || 'Copied';
+					const prev = btn.textContent;
+					try {
+						await navigator.clipboard.writeText(url);
+						btn.textContent = done;
+						setTimeout(() => { btn.textContent = prev; }, 1500);
+					} catch {
+						/* ignore */
+					}
+				});
+			});
+		</script>
 	</body>
 </html>

@@ -13,7 +13,8 @@ reason: >-
   die" engagement bait. That gap between meme and toolchain reliability is
   the slop: green checkmarks that fail when you actually execute them.
 featuredImage: '../../assets/slops/scriptc-og.png'
-icon: '../../assets/blog-placeholder-5.jpg'
+icon: '../../assets/slops/scriptc-icon.png'
+lastVerifiedAt: 2026-07-28
 publishedAt: 2026-07-27
 tags:
   - compiler

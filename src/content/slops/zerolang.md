@@ -20,7 +20,8 @@ reason: >-
   When your pitch is "stale hashes get rejected before write" and #425 is
   "incorrect module hash comparison," the comedy writes itself.
 featuredImage: '../../assets/slops/zerolang-og.png'
-icon: '../../assets/blog-placeholder-5.jpg'
+icon: '../../assets/slops/zerolang-icon.png'
+lastVerifiedAt: 2026-07-28
 publishedAt: 2026-05-15
 tags:
   - language

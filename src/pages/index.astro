@@ -216,7 +216,18 @@ const jsonLd = [
 												<span class:list={['badge', slop.data.status]}>
 													{slop.data.status}
 												</span>
-												<span>
+												{slop.data.lastVerifiedAt && (
+												<span class="verified-mini">
+													{t(locale, 'lastVerified', {
+														date: slop.data.lastVerifiedAt.toLocaleDateString(undefined, {
+															year: 'numeric',
+															month: 'short',
+															day: 'numeric',
+														}),
+													})}
+												</span>
+											)}
+											<span>
 													{t(locale, 'referencesCount', {
 														n: slop.data.references.length,
 													})}

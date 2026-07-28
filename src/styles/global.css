@@ -135,3 +135,52 @@ hr {
 	clip-path: inset(50%);
 	white-space: nowrap;
 }
+
+
+/* Theme: system default + data-theme override */
+html {
+	color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+	html:not([data-theme='light']) {
+		--accent: #7b8cff;
+		--accent-dark: #c5ccff;
+		--black: 235, 238, 245;
+		--gray: 150, 160, 185;
+		--gray-light: 40, 44, 58;
+		--gray-dark: 220, 224, 235;
+		--gray-gradient: rgba(30, 34, 48, 0.95), #12141c;
+	}
+	html:not([data-theme='light']) body {
+		background-color: #12141c;
+	}
+	html:not([data-theme='light']) header,
+	html:not([data-theme='light']) .panel,
+	html:not([data-theme='light']) ul.catalog a.card {
+		background: #1a1e2a !important;
+		color: rgb(var(--gray-dark));
+	}
+}
+html[data-theme='dark'] {
+	--accent: #7b8cff;
+	--accent-dark: #c5ccff;
+	--black: 235, 238, 245;
+	--gray: 150, 160, 185;
+	--gray-light: 40, 44, 58;
+	--gray-dark: 220, 224, 235;
+	--gray-gradient: rgba(30, 34, 48, 0.95), #12141c;
+}
+html[data-theme='dark'] body {
+	background-color: #12141c;
+}
+html[data-theme='dark'] header,
+html[data-theme='dark'] .panel,
+html[data-theme='dark'] ul.catalog a.card {
+	background: #1a1e2a !important;
+}
+a:focus-visible,
+button:focus-visible,
+select:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 2px;
+}

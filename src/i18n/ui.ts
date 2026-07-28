@@ -23,7 +23,17 @@ export type UiKey =
 	| 'specimenTitle'
 	| 'language'
 	| 'hardSignals'
-	| 'bodyFallbackNote';
+	| 'bodyFallbackNote'
+	| 'lastVerified'
+	| 'copyLink'
+	| 'copied'
+	| 'theme'
+	| 'themeLight'
+	| 'themeDark'
+	| 'themeSystem'
+	| 'notFoundTitle'
+	| 'notFoundBody'
+	| 'goHome';
 
 const en: Record<UiKey, string> = {
 	siteTitle: 'Slop Watch',
@@ -56,6 +66,16 @@ const en: Record<UiKey, string> = {
 	language: 'Language',
 	hardSignals: 'Hard signals',
 	bodyFallbackNote: 'Body text below is shown in English until a full translation is available.',
+	lastVerified: 'Evidence checked {date}',
+	copyLink: 'Copy link',
+	copied: 'Copied',
+	theme: 'Theme',
+	themeLight: 'Light',
+	themeDark: 'Dark',
+	themeSystem: 'System',
+	notFoundTitle: 'Page not found',
+	notFoundBody: 'That path is not in the landfill catalog. It may have been moved, or it never existed.',
+	goHome: 'Back to catalog',
 };
 
 const zh: Record<UiKey, string> = {
@@ -87,6 +107,16 @@ const zh: Record<UiKey, string> = {
 	language: '语言',
 	hardSignals: '硬信号',
 	bodyFallbackNote: '正文暂以英文显示，完整翻译后续补充。',
+	lastVerified: '证据核验 {date}',
+	copyLink: '复制链接',
+	copied: '已复制',
+	theme: '主题',
+	themeLight: '浅色',
+	themeDark: '深色',
+	themeSystem: '跟随系统',
+	notFoundTitle: '页面不存在',
+	notFoundBody: '目录里没有这个地址。可能已迁移，或从未收录。',
+	goHome: '返回目录',
 };
 
 const de: Record<UiKey, string> = {
@@ -120,6 +150,16 @@ const de: Record<UiKey, string> = {
 	language: 'Sprache',
 	hardSignals: 'Harte Signale',
 	bodyFallbackNote: 'Der Fließtext unten ist vorerst auf Englisch, bis eine volle Übersetzung vorliegt.',
+	lastVerified: 'Belege geprüft {date}',
+	copyLink: 'Link kopieren',
+	copied: 'Kopiert',
+	theme: 'Design',
+	themeLight: 'Hell',
+	themeDark: 'Dunkel',
+	themeSystem: 'System',
+	notFoundTitle: 'Seite nicht gefunden',
+	notFoundBody: 'Dieser Pfad steht nicht im Katalog. Verschoben oder nie vorhanden.',
+	goHome: 'Zurück zum Katalog',
 };
 
 const it: Record<UiKey, string> = {
@@ -153,6 +193,16 @@ const it: Record<UiKey, string> = {
 	language: 'Lingua',
 	hardSignals: 'Segnali duri',
 	bodyFallbackNote: 'Il corpo del testo sotto è in inglese finché non c’è una traduzione completa.',
+	lastVerified: 'Prove verificate {date}',
+	copyLink: 'Copia link',
+	copied: 'Copiato',
+	theme: 'Tema',
+	themeLight: 'Chiaro',
+	themeDark: 'Scuro',
+	themeSystem: 'Sistema',
+	notFoundTitle: 'Pagina non trovata',
+	notFoundBody: 'Questo percorso non è nel catalogo. Forse è stato spostato o non è mai esistito.',
+	goHome: 'Torna al catalogo',
 };
 
 const ja: Record<UiKey, string> = {
@@ -186,6 +236,16 @@ const ja: Record<UiKey, string> = {
 	language: '言語',
 	hardSignals: 'ハードシグナル',
 	bodyFallbackNote: '本文は完全翻訳まで英語で表示します。',
+	lastVerified: '証拠確認 {date}',
+	copyLink: 'リンクをコピー',
+	copied: 'コピー済み',
+	theme: 'テーマ',
+	themeLight: 'ライト',
+	themeDark: 'ダーク',
+	themeSystem: 'システム',
+	notFoundTitle: 'ページが見つかりません',
+	notFoundBody: 'カタログにこのパスはありません。移動したか、未収録です。',
+	goHome: 'カタログへ戻る',
 };
 
 const ko: Record<UiKey, string> = {
@@ -218,6 +278,16 @@ const ko: Record<UiKey, string> = {
 	language: '언어',
 	hardSignals: '하드 시그널',
 	bodyFallbackNote: '본문은 전체 번역 전까지 영어로 표시됩니다.',
+	lastVerified: '증거 확인 {date}',
+	copyLink: '링크 복사',
+	copied: '복사됨',
+	theme: '테마',
+	themeLight: '라이트',
+	themeDark: '다크',
+	themeSystem: '시스템',
+	notFoundTitle: '페이지 없음',
+	notFoundBody: '목록에 없는 경로입니다. 이동했거나 등록되지 않았습니다.',
+	goHome: '목록으로',
 };
 
 const es: Record<UiKey, string> = {
@@ -251,6 +321,16 @@ const es: Record<UiKey, string> = {
 	language: 'Idioma',
 	hardSignals: 'Señales duras',
 	bodyFallbackNote: 'El cuerpo del texto se muestra en inglés hasta que haya traducción completa.',
+	lastVerified: 'Pruebas verificadas {date}',
+	copyLink: 'Copiar enlace',
+	copied: 'Copiado',
+	theme: 'Tema',
+	themeLight: 'Claro',
+	themeDark: 'Oscuro',
+	themeSystem: 'Sistema',
+	notFoundTitle: 'Página no encontrada',
+	notFoundBody: 'Esa ruta no está en el catálogo. Puede haberse movido o no existir.',
+	goHome: 'Volver al catálogo',
 };
 
 const dictionaries: Record<Locale, Record<UiKey, string>> = {

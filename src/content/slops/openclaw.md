@@ -15,7 +15,8 @@ reason: >-
   researchers keep filing accident reports — the issue tracker is the product
   roadmap, and the roadmap is on fire.
 featuredImage: '../../assets/slops/openclaw-og.png'
-icon: '../../assets/blog-placeholder-5.jpg'
+icon: '../../assets/slops/openclaw-icon.png'
+lastVerifiedAt: 2026-07-28
 publishedAt: 2026-07-28
 tags:
   - agent

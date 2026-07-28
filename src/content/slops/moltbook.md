@@ -16,6 +16,7 @@ reason: >-
   database password in the browser," you get a museum piece, not a network.
 featuredImage: '../../assets/slops/moltbook-og.png'
 icon: '../../assets/slops/moltbook-logo.webp'
+lastVerifiedAt: 2026-07-28
 publishedAt: 2026-02-03
 tags:
   - security

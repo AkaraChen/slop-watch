@@ -1,0 +1,69 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { defaultLocale, localeLabels, localePath, locales, type Locale } from '../i18n/config';
+import { t } from '../i18n/ui';
+
+const locale: Locale = defaultLocale;
+---
+
+<!doctype html>
+<html lang={locale}>
+	<head>
+		<BaseHead
+			title={`${t(locale, 'notFoundTitle')} · ${t(locale, 'siteTitle')}`}
+			description={t(locale, 'notFoundBody')}
+			locale={locale}
+			path="/404/"
+		/>
+		<style>
+			main {
+				max-width: 36rem;
+			}
+			h1 {
+				font-size: 1.75rem;
+				margin-bottom: 0.5rem;
+			}
+			p {
+				color: rgb(var(--gray));
+				margin-bottom: 1rem;
+			}
+			.homes {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				list-style: none;
+				padding: 0;
+				margin: 1rem 0 0;
+			}
+			.homes a {
+				display: inline-block;
+				padding: 0.3rem 0.65rem;
+				border: 1px solid rgba(var(--gray), 0.3);
+				border-radius: 8px;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<Header locale={locale} path="/" />
+		<main>
+			<h1>{t(locale, 'notFoundTitle')}</h1>
+			<p>{t(locale, 'notFoundBody')}</p>
+			<p>
+				<a href={localePath(locale, '/')}>{t(locale, 'goHome')}</a>
+			</p>
+			<ul class="homes" aria-label={t(locale, 'language')}>
+				{
+					locales.map((code) => (
+						<li>
+							<a href={localePath(code, '/')}>{localeLabels[code]}</a>
+						</li>
+					))
+				}
+			</ul>
+		</main>
+		<Footer locale={locale} />
+	</body>
+</html>

@@ -15,7 +15,8 @@ reason: >-
   still cannot tell which terminal fired an event, it is not a revolution —
   it is a launch thread with homework.
 featuredImage: '../../assets/slops/native-og.png'
-icon: '../../assets/blog-placeholder-5.jpg'
+icon: '../../assets/slops/native-icon.png'
+lastVerifiedAt: 2026-07-28
 publishedAt: 2026-07-26
 tags:
   - desktop
