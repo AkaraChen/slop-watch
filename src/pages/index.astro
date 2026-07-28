@@ -7,14 +7,10 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
+// Equal cards: newest catalog date first. No status pin / no first-item hero.
 const slops = (await getCollection('slops'))
 	.filter((entry) => entry.data.status !== 'archived')
-	.sort((a, b) => {
-		const rank = { featured: 0, listed: 1, archived: 2 } as const;
-		const byStatus = rank[a.data.status] - rank[b.data.status];
-		if (byStatus !== 0) return byStatus;
-		return b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf();
-	});
+	.sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
 ---
 
 <!doctype html>
@@ -51,17 +47,6 @@ const slops = (await getCollection('slops'))
 			ul li * {
 				text-decoration: none;
 				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 0.5rem;
-			}
-			ul li:first-child .card-body {
-				text-align: left;
-			}
-			ul li:first-child img.featured {
-				width: 100%;
-				height: auto;
 			}
 			ul li img.featured {
 				margin-bottom: 0.75rem;
