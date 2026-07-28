@@ -1,0 +1,62 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { defaultLocale, localePath, locales, type Locale } from '../../i18n/config';
+import { t } from '../../i18n/ui';
+
+export function getStaticPaths() {
+	return locales
+		.filter((l) => l !== defaultLocale)
+		.map((lang) => ({ params: { lang } }));
+}
+
+const locale = Astro.params.lang as Locale;
+const siteUrl = Astro.site?.href ?? 'https://slop-watch.vercel.app/';
+const meta = t(locale, 'standardsMetaDescription');
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'WebPage',
+	name: t(locale, 'standardsTitle'),
+	description: meta,
+	url: new URL(localePath(locale, '/standards/'), siteUrl).href,
+	inLanguage: locale,
+	isPartOf: { '@type': 'WebSite', name: t(locale, 'siteTitle'), url: siteUrl },
+};
+---
+
+<!doctype html>
+<html lang={locale}>
+	<head>
+		<BaseHead
+			title={t(locale, 'standardsTitle')}
+			description={meta}
+			locale={locale}
+			path="/standards/"
+			jsonLd={jsonLd}
+		/>
+	</head>
+	<body>
+		<Header locale={locale} path="/standards/" />
+		<main class="standards">
+			<h1>{t(locale, 'standardsH1')}</h1>
+			<p set:html={t(locale, 'standardsP1')} />
+			<p set:html={t(locale, 'standardsP2')} />
+			<p set:html={t(locale, 'standardsP3')} />
+			<p set:html={t(locale, 'standardsP4')} />
+		</main>
+		<Footer locale={locale} />
+		<style>
+			.standards h1 {
+				margin-bottom: 0.55rem;
+				font-size: 1.45rem;
+			}
+			.standards p {
+				font-size: 0.98rem;
+				line-height: 1.5;
+				margin-bottom: 0.75em;
+				max-width: 42rem;
+			}
+		</style>
+	</body>
+</html>

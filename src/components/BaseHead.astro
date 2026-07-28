@@ -35,6 +35,19 @@ const ogImage = new URL(image.src, site);
 const absolutePageUrl = canonicalURL.href;
 const jsonLdPayload = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : null;
 const siteTitle = t(locale, 'siteTitle');
+
+/** SERP-safe meta length (UTF-16 code units ≈ display budget for most engines). */
+function clampMeta(text: string, max = 155): string {
+	const normalized = text.replace(/\s+/g, ' ').trim();
+	if (normalized.length <= max) return normalized;
+	const cut = normalized.slice(0, max - 1);
+	const soft = cut.replace(/\s+\S*$/, '');
+	return `${(soft.length >= 40 ? soft : cut).trimEnd()}…`;
+}
+
+// Leave headroom for HTML entity expansion (e.g. quotes → &quot;) in attributes.
+const metaDescription = clampMeta(description.replace(/[“”"']/g, ''), 155);
+const metaTitle = clampMeta(title, 70);
 ---
 
 <meta charset="utf-8" />
@@ -63,7 +76,7 @@ const siteTitle = t(locale, 'siteTitle');
 <link rel="alternate" hreflang="x-default" href={new URL(localePath(defaultLocale, path), site).href} />
 
 <title>{title}</title>
-<meta name="description" content={description} />
+<meta name="description" content={metaDescription} />
 <meta name="author" content={siteTitle} />
 
 <meta property="og:type" content={type} />
@@ -75,17 +88,17 @@ const siteTitle = t(locale, 'siteTitle');
 		.map((code) => <meta property="og:locale:alternate" content={ogLocales[code]} />)
 }
 <meta property="og:url" content={absolutePageUrl} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
+<meta property="og:title" content={metaTitle} />
+<meta property="og:description" content={metaDescription} />
 <meta property="og:image" content={ogImage} />
-<meta property="og:image:alt" content={title} />
+<meta property="og:image:alt" content={metaTitle} />
 {publishedAt && <meta property="article:published_time" content={publishedAt.toISOString()} />}
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
+<meta name="twitter:title" content={metaTitle} />
+<meta name="twitter:description" content={metaDescription} />
 <meta name="twitter:image" content={ogImage} />
-<meta name="twitter:image:alt" content={title} />
+<meta name="twitter:image:alt" content={metaTitle} />
 
 {
 	jsonLdPayload &&

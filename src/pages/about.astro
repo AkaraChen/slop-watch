@@ -38,6 +38,9 @@ const jsonLd = {
 			<p set:html={t(locale, 'aboutP2')} />
 			<p set:html={t(locale, 'aboutP3')} />
 			<p set:html={t(locale, 'aboutP4')} />
+			<p class="standards-link">
+				<a href={localePath(locale, '/standards/')}>{t(locale, 'aboutStandardsLink')}</a>
+			</p>
 		</main>
 		<Footer locale={locale} />
 		<style>
@@ -50,6 +53,10 @@ const jsonLd = {
 				line-height: 1.45;
 				margin-bottom: 0.65em;
 				max-width: 42rem;
+			}
+			.about .standards-link {
+				margin-top: 1rem;
+				font-weight: 700;
 			}
 		</style>
 	</body>
