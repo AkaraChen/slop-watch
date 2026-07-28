@@ -14,7 +14,23 @@ export default defineConfig({
 			prefixDefaultLocale: false,
 		},
 	},
-	integrations: [mdx(), sitemap()],
+	integrations: [
+		mdx(),
+		sitemap({
+			i18n: {
+				defaultLocale: 'en',
+				locales: {
+					en: 'en-US',
+					zh: 'zh-CN',
+					de: 'de-DE',
+					it: 'it-IT',
+					ja: 'ja-JP',
+					ko: 'ko-KR',
+					es: 'es-ES',
+				},
+			},
+		}),
+	],
 	fonts: [
 		{
 			provider: fontProviders.local(),

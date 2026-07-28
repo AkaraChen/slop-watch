@@ -74,62 +74,60 @@ const jsonLd = {
 		/>
 		<style>
 			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
+				width: 100%;
+				max-width: 720px;
+				margin: 0 auto;
+				padding: 0.75em 0.75em 1.5em;
 			}
 			.hero-image {
 				width: 100%;
+				margin-bottom: 0.65rem;
 			}
 			.hero-image img {
 				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
+				width: 100%;
+				height: auto;
+				max-height: 220px;
+				object-fit: cover;
+				border-radius: 8px;
 				box-shadow: var(--box-shadow);
 			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
 			.header-block {
-				margin-bottom: 1.5em;
-				padding: 1em 0 0.5em;
+				margin-bottom: 0.85em;
 			}
 			.title-row {
 				display: flex;
 				align-items: center;
-				gap: 0.75rem;
-				margin-bottom: 0.5rem;
+				gap: 0.5rem;
+				margin-bottom: 0.3rem;
 			}
 			.title-row h1 {
 				margin: 0;
+				font-size: 1.45rem;
 				line-height: 1.15;
 			}
 			.icon {
-				border-radius: 10px;
+				border-radius: 6px;
 				flex-shrink: 0;
 			}
 			.meta {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 0.5rem 1rem;
+				gap: 0.3rem 0.55rem;
 				align-items: center;
 				color: rgb(var(--gray));
-				font-size: 0.95rem;
-				margin-bottom: 1rem;
+				font-size: 0.82rem;
+				margin-bottom: 0.55rem;
 			}
 			.badge {
 				display: inline-block;
-				padding: 0.15rem 0.55rem;
+				padding: 0.05rem 0.4rem;
 				border-radius: 999px;
 				background: rgba(var(--gray-light), 0.9);
 				color: rgb(var(--gray-dark));
-				font-size: 0.8rem;
+				font-size: 0.7rem;
 				text-transform: uppercase;
-				letter-spacing: 0.03em;
+				letter-spacing: 0.02em;
 			}
 			.badge.featured {
 				background: color-mix(in srgb, var(--accent) 18%, white);
@@ -138,77 +136,86 @@ const jsonLd = {
 			.tags {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 0.4rem;
+				gap: 0.25rem;
 			}
 			.tag {
-				font-size: 0.8rem;
-				padding: 0.1rem 0.5rem;
+				font-size: 0.72rem;
+				padding: 0.05rem 0.35rem;
 				border: 1px solid rgba(var(--gray), 0.35);
-				border-radius: 6px;
+				border-radius: 4px;
 				color: rgb(var(--gray));
 			}
 			.lead {
-				font-size: 1.15rem;
-				margin: 0 0 1rem;
+				font-size: 0.98rem;
+				line-height: 1.45;
+				margin: 0 0 0.45rem;
 			}
 			.panel {
 				background: white;
 				border: 1px solid rgba(var(--gray-light), 1);
-				border-radius: 12px;
-				padding: 1rem 1.15rem;
-				margin: 0 0 1.25rem;
-				box-shadow: 0 1px 0 rgba(var(--black), 3%);
+				border-radius: 8px;
+				padding: 0.7rem 0.85rem;
+				margin: 0 0 0.7rem;
 			}
 			.panel h2 {
-				font-size: 1.15rem;
-				margin: 0 0 0.5rem;
+				font-size: 0.98rem;
+				margin: 0 0 0.35rem;
 			}
 			.panel p {
 				margin: 0;
+				font-size: 0.92rem;
+				line-height: 1.45;
 			}
 			.external {
 				display: inline-flex;
 				align-items: center;
-				gap: 0.35rem;
+				gap: 0.25rem;
 				font-weight: 700;
+				font-size: 0.9rem;
 			}
 			.references {
 				list-style: none;
 				margin: 0;
 				padding: 0;
 				display: grid;
-				gap: 1rem;
+				gap: 0.55rem;
 			}
 			.references li {
 				border-top: 1px solid rgba(var(--gray-light), 1);
-				padding-top: 0.85rem;
+				padding-top: 0.5rem;
 			}
 			.references li:first-child {
 				border-top: none;
 				padding-top: 0;
 			}
 			.references h3 {
-				font-size: 1.05rem;
-				margin: 0 0 0.25rem;
+				font-size: 0.95rem;
+				margin: 0 0 0.15rem;
 			}
 			.references .summary {
-				margin: 0.35rem 0 0;
+				margin: 0.2rem 0 0;
 				color: rgb(var(--gray-dark));
+				font-size: 0.88rem;
+				line-height: 1.4;
 			}
 			.ref-meta {
-				font-size: 0.85rem;
+				font-size: 0.78rem;
 				color: rgb(var(--gray));
 			}
 			.fallback-note {
-				font-size: 0.9rem;
+				font-size: 0.82rem;
 				color: rgb(var(--gray));
 				font-style: italic;
-				margin: 0 0 1rem;
+				margin: 0 0 0.65rem;
+			}
+			.prose-body {
+				font-size: 0.92rem;
+				line-height: 1.45;
 			}
 			hr {
 				border: none;
 				border-top: 1px solid rgba(var(--gray-light), 1);
-				margin: 1.5rem 0;
+				margin: 0.85rem 0;
 			}
 		</style>
 	</head>
@@ -218,73 +225,73 @@ const jsonLd = {
 			<article>
 				<div class="hero-image">
 					<Image
-						width={1020}
-						height={510}
+						width={720}
+						height={360}
 						src={featuredImage}
 						alt={t(locale, 'featuredImageAlt', { name })}
 					/>
 				</div>
-				<div class="prose">
-					<div class="header-block">
-						<div class="title-row">
-							{icon && <Image class="icon" width={56} height={56} src={icon} alt="" />}
-							<h1>{name}</h1>
-						</div>
-						<div class="meta">
-							<span class:list={['badge', status]}>{status}</span>
-							<span><FormattedDate date={publishedAt} locale={locale} /></span>
-							{
-								tags.length > 0 && (
-									<span class="tags">
-										{tags.map((tag) => (
-											<span class="tag">{tag}</span>
-										))}
-									</span>
-								)
-							}
-						</div>
-						<p class="lead">{description}</p>
-						<p>
-							<a class="external" href={link} target="_blank" rel="noopener noreferrer">
-								{t(locale, 'openPrimaryLink')}
-							</a>
-						</p>
+				<div class="header-block">
+					<div class="title-row">
+						{icon && <Image class="icon" width={36} height={36} src={icon} alt="" />}
+						<h1>{name}</h1>
 					</div>
-
-					<section class="panel">
-						<h2>{t(locale, 'whyListed')}</h2>
-						<p>{reason}</p>
-					</section>
-
-					{
-						references.length > 0 && (
-							<section class="panel">
-								<h2>{t(locale, 'referencesHeading', { n: references.length })}</h2>
-								<ul class="references">
-									{references.map((ref) => (
-										<li>
-											<h3>
-												<a href={ref.url} target="_blank" rel="noopener noreferrer">
-													{ref.title}
-												</a>
-											</h3>
-											<div class="ref-meta">
-												{ref.source && <span>{ref.source}</span>}
-												{ref.source && ref.publishedAt && <span> · </span>}
-												{ref.publishedAt && (
-													<FormattedDate date={ref.publishedAt} locale={locale} />
-												)}
-											</div>
-											<p class="summary">{ref.summary}</p>
-										</li>
+					<div class="meta">
+						<span class:list={['badge', status]}>{status}</span>
+						<span><FormattedDate date={publishedAt} locale={locale} /></span>
+						{
+							tags.length > 0 && (
+								<span class="tags">
+									{tags.map((tag) => (
+										<span class="tag">{tag}</span>
 									))}
-								</ul>
-							</section>
-						)
-					}
+								</span>
+							)
+						}
+					</div>
+					<p class="lead">{description}</p>
+					<p>
+						<a class="external" href={link} target="_blank" rel="noopener noreferrer">
+							{t(locale, 'openPrimaryLink')}
+						</a>
+					</p>
+				</div>
 
-					<hr />
-					{showBodyFallbackNote && <p class="fallback-note">{t(locale, 'bodyFallbackNote')}</p>}
+				<section class="panel">
+					<h2>{t(locale, 'whyListed')}</h2>
+					<p>{reason}</p>
+				</section>
+
+				{
+					references.length > 0 && (
+						<section class="panel">
+							<h2>{t(locale, 'referencesHeading', { n: references.length })}</h2>
+							<ul class="references">
+								{references.map((ref) => (
+									<li>
+										<h3>
+											<a href={ref.url} target="_blank" rel="noopener noreferrer">
+												{ref.title}
+											</a>
+										</h3>
+										<div class="ref-meta">
+											{ref.source && <span>{ref.source}</span>}
+											{ref.source && ref.publishedAt && <span> · </span>}
+											{ref.publishedAt && (
+												<FormattedDate date={ref.publishedAt} locale={locale} />
+											)}
+										</div>
+										<p class="summary">{ref.summary}</p>
+									</li>
+								))}
+							</ul>
+						</section>
+					)
+				}
+
+				<hr />
+				{showBodyFallbackNote && <p class="fallback-note">{t(locale, 'bodyFallbackNote')}</p>}
+				<div class="prose-body">
 					<slot />
 				</div>
 			</article>

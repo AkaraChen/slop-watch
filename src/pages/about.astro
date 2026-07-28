@@ -32,14 +32,25 @@ const jsonLd = {
 	</head>
 	<body>
 		<Header locale={locale} path="/about/" />
-		<main>
+		<main class="about">
 			<h1>About Slop Watch</h1>
 			<p set:html={t(locale, 'aboutP1')} />
 			<p set:html={t(locale, 'aboutP2')} />
 			<p set:html={t(locale, 'aboutP3')} />
 			<p set:html={t(locale, 'aboutP4')} />
-			<p style="color: rgb(var(--gray)); font-size: 0.95rem;">{t(locale, 'siteDescription')}</p>
 		</main>
 		<Footer locale={locale} />
+		<style>
+			.about h1 {
+				margin-bottom: 0.55rem;
+				font-size: 1.35rem;
+			}
+			.about p {
+				font-size: 0.95rem;
+				line-height: 1.45;
+				margin-bottom: 0.65em;
+				max-width: 42rem;
+			}
+		</style>
 	</body>
 </html>
