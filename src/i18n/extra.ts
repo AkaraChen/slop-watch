@@ -1091,7 +1091,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 				},
 				'https://zhuanlan.zhihu.com/p/2039725076204016063': {
 					title: `PL Nerd 迎来惊天大变 · Vibe Coder 喜提 AI 原生（zerolang 扒代码）`,
-					summary: `中文长文吐槽 Zero/zerolang 作为「agent 原生」语言，实现读起来像反 hump 行为艺术——记录粗糙 IR 与编译器结构，如何拆穿 graph-first 营销。`,
+					summary: `中文长文吐槽 Zero/zerolang 作为「agent 原生」语言，实现读起来像反 hype 行为艺术——记录粗糙 IR 与编译器结构，如何拆穿 graph-first 营销。`,
 				},
 				'https://www.zhihu.com/question/2040211383581685307/answer/2040244239687279555': {
 					title: `如何评价 Vercel 近期发布的 Zero 编程语言？（续扒）`,
