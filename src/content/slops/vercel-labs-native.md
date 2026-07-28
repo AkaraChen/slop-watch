@@ -1,13 +1,19 @@
 ---
 name: Native SDK (vercel-labs/native)
-description: Vercel Labs toolkit for building native desktop apps with declarative UI and TypeScript authoring that compiles toward native binaries.
+description: >-
+  Vercel Labs toolkit for building native desktop apps with declarative UI and
+  TypeScript that "compiles toward native" — sold as the Electron funeral,
+  currently still arguing with focus, terminals, and WebView observability in
+  the issue tracker.
 link: https://github.com/vercel-labs/native
 reason: >-
   Early-platform slop dressed as a finished Electron killer. Public discourse
-  sells "no WebView / no JS runtime" while the issue tracker is full of basic
+  sells "no WebView / no JS runtime" while the tracker is full of basic
   desktop primitives that still do not work (focus, terminals, WebView
-  observability, layout knobs). Star velocity and agent-automation marketing
-  outrun a coherent quality bar.
+  observability, layout knobs — see #222–#226). Star velocity and
+  agent-automation marketing outrun a coherent quality bar. If your revolution
+  still cannot tell which terminal fired an event, it is not a revolution —
+  it is a launch thread with homework.
 featuredImage: '../../assets/slops/native-og.png'
 icon: '../../assets/blog-placeholder-5.jpg'
 publishedAt: 2026-07-26
@@ -54,7 +60,7 @@ references:
     publishedAt: 2026-07-20
 ---
 
-Native SDK may mature. Today it is catalogued as **marketing-complete, desktop-incomplete** software — the slop is shipping a revolution pitch while fundamental UI plumbing is still open issues.
+Native SDK may mature. Today it is catalogued as **marketing-complete, desktop-incomplete** software — the slop is shipping a revolution pitch while fundamental UI plumbing is still open issues. The funeral for Electron has been scheduled; the body still has focus bugs.
 
 ### Quality angle
 - Issue titles read like a pre-1.0 platform checklist, not polish

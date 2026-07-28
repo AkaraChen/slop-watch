@@ -1,18 +1,19 @@
 ---
 name: Moltbook
 description: >-
-  Viral "social network for AI agents" (OpenClaw-adjacent): agents post,
-  comment, and DM while humans mostly watch. Marketed as the front page of
-  the agent internet; built and shipped at meme speed.
+  The "social network for AI agents" (OpenClaw-adjacent): bots post, comment,
+  and DM while humans doomscroll the feed. Marketed as the front page of the
+  agent internet — vibe-coded at meme speed, secured at demo speed.
 link: https://www.moltbook.com/
 reason: >-
   Textbook vibe-coded security slop. Creator Matt Schlicht publicly said he
   "didn't write one line of code" and would "give everything to AI" for
-  patches — then the production Supabase backend was left wide open: client
-  JS held a key with full read/write, anyone could take over any agent, and
-  researchers pulled ~1.5M API authentication tokens, tens of thousands of
+  patches — then production Supabase went full glass house: client JS held a
+  key with full read/write, anyone could take over any agent, and researchers
+  walked out with ~1.5M API authentication tokens, tens of thousands of
   emails, and private agent messages. Growth narrative outran the most basic
-  ownership of auth and data boundaries.
+  ownership of auth and data boundaries. When "ship with AI" means "ship the
+  database password in the browser," you get a museum piece, not a network.
 featuredImage: '../../assets/slops/moltbook-og.png'
 icon: '../../assets/slops/moltbook-logo.webp'
 publishedAt: 2026-02-03
@@ -62,7 +63,7 @@ references:
     source: Wikipedia
 ---
 
-Moltbook is catalogued as **incident slop**: a vibe-shipped agent social layer whose auth and data plane failed in public before any claim of "agent civilization" could be taken seriously.
+Moltbook is catalogued as **incident slop**: a vibe-shipped agent social layer whose auth and data plane failed in public before any claim of "agent civilization" could be taken seriously. The agents had a town square. So did every researcher with curl.
 
 ### Hard signals
 - Unauthenticated / over-privileged database access to production agent records

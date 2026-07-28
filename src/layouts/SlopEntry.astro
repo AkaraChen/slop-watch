@@ -5,10 +5,12 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
 
 type Props = CollectionEntry<'slops'>['data'] & { id: string };
 
 const {
+	id,
 	name,
 	description,
 	link,
@@ -20,11 +22,43 @@ const {
 	status,
 	references,
 } = Astro.props;
+
+const pageTitle = `${name} · AI Slop specimen · ${SITE_TITLE}`;
+const metaDescription =
+	description.length > 155 ? `${description.slice(0, 152).trimEnd()}…` : description;
+const siteUrl = Astro.site?.href ?? 'https://slop-watch.vercel.app/';
+const pageUrl = new URL(`/slops/${id}/`, siteUrl).href;
+const imageUrl = new URL(featuredImage.src, siteUrl).href;
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'Article',
+	headline: name,
+	description,
+	image: [imageUrl],
+	datePublished: publishedAt.toISOString(),
+	mainEntityOfPage: pageUrl,
+	author: { '@type': 'Organization', name: SITE_TITLE },
+	publisher: { '@type': 'Organization', name: SITE_TITLE, url: siteUrl },
+	about: {
+		'@type': 'SoftwareApplication',
+		name,
+		url: link,
+	},
+	keywords: tags.join(', '),
+};
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={`${name} · Slop Watch`} description={description} image={featuredImage} />
+		<BaseHead
+			title={pageTitle}
+			description={metaDescription}
+			image={featuredImage}
+			type="article"
+			publishedAt={publishedAt}
+			jsonLd={jsonLd}
+		/>
 		<style>
 			main {
 				width: calc(100% - 2em);

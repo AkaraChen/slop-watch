@@ -5,18 +5,47 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { SITE_DESCRIPTION, SITE_TAGLINE, SITE_TITLE } from '../consts';
 
 // Equal cards: newest catalog date first. No status pin / no first-item hero.
 const slops = (await getCollection('slops'))
 	.filter((entry) => entry.data.status !== 'archived')
 	.sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+
+const siteUrl = Astro.site?.href ?? 'https://slop-watch.vercel.app/';
+const jsonLd = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: SITE_TITLE,
+		description: SITE_DESCRIPTION,
+		url: siteUrl,
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: `${SITE_TITLE} — Catalog`,
+		description: SITE_DESCRIPTION,
+		url: siteUrl,
+		isPartOf: { '@type': 'WebSite', name: SITE_TITLE, url: siteUrl },
+		mainEntity: {
+			'@type': 'ItemList',
+			numberOfItems: slops.length,
+			itemListElement: slops.map((slop, index) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				url: new URL(`/slops/${slop.id}/`, siteUrl).href,
+				name: slop.data.name,
+			})),
+		},
+	},
+];
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={`${SITE_TITLE} — ${SITE_TAGLINE}`} description={SITE_DESCRIPTION} jsonLd={jsonLd} />
 		<style>
 			main {
 				width: 960px;
@@ -128,8 +157,8 @@ const slops = (await getCollection('slops'))
 			<section class="intro">
 				<h1>Catalog of AI Slop</h1>
 				<p>
-					{SITE_DESCRIPTION} Each entry has a name, icon, featured image, primary link,
-					description, selection reason, and supporting references.
+					{SITE_DESCRIPTION} Each specimen has a name, icon, featured image, primary link,
+					description, selection reason, and receipts (references).
 				</p>
 			</section>
 			<section>
@@ -143,7 +172,7 @@ const slops = (await getCollection('slops'))
 										width={720}
 										height={360}
 										src={slop.data.featuredImage}
-										alt=""
+										alt={`${slop.data.name} featured image`}
 									/>
 									<div class="card-body">
 										<div class="card-top">
