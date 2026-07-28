@@ -45,7 +45,8 @@ function clampMeta(text: string, max = 155): string {
 	return `${(soft.length >= 40 ? soft : cut).trimEnd()}…`;
 }
 
-const metaDescription = clampMeta(description);
+// Leave headroom for HTML entity expansion (e.g. quotes → &quot;) in attributes.
+const metaDescription = clampMeta(description, 148);
 const metaTitle = clampMeta(title, 70);
 ---
 
