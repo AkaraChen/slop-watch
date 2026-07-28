@@ -77,5 +77,3 @@ OpenClaw is the catalog's clearest **garbage specimen**: an agent that asks for 
 - Issue backlog measured in thousands while marketing still ships install funnels
 - Security history that includes one-click RCE and hostile skills distribution
 - Field reports of silent failure and "false complete" task results
-
-Replace body notes as new advisories land; frontmatter already carries the core references.
