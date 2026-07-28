@@ -15,13 +15,17 @@ reason: >-
   oversized frames silently truncated into segfaults, borrow tracking cleared
   by dynamic array sets). Community issue #181 is literally titled "Low code
   quality. Don't run this on your machine"; maintainers acknowledged and said
-  they are hiring. README already warns of security issues and isolation —
-  growth posts rarely lead with that gap between agent utopia and emit quality.
-  When your pitch is "stale hashes get rejected before write" and #425 is
-  "incorrect module hash comparison," the comedy writes itself.
+  they are hiring. Chinese PL deep-dives (Zhihu) further document agent-driven
+  thrash (whole trees like compiler-zero deleted after critique), stdlib
+  primitives (time/rand/fs) hammered into the IR instead of a real runtime, a
+  "runtime" module that still only covers http/json while the hardcoding stays,
+  and an ownership story implemented with a thin checker.c-style approach —
+  fashion features (effect handlers) on top of comedy plumbing. When your pitch
+  is "stale hashes get rejected before write" and #425 is "incorrect module
+  hash comparison," the comedy writes itself.
 featuredImage: '../../assets/slops/zerolang-og.png'
 icon: '../../assets/slops/zerolang-icon.png'
-lastVerifiedAt: 2026-07-28
+lastVerifiedAt: 2026-07-29
 publishedAt: 2026-05-15
 tags:
   - language
@@ -71,12 +75,31 @@ references:
     summary: Official X account pitch — graph-first, verified refactor; experimental framing often buried under launch energy.
     source: X / @zerolangai
     publishedAt: 2026-06-06
+  - title: PL Nerd 迎来惊天大变 · Vibe Coder 喜提 AI 原生（zerolang 扒代码）
+    url: https://zhuanlan.zhihu.com/p/2039725076204016063
+    summary: >-
+      Chinese long-form roast of Zero/zerolang as an "agent-native" language whose
+      implementation reads like anti-hype performance art — documents crude IR
+      and compiler structure that undercut the graph-first marketing.
+    source: Zhihu / 知乎用户名可以重复吗
+    publishedAt: 2026-05-18
+  - title: 如何评价 Vercel 近期发布的 Zero 编程语言？（续扒）
+    url: https://www.zhihu.com/question/2040211383581685307/answer/2040244239687279555
+    summary: >-
+      Follow-up: compiler-zero tree deleted after critique; time/rand/fs still
+      modeled in IR; new "runtime" is mostly http/json while hardcoding remains;
+      giant EmitContext/RuntimePatch surface; ownership/effect-handler fashion on
+      a thin checker — community evidence that agents thrash the tree faster than
+      quality lands.
+    source: Zhihu / 知乎用户名可以重复吗
+    publishedAt: 2026-05-19
 ---
 
-Zerolang is **compiler-quality slop in agent cosplay**: the pitch is semantic certainty for agents; the public evidence is wrong-code and "don't run this" on the default Mac backend. Graph-first utopia, segfault-second reality.
+Zerolang is **compiler-quality slop in agent cosplay**: the pitch is semantic certainty for agents; the public evidence is wrong-code, "don't run this," and community reverse-engineering that shows the agent-native story sitting on IR hardcodes and thrashy trees.
 
 ### Hard signals
 - Wrong-code / soundness findings with repros on main (#318)
 - Host platform backend gaps (#230)
 - Explicit community + maintainer acknowledgment of low quality (#181)
+- Chinese deep-dives: IR-baked stdlib, cosmetic runtime module, agent-driven delete of whole compiler trees after public roast
 - Same Labs packaging pattern as scriptc/native (narrative first, drain later)
