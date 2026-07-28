@@ -15,9 +15,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 ### 硬信号
 - issue 积压以千计，营销仍在狂推安装漏斗
 - 安全史含一键 RCE 与恶意 skill 分发路径
-- 现场反馈：静默失败与「假完成」任务结果
-
-有新通告时再改正文；核心 references 已在 frontmatter。`,
+- 现场反馈：静默失败与「假完成」任务结果`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw 仓库数据`,
@@ -67,9 +65,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 ### Harte Signale
 - Issue-Rückstand in Tausenden, während Marketing weiter Install-Funnels fährt
 - Sicherheitsgeschichte mit One-Click-RCE und feindlichen Skills
-- Feldberichte: stille Fehler und „falsch fertig“-Tasks
-
-Body bei neuen Advisories aktualisieren; Kern-References stecken im Frontmatter.`,
+- Feldberichte: stille Fehler und „falsch fertig“-Tasks`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw Repository-Stats`,
@@ -119,9 +115,7 @@ Body bei neuen Advisories aktualisieren; Kern-References stecken im Frontmatter.
 ### Segnali duri
 - Backlog di issue a migliaia mentre il marketing spinge ancora i funnel di install
 - Storia di sicurezza con RCE one-click e skill ostili
-- Report sul campo: fallimenti silenziosi e task “falsamente completi”
-
-Aggiornare il body con i nuovi advisory; le reference principali sono nel frontmatter.`,
+- Report sul campo: fallimenti silenziosi e task “falsamente completi”`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `Statistiche repo openclaw/openclaw`,
@@ -171,9 +165,7 @@ Aggiornare il body con i nuovi advisory; le reference principali sono nel frontm
 ### ハードシグナル
 - issue が数千単位で積もる一方、マーケはまだインストール導線を量産
 - ワンクリック RCE や敵対的 skill 配信を含むセキュリティ履歴
-- 現場報告：黙って失敗、「完了したフリ」のタスク結果
-
-新しい advisory が出たら本文を更新。中核の references は frontmatter に既にある。`,
+- 現場報告：黙って失敗、「完了したフリ」のタスク結果`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw リポジトリ統計`,
@@ -223,9 +215,7 @@ Aggiornare il body con i nuovi advisory; le reference principali sono nel frontm
 ### 하드 시그널
 - issue가 수천 단위로 쌓이는데 마케팅은 여전히 설치 퍼널을 판다
 - 원클릭 RCE와 적대적 skill 배포가 포함된 보안 이력
-- 현장 보고: 조용한 실패, “완료된 척” 하는 태스크 결과
-
-새 advisory가 나오면 본문을 갱신. 핵심 references는 frontmatter에 이미 있다.`,
+- 현장 보고: 조용한 실패, “완료된 척” 하는 태스크 결과`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw 저장소 통계`,
@@ -275,9 +265,7 @@ Aggiornare il body con i nuovi advisory; le reference principali sono nel frontm
 ### Señales duras
 - Backlog de issues por miles mientras el marketing sigue empujando embudos de install
 - Historial de seguridad con RCE de un clic y skills hostiles
-- Reportes de campo: fallos silenciosos y tareas “falsamente completas”
-
-Actualizar el body cuando lleguen advisories; las referencias clave ya están en el frontmatter.`,
+- Reportes de campo: fallos silenciosos y tareas “falsamente completas”`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `Estadísticas del repo openclaw/openclaw`,
@@ -511,9 +499,7 @@ Actualizar el body cuando lleguen advisories; las referencias clave ya están en
 ### 质量视角
 - 构建绿灯，加载阶段炸（FFI）
 - Windows 用户立刻被挡
-- 社交图谱优化口号，不优化分诊
-
-等 issue 跟踪器稳定——或者它不稳。`,
+- 社交图谱优化口号，不优化分诊`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc 仓库`,
@@ -563,9 +549,7 @@ Actualizar el body cuando lleguen advisories; las referencias clave ya están en
 ### Qualitätswinkel
 - Grüne Builds, die beim Laden scheitern (FFI)
 - Windows-Nutzer sofort blockiert
-- Social Graph optimiert Slogans, nicht Triage
-
-Aktualisieren, wenn der Tracker stabil wird — oder wenn nicht.`,
+- Social Graph optimiert Slogans, nicht Triage`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc Repository`,
@@ -615,9 +599,7 @@ Aktualisieren, wenn der Tracker stabil wird — oder wenn nicht.`,
 ### Angolo qualità
 - Build verdi che falliscono al load (FFI)
 - Utenti Windows bloccati subito
-- Il grafo social ottimizza slogan, non il triage
-
-Aggiornare quando il tracker si stabilizza — o se non lo fa.`,
+- Il grafo social ottimizza slogan, non il triage`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `Repo vercel-labs/scriptc`,
@@ -667,9 +649,7 @@ Aggiornare quando il tracker si stabilizza — o se non lo fa.`,
 ### 品質の切り口
 - ビルドは緑、ロードで落ちる（FFI）
 - Windows ユーザーは即ブロック
-- SNS はスローガン最適化、トリアージではない
-
-トラッカーが落ち着いたら更新——落ち着かなくても。`,
+- SNS はスローガン最適化、トリアージではない`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc リポジトリ`,
@@ -719,9 +699,7 @@ Aggiornare quando il tracker si stabilizza — o se non lo fa.`,
 ### 품질 각도
 - 빌드는 초록, 로드에서 터짐(FFI)
 - Windows 사용자는 즉시 막힘
-- 소셜 그래프는 슬로건 최적화, 트리아주가 아님
-
-트래커가 안정되면 갱신—안 되어도.`,
+- 소셜 그래프는 슬로건 최적화, 트리아주가 아님`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc 저장소`,
@@ -771,9 +749,7 @@ Aggiornare quando il tracker si stabilizza — o se non lo fa.`,
 ### Ángulo de calidad
 - Builds verdes que fallan al cargar (FFI)
 - Usuarios de Windows bloqueados de inmediato
-- El grafo social optimiza eslóganes, no el triage
-
-Actualizar cuando el tracker se estabilice — o si no lo hace.`,
+- El grafo social optimiza eslóganes, no el triage`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `Repo vercel-labs/scriptc`,
