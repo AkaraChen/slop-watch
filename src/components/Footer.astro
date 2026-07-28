@@ -12,6 +12,11 @@ const year = new Date().getFullYear();
 
 <footer>
 	{t(locale, 'footer', { year })}
+	<div class="feed-links">
+		<a href="/rss-weekly.xml">{t(locale, 'weeklyFeedLink')}</a>
+		<span aria-hidden="true">·</span>
+		<a href="/rss.xml">{t(locale, 'allFeedLink')}</a>
+	</div>
 	<div class="social-links">
 		<a href="https://github.com/AkaraChen/slop-watch" target="_blank" rel="noopener noreferrer">
 			<span class="sr-only">GitHub repository</span>
@@ -31,6 +36,17 @@ const year = new Date().getFullYear();
 		text-align: center;
 		font-size: 0.9rem;
 		border-top: 1px solid rgba(var(--gray-light), 1);
+	}
+	.feed-links {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 0.35rem 0.55rem;
+		margin-top: 0.55em;
+		font-size: 0.85rem;
+	}
+	.feed-links a {
+		color: rgb(var(--gray-dark));
 	}
 	.social-links {
 		display: flex;

@@ -33,7 +33,13 @@ export type UiKey =
 	| 'themeSystem'
 	| 'notFoundTitle'
 	| 'notFoundBody'
-	| 'goHome';
+	| 'goHome'
+	| 'filterAll'
+	| 'filterLabel'
+	| 'filterEmpty'
+	| 'relatedHeading'
+	| 'weeklyFeedLink'
+	| 'allFeedLink';
 
 const en: Record<UiKey, string> = {
 	siteTitle: 'Slop Watch',
@@ -76,6 +82,12 @@ const en: Record<UiKey, string> = {
 	notFoundTitle: 'Page not found',
 	notFoundBody: 'That path is not in the landfill catalog. It may have been moved, or it never existed.',
 	goHome: 'Back to catalog',
+	filterAll: 'All',
+	filterLabel: 'Filter by tag',
+	filterEmpty: 'No specimens match this tag.',
+	relatedHeading: 'Related specimens',
+	weeklyFeedLink: 'This week (RSS)',
+	allFeedLink: 'Full catalog (RSS)',
 };
 
 const zh: Record<UiKey, string> = {
@@ -117,6 +129,12 @@ const zh: Record<UiKey, string> = {
 	notFoundTitle: '页面不存在',
 	notFoundBody: '目录里没有这个地址。可能已迁移，或从未收录。',
 	goHome: '返回目录',
+	filterAll: '全部',
+	filterLabel: '按标签筛选',
+	filterEmpty: '没有匹配该标签的标本。',
+	relatedHeading: '同类标本',
+	weeklyFeedLink: '本周新 slop（RSS）',
+	allFeedLink: '完整目录（RSS）',
 };
 
 const de: Record<UiKey, string> = {
@@ -160,6 +178,12 @@ const de: Record<UiKey, string> = {
 	notFoundTitle: 'Seite nicht gefunden',
 	notFoundBody: 'Dieser Pfad steht nicht im Katalog. Verschoben oder nie vorhanden.',
 	goHome: 'Zurück zum Katalog',
+	filterAll: 'Alle',
+	filterLabel: 'Nach Tag filtern',
+	filterEmpty: 'Keine Exemplare mit diesem Tag.',
+	relatedHeading: 'Ähnliche Exemplare',
+	weeklyFeedLink: 'Diese Woche (RSS)',
+	allFeedLink: 'Gesamtkatalog (RSS)',
 };
 
 const it: Record<UiKey, string> = {
@@ -203,6 +227,12 @@ const it: Record<UiKey, string> = {
 	notFoundTitle: 'Pagina non trovata',
 	notFoundBody: 'Questo percorso non è nel catalogo. Forse è stato spostato o non è mai esistito.',
 	goHome: 'Torna al catalogo',
+	filterAll: 'Tutti',
+	filterLabel: 'Filtra per tag',
+	filterEmpty: 'Nessun esemplare con questo tag.',
+	relatedHeading: 'Esemplari correlati',
+	weeklyFeedLink: 'Questa settimana (RSS)',
+	allFeedLink: 'Catalogo completo (RSS)',
 };
 
 const ja: Record<UiKey, string> = {
@@ -246,6 +276,12 @@ const ja: Record<UiKey, string> = {
 	notFoundTitle: 'ページが見つかりません',
 	notFoundBody: 'カタログにこのパスはありません。移動したか、未収録です。',
 	goHome: 'カタログへ戻る',
+	filterAll: 'すべて',
+	filterLabel: 'タグで絞り込み',
+	filterEmpty: 'このタグに一致する標本はありません。',
+	relatedHeading: '関連する標本',
+	weeklyFeedLink: '今週の新着（RSS）',
+	allFeedLink: '全カタログ（RSS）',
 };
 
 const ko: Record<UiKey, string> = {
@@ -288,6 +324,12 @@ const ko: Record<UiKey, string> = {
 	notFoundTitle: '페이지 없음',
 	notFoundBody: '목록에 없는 경로입니다. 이동했거나 등록되지 않았습니다.',
 	goHome: '목록으로',
+	filterAll: '전체',
+	filterLabel: '태그로 필터',
+	filterEmpty: '이 태그와 일치하는 표본이 없습니다.',
+	relatedHeading: '관련 표본',
+	weeklyFeedLink: '이번 주 신규 (RSS)',
+	allFeedLink: '전체 목록 (RSS)',
 };
 
 const es: Record<UiKey, string> = {
@@ -331,6 +373,12 @@ const es: Record<UiKey, string> = {
 	notFoundTitle: 'Página no encontrada',
 	notFoundBody: 'Esa ruta no está en el catálogo. Puede haberse movido o no existir.',
 	goHome: 'Volver al catálogo',
+	filterAll: 'Todos',
+	filterLabel: 'Filtrar por etiqueta',
+	filterEmpty: 'Ningún ejemplar con esta etiqueta.',
+	relatedHeading: 'Ejemplares relacionados',
+	weeklyFeedLink: 'Esta semana (RSS)',
+	allFeedLink: 'Catálogo completo (RSS)',
 };
 
 const dictionaries: Record<Locale, Record<UiKey, string>> = {

@@ -1,0 +1,317 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+import { localePath, type Locale } from '../i18n/config';
+import { getSlopCopy } from '../i18n/content';
+import { t } from '../i18n/ui';
+import { collectTags } from '../lib/related';
+
+interface Props {
+	locale: Locale;
+	slops: CollectionEntry<'slops'>[];
+}
+
+const { locale, slops } = Astro.props;
+const tags = collectTags(slops);
+---
+
+<section class="filter-bar" aria-label={t(locale, 'filterLabel')}>
+	<span class="filter-label">{t(locale, 'filterLabel')}</span>
+	<div class="filter-chips" role="toolbar">
+		<button type="button" class="chip is-active" data-tag-filter="" aria-pressed="true">
+			{t(locale, 'filterAll')}
+		</button>
+		{
+			tags.map((tag) => (
+				<button type="button" class="chip" data-tag-filter={tag} aria-pressed="false">
+					#{tag}
+				</button>
+			))
+		}
+	</div>
+</section>
+
+<p class="filter-empty" id="catalog-filter-empty" hidden>{t(locale, 'filterEmpty')}</p>
+
+<ul class="catalog" id="slop-catalog">
+	{
+		slops.map((slop) => {
+			const copy = getSlopCopy(slop.id, locale, {
+				description: slop.data.description,
+				reason: slop.data.reason,
+			});
+			const tagAttr = slop.data.tags.join(' ');
+			return (
+				<li data-tags={tagAttr} data-catalog-item>
+					<a class="card" href={localePath(locale, `/slops/${slop.id}/`)}>
+						<Image
+							class="featured"
+							width={480}
+							height={270}
+							src={slop.data.featuredImage}
+							alt={t(locale, 'featuredImageAlt', { name: slop.data.name })}
+						/>
+						<div class="card-body">
+							<div class="card-top">
+								{slop.data.icon && (
+									<Image
+										class="icon"
+										width={24}
+										height={24}
+										src={slop.data.icon}
+										alt=""
+									/>
+								)}
+								<h2 class="title">{slop.data.name}</h2>
+							</div>
+							<p class="date">
+								<FormattedDate date={slop.data.publishedAt} locale={locale} />
+							</p>
+							<p class="desc">{copy.description}</p>
+							<div class="meta-row">
+								<span class:list={['badge', slop.data.status]}>{slop.data.status}</span>
+								{slop.data.lastVerifiedAt && (
+									<span class="verified-mini">
+										{t(locale, 'lastVerified', {
+											date: slop.data.lastVerifiedAt.toLocaleDateString(undefined, {
+												year: 'numeric',
+												month: 'short',
+												day: 'numeric',
+											}),
+										})}
+									</span>
+								)}
+								<span>
+									{t(locale, 'referencesCount', {
+										n: slop.data.references.length,
+									})}
+								</span>
+								{slop.data.tags.slice(0, 3).map((tag) => (
+									<button
+										type="button"
+										class="tag-link"
+										data-tag-filter={tag}
+									>
+										#{tag}
+									</button>
+								))}
+							</div>
+						</div>
+					</a>
+				</li>
+			);
+		})
+	}
+</ul>
+
+<style>
+	.filter-bar {
+		margin: 0 0 1rem;
+	}
+	.filter-label {
+		display: block;
+		font-size: 0.82rem;
+		color: rgb(var(--gray));
+		margin-bottom: 0.4rem;
+	}
+	.filter-chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+	}
+	.chip {
+		appearance: none;
+		border: 1px solid rgba(var(--gray-light), 1);
+		background: white;
+		color: rgb(var(--gray-dark));
+		border-radius: 999px;
+		padding: 0.22rem 0.65rem;
+		font-size: 0.8rem;
+		cursor: pointer;
+		line-height: 1.2;
+	}
+	.chip.is-active {
+		border-color: color-mix(in srgb, var(--accent) 45%, white);
+		background: color-mix(in srgb, var(--accent) 14%, white);
+		color: var(--accent-dark);
+		font-weight: 700;
+	}
+	.filter-empty {
+		margin: 0 0 0.85rem;
+		color: rgb(var(--gray));
+		font-size: 0.92rem;
+	}
+	ul.catalog {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		width: 100%;
+		max-width: 100%;
+		gap: 1.25rem 1.1rem;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	ul.catalog > li {
+		min-width: 0;
+		max-width: 100%;
+	}
+	ul.catalog * {
+		text-decoration: none;
+		transition: 0.15s ease;
+	}
+	ul.catalog img.featured {
+		margin-bottom: 0.55rem;
+		border-radius: 8px;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 2 / 1;
+		object-fit: cover;
+	}
+	ul.catalog a.card {
+		display: block;
+		color: inherit;
+		min-width: 0;
+		max-width: 100%;
+		padding: 0.55rem;
+		border: 1px solid rgba(var(--gray-light), 1);
+		border-radius: 10px;
+		background: rgba(255, 255, 255, 0.85);
+	}
+	.desc,
+	.title {
+		overflow-wrap: anywhere;
+	}
+	.verified-mini {
+		font-size: 0.75rem;
+		color: rgb(var(--gray));
+	}
+	.card-top {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 0.25rem;
+	}
+	.card-top img.icon {
+		border-radius: 6px;
+		flex-shrink: 0;
+	}
+	.title {
+		margin: 0;
+		color: rgb(var(--black));
+		line-height: 1.25;
+		font-size: 1.12rem;
+	}
+	.date {
+		margin: 0 0 0.35rem;
+		color: rgb(var(--gray));
+		font-size: 0.88rem;
+	}
+	.desc {
+		margin: 0 0 0.45rem;
+		color: rgb(var(--gray-dark));
+		font-size: 0.95rem;
+		line-height: 1.45;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	.meta-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.3rem 0.55rem;
+		align-items: center;
+		font-size: 0.8rem;
+		color: rgb(var(--gray));
+	}
+	.badge {
+		display: inline-block;
+		padding: 0.08rem 0.45rem;
+		border-radius: 999px;
+		background: rgba(var(--gray-light), 0.95);
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		font-size: 0.72rem;
+	}
+	.badge.featured {
+		background: color-mix(in srgb, var(--accent) 18%, white);
+		color: var(--accent-dark);
+	}
+	.tag-link {
+		appearance: none;
+		border: none;
+		background: transparent;
+		padding: 0;
+		color: rgb(var(--gray));
+		cursor: pointer;
+		font-size: inherit;
+	}
+	.tag-link:hover {
+		color: var(--accent);
+	}
+	@media (hover: hover) and (pointer: fine) {
+		ul.catalog a.card:hover {
+			border-color: color-mix(in srgb, var(--accent) 35%, white);
+			box-shadow: var(--box-shadow);
+		}
+		ul.catalog a.card:hover .title {
+			color: var(--accent);
+		}
+		ul.catalog a.card:hover img.featured {
+			box-shadow: var(--box-shadow);
+			transform: translateY(-1px);
+		}
+	}
+	@media (max-width: 720px) {
+		ul.catalog {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+	}
+</style>
+
+<script>
+	function applyFilter(tag: string) {
+		const items = document.querySelectorAll<HTMLElement>('[data-catalog-item]');
+		const empty = document.getElementById('catalog-filter-empty');
+		let visible = 0;
+		items.forEach((el) => {
+			const tags = (el.dataset.tags || '').split(/\s+/).filter(Boolean);
+			const show = !tag || tags.includes(tag);
+			el.hidden = !show;
+			if (show) visible += 1;
+		});
+		if (empty) empty.hidden = visible > 0;
+
+		document.querySelectorAll<HTMLButtonElement>('[data-tag-filter]').forEach((btn) => {
+			const active = (btn.dataset.tagFilter || '') === tag;
+			btn.classList.toggle('is-active', active);
+			btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+		});
+
+		const url = new URL(window.location.href);
+		if (tag) url.searchParams.set('tag', tag);
+		else url.searchParams.delete('tag');
+		window.history.replaceState({}, '', url);
+	}
+
+	function init() {
+		const root = document.getElementById('slop-catalog');
+		if (!root) return;
+
+		document.querySelectorAll<HTMLButtonElement>('[data-tag-filter]').forEach((btn) => {
+			btn.addEventListener('click', (e) => {
+				e.preventDefault();
+				e.stopPropagation();
+				applyFilter(btn.dataset.tagFilter || '');
+			});
+		});
+
+		const initial = new URL(window.location.href).searchParams.get('tag') || '';
+		if (initial) applyFilter(initial);
+	}
+
+	init();
+	document.addEventListener('astro:page-load', init);
+</script>

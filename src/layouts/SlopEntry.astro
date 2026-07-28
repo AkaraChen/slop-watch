@@ -8,6 +8,12 @@ import Header from '../components/Header.astro';
 import { localePath, type Locale } from '../i18n/config';
 import { t } from '../i18n/ui';
 
+type RelatedItem = {
+	id: string;
+	name: string;
+	description: string;
+};
+
 type Props = Omit<CollectionEntry<'slops'>['data'], 'references' | 'description' | 'reason'> & {
 	id: string;
 	locale: Locale;
@@ -17,6 +23,7 @@ type Props = Omit<CollectionEntry<'slops'>['data'], 'references' | 'description'
 	showBodyFallbackNote?: boolean;
 	/** When set, used instead of default <slot /> body (localized HTML) */
 	bodyHtml?: string;
+	related?: RelatedItem[];
 };
 
 const {
@@ -35,6 +42,7 @@ const {
 	references,
 	showBodyFallbackNote = false,
 	bodyHtml,
+	related = [],
 } = Astro.props;
 
 const pageTitle = t(locale, 'specimenTitle', { name });
@@ -255,6 +263,31 @@ const jsonLd = {
 				font-size: 0.92rem;
 				line-height: 1.45;
 			}
+			.related {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: grid;
+				gap: 0.55rem;
+			}
+			.related li {
+				border-top: 1px solid rgba(var(--gray-light), 1);
+				padding-top: 0.5rem;
+			}
+			.related li:first-child {
+				border-top: none;
+				padding-top: 0;
+			}
+			.related a {
+				font-weight: 700;
+				font-size: 0.95rem;
+			}
+			.related p {
+				margin: 0.2rem 0 0;
+				color: rgb(var(--gray-dark));
+				font-size: 0.88rem;
+				line-height: 1.4;
+			}
 			hr {
 				border: none;
 				border-top: 1px solid rgba(var(--gray-light), 1);
@@ -341,6 +374,22 @@ const jsonLd = {
 											)}
 										</div>
 										<p class="summary">{ref.summary}</p>
+									</li>
+								))}
+							</ul>
+						</section>
+					)
+				}
+
+				{
+					related.length > 0 && (
+						<section class="panel">
+							<h2>{t(locale, 'relatedHeading')}</h2>
+							<ul class="related">
+								{related.map((item) => (
+									<li>
+										<a href={localePath(locale, `/slops/${item.id}/`)}>{item.name}</a>
+										<p>{item.description}</p>
 									</li>
 								))}
 							</ul>

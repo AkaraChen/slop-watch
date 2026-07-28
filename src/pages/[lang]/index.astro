@@ -1,12 +1,10 @@
 ---
-import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
+import CatalogList from '../../components/CatalogList.astro';
 import Footer from '../../components/Footer.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { defaultLocale, localePath, locales, type Locale } from '../../i18n/config';
-import { getSlopCopy } from '../../i18n/content';
 import { t } from '../../i18n/ui';
 
 export function getStaticPaths() {
@@ -72,113 +70,7 @@ const jsonLd = [
 				margin: 0;
 				font-size: 1.85rem;
 			}
-			ul.catalog {
-				display: grid;
-				grid-template-columns: repeat(2, minmax(0, 1fr));
-				width: 100%;
-				max-width: 100%;
-				gap: 1.25rem 1.1rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul.catalog > li {
-				min-width: 0;
-				max-width: 100%;
-			}
-			ul.catalog * {
-				text-decoration: none;
-				transition: 0.15s ease;
-			}
-			ul.catalog img.featured {
-				margin-bottom: 0.55rem;
-				border-radius: 8px;
-				width: 100%;
-				height: auto;
-				aspect-ratio: 2 / 1;
-				object-fit: cover;
-			}
-			ul.catalog a.card {
-				display: block;
-				color: inherit;
-				min-width: 0;
-				max-width: 100%;
-				padding: 0.55rem;
-				border: 1px solid rgba(var(--gray-light), 1);
-				border-radius: 10px;
-				background: rgba(255, 255, 255, 0.85);
-			}
-			.card-top {
-				display: flex;
-				align-items: center;
-				gap: 0.5rem;
-				margin-bottom: 0.25rem;
-			}
-			.card-top img.icon {
-				border-radius: 6px;
-				flex-shrink: 0;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1.25;
-				font-size: 1.12rem;
-			}
-			.date {
-				margin: 0 0 0.35rem;
-				color: rgb(var(--gray));
-				font-size: 0.88rem;
-			}
-			.desc {
-				margin: 0 0 0.45rem;
-				color: rgb(var(--gray-dark));
-				font-size: 0.95rem;
-				line-height: 1.45;
-				display: -webkit-box;
-				-webkit-line-clamp: 4;
-				-webkit-box-orient: vertical;
-				overflow: hidden;
-			}
-			.meta-row {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 0.3rem 0.55rem;
-				align-items: center;
-				font-size: 0.8rem;
-				color: rgb(var(--gray));
-			}
-			.badge {
-				display: inline-block;
-				padding: 0.08rem 0.45rem;
-				border-radius: 999px;
-				background: rgba(var(--gray-light), 0.95);
-				text-transform: uppercase;
-				letter-spacing: 0.02em;
-				font-size: 0.72rem;
-			}
-			.badge.featured {
-				background: color-mix(in srgb, var(--accent) 18%, white);
-				color: var(--accent-dark);
-			}
-			/* Hover effects only on devices that support real hover (not touch phones) */
-			@media (hover: hover) and (pointer: fine) {
-				ul.catalog a.card:hover {
-					border-color: color-mix(in srgb, var(--accent) 35%, white);
-					box-shadow: var(--box-shadow);
-				}
-				ul.catalog a.card:hover .title {
-					color: var(--accent);
-				}
-				ul.catalog a.card:hover img.featured {
-					box-shadow: var(--box-shadow);
-					transform: translateY(-1px);
-				}
-			}
 			@media (max-width: 720px) {
-				ul.catalog {
-					grid-template-columns: 1fr;
-					gap: 1rem;
-				}
 				.page-head h1 {
 					font-size: 1.55rem;
 				}
@@ -191,73 +83,7 @@ const jsonLd = [
 			<section class="page-head">
 				<h1>{t(locale, 'catalogHeading')}</h1>
 			</section>
-			<section>
-				<ul class="catalog">
-					{
-						slops.map((slop) => {
-							const copy = getSlopCopy(slop.id, locale, {
-								description: slop.data.description,
-								reason: slop.data.reason,
-							});
-							return (
-								<li>
-									<a class="card" href={localePath(locale, `/slops/${slop.id}/`)}>
-										<Image
-											class="featured"
-											width={480}
-											height={270}
-											src={slop.data.featuredImage}
-											alt={t(locale, 'featuredImageAlt', { name: slop.data.name })}
-										/>
-										<div class="card-body">
-											<div class="card-top">
-												{slop.data.icon && (
-													<Image
-														class="icon"
-														width={24}
-														height={24}
-														src={slop.data.icon}
-														alt=""
-													/>
-												)}
-												<h2 class="title">{slop.data.name}</h2>
-											</div>
-											<p class="date">
-												<FormattedDate date={slop.data.publishedAt} locale={locale} />
-											</p>
-											<p class="desc">{copy.description}</p>
-											<div class="meta-row">
-												<span class:list={['badge', slop.data.status]}>
-													{slop.data.status}
-												</span>
-												{slop.data.lastVerifiedAt && (
-												<span class="verified-mini">
-													{t(locale, 'lastVerified', {
-														date: slop.data.lastVerifiedAt.toLocaleDateString(undefined, {
-															year: 'numeric',
-															month: 'short',
-															day: 'numeric',
-														}),
-													})}
-												</span>
-											)}
-											<span>
-													{t(locale, 'referencesCount', {
-														n: slop.data.references.length,
-													})}
-												</span>
-												{slop.data.tags.slice(0, 3).map((tag) => (
-													<span>#{tag}</span>
-												))}
-											</div>
-										</div>
-									</a>
-								</li>
-							);
-						})
-					}
-				</ul>
-			</section>
+			<CatalogList locale={locale} slops={slops} />
 		</main>
 		<Footer locale={locale} />
 	</body>

@@ -2,20 +2,24 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import SlopEntry from '../../layouts/SlopEntry.astro';
 import { defaultLocale } from '../../i18n/config';
-import { getLocalizedSlop } from '../../i18n/content';
+import { getLocalizedSlop, getSlopCopy } from '../../i18n/content';
+import { relatedSlops } from '../../lib/related';
 
 export async function getStaticPaths() {
 	const slops = await getCollection('slops');
 	return slops.map((slop) => ({
 		params: { slug: slop.id },
-		props: slop,
+		props: { slop, all: slops },
 	}));
 }
 
-type Props = CollectionEntry<'slops'>;
+type Props = {
+	slop: CollectionEntry<'slops'>;
+	all: CollectionEntry<'slops'>[];
+};
 
 const locale = defaultLocale;
-const slop = Astro.props;
+const { slop, all } = Astro.props;
 const { Content } = await render(slop);
 const loc = getLocalizedSlop(
 	slop.id,
@@ -23,6 +27,17 @@ const loc = getLocalizedSlop(
 	{ description: slop.data.description, reason: slop.data.reason },
 	slop.data.references,
 );
+const related = relatedSlops(slop, all, 3).map((entry) => {
+	const copy = getSlopCopy(entry.id, locale, {
+		description: entry.data.description,
+		reason: entry.data.reason,
+	});
+	return {
+		id: entry.id,
+		name: entry.data.name,
+		description: copy.description,
+	};
+});
 ---
 
 <SlopEntry
@@ -32,6 +47,7 @@ const loc = getLocalizedSlop(
 	description={loc.description}
 	reason={loc.reason}
 	references={loc.references}
+	related={related}
 	showBodyFallbackNote={false}
 >
 	<Content />
