@@ -6,7 +6,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://akarachen.github.io/slop-watch',
+	site: 'https://slop-watch.vercel.app',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
