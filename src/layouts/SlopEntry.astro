@@ -8,12 +8,15 @@ import Header from '../components/Header.astro';
 import { localePath, type Locale } from '../i18n/config';
 import { t } from '../i18n/ui';
 
-type Props = CollectionEntry<'slops'>['data'] & {
+type Props = Omit<CollectionEntry<'slops'>['data'], 'references' | 'description' | 'reason'> & {
 	id: string;
 	locale: Locale;
 	description: string;
 	reason: string;
+	references: CollectionEntry<'slops'>['data']['references'];
 	showBodyFallbackNote?: boolean;
+	/** When set, used instead of default <slot /> body (localized HTML) */
+	bodyHtml?: string;
 };
 
 const {
@@ -30,6 +33,7 @@ const {
 	status,
 	references,
 	showBodyFallbackNote = false,
+	bodyHtml,
 } = Astro.props;
 
 const pageTitle = t(locale, 'specimenTitle', { name });
@@ -290,9 +294,11 @@ const jsonLd = {
 				}
 
 				<hr />
-				{showBodyFallbackNote && <p class="fallback-note">{t(locale, 'bodyFallbackNote')}</p>}
+				{showBodyFallbackNote && !bodyHtml && (
+					<p class="fallback-note">{t(locale, 'bodyFallbackNote')}</p>
+				)}
 				<div class="prose-body">
-					<slot />
+					{bodyHtml ? <div class="localized-body" set:html={bodyHtml} /> : <slot />}
 				</div>
 			</article>
 		</main>

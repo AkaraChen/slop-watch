@@ -1,4 +1,6 @@
 import type { Locale } from './config';
+import { extraCopy } from './extra';
+import { mdToHtml } from './md';
 
 export type SlopCopy = {
 	description: string;
@@ -206,4 +208,58 @@ export function getSlopCopy(
 ): SlopCopy {
 	if (locale === 'en') return fallback;
 	return slopCopy[id]?.[locale] ?? fallback;
+}
+
+export type LocalizedReference = {
+	title: string;
+	url: string;
+	summary: string;
+	source?: string;
+	publishedAt?: Date;
+};
+
+export type LocalizedSlop = SlopCopy & {
+	/** Translated body as HTML when overlay exists for locale */
+	bodyHtml?: string;
+	/** EN body still rendered via content collection when bodyHtml missing */
+	hasLocalizedBody: boolean;
+	references: LocalizedReference[];
+};
+
+type BaseRef = {
+	title: string;
+	url: string;
+	summary: string;
+	source?: string;
+	publishedAt?: Date;
+};
+
+/** Merge description/reason/body/refs overlays for a locale. EN uses collection source. */
+export function getLocalizedSlop(
+	id: string,
+	locale: Locale,
+	fallback: SlopCopy,
+	baseReferences: BaseRef[],
+): LocalizedSlop {
+	const copy = getSlopCopy(id, locale, fallback);
+	if (locale === 'en') {
+		return {
+			...copy,
+			hasLocalizedBody: true,
+			references: baseReferences,
+		};
+	}
+	const extra = extraCopy[id]?.[locale];
+	const references = baseReferences.map((ref) => {
+		const over = extra?.references?.[ref.url];
+		return over
+			? { ...ref, title: over.title, summary: over.summary }
+			: ref;
+	});
+	return {
+		...copy,
+		bodyHtml: extra?.body ? mdToHtml(extra.body) : undefined,
+		hasLocalizedBody: Boolean(extra?.body),
+		references,
+	};
 }
