@@ -196,6 +196,45 @@ html[data-theme='dark'] .panel,
 html[data-theme='dark'] ul.catalog a.card {
 	background: #1a1e2a !important;
 }
+
+/* Tag / chip / badge contrast in dark mode (avoid mid-gray on dark panels) */
+@media (prefers-color-scheme: dark) {
+	html:not([data-theme='light']) .tag,
+	html:not([data-theme='light']) .tag-link,
+	html:not([data-theme='light']) .chip,
+	html:not([data-theme='light']) .badge {
+		color: #e8ecf8;
+		border-color: rgba(180, 190, 220, 0.55);
+		background: rgba(70, 78, 110, 0.55);
+	}
+	html:not([data-theme='light']) .chip.is-active,
+	html:not([data-theme='light']) .badge.featured {
+		color: #f0f3ff;
+		border-color: color-mix(in srgb, var(--accent) 55%, #fff);
+		background: color-mix(in srgb, var(--accent) 32%, #1a1e2a);
+	}
+	html:not([data-theme='light']) .tag-link:hover {
+		color: #c5ccff;
+	}
+}
+html[data-theme='dark'] .tag,
+html[data-theme='dark'] .tag-link,
+html[data-theme='dark'] .chip,
+html[data-theme='dark'] .badge {
+	color: #e8ecf8;
+	border-color: rgba(180, 190, 220, 0.55);
+	background: rgba(70, 78, 110, 0.55);
+}
+html[data-theme='dark'] .chip.is-active,
+html[data-theme='dark'] .badge.featured {
+	color: #f0f3ff;
+	border-color: color-mix(in srgb, var(--accent) 55%, #fff);
+	background: color-mix(in srgb, var(--accent) 32%, #1a1e2a);
+}
+html[data-theme='dark'] .tag-link:hover {
+	color: #c5ccff;
+}
+
 a:focus-visible,
 button:focus-visible,
 select:focus-visible {

@@ -122,8 +122,8 @@ const tags = collectTags(slops);
 	}
 	.chip {
 		appearance: none;
-		border: 1px solid rgba(var(--gray-light), 1);
-		background: white;
+		border: 1px solid rgba(var(--gray), 0.4);
+		background: rgba(var(--gray-light), 0.85);
 		color: rgb(var(--gray-dark));
 		border-radius: 999px;
 		padding: 0.22rem 0.65rem;
@@ -132,8 +132,8 @@ const tags = collectTags(slops);
 		line-height: 1.2;
 	}
 	.chip.is-active {
-		border-color: color-mix(in srgb, var(--accent) 45%, white);
-		background: color-mix(in srgb, var(--accent) 14%, white);
+		border-color: color-mix(in srgb, var(--accent) 55%, white);
+		background: color-mix(in srgb, var(--accent) 22%, white);
 		color: var(--accent-dark);
 		font-weight: 700;
 	}
@@ -240,15 +240,17 @@ const tags = collectTags(slops);
 	}
 	.tag-link {
 		appearance: none;
-		border: none;
-		background: transparent;
-		padding: 0;
-		color: rgb(var(--gray));
+		border: 1px solid rgba(var(--gray), 0.4);
+		background: rgba(var(--gray-light), 0.65);
+		border-radius: 4px;
+		padding: 0.05rem 0.35rem;
+		color: rgb(var(--gray-dark));
 		cursor: pointer;
 		font-size: inherit;
 	}
 	.tag-link:hover {
-		color: var(--accent);
+		color: var(--accent-dark);
+		border-color: var(--accent);
 	}
 	@media (hover: hover) and (pointer: fine) {
 		ul.catalog a.card:hover {
