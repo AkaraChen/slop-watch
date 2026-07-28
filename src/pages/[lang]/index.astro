@@ -1,15 +1,22 @@
 ---
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
-import { defaultLocale, localePath } from '../i18n/config';
-import { getSlopCopy } from '../i18n/content';
-import { t } from '../i18n/ui';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { defaultLocale, localePath, locales, type Locale } from '../../i18n/config';
+import { getSlopCopy } from '../../i18n/content';
+import { t } from '../../i18n/ui';
 
-const locale = defaultLocale;
+export function getStaticPaths() {
+	return locales
+		.filter((l) => l !== defaultLocale)
+		.map((lang) => ({ params: { lang } }));
+}
+
+const locale = Astro.params.lang as Locale;
+
 const slops = (await getCollection('slops'))
 	.filter((entry) => entry.data.status !== 'archived')
 	.sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
@@ -23,7 +30,7 @@ const jsonLd = [
 		'@type': 'WebSite',
 		name: siteTitle,
 		description: siteDescription,
-		url: siteUrl,
+		url: new URL(localePath(locale, '/'), siteUrl).href,
 		inLanguage: locale,
 	},
 	{
@@ -31,9 +38,8 @@ const jsonLd = [
 		'@type': 'CollectionPage',
 		name: `${siteTitle} — ${t(locale, 'navCatalog')}`,
 		description: siteDescription,
-		url: siteUrl,
+		url: new URL(localePath(locale, '/'), siteUrl).href,
 		inLanguage: locale,
-		isPartOf: { '@type': 'WebSite', name: siteTitle, url: siteUrl },
 		mainEntity: {
 			'@type': 'ItemList',
 			numberOfItems: slops.length,

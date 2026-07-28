@@ -1,0 +1,73 @@
+---
+import { defaultLocale, localeLabels, localePath, locales, type Locale } from '../i18n/config';
+import { t } from '../i18n/ui';
+
+interface Props {
+	locale: Locale;
+	/** Path without locale prefix, e.g. `/` or `/slops/openclaw/` */
+	path: string;
+}
+
+const { locale, path } = Astro.props;
+---
+
+<nav class="lang-switch" aria-label={t(locale, 'language')}>
+	<span class="label">{t(locale, 'language')}</span>
+	<ul>
+		{
+			locales.map((code) => (
+				<li>
+					<a
+						href={localePath(code, path)}
+						hreflang={code}
+						aria-current={code === locale ? 'page' : undefined}
+						class:list={[{ active: code === locale }]}
+					>
+						{localeLabels[code]}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
+<style>
+	.lang-switch {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		font-size: 0.8rem;
+	}
+	.label {
+		color: rgb(var(--gray));
+		margin-right: 0.15rem;
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	a {
+		padding: 0.15rem 0.45rem;
+		border-radius: 6px;
+		border: 1px solid rgba(var(--gray), 0.25);
+		color: rgb(var(--gray-dark));
+		text-decoration: none;
+	}
+	a.active {
+		border-color: var(--accent);
+		color: var(--accent-dark);
+		font-weight: 700;
+	}
+	a:hover {
+		border-color: var(--accent);
+	}
+	@media (max-width: 720px) {
+		.label {
+			display: none;
+		}
+	}
+</style>

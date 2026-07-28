@@ -1,6 +1,8 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import SlopEntry from '../../layouts/SlopEntry.astro';
+import { defaultLocale } from '../../i18n/config';
+import { getSlopCopy } from '../../i18n/content';
 
 export async function getStaticPaths() {
 	const slops = await getCollection('slops');
@@ -12,10 +14,22 @@ export async function getStaticPaths() {
 
 type Props = CollectionEntry<'slops'>;
 
+const locale = defaultLocale;
 const slop = Astro.props;
 const { Content } = await render(slop);
+const copy = getSlopCopy(slop.id, locale, {
+	description: slop.data.description,
+	reason: slop.data.reason,
+});
 ---
 
-<SlopEntry id={slop.id} {...slop.data}>
+<SlopEntry
+	id={slop.id}
+	locale={locale}
+	{...slop.data}
+	description={copy.description}
+	reason={copy.reason}
+	showBodyFallbackNote={false}
+>
 	<Content />
 </SlopEntry>

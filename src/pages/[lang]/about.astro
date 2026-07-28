@@ -1,11 +1,17 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { defaultLocale, localePath } from '../i18n/config';
-import { t } from '../i18n/ui';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { defaultLocale, localePath, locales, type Locale } from '../../i18n/config';
+import { t } from '../../i18n/ui';
 
-const locale = defaultLocale;
+export function getStaticPaths() {
+	return locales
+		.filter((l) => l !== defaultLocale)
+		.map((lang) => ({ params: { lang } }));
+}
+
+const locale = Astro.params.lang as Locale;
 const siteUrl = Astro.site?.href ?? 'https://slop-watch.vercel.app/';
 const aboutDescription = t(locale, 'aboutMetaDescription');
 const jsonLd = {
@@ -16,6 +22,16 @@ const jsonLd = {
 	url: new URL(localePath(locale, '/about/'), siteUrl).href,
 	inLanguage: locale,
 	isPartOf: { '@type': 'WebSite', name: t(locale, 'siteTitle'), url: siteUrl },
+};
+
+const aboutH1: Record<Locale, string> = {
+	en: 'About Slop Watch',
+	zh: '关于 Slop Watch',
+	de: 'Über Slop Watch',
+	it: 'Info su Slop Watch',
+	ja: 'Slop Watch について',
+	ko: 'Slop Watch 소개',
+	es: 'Acerca de Slop Watch',
 };
 ---
 
@@ -33,7 +49,7 @@ const jsonLd = {
 	<body>
 		<Header locale={locale} path="/about/" />
 		<main>
-			<h1>About Slop Watch</h1>
+			<h1>{aboutH1[locale]}</h1>
 			<p set:html={t(locale, 'aboutP1')} />
 			<p set:html={t(locale, 'aboutP2')} />
 			<p set:html={t(locale, 'aboutP3')} />

@@ -38,10 +38,14 @@ Schema lives in `src/content.config.ts`.
 
 ## Pages
 
-- `/` — catalog list (featured first, then by date)
-- `/slops/<slug>/` — entry detail (reason + references + body)
-- `/about` — project blurb
+- `/` — catalog (English default)
+- `/zh/`, `/de/`, `/it/`, `/ja/`, `/ko/`, `/es/` — same UI + translated description/reason
+- `/slops/<slug>/` and `/{lang}/slops/<slug>/` — entry detail
+- `/about/` and `/{lang}/about/`
 - `/rss.xml` — feed of entries
+
+Locales: `en` (default, no prefix), `zh`, `de`, `it`, `ja`, `ko`, `es`.
+UI strings: `src/i18n/ui.ts`. Content overlays: `src/i18n/content.ts`.
 
 ## License
 

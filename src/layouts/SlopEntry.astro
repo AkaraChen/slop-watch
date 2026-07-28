@@ -5,12 +5,20 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import { SITE_TITLE } from '../consts';
+import { localePath, type Locale } from '../i18n/config';
+import { t } from '../i18n/ui';
 
-type Props = CollectionEntry<'slops'>['data'] & { id: string };
+type Props = CollectionEntry<'slops'>['data'] & {
+	id: string;
+	locale: Locale;
+	description: string;
+	reason: string;
+	showBodyFallbackNote?: boolean;
+};
 
 const {
 	id,
+	locale,
 	name,
 	description,
 	link,
@@ -21,13 +29,15 @@ const {
 	tags,
 	status,
 	references,
+	showBodyFallbackNote = false,
 } = Astro.props;
 
-const pageTitle = `${name} · AI Slop specimen · ${SITE_TITLE}`;
+const pageTitle = t(locale, 'specimenTitle', { name });
 const metaDescription =
 	description.length > 155 ? `${description.slice(0, 152).trimEnd()}…` : description;
 const siteUrl = Astro.site?.href ?? 'https://slop-watch.vercel.app/';
-const pageUrl = new URL(`/slops/${id}/`, siteUrl).href;
+const pagePath = `/slops/${id}/`;
+const pageUrl = new URL(localePath(locale, pagePath), siteUrl).href;
 const imageUrl = new URL(featuredImage.src, siteUrl).href;
 
 const jsonLd = {
@@ -35,11 +45,12 @@ const jsonLd = {
 	'@type': 'Article',
 	headline: name,
 	description,
+	inLanguage: locale,
 	image: [imageUrl],
 	datePublished: publishedAt.toISOString(),
 	mainEntityOfPage: pageUrl,
-	author: { '@type': 'Organization', name: SITE_TITLE },
-	publisher: { '@type': 'Organization', name: SITE_TITLE, url: siteUrl },
+	author: { '@type': 'Organization', name: t(locale, 'siteTitle') },
+	publisher: { '@type': 'Organization', name: t(locale, 'siteTitle'), url: siteUrl },
 	about: {
 		'@type': 'SoftwareApplication',
 		name,
@@ -49,11 +60,13 @@ const jsonLd = {
 };
 ---
 
-<html lang="en">
+<html lang={locale}>
 	<head>
 		<BaseHead
 			title={pageTitle}
 			description={metaDescription}
+			locale={locale}
+			path={pagePath}
 			image={featuredImage}
 			type="article"
 			publishedAt={publishedAt}
@@ -186,6 +199,12 @@ const jsonLd = {
 				font-size: 0.85rem;
 				color: rgb(var(--gray));
 			}
+			.fallback-note {
+				font-size: 0.9rem;
+				color: rgb(var(--gray));
+				font-style: italic;
+				margin: 0 0 1rem;
+			}
 			hr {
 				border: none;
 				border-top: 1px solid rgba(var(--gray-light), 1);
@@ -194,25 +213,26 @@ const jsonLd = {
 		</style>
 	</head>
 	<body>
-		<Header />
+		<Header locale={locale} path={pagePath} />
 		<main>
 			<article>
 				<div class="hero-image">
-					<Image width={1020} height={510} src={featuredImage} alt={`Featured image for ${name}`} />
+					<Image
+						width={1020}
+						height={510}
+						src={featuredImage}
+						alt={t(locale, 'featuredImageAlt', { name })}
+					/>
 				</div>
 				<div class="prose">
 					<div class="header-block">
 						<div class="title-row">
-							{
-								icon && (
-									<Image class="icon" width={56} height={56} src={icon} alt="" />
-								)
-							}
+							{icon && <Image class="icon" width={56} height={56} src={icon} alt="" />}
 							<h1>{name}</h1>
 						</div>
 						<div class="meta">
 							<span class:list={['badge', status]}>{status}</span>
-							<span><FormattedDate date={publishedAt} /></span>
+							<span><FormattedDate date={publishedAt} locale={locale} /></span>
 							{
 								tags.length > 0 && (
 									<span class="tags">
@@ -226,20 +246,20 @@ const jsonLd = {
 						<p class="lead">{description}</p>
 						<p>
 							<a class="external" href={link} target="_blank" rel="noopener noreferrer">
-								Open primary link ↗
+								{t(locale, 'openPrimaryLink')}
 							</a>
 						</p>
 					</div>
 
 					<section class="panel">
-						<h2>Why it made the list</h2>
+						<h2>{t(locale, 'whyListed')}</h2>
 						<p>{reason}</p>
 					</section>
 
 					{
 						references.length > 0 && (
 							<section class="panel">
-								<h2>References ({references.length})</h2>
+								<h2>{t(locale, 'referencesHeading', { n: references.length })}</h2>
 								<ul class="references">
 									{references.map((ref) => (
 										<li>
@@ -251,7 +271,9 @@ const jsonLd = {
 											<div class="ref-meta">
 												{ref.source && <span>{ref.source}</span>}
 												{ref.source && ref.publishedAt && <span> · </span>}
-												{ref.publishedAt && <FormattedDate date={ref.publishedAt} />}
+												{ref.publishedAt && (
+													<FormattedDate date={ref.publishedAt} locale={locale} />
+												)}
 											</div>
 											<p class="summary">{ref.summary}</p>
 										</li>
@@ -262,10 +284,11 @@ const jsonLd = {
 					}
 
 					<hr />
+					{showBodyFallbackNote && <p class="fallback-note">{t(locale, 'bodyFallbackNote')}</p>}
 					<slot />
 				</div>
 			</article>
 		</main>
-		<Footer />
+		<Footer locale={locale} />
 	</body>
 </html>
