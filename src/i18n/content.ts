@@ -166,37 +166,37 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 			description:
 				'Vercel Labs 实验性「给 Agent 用的」语言：图原生程序库、.0 投影、agent patch/query，而非文本 diff。面向原生二进制与 agent 友好诊断。',
 			reason:
-				'与 scriptc/native 同波次的重量级 agent 工具链垃圾。话术是 agent 编辑语义图而非脆弱文本——公开 tracker 与 18 bug 审计却显示默认 macOS 宿主上的错码与可靠性漏洞（i64 比较发成 32 位 CMP、栈帧静默截断 segfault、动态数组 set 清掉 borrow）。社区 issue #181 标题直译为「低代码质量。别在你机器上跑」；维护者认账并说在招人。',
+				'与 scriptc/native 同波次的重量级 agent 工具链垃圾。话术是 agent 编辑语义图而非脆弱文本——公开 tracker 与 18 bug 审计却显示默认 macOS 宿主上的错码与健全性漏洞（i64 比较发成 32 位 CMP、栈帧静默截断 segfault、动态数组 set 清掉 borrow）。社区 issue #181 标题直译为「低代码质量。别在你机器上跑」；维护者认账并说在招人。知乎长文进一步记录 agent 驱动的 thrash（公开吐槽后整棵 compiler-zero 树被删）、time/rand/fs 等被砸进 IR 而非正经 runtime、所谓 runtime 模块主要只覆盖 http/json 而硬编码仍在、所有权叙事配上薄薄的 checker 体量——效果处理器等「时髦特性」盖在喜剧级管线上。当你的 pitch 是「过期哈希写入前拒绝」而 #425 是「错误的模块哈希比较」，笑点自己写完了。',
 		},
 		de: {
 			description:
 				'Experimentelle „Programmiersprache für Agenten“ von Vercel Labs: graph-native DB, .0-Projektionen, Agent-Patch/Query statt Text-Diffs.',
 			reason:
-				'Schwergewichtiger Agent-Toolchain-Slop. Pitch: semantische Graphen — Tracker und 18-Bug-Audit zeigen Wrong-Code/Soundness auf macOS (i64 als 32-bit CMP, stille Frame-Trunkierung → SIGSEGV, Borrow-Löcher). Issue #181: „Low code quality. Don’t run this on your machine.“',
+				`Schwergewichtiger Agent-Toolchain-Slop derselben Labs-Welle wie scriptc/native. Pitch: Agents editieren semantische Graphen, nicht fragilen Text — Tracker und 18-Bug-Audit zeigen Wrong-Code/Soundness auf dem Default-macOS-Host (i64 als 32-bit CMP, stille Frame-Trunkierung → SIGSEGV, Borrow-Löcher). Issue #181 heißt wörtlich „Low code quality. Don't run this on your machine“; Maintainer acknowledged und sprechen von Hiring. Chinesische PL-Deep-Dives (Zhihu) belegen agent-getriebenes Thrash (ganze Bäume wie compiler-zero nach Kritik gelöscht), Stdlib-Primitive (time/rand/fs) in die IR gehämmert statt echtem Runtime, ein „runtime“-Modul, das vor allem http/json abdeckt während Hardcoding bleibt, und Ownership-Story mit dünnem Checker — Mode-Features (Effect Handlers) auf Comedy-Plumbing. Pitch „stale hashes rejected before write“, #425 „incorrect module hash comparison“ — der Witz schreibt sich selbst.`,
 		},
 		it: {
 			description:
 				'Linguaggio sperimentale Vercel Labs “per agenti”: DB a grafo, proiezioni .0, patch/query agent invece di diff di testo.',
 			reason:
-				'Slop pesante di toolchain agent. Pitch: grafi semantici — audit a 18 bug con wrong-code su macOS (i64→CMP 32-bit, frame troncati→SIGSEGV, borrow). Issue #181: “Low code quality. Don’t run this on your machine.”',
+				`Slop pesante di toolchain agent dalla stessa ondata Labs di scriptc/native. Pitch: gli agent editano grafi semantici, non testo fragile — tracker e audit a 18 bug mostrano wrong-code/soundness sul host macOS di default (i64 come CMP a 32 bit, frame troncati → SIGSEGV, buchi di borrow). Issue #181 si intitola letteralmente “Low code quality. Don't run this on your machine”; i maintainer riconoscono e parlano di hiring. Deep-dive cinesi (Zhihu) documentano thrash agent-driven (interi alberi come compiler-zero cancellati dopo critiche), primitive stdlib (time/rand/fs) inchiodate nell'IR invece di un runtime vero, un modulo “runtime” soprattutto http/json mentre l'hardcoding resta, e ownership con checker sottile — feature di moda (effect handlers) su plumbing da commedia. Pitch “stale hashes rejected before write”, #425 “incorrect module hash comparison”: la battuta si scrive da sola.`,
 		},
 		ja: {
 			description:
 				'Vercel Labsの実験的「エージェント向け」言語。グラフ原生、.0投影、テキストdiffではなくagent patch/query。',
 			reason:
-				'scriptc/native同波の重量級ツールチェインスロップ。売りは意味グラフ——公開トラッカーと18バグ監査はmacOS上の誤コード/健全性穴（i64が32bit CMP、フレーム切り捨てsegfault、borrow）。#181「Low code quality. Don’t run this on your machine。」',
+				`scriptc/native 同波の重量級 agent ツールチェーン・スロップ。売りは「テキストではなく意味グラフを編集」——公開 tracker と 18 バグ監査はデフォルト macOS ホスト上の誤コード/健全性穴（i64 が 32bit CMP、フレーム黙って切り詰め→SIGSEGV、borrow 穴）。issue #181 のタイトルは文字どおり「Low code quality. Don't run this on your machine」；メンテナは認めて採用中と述べた。知乎の長文はさらに agent 駆動 thrash（批判後に compiler-zero ツリー丸ごと削除）、time/rand/fs をまともな runtime ではなく IR に叩き込む、http/json 中心の「runtime」モジュールでもハードコードは残る、薄い checker 上の ownership 物語——effect handler などの流行機能がコメディ配管の上に乗っている、と記録する。pitch が「stale hash は書き込み前拒否」で #425 が「incorrect module hash comparison」なら、オチは自分で書ける。`,
 		},
 		ko: {
 			description:
 				'Vercel Labs 실험적 “에이전트용” 언어. 그래프 네이티브, .0 투영, 텍스트 diff 대신 agent patch/query.',
 			reason:
-				'scriptc/native과 같은 파동의 중량급 툴체인 슬롭. 피치는 시맨틱 그래프—트래커와 18버그 감사는 macOS wrong-code/사운드니스(i64→32bit CMP, 프레임 절단 segfault, borrow). #181: “Low code quality. Don’t run this on your machine.”',
+				`scriptc/native과 같은 Labs 파동의 중량급 에이전트 툴체인 슬롭. 피치는 에이전트가 취약한 텍스트가 아니라 시맨틱 그래프를 편집한다는 것—공개 트래커와 18버그 감사는 기본 macOS 호스트의 wrong-code/사운드니스(i64가 32bit CMP, 프레임 묵시 절단→SIGSEGV, borrow 구멍)를 보여 준다. issue #181 제목은 말 그대로 “Low code quality. Don't run this on your machine”; 메인테이너는 인정하고 채용 중이라고 했다. 중국어 PL 딥다이브(Zhihu)는 에이전트 주도 thrash(비판 후 compiler-zero 트리 통째 삭제), time/rand/fs를 진짜 런타임이 아니라 IR에 박아 넣음, http/json 위주의 “runtime” 모듈인데 하드코딩은 남음, 얇은 checker 위의 ownership 스토리—effect handler 같은 유행 기능이 코미디 배관 위에 얹힘—을 추가로 기록한다. 피치가 “stale hash는 쓰기 전 거부”인데 #425가 “incorrect module hash comparison”이면 개그는 스스로 쓴다.`,
 		},
 		es: {
 			description:
 				'Lenguaje experimental de Vercel Labs “para agentes”: base en grafo, proyecciones .0, patch/query de agente en vez de diffs de texto.',
 			reason:
-				'Slop pesado de toolchain de agentes. Pitch: grafos semánticos — tracker y auditoría de 18 bugs con wrong-code en macOS (i64 como CMP de 32 bits, frames truncados→SIGSEGV, borrow). Issue #181: “Low code quality. Don’t run this on your machine.”',
+				`Slop pesado de toolchain de agentes de la misma ola Labs que scriptc/native. Pitch: los agentes editan grafos semánticos, no texto frágil — el tracker y la auditoría de 18 bugs muestran wrong-code/soundness en el host macOS por defecto (i64 como CMP de 32 bits, frames truncados → SIGSEGV, agujeros de borrow). El issue #181 se titula literalmente “Low code quality. Don't run this on your machine”; los maintainers reconocen y hablan de hiring. Deep-dives chinos (Zhihu) documentan thrash impulsado por agentes (árboles enteros como compiler-zero borrados tras críticas), primitivas de stdlib (time/rand/fs) metidas en el IR en vez de un runtime real, un módulo “runtime” sobre todo http/json mientras el hardcoding sigue, y ownership con checker delgado — features de moda (effect handlers) sobre fontanería de comedia. Pitch “stale hashes rejected before write”, #425 “incorrect module hash comparison”: el chiste se escribe solo.`,
 		},
 	},
 };

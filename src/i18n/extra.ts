@@ -1052,12 +1052,13 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	zerolang: {
 		zh: {
-			body: `Zerolang 是 **披着 agent 皮的编译器质量 slop**：话术是给 agent 语义确定性；公开证据是默认 Mac 后端上的错码与「别在你机器上跑」。图优先乌托邦，segfault 第二现实。
+			body: `Zerolang 是 **披着 agent 皮的编译器质量 slop**：话术是给 agent 语义确定性；公开证据是错码、「别在你机器上跑」，以及社区逆向——agent 原生故事坐在 IR 硬编码与 thrash 树上。
 
 ### 硬信号
 - 主干上有 repro 的错码 / 健全性发现（#318）
 - 宿主平台后端缺口（#230）
 - 社区与维护者对低质量的明确认账（#181）
+- 知乎深挖：stdlib 砸进 IR、cosmetic runtime 模块、公开吐槽后整棵编译器树被 agent 驱动删除
 - 与 scriptc/native 同套 Labs 包装：叙事优先，排干其次`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
@@ -1088,16 +1089,25 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 					title: `Vercel Labs 营销框架（agent 图，不是文本）`,
 					summary: `官方 X 账号 pitch：图优先、可验证重构；实验性表述常被发布热度淹没。`,
 				},
+				'https://zhuanlan.zhihu.com/p/2039725076204016063': {
+					title: `PL Nerd 迎来惊天大变 · Vibe Coder 喜提 AI 原生（zerolang 扒代码）`,
+					summary: `中文长文吐槽 Zero/zerolang 作为「agent 原生」语言，实现读起来像反 hump 行为艺术——记录粗糙 IR 与编译器结构，如何拆穿 graph-first 营销。`,
+				},
+				'https://www.zhihu.com/question/2040211383581685307/answer/2040244239687279555': {
+					title: `如何评价 Vercel 近期发布的 Zero 编程语言？（续扒）`,
+					summary: `续篇：批判后 compiler-zero 整树被删；time/rand/fs 仍在 IR 里建模；新「runtime」多为 http/json 而硬编码仍在；巨大的 EmitContext/RuntimePatch 面；薄 checker 上的 ownership/effect-handler 时尚——社区证据：agent thrash 树的速度压过质量落地。`,
+				},
 			},
 		},
 		de: {
-			body: `Zerolang ist **Compiler-Qualitätsslop im Agent-Kostüm**: Pitch ist semantische Sicherheit für Agents; die öffentliche Evidenz ist Wrong-Code und „don’t run this“ auf dem Default-Mac-Backend. Graph-first-Utopie, Segfault-second-Realität.
+			body: `Zerolang es **slop de calidad de compilador con cosplay de agente**: el pitch es certeza semántica para agentes; la evidencia pública es wrong-code, “don't run this”, e ingeniería inversa de la comunidad que muestra la historia agent-native sentada sobre hardcodes de IR y árboles thrash.
 
-### Harte Signale
-- Wrong-Code-/Soundness-Funde mit Repros auf main (#318)
-- Host-Backend-Lücken (#230)
-- Explizites Community- + Maintainer-Eingeständnis niedriger Qualität (#181)
-- Gleiches Labs-Packaging wie scriptc/native (Narrativ zuerst, Drain später)`,
+### Señales duras
+- Hallazgos de wrong-code / soundness con repros en main (#318)
+- Huecos del backend host (#230)
+- Reconocimiento explícito de baja calidad por comunidad + maintainers (#181)
+- Deep-dives chinos: stdlib horneada en el IR, módulo runtime cosmético, borrado impulsado por agentes de árboles enteros del compilador tras asados públicos
+- Mismo packaging Labs que scriptc/native (narrativa primero, drenaje después)`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `README-Sicherheitswarnung`,
@@ -1127,15 +1137,24 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 					title: `Vercel-Labs-Marketing (Agent-Graph, nicht Text)`,
 					summary: `Offizieller X-Pitch: graph-first, verifizierbares Refactor; experimenteller Rahmen oft unter Launch-Energie begraben.`,
 				},
+				'https://zhuanlan.zhihu.com/p/2039725076204016063': {
+					title: `PL Nerd 迎来惊天大变 · Vibe Coder 喜提 AI 原生 (zerolang-Code-Roast)`,
+					summary: `Chinesischer Langform-Roast von Zero/zerolang als „agent-native“ Sprache, deren Implementierung wie Anti-Hype-Performance-Art wirkt — dokumentiert grobe IR und Compiler-Struktur gegen das Graph-first-Marketing.`,
+				},
+				'https://www.zhihu.com/question/2040211383581685307/answer/2040244239687279555': {
+					title: `Wie ist Zero von Vercel zu bewerten? (Fortsetzung)`,
+					summary: `Follow-up: compiler-zero-Baum nach Kritik gelöscht; time/rand/fs weiter in IR; neues „runtime“ vor allem http/json bei bleibendem Hardcoding; riesige EmitContext/RuntimePatch-Fläche; Ownership/Effect-Handler-Mode auf dünnem Checker — Community-Evidenz, dass Agents den Baum schneller thrashen als Qualität landet.`,
+				},
 			},
 		},
 		it: {
-			body: `Zerolang è **slop di qualità del compilatore in cosplay da agent**: il pitch è certezza semantica per gli agent; l’evidenza pubblica è wrong-code e “don’t run this” sul backend Mac di default. Utopia graph-first, realtà segfault-second.
+			body: `Zerolang è **slop di qualità del compilatore in cosplay da agent**: il pitch è certezza semantica per gli agent; l'evidenza pubblica è wrong-code, “don't run this”, e reverse-engineering di comunità che mostra la storia agent-native seduta su hardcode IR e alberi thrash.
 
 ### Segnali duri
 - Finding di wrong-code / soundness con repro su main (#318)
 - Buchi del backend host (#230)
 - Ammissione esplicita di bassa qualità da community + maintainer (#181)
+- Deep-dive cinesi: stdlib cotta nell'IR, modulo runtime cosmetico, delete agent-driven di interi alberi del compilatore dopo roast pubblici
 - Stesso packaging Labs di scriptc/native (narrativa prima, drain dopo)`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
@@ -1166,15 +1185,24 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 					title: `Framing marketing Vercel Labs (grafo agent, non testo)`,
 					summary: `Pitch ufficiale su X: graph-first, refactor verificato; il framing sperimentale spesso sommerso dall’energia di launch.`,
 				},
+				'https://zhuanlan.zhihu.com/p/2039725076204016063': {
+					title: `PL Nerd 迎来惊天大变 · Vibe Coder 喜提 AI 原生 (roast del codice zerolang)`,
+					summary: `Long-form cinese su Zero/zerolang come linguaggio “agent-native” la cui implementazione sembra performance art anti-hype — documenta IR grezzo e struttura del compilatore che smontano il marketing graph-first.`,
+				},
+				'https://www.zhihu.com/question/2040211383581685307/answer/2040244239687279555': {
+					title: `Come valutare Zero di Vercel? (seguito)`,
+					summary: `Seguito: albero compiler-zero cancellato dopo critiche; time/rand/fs ancora modellati in IR; nuovo “runtime” soprattutto http/json mentre l’hardcoding resta; superficie enorme EmitContext/RuntimePatch; ownership/effect-handler di moda su checker sottile — evidenza di comunità che gli agent thrashano l’albero più in fretta di quanto atterri la qualità.`,
+				},
 			},
 		},
 		ja: {
-			body: `Zerolang は **エージェントのコスプレをしたコンパイラ品質スロップ**：売りは agent 向け意味的確実性；公開証拠はデフォルト Mac バックエンド上の誤コードと「自分のマシンで走らせるな」。グラフ優先ユートピア、segfault が第二の現実。
+			body: `Zerolang は **エージェントのコスプレをしたコンパイラ品質スロップ**：売りは agent 向け意味的確実性；公開証拠は誤コードと「自分のマシンで走らせるな」、そしてコミュニティのリバース——agent ネイティブ物語が IR ハードコードと thrash ツリーの上に座っていること。
 
 ### ハードシグナル
 - main 上で repro 付きの wrong-code / soundness 発見（#318）
 - ホスト基盤バックエンドの穴（#230）
 - 低品質に対するコミュニティとメンテナの明示的認（#181）
+- 中国語の深掘り：IR に焼き込まれた stdlib、cosmetic な runtime モジュール、公開批判後に agent 駆動でコンパイラツリー丸ごと削除
 - scriptc/native と同じ Labs 包装：ナラティブ優先、掃除は後回し`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
@@ -1205,15 +1233,24 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 					title: `Vercel Labs のマーケティング枠（agent グラフ、テキストではない）`,
 					summary: `公式 X の pitch：graph-first、検証可能な refactor；実験的フレーミングはローンチ熱に埋もれがち。`,
 				},
+				'https://zhuanlan.zhihu.com/p/2039725076204016063': {
+					title: `PL Nerd 迎来惊天大变 · Vibe Coder 喜提 AI 原生（zerolang コード解剖）`,
+					summary: `Zero/zerolang を「agent ネイティブ」言語として扱う中国語長文のロースト。実装がアンチハイプの行為芸術のように読めるとし、粗い IR とコンパイラ構造が graph-first マーケを掘り崩すと記録。`,
+				},
+				'https://www.zhihu.com/question/2040211383581685307/answer/2040244239687279555': {
+					title: `Vercel の Zero 言語をどう評価するか？（続編）`,
+					summary: `続編：批判後に compiler-zero ツリー削除；time/rand/fs は依然 IR モデル；新「runtime」は主に http/json でハードコードは残る；巨大な EmitContext/RuntimePatch；薄い checker 上の ownership/effect-handler 流行——agent が品質着地より速くツリーを thrash するコミュニティ証拠。`,
+				},
 			},
 		},
 		ko: {
-			body: `Zerolang은 **에이전트 코스프레를 한 컴파일러 품질 슬롭**이다. 피치는 에이전트를 위한 의미적 확실성; 공개 증거는 기본 Mac 백엔드의 wrong-code와 “네 머신에서 돌리지 마”. 그래프 우선 유토피아, segfault가 두 번째 현실.
+			body: `Zerolang은 **에이전트 코스프레를 한 컴파일러 품질 슬롭**이다. 피치는 에이전트를 위한 의미적 확실성; 공개 증거는 wrong-code와 “네 머신에서 돌리지 마”, 그리고 커뮤니티 리버스—에이전트 네이티브 스토리가 IR 하드코딩과 thrash 트리 위에 앉아 있다는 것.
 
 ### 하드 시그널
 - main에서 repro 있는 wrong-code/사운드니스 발견(#318)
 - 호스트 플랫폼 백엔드 구멍(#230)
 - 커뮤니티+메인테이너의 저품질 명시 인정(#181)
+- 중국어 딥다이브: IR에 구운 stdlib, 화장용 runtime 모듈, 공개 비판 후 에이전트 주도로 컴파일러 트리 통째 삭제
 - scriptc/native과 같은 Labs 패키징: 내러티브 먼저, 정리는 나중`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
@@ -1244,15 +1281,24 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 					title: `Vercel Labs 마케팅 프레이밍(에이전트 그래프, 텍스트 아님)`,
 					summary: `공식 X 피치: graph-first, 검증 가능한 리팩터; 실험 프레이밍은 런치 열기에 자주 묻힘.`,
 				},
+				'https://zhuanlan.zhihu.com/p/2039725076204016063': {
+					title: `PL Nerd 迎来惊天大变 · Vibe Coder 喜提 AI 原生 (zerolang 코드 해부)`,
+					summary: `Zero/zerolang을 “에이전트 네이티브” 언어로 다루는 중국어 장문 로스트. 구현이 안티-하이프 행위예술처럼 읽힌다고 보며, 거친 IR과 컴파일러 구조가 graph-first 마케팅을 깎는다고 기록.`,
+				},
+				'https://www.zhihu.com/question/2040211383581685307/answer/2040244239687279555': {
+					title: `Vercel의 Zero 언어를 어떻게 볼 것인가? (속편)`,
+					summary: `속편: 비판 후 compiler-zero 트리 삭제; time/rand/fs는 여전히 IR 모델링; 새 “runtime”은 주로 http/json이고 하드코딩은 남음; 거대한 EmitContext/RuntimePatch; 얇은 checker 위의 ownership/effect-handler 유행—에이전트가 품질 착지보다 빠르게 트리를 thrash한다는 커뮤니티 증거.`,
+				},
 			},
 		},
 		es: {
-			body: `Zerolang es **slop de calidad de compilador con cosplay de agente**: el pitch es certeza semántica para agentes; la evidencia pública es wrong-code y “don’t run this” en el backend Mac por defecto. Utopía graph-first, realidad segfault-second.
+			body: `Zerolang es **slop de calidad de compilador con cosplay de agente**: el pitch es certeza semántica para agentes; la evidencia pública es wrong-code, “don't run this”, e ingeniería inversa de la comunidad que muestra la historia agent-native sentada sobre hardcodes de IR y árboles thrash.
 
 ### Señales duras
 - Hallazgos de wrong-code / soundness con repros en main (#318)
 - Huecos del backend host (#230)
 - Reconocimiento explícito de baja calidad por comunidad + maintainers (#181)
+- Deep-dives chinos: stdlib horneada en el IR, módulo runtime cosmético, borrado impulsado por agentes de árboles enteros del compilador tras asados públicos
 - Mismo packaging Labs que scriptc/native (narrativa primero, drenaje después)`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
@@ -1282,6 +1328,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 				'https://x.com/zerolangai/status/2063264734108155978': {
 					title: `Framing de marketing de Vercel Labs (grafo agent, no texto)`,
 					summary: `Pitch oficial en X: graph-first, refactor verificado; el marco experimental a menudo queda enterrado bajo la energía del launch.`,
+				},
+				'https://zhuanlan.zhihu.com/p/2039725076204016063': {
+					title: `PL Nerd 迎来惊天大变 · Vibe Coder 喜提 AI 原生 (roast de código zerolang)`,
+					summary: `Largo roast chino de Zero/zerolang como lenguaje “agent-native” cuya implementación parece performance art anti-hype — documenta IR crudo y estructura del compilador que desmontan el marketing graph-first.`,
+				},
+				'https://www.zhihu.com/question/2040211383581685307/answer/2040244239687279555': {
+					title: `¿Cómo valorar Zero de Vercel? (continuación)`,
+					summary: `Seguimiento: árbol compiler-zero borrado tras críticas; time/rand/fs siguen modelados en IR; el nuevo “runtime” es sobre todo http/json y el hardcoding permanece; superficie enorme EmitContext/RuntimePatch; ownership/effect-handler de moda sobre checker delgado — evidencia comunitaria de que los agentes thrash el árbol más rápido de lo que aterriza la calidad.`,
 				},
 			},
 		},
