@@ -46,7 +46,7 @@ function clampMeta(text: string, max = 155): string {
 }
 
 // Leave headroom for HTML entity expansion (e.g. quotes → &quot;) in attributes.
-const metaDescription = clampMeta(description, 148);
+const metaDescription = clampMeta(description.replace(/[“”"']/g, ''), 155);
 const metaTitle = clampMeta(title, 70);
 ---
 
