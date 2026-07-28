@@ -81,5 +81,3 @@ scriptc is **toolchain slop**: a brand-new compiler marketed as eliminating JS r
 - Green builds that fail at load (FFI)
 - Windows users blocked immediately
 - Social graph optimizes for slogans, not issue triage
-
-Update as the issue tracker stabilizes — or if it does not.
