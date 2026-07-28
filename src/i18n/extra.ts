@@ -551,9 +551,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 ### Qualitätswinkel
 - Grüne Builds, die beim Laden scheitern (FFI)
 - Windows-Nutzer sofort blockiert
-- Social Graph optimiert Slogans, nicht Triage
-
-Aktualisieren, wenn der Tracker stabil wird — oder wenn nicht.`,
+- Social Graph optimiert Slogans, nicht Triage`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc Repository`,
@@ -653,9 +651,7 @@ Aktualisieren, wenn der Tracker stabil wird — oder wenn nicht.`,
 ### 品質の切り口
 - ビルドは緑、ロードで落ちる（FFI）
 - Windows ユーザーは即ブロック
-- SNS はスローガン最適化、トリアージではない
-
-トラッカーが落ち着いたら更新——落ち着かなくても。`,
+- SNS はスローガン最適化、トリアージではない`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc リポジトリ`,
@@ -705,9 +701,7 @@ Aktualisieren, wenn der Tracker stabil wird — oder wenn nicht.`,
 ### 품질 각도
 - 빌드는 초록, 로드에서 터짐(FFI)
 - Windows 사용자는 즉시 막힘
-- 소셜 그래프는 슬로건 최적화, 트리아주가 아님
-
-트래커가 안정되면 갱신—안 되어도.`,
+- 소셜 그래프는 슬로건 최적화, 트리아주가 아님`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc 저장소`,
@@ -757,9 +751,7 @@ Aktualisieren, wenn der Tracker stabil wird — oder wenn nicht.`,
 ### Ángulo de calidad
 - Builds verdes que fallan al cargar (FFI)
 - Usuarios de Windows bloqueados de inmediato
-- El grafo social optimiza eslóganes, no el triage
-
-Actualizar cuando el tracker se estabilice — o si no lo hace.`,
+- El grafo social optimiza eslóganes, no el triage`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `Repo vercel-labs/scriptc`,
