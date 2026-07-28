@@ -1,13 +1,17 @@
 ---
 name: scriptc
-description: Vercel Labs TypeScript-to-native compiler that routes TS through a C intermediate and emits binaries without a Node/V8 runtime.
+description: >-
+  Vercel Labs TypeScript→native compiler: TS through a C intermediate, no
+  Node/V8 at runtime — day-one X thread says cold starts are dead; day-one
+  issues say Windows, clang, and silent FFI bugs are very much alive.
 link: https://github.com/vercel-labs/scriptc
 reason: >-
   Fresh compiler drop already exhibiting demo-quality edges: Windows cannot
-  run it cleanly, clang compile failures, silent FFI bugs that build green
-  then throw at load, and dynamic re-export holes with no diagnostics — while
-  X is full of "TS becomes native, cold starts die" engagement posts. That
-  gap between meme and toolchain reliability is the slop.
+  run it cleanly (#10/#25), clang compile failures (#23), silent FFI bugs that
+  build green then throw at load (#21), and dynamic re-export holes with no
+  diagnostics (#19) — while X is wall-to-wall "TS becomes native, cold starts
+  die" engagement bait. That gap between meme and toolchain reliability is
+  the slop: green checkmarks that fail when you actually execute them.
 featuredImage: '../../assets/slops/scriptc-og.png'
 icon: '../../assets/blog-placeholder-5.jpg'
 publishedAt: 2026-07-27
@@ -70,7 +74,7 @@ references:
     publishedAt: 2026-07-28
 ---
 
-scriptc is **toolchain slop**: a brand-new compiler marketed as eliminating JS runtimes while day-one issues show silent wrong code and incomplete platforms.
+scriptc is **toolchain slop**: a brand-new compiler marketed as eliminating JS runtimes while day-one issues show silent wrong code and incomplete platforms. The launch thread ships features; the issue tracker ships truth.
 
 ### Quality angle
 - Green builds that fail at load (FFI)

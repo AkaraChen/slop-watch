@@ -3,31 +3,50 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const aboutDescription =
+	'What Slop Watch is, how entries are maintained, and why “slop” here means quality trash with receipts — not a promo reel.';
+const siteUrl = Astro.site?.href ?? 'https://slop-watch.vercel.app/';
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'AboutPage',
+	name: `About · ${SITE_TITLE}`,
+	description: aboutDescription,
+	url: new URL('/about/', siteUrl).href,
+	isPartOf: { '@type': 'WebSite', name: SITE_TITLE, url: siteUrl },
+};
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`About · ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<BaseHead title={`About · ${SITE_TITLE}`} description={aboutDescription} jsonLd={jsonLd} />
 	</head>
 	<body>
 		<Header />
 		<main>
 			<h1>About Slop Watch</h1>
 			<p>
-				Slop Watch is a showcase catalog of AI Slop — generative mush that floods feeds,
-				search results, and product surfaces. We publish named specimens so people can
-				recognize patterns, not just complain abstractly.
+				Slop Watch is a public landfill catalog of <strong>AI Slop</strong> — products and
+				stacks where quality collapsed: authors cannot stand behind the code, upgrades break
+				for sport, and production incidents / CVEs keep the lights interesting. We name the
+				specimens so the pattern is visible, not just the vibes.
 			</p>
 			<p>
-				Entries are maintained with <strong>Astro Content Collections</strong>. Each slop
-				record includes display assets (name, icon, featured image), a primary link,
-				description, selection reason, and a list of references (links + short overviews).
+				This is <strong>not</strong> a soft “generative mush showcase” and not an endorsement
+				archive. Description says what it is; reason says why it is garbage; references are
+				the receipts (issues, advisories, failure posts).
+			</p>
+			<p>
+				Entries live in <strong>Astro Content Collections</strong>. Each record includes
+				display assets (name, icon, featured image), a primary link, description, selection
+				reason, and references (links + short overviews).
 			</p>
 			<p>
 				To add an entry, drop a Markdown/MDX file under <code>src/content/slops/</code> and
 				fill the frontmatter schema in <code>src/content.config.ts</code>.
 			</p>
+			<p style="color: rgb(var(--gray)); font-size: 0.95rem;">{SITE_DESCRIPTION}</p>
 		</main>
 		<Footer />
 	</body>

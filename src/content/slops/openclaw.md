@@ -1,14 +1,19 @@
 ---
 name: OpenClaw
-description: Self-hosted personal AI assistant controlled via chat apps, multi-model routing, and a skills marketplace — ~380k GitHub stars with a matching pile of open issues.
+description: >-
+  Self-hosted "personal AI operator" you drive from chat apps — multi-model
+  routing, skills marketplace, ~380k GitHub stars… and a matching landfill of
+  open issues. The lobster that asked for your shell and then forgot how to
+  keep the lights on.
 link: https://openclaw.ai/
 reason: >-
-  Classic quality slop. Growth completely outran ownership of the codebase:
-  ~6.6k open issues on the main repo, repeated breaking upgrades, demo-ready
-  agents that fail under real use (gateway/cron/memory/silent task completion),
-  and high-severity security debt including one-click RCE (CVE-2026-25253). The
-  product is marketed as a personal operator while users and researchers keep
-  documenting accidents.
+  Peak quality slop. Growth completely outran ownership of the codebase:
+  ~6.6k open issues on the main repo, upgrade paths that nuke plugins,
+  demo-ready agents that go silent under real use (gateway/cron/memory/false
+  "task complete"), and high-severity security debt including one-click RCE
+  (CVE-2026-25253). Marketed as your always-on operator while users and
+  researchers keep filing accident reports — the issue tracker is the product
+  roadmap, and the roadmap is on fire.
 featuredImage: '../../assets/slops/openclaw-og.png'
 icon: '../../assets/blog-placeholder-5.jpg'
 publishedAt: 2026-07-28
@@ -65,7 +70,7 @@ references:
     source: r/openclaw
 ---
 
-OpenClaw is the catalog's clearest **garbage specimen**: an agent that asks for shell and credentials while the project cannot drain its own issue queue or keep installs stable across upgrades.
+OpenClaw is the catalog's clearest **garbage specimen**: an agent that asks for shell and credentials while the project cannot drain its own issue queue or keep installs stable across upgrades. Star count as a personality; reliability as an optional DLC.
 
 ### Hard signals
 - Issue backlog measured in thousands while marketing still ships install funnels
