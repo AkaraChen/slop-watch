@@ -38,31 +38,51 @@ const {
 } = Astro.props;
 
 const pageTitle = t(locale, 'specimenTitle', { name });
-const metaDescription =
-	description.length > 155 ? `${description.slice(0, 152).trimEnd()}…` : description;
+const metaDescription = description;
 const siteUrl = Astro.site?.href ?? 'https://slop-watch.vercel.app/';
 const pagePath = `/slops/${id}/`;
 const pageUrl = new URL(localePath(locale, pagePath), siteUrl).href;
 const imageUrl = new URL(featuredImage.src, siteUrl).href;
+const catalogUrl = new URL(localePath(locale, '/'), siteUrl).href;
 
-const jsonLd = {
-	'@context': 'https://schema.org',
-	'@type': 'Article',
-	headline: name,
-	description,
-	inLanguage: locale,
-	image: [imageUrl],
-	datePublished: publishedAt.toISOString(),
-	mainEntityOfPage: pageUrl,
-	author: { '@type': 'Organization', name: t(locale, 'siteTitle') },
-	publisher: { '@type': 'Organization', name: t(locale, 'siteTitle'), url: siteUrl },
-	about: {
-		'@type': 'SoftwareApplication',
-		name,
-		url: link,
+const jsonLd = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Article',
+		headline: name,
+		description,
+		inLanguage: locale,
+		image: [imageUrl],
+		datePublished: publishedAt.toISOString(),
+		mainEntityOfPage: pageUrl,
+		author: { '@type': 'Organization', name: t(locale, 'siteTitle') },
+		publisher: { '@type': 'Organization', name: t(locale, 'siteTitle'), url: siteUrl },
+		about: {
+			'@type': 'SoftwareApplication',
+			name,
+			url: link,
+		},
+		keywords: tags.join(', '),
 	},
-	keywords: tags.join(', '),
-};
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: t(locale, 'navCatalog'),
+				item: catalogUrl,
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name,
+				item: pageUrl,
+			},
+		],
+	},
+];
 ---
 
 <html lang={locale}>

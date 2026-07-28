@@ -19,6 +19,15 @@ export type UiKey =
 	| 'aboutP2'
 	| 'aboutP3'
 	| 'aboutP4'
+	| 'aboutStandardsLink'
+	| 'navStandards'
+	| 'standardsTitle'
+	| 'standardsMetaDescription'
+	| 'standardsH1'
+	| 'standardsP1'
+	| 'standardsP2'
+	| 'standardsP3'
+	| 'standardsP4'
 	| 'footer'
 	| 'specimenTitle'
 	| 'language'
@@ -39,9 +48,10 @@ const en: Record<UiKey, string> = {
 	siteTitle: 'Slop Watch',
 	siteTagline: 'AI Slop, catalogued with receipts.',
 	siteDescription:
-		'The public landfill of AI products that ship hard, break harder, and leave CVEs, open-issue swamps, and vibe-coded dumps in the wreckage. Named. Linked. Documented.',
+		'Public landfill of AI products that ship hard, break harder, and leave CVEs, issue swamps, and vibe-coded wreckage. Named. Linked. Documented.',
 	navCatalog: 'Catalog',
 	navAbout: 'About',
+	navStandards: 'Standards',
 	catalogHeading: 'Catalog of AI Slop',
 	catalogLead:
 		'Each specimen has a name, icon, featured image, primary link, description, selection reason, and receipts (references).',
@@ -61,6 +71,19 @@ const en: Record<UiKey, string> = {
 		'Each entry is a specimen card: name, icon, cover image, primary link, a short description, a selection reason, and a stack of supporting references.',
 	aboutP4:
 		'We curate for evidence, not hype. If the public trail of breakage, security debt, or unowned quality is thin, it does not belong here.',
+	aboutStandardsLink: 'Read our inclusion standards →',
+	standardsTitle: 'Inclusion standards · Slop Watch',
+	standardsMetaDescription:
+		'How Slop Watch chooses specimens: public evidence of quality collapse, not hype or endorsement.',
+	standardsH1: 'Inclusion standards',
+	standardsP1:
+		'We list <strong>AI Slop</strong> — products or stacks where quality is unowned: constant breaking, production incidents, security debt, or marketing that outruns a verifiable engineering bar.',
+	standardsP2:
+		'<strong>In:</strong> named products with public receipts — issues, advisories, CVEs, credible failure reports. Description stays neutral; reason explains why it is garbage; references carry the proof.',
+	standardsP3:
+		'<strong>Out:</strong> promo roundups, anonymous “N% leak” vibes with no product, soft showcases, or entries whose only signal is star count or viral praise.',
+	standardsP4:
+		'Facts stay frozen (links, issue/CVE IDs, measured counts). Tone may be sharp; evidence must still stand. If the public trail is thin, it does not belong here.',
 	footer: '© {year} Slop Watch. Catalog of AI Slop.',
 	specimenTitle: '{name} · AI Slop specimen · Slop Watch',
 	language: 'Language',
@@ -82,9 +105,10 @@ const zh: Record<UiKey, string> = {
 	siteTitle: 'Slop Watch',
 	siteTagline: 'AI 垃圾档案，带收据。',
 	siteDescription:
-		'公开的 AI 产品垃圾填埋场：猛推上线、猛烈崩溃，留下 CVE、issue 堰塞湖与 vibe coding 残骸。有名有姓、有链接、有文档。',
+		'公开的 AI 产品垃圾填埋场：猛推上线、猛烈崩溃，留下 CVE、issue 堰塞湖与 vibe coding 残骸。有名有链接有文档。',
 	navCatalog: '目录',
 	navAbout: '关于',
+	navStandards: '收录标准',
 	catalogHeading: 'AI Slop 目录',
 	catalogLead: '每条标本含名称、图标、封面、主链接、描述、入选理由与参考（收据）。',
 	referencesCount: '{n} 条参考',
@@ -102,6 +126,18 @@ const zh: Record<UiKey, string> = {
 		'每条都是标本卡：名称、图标、封面、主链接、简短描述、入选理由，以及一摞支撑用的参考资料。',
 	aboutP4:
 		'我们按证据收录，不按热度。若公开可核验的崩坏、安全债或质量失控痕迹太薄，这里就不收。',
+	aboutStandardsLink: '阅读收录标准 →',
+	standardsTitle: '收录标准 · Slop Watch',
+	standardsMetaDescription: 'Slop Watch 如何选标本：公开可核验的质量崩坏证据，而不是热度或安利。',
+	standardsH1: '收录标准',
+	standardsP1:
+		'我们刊登 <strong>AI Slop</strong>——质量无人兜底的产品或栈：持续 breaking、线上事故、安全债，或营销远远压过可核验的工程水准。',
+	standardsP2:
+		'<strong>收：</strong>有名有姓、有公开收据的产品——issue、安全通告、CVE、可信翻车报告。描述保持中性；理由说明为何是垃圾；参考资料承担证明。',
+	standardsP3:
+		'<strong>不收：</strong>安利合集、无具名产品的「百分之 N 泄漏」氛围帖、软性展示，或唯一信号只是星标/病毒赞美的条目。',
+	standardsP4:
+		'事实字段冻结（链接、issue/CVE 编号、可计量数字）。语气可以毒，证据必须站得住。公开痕迹太薄，这里就不收。',
 	footer: '© {year} Slop Watch. AI 垃圾目录。',
 	specimenTitle: '{name} · AI 垃圾标本 · Slop Watch',
 	language: '语言',
@@ -126,6 +162,7 @@ const de: Record<UiKey, string> = {
 		'Die öffentliche Müllhalde für KI-Produkte, die hart shippen, härter brechen und CVEs, Issue-Sümpfe und vibe-codierte Trümmer hinterlassen. Benannt. Verlinkt. Dokumentiert.',
 	navCatalog: 'Katalog',
 	navAbout: 'Über uns',
+	navStandards: 'Standards',
 	catalogHeading: 'Katalog des AI Slop',
 	catalogLead:
 		'Jedes Exemplar hat Name, Icon, Bild, Primärlink, Beschreibung, Auswahlgrund und Belege (Referenzen).',
@@ -145,6 +182,19 @@ const de: Record<UiKey, string> = {
 		'Jeder Eintrag ist eine Exemplarkarte: Name, Icon, Titelbild, Primärlink, Kurzbeschreibung, Auswahlgrund und ein Stapel stützender Referenzen.',
 	aboutP4:
 		'Wir kuratieren nach Belegen, nicht nach Hype. Fehlt die öffentliche Spur von Bruch, Security-Schuld oder herrenloser Qualität, gehört es nicht hierher.',
+	aboutStandardsLink: 'Aufnahmekriterien lesen →',
+	standardsTitle: 'Aufnahmekriterien · Slop Watch',
+	standardsMetaDescription:
+		'Wie Slop Watch Exemplare wählt: öffentliche Belege für Qualitätskollaps — kein Hype, keine Werbung.',
+	standardsH1: 'Aufnahmekriterien',
+	standardsP1:
+		'Wir listen <strong>AI Slop</strong> — Produkte oder Stacks ohne Ownership von Qualität: Dauer-Breaking, Produktionsvorfälle, Security-Schuld oder Marketing über der belegbaren Engineering-Latte.',
+	standardsP2:
+		'<strong>Rein:</strong> benannte Produkte mit öffentlichen Belegen — Issues, Advisories, CVEs, glaubwürdige Ausfallberichte. Beschreibung neutral; Grund erklärt den Müll; Referenzen tragen den Beweis.',
+	standardsP3:
+		'<strong>Raus:</strong> Promo-Listen, anonyme „N%-Leak“-Stimmung ohne Produkt, weiche Showcases oder Einträge, deren einziges Signal Sterne oder virales Lob ist.',
+	standardsP4:
+		'Fakten bleiben eingefroren (Links, Issue/CVE-IDs, messbare Zahlen). Ton darf scharf sein; Belege müssen stehen. Dünne öffentliche Spur? Gehört nicht hierher.',
 	footer: '© {year} Slop Watch. Katalog von AI Slop.',
 	specimenTitle: '{name} · AI-Slop-Exemplar · Slop Watch',
 	language: 'Sprache',
@@ -169,6 +219,7 @@ const it: Record<UiKey, string> = {
 		'La discarica pubblica di prodotti AI che spediscono forte, si rompono più forte e lasciano CVE, paludi di issue e rottami vibe-coded. Nominati. Collegati. Documentati.',
 	navCatalog: 'Catalogo',
 	navAbout: 'Info',
+	navStandards: 'Criteri',
 	catalogHeading: 'Catalogo di AI Slop',
 	catalogLead:
 		'Ogni esemplare ha nome, icona, immagine, link principale, descrizione, motivo di selezione e prove (riferimenti).',
@@ -188,6 +239,19 @@ const it: Record<UiKey, string> = {
 		'Ogni voce è una scheda-esemplare: nome, icona, copertina, link principale, breve descrizione, motivo di selezione e un mucchio di riferimenti a supporto.',
 	aboutP4:
 		'Curiamo per evidenza, non per hype. Se la scia pubblica di rotture, debito di sicurezza o qualità senza ownership è sottile, non entra qui.',
+	aboutStandardsLink: 'Leggi i criteri di inclusione →',
+	standardsTitle: 'Criteri di inclusione · Slop Watch',
+	standardsMetaDescription:
+		'Come Slop Watch sceglie gli esemplari: prove pubbliche di collasso di qualità, non hype o endorsement.',
+	standardsH1: 'Criteri di inclusione',
+	standardsP1:
+		'Elenciamo <strong>AI Slop</strong> — prodotti o stack senza ownership della qualità: breaking continui, incidenti, debito di sicurezza o marketing oltre il listone ingegneristico verificabile.',
+	standardsP2:
+		'<strong>Dentro:</strong> prodotti nominati con ricevute pubbliche — issue, advisory, CVE, report di fallimento credibili. Descrizione neutrale; motivo spiega la spazzatura; i riferimenti portano la prova.',
+	standardsP3:
+		'<strong>Fuori:</strong> roundup promo, vibe “N% leak” senza prodotto, showcase soft, o voci il cui unico segnale è stelle o lode virale.',
+	standardsP4:
+		'I fatti restano congelati (link, ID issue/CVE, conteggi misurabili). Il tono può essere tagliente; le prove devono reggere. Scia pubblica sottile? Non entra.',
 	footer: '© {year} Slop Watch. Catalogo di AI Slop.',
 	specimenTitle: '{name} · esemplare AI Slop · Slop Watch',
 	language: 'Lingua',
@@ -212,6 +276,7 @@ const ja: Record<UiKey, string> = {
 		'強硬に出荷し、より強硬に壊れ、CVE・issue沼・バイブコーディングの残骸を残すAI製品の公開埋め立て地。名前付き。リンク付き。文書化。',
 	navCatalog: 'カタログ',
 	navAbout: '概要',
+	navStandards: '掲載基準',
 	catalogHeading: 'AIスロップ・カタログ',
 	catalogLead:
 		'各標本には名前・アイコン・画像・主リンク・説明・選定理由・根拠（参考文献）があります。',
@@ -231,6 +296,19 @@ const ja: Record<UiKey, string> = {
 		'各エントリは標本カードです。名前、アイコン、カバー、主リンク、短い説明、選定理由、そして根拠になる参考文献の束。',
 	aboutP4:
 		'熱量ではなく証拠で選びます。公開で追える破綻・セキュリティ負債・品質の放置が薄いなら、ここには載せません。',
+	aboutStandardsLink: '掲載基準を読む →',
+	standardsTitle: '掲載基準 · Slop Watch',
+	standardsMetaDescription:
+		'Slop Watchが標本を選ぶ方法：品質崩壊の公開証拠であり、熱量や宣伝ではない。',
+	standardsH1: '掲載基準',
+	standardsP1:
+		'<strong>AIスロップ</strong>を掲載します——品質の所有がない製品やスタック：継続的な breaking、本番事故、セキュリティ負債、検証可能な工学水準を超えるマーケ。',
+	standardsP2:
+		'<strong>入れる：</strong>名前があり公開の領収書がある製品——issue、アドバイザリ、CVE、信頼できる失敗報告。説明は中立、理由はなぜゴミか、参考文献が証拠。',
+	standardsP3:
+		'<strong>入れない：</strong>宣伝まとめ、製品のない「N% 漏洩」雰囲気、ソフトなショーケース、星やバズ称賛だけが信号の項目。',
+	standardsP4:
+		'事実は凍結（リンク、issue/CVE 番号、測れる数字）。トーンは鋭くてよいが証拠は立つこと。公開の痕跡が薄いなら載せない。',
 	footer: '© {year} Slop Watch. AIスロップのカタログ。',
 	specimenTitle: '{name} · AIスロップ標本 · Slop Watch',
 	language: '言語',
@@ -255,6 +333,7 @@ const ko: Record<UiKey, string> = {
 		'세게 출시하고 더 세게 부서지며 CVE, 이슈 늪, 바이브 코딩 잔해를 남기는 AI 제품의 공개 매립지. 이름. 링크. 문서.',
 	navCatalog: '목록',
 	navAbout: '소개',
+	navStandards: '수록 기준',
 	catalogHeading: 'AI 슬롭 목록',
 	catalogLead: '각 표본에는 이름, 아이콘, 이미지, 주 링크, 설명, 선정 이유, 근거(참고)가 있습니다.',
 	referencesCount: '참고 {n}개',
@@ -273,6 +352,19 @@ const ko: Record<UiKey, string> = {
 		'각 항목은 표본 카드입니다. 이름, 아이콘, 커버, 주 링크, 짧은 설명, 선정 이유, 그리고 뒷받침 참고 자료 묶음.',
 	aboutP4:
 		'유행이 아니라 증거로 고릅니다. 공개적으로 따라갈 수 있는 붕괴·보안 부채·방치된 품질의 흔적이 얇으면 여기 올리지 않습니다.',
+	aboutStandardsLink: '수록 기준 읽기 →',
+	standardsTitle: '수록 기준 · Slop Watch',
+	standardsMetaDescription:
+		'Slop Watch가 표본을 고르는 방식: 품질 붕괴의 공개 증거이지 유행이나 홍보가 아님.',
+	standardsH1: '수록 기준',
+	standardsP1:
+		'<strong>AI 슬롭</strong>을 싣습니다—품질을 책임질 주인이 없는 제품/스택: 계속되는 breaking, 프로덕션 사고, 보안 부채, 검증 가능한 엔지니어링 기준을 넘는 마케팅.',
+	standardsP2:
+		'<strong>수록:</strong> 이름 있는 제품과 공개 영수증—이슈, 권고, CVE, 신뢰할 수 있는 실패 보고. 설명은 중립, 이유는 왜 쓰레기인지, 참고가 증거.',
+	standardsP3:
+		'<strong>제외:</strong> 홍보 모음, 제품 없는 “N% 유출” 분위기, 소프트 쇼케이스, 스타나 바이럴 칭찬만 신호인 항목.',
+	standardsP4:
+		'사실은 고정(링크, issue/CVE 번호, 측정 가능한 숫자). 톤은 날카로워도 증거는 서야 합니다. 공개 흔적이 얇으면 여기 없습니다.',
 	footer: '© {year} Slop Watch. AI 슬롭 목록.',
 	specimenTitle: '{name} · AI 슬롭 표본 · Slop Watch',
 	language: '언어',
@@ -297,6 +389,7 @@ const es: Record<UiKey, string> = {
 		'El vertedero público de productos de IA que lanzan fuerte, se rompen más fuerte y dejan CVE, pantanos de issues y restos vibe-coded. Nombrados. Enlazados. Documentados.',
 	navCatalog: 'Catálogo',
 	navAbout: 'Acerca de',
+	navStandards: 'Criterios',
 	catalogHeading: 'Catálogo de AI Slop',
 	catalogLead:
 		'Cada ejemplar tiene nombre, icono, imagen, enlace principal, descripción, motivo de selección y pruebas (referencias).',
@@ -316,6 +409,19 @@ const es: Record<UiKey, string> = {
 		'Cada entrada es una ficha de espécimen: nombre, icono, portada, enlace principal, descripción breve, motivo de selección y un montón de referencias de apoyo.',
 	aboutP4:
 		'Curamos por evidencia, no por hype. Si el rastro público de roturas, deuda de seguridad o calidad sin dueño es fino, no entra aquí.',
+	aboutStandardsLink: 'Leer criterios de inclusión →',
+	standardsTitle: 'Criterios de inclusión · Slop Watch',
+	standardsMetaDescription:
+		'Cómo Slop Watch elige especímenes: evidencia pública de colapso de calidad, no hype ni endorsement.',
+	standardsH1: 'Criterios de inclusión',
+	standardsP1:
+		'Listamos <strong>AI Slop</strong> — productos o stacks sin dueño de la calidad: breaking constante, incidentes, deuda de seguridad o marketing por encima de un listón de ingeniería verificable.',
+	standardsP2:
+		'<strong>Entra:</strong> productos con nombre y recibos públicos — issues, avisos, CVE, reportes creíbles de fallo. Descripción neutra; motivo explica la basura; las referencias llevan la prueba.',
+	standardsP3:
+		'<strong>Fuera:</strong> recopilatorios promo, vibes de “fuga del N%” sin producto, escaparates suaves, o entradas cuyo único señal son estrellas o alabanza viral.',
+	standardsP4:
+		'Los hechos se congelan (enlaces, IDs de issue/CVE, conteos medibles). El tono puede ser afilado; la evidencia debe sostenerse. ¿Rastro público fino? No entra.',
 	footer: '© {year} Slop Watch. Catálogo de AI Slop.',
 	specimenTitle: '{name} · ejemplar AI Slop · Slop Watch',
 	language: 'Idioma',
