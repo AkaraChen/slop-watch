@@ -42,15 +42,15 @@ const en: Record<UiKey, string> = {
 	referencesHeading: 'References ({n})',
 	aboutTitle: 'About · Slop Watch',
 	aboutMetaDescription:
-		'What Slop Watch is, how entries are maintained, and why “slop” here means quality trash with receipts — not a promo reel.',
+		'What Slop Watch is, and why “slop” here means quality trash with receipts — not a promo reel.',
 	aboutP1:
 		'Slop Watch is a public landfill catalog of <strong>AI Slop</strong> — products and stacks where quality collapsed: authors cannot stand behind the code, upgrades break for sport, and production incidents / CVEs keep the lights interesting. We name the specimens so the pattern is visible, not just the vibes.',
 	aboutP2:
 		'This is <strong>not</strong> a soft “generative mush showcase” and not an endorsement archive. Description says what it is; reason says why it is garbage; references are the receipts (issues, advisories, failure posts).',
 	aboutP3:
-		'Entries live in <strong>Astro Content Collections</strong>. Each record includes display assets (name, icon, featured image), a primary link, description, selection reason, and references (links + short overviews).',
+		'Each entry is a specimen card: name, icon, cover image, primary link, a short description, a selection reason, and a stack of supporting references.',
 	aboutP4:
-		'To add an entry, drop a Markdown/MDX file under <code>src/content/slops/</code> and fill the frontmatter schema in <code>src/content.config.ts</code>.',
+		'We curate for evidence, not hype. If the public trail of breakage, security debt, or unowned quality is thin, it does not belong here.',
 	footer: '© {year} Slop Watch. Catalog of AI Slop.',
 	specimenTitle: '{name} · AI Slop specimen · Slop Watch',
 	language: 'Language',
@@ -73,15 +73,15 @@ const zh: Record<UiKey, string> = {
 	whyListed: '为何上榜',
 	referencesHeading: '参考资料（{n}）',
 	aboutTitle: '关于 · Slop Watch',
-	aboutMetaDescription: 'Slop Watch 是什么、如何维护条目，以及这里的 slop 为何是「有证据的质量垃圾」而不是安利合集。',
+	aboutMetaDescription: 'Slop Watch 是什么，以及这里的 slop 为何是「有证据的质量垃圾」而不是安利合集。',
 	aboutP1:
 		'Slop Watch 是公开的 <strong>AI 垃圾</strong> 档案：代码质量崩盘、作者兜不住、升级即 breaking、线上事故 / CVE 不断的产品。我们给标本命名，让模式可见，而不只是情绪。',
 	aboutP2:
 		'这<strong>不是</strong>温和的「生成式糊弄展示」，也不是背书库。描述说清它是什么；理由说明为何是垃圾；参考资料是收据（issue、通告、翻车帖）。',
 	aboutP3:
-		'条目由 <strong>Astro Content Collections</strong> 维护。每条含展示资源（名称、图标、封面）、主链接、描述、入选理由与参考链接概览。',
+		'每条都是标本卡：名称、图标、封面、主链接、简短描述、入选理由，以及一摞支撑用的参考资料。',
 	aboutP4:
-		'新增条目：在 <code>src/content/slops/</code> 放下 Markdown/MDX，并填写 <code>src/content.config.ts</code> 中的 schema。',
+		'我们按证据收录，不按热度。若公开可核验的崩坏、安全债或质量失控痕迹太薄，这里就不收。',
 	footer: '© {year} Slop Watch. AI 垃圾目录。',
 	specimenTitle: '{name} · AI 垃圾标本 · Slop Watch',
 	language: '语言',
@@ -106,15 +106,15 @@ const de: Record<UiKey, string> = {
 	referencesHeading: 'Referenzen ({n})',
 	aboutTitle: 'Über · Slop Watch',
 	aboutMetaDescription:
-		'Was Slop Watch ist, wie Einträge gepflegt werden und warum „slop“ hier Qualitätsmüll mit Belegen meint — keine Werberolle.',
+		'Was Slop Watch ist und warum „slop“ hier Qualitätsmüll mit Belegen meint — keine Werberolle.',
 	aboutP1:
 		'Slop Watch ist ein öffentlicher Müllkatalog von <strong>AI Slop</strong> — Produkte, bei denen Qualität kollabiert: Autoren stehen nicht hinter dem Code, Upgrades brechen absichtlich, Incidents/CVEs bleiben spannend. Wir benennen Exemplare, damit das Muster sichtbar wird.',
 	aboutP2:
 		'Das ist <strong>kein</strong> weiches „Generative-Mush-Showcase“ und kein Endorsement-Archiv. Beschreibung sagt was es ist; Grund sagt warum Müll; Referenzen sind die Belege.',
 	aboutP3:
-		'Einträge leben in <strong>Astro Content Collections</strong>: Assets, Primärlink, Beschreibung, Auswahlgrund, Referenzen.',
+		'Jeder Eintrag ist eine Exemplarkarte: Name, Icon, Titelbild, Primärlink, Kurzbeschreibung, Auswahlgrund und ein Stapel stützender Referenzen.',
 	aboutP4:
-		'Neuer Eintrag: Markdown/MDX unter <code>src/content/slops/</code> und Schema in <code>src/content.config.ts</code>.',
+		'Wir kuratieren nach Belegen, nicht nach Hype. Fehlt die öffentliche Spur von Bruch, Security-Schuld oder herrenloser Qualität, gehört es nicht hierher.',
 	footer: '© {year} Slop Watch. Katalog von AI Slop.',
 	specimenTitle: '{name} · AI-Slop-Exemplar · Slop Watch',
 	language: 'Sprache',
@@ -139,15 +139,15 @@ const it: Record<UiKey, string> = {
 	referencesHeading: 'Riferimenti ({n})',
 	aboutTitle: 'Info · Slop Watch',
 	aboutMetaDescription:
-		'Cos’è Slop Watch, come si mantengono le voci e perché qui “slop” significa spazzatura di qualità con prove — non un reel promo.',
+		'Cos’è Slop Watch e perché qui “slop” significa spazzatura di qualità con prove — non un reel promo.',
 	aboutP1:
 		'Slop Watch è un catalogo-discarica pubblica di <strong>AI Slop</strong>: prodotti dove la qualità è collassata, breaking continui, incidenti e CVE. Nominiamo gli esemplari perché il pattern sia visibile.',
 	aboutP2:
 		'<strong>Non</strong> è una vetrina soft né un archivio di endorsement. Descrizione = cos’è; motivo = perché è spazzatura; riferimenti = prove.',
 	aboutP3:
-		'Le voci vivono in <strong>Astro Content Collections</strong> con asset, link, descrizione, motivo e riferimenti.',
+		'Ogni voce è una scheda-esemplare: nome, icona, copertina, link principale, breve descrizione, motivo di selezione e un mucchio di riferimenti a supporto.',
 	aboutP4:
-		'Per aggiungere: Markdown/MDX in <code>src/content/slops/</code> e schema in <code>src/content.config.ts</code>.',
+		'Curiamo per evidenza, non per hype. Se la scia pubblica di rotture, debito di sicurezza o qualità senza ownership è sottile, non entra qui.',
 	footer: '© {year} Slop Watch. Catalogo di AI Slop.',
 	specimenTitle: '{name} · esemplare AI Slop · Slop Watch',
 	language: 'Lingua',
@@ -172,15 +172,15 @@ const ja: Record<UiKey, string> = {
 	referencesHeading: '参考文献（{n}）',
 	aboutTitle: '概要 · Slop Watch',
 	aboutMetaDescription:
-		'Slop Watchとは何か、エントリの管理方法、ここでいうslopが宣伝ではなく証拠付きの品質ゴミである理由。',
+		'Slop Watchとは何か、ここでいうslopが宣伝ではなく証拠付きの品質ゴミである理由。',
 	aboutP1:
 		'Slop Watchは<strong>AIスロップ</strong>の公開カタログです。品質崩壊、作者が品質を担保できない、breaking、本番事故/CVE。パターンを可視化するために標本に名前を付けます。',
 	aboutP2:
 		'ソフトな「生成ムッシュのショーケース」でも宣伝アーカイブでも<strong>ありません</strong>。説明は何か、理由はなぜゴミか、参考文献は証拠です。',
 	aboutP3:
-		'エントリは<strong>Astro Content Collections</strong>で管理。表示資産・主リンク・説明・選定理由・参考文献。',
+		'各エントリは標本カードです。名前、アイコン、カバー、主リンク、短い説明、選定理由、そして根拠になる参考文献の束。',
 	aboutP4:
-		'追加は <code>src/content/slops/</code> に Markdown/MDX を置き、<code>src/content.config.ts</code> のスキーマを満たします。',
+		'熱量ではなく証拠で選びます。公開で追える破綻・セキュリティ負債・品質の放置が薄いなら、ここには載せません。',
 	footer: '© {year} Slop Watch. AIスロップのカタログ。',
 	specimenTitle: '{name} · AIスロップ標本 · Slop Watch',
 	language: '言語',
@@ -204,15 +204,15 @@ const ko: Record<UiKey, string> = {
 	referencesHeading: '참고 자료 ({n})',
 	aboutTitle: '소개 · Slop Watch',
 	aboutMetaDescription:
-		'Slop Watch가 무엇인지, 항목 관리 방식, 여기서 slop이 홍보가 아닌 증거 있는 품질 쓰레기인 이유.',
+		'Slop Watch가 무엇인지, 여기서 slop이 홍보가 아닌 증거 있는 품질 쓰레기인 이유.',
 	aboutP1:
 		'Slop Watch는 품질이 무너진 <strong>AI 슬롭</strong> 공개 목록입니다. 작성자가 코드를 감당하지 못하고, 업그레이드가 깨지며, 사고/CVE가 이어집니다. 패턴을 보이게 이름을 붙입니다.',
 	aboutP2:
 		'부드러운 생성 쇼케이스나 홍보 아카이브가 <strong>아닙니다</strong>. 설명은 무엇인지, 이유는 왜 쓰레기인지, 참고는 영수증입니다.',
 	aboutP3:
-		'항목은 <strong>Astro Content Collections</strong>로 관리됩니다. 자산, 링크, 설명, 이유, 참고.',
+		'각 항목은 표본 카드입니다. 이름, 아이콘, 커버, 주 링크, 짧은 설명, 선정 이유, 그리고 뒷받침 참고 자료 묶음.',
 	aboutP4:
-		'추가: <code>src/content/slops/</code>에 Markdown/MDX, 스키마는 <code>src/content.config.ts</code>.',
+		'유행이 아니라 증거로 고릅니다. 공개적으로 따라갈 수 있는 붕괴·보안 부채·방치된 품질의 흔적이 얇으면 여기 올리지 않습니다.',
 	footer: '© {year} Slop Watch. AI 슬롭 목록.',
 	specimenTitle: '{name} · AI 슬롭 표본 · Slop Watch',
 	language: '언어',
@@ -237,15 +237,15 @@ const es: Record<UiKey, string> = {
 	referencesHeading: 'Referencias ({n})',
 	aboutTitle: 'Acerca de · Slop Watch',
 	aboutMetaDescription:
-		'Qué es Slop Watch, cómo se mantienen las entradas y por qué aquí “slop” significa basura de calidad con pruebas — no un reel promocional.',
+		'Qué es Slop Watch y por qué aquí “slop” significa basura de calidad con pruebas — no un reel promocional.',
 	aboutP1:
 		'Slop Watch es un catálogo-vertedero público de <strong>AI Slop</strong>: productos donde la calidad colapsó, breaking constantes, incidentes y CVE. Nombramos ejemplares para que el patrón sea visible.',
 	aboutP2:
 		'<strong>No</strong> es un escaparate suave ni un archivo de endorsements. Descripción = qué es; motivo = por qué es basura; referencias = pruebas.',
 	aboutP3:
-		'Las entradas viven en <strong>Astro Content Collections</strong> con assets, enlace, descripción, motivo y referencias.',
+		'Cada entrada es una ficha de espécimen: nombre, icono, portada, enlace principal, descripción breve, motivo de selección y un montón de referencias de apoyo.',
 	aboutP4:
-		'Para añadir: Markdown/MDX en <code>src/content/slops/</code> y el schema en <code>src/content.config.ts</code>.',
+		'Curamos por evidencia, no por hype. Si el rastro público de roturas, deuda de seguridad o calidad sin dueño es fino, no entra aquí.',
 	footer: '© {year} Slop Watch. Catálogo de AI Slop.',
 	specimenTitle: '{name} · ejemplar AI Slop · Slop Watch',
 	language: 'Idioma',
