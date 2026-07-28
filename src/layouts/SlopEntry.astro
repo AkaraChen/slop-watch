@@ -80,9 +80,22 @@ const jsonLd = {
 		<style>
 			main {
 				width: 100%;
-				max-width: 720px;
+				max-width: min(720px, 100%);
 				margin: 0 auto;
-				padding: 1.15em 1em 2em;
+				padding: 1.15em 0.75em 2em;
+				min-width: 0;
+				overflow-x: clip;
+			}
+			article {
+				min-width: 0;
+				max-width: 100%;
+			}
+			.references a,
+			.external,
+			.lead,
+			.summary {
+				overflow-wrap: anywhere;
+				word-break: break-word;
 			}
 			.hero-image {
 				width: 100%;
