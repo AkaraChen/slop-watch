@@ -4,18 +4,54 @@ export function mdToHtml(md: string): string {
 		s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 	const inline = (s: string) =>
 		escape(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-	const blocks = md.trim().split(/\n\n+/);
-	return blocks
-		.map((block) => {
-			const lines = block.split('\n');
-			if (lines[0]?.startsWith('### ')) {
-				return `<h3>${inline(lines[0].slice(4))}</h3>`;
+
+	const lines = md.replace(/\r\n/g, '\n').trim().split('\n');
+	const out: string[] = [];
+	let i = 0;
+
+	while (i < lines.length) {
+		const line = lines[i] ?? '';
+		if (line.trim() === '') {
+			i += 1;
+			continue;
+		}
+
+		if (line.startsWith('### ')) {
+			out.push(`<h3>${inline(line.slice(4).trim())}</h3>`);
+			i += 1;
+			continue;
+		}
+
+		if (line.startsWith('## ')) {
+			out.push(`<h2>${inline(line.slice(3).trim())}</h2>`);
+			i += 1;
+			continue;
+		}
+
+		if (line.startsWith('- ')) {
+			const items: string[] = [];
+			while (i < lines.length && (lines[i] ?? '').startsWith('- ')) {
+				items.push(`<li>${inline((lines[i] ?? '').slice(2).trim())}</li>`);
+				i += 1;
 			}
-			if (lines.every((l) => l.startsWith('- '))) {
-				const items = lines.map((l) => `<li>${inline(l.slice(2))}</li>`).join('');
-				return `<ul>${items}</ul>`;
-			}
-			return `<p>${inline(lines.join(' '))}</p>`;
-		})
-		.join('\n');
+			out.push(`<ul>${items.join('')}</ul>`);
+			continue;
+		}
+
+		const para: string[] = [];
+		while (
+			i < lines.length &&
+			(lines[i] ?? '').trim() !== '' &&
+			!(lines[i] ?? '').startsWith('#') &&
+			!(lines[i] ?? '').startsWith('- ')
+		) {
+			para.push((lines[i] ?? '').trim());
+			i += 1;
+		}
+		if (para.length > 0) {
+			out.push(`<p>${inline(para.join(' '))}</p>`);
+		}
+	}
+
+	return out.join('\n');
 }
