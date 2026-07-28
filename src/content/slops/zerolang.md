@@ -1,10 +1,11 @@
 ---
 name: Zerolang
 description: >-
-  Vercel Labs experimental "programming language for agents": graph-native
-  program database, .0 files as human-readable projections, agent patch/query
-  loop instead of text diffs. Systems language aimed at native binaries with
-  agent-friendly diagnostics.
+  Vercel Labs' experimental "programming language for agents": the semantic
+  graph is the program database, .0 files are just the human-readable
+  projection, and agents are supposed to patch nodes instead of fighting text
+  diffs. Systems-language cosplay for native binaries — with agent-friendly
+  diagnostics and, so far, host-backend honesty issues.
 link: https://github.com/vercel-labs/zerolang
 reason: >-
   Heavyweight agent-toolchain slop from the same Labs wave as scriptc/native.
@@ -16,6 +17,8 @@ reason: >-
   quality. Don't run this on your machine"; maintainers acknowledged and said
   they are hiring. README already warns of security issues and isolation —
   growth posts rarely lead with that gap between agent utopia and emit quality.
+  When your pitch is "stale hashes get rejected before write" and #425 is
+  "incorrect module hash comparison," the comedy writes itself.
 featuredImage: '../../assets/slops/zerolang-og.png'
 icon: '../../assets/blog-placeholder-5.jpg'
 publishedAt: 2026-05-15
@@ -69,7 +72,7 @@ references:
     publishedAt: 2026-06-06
 ---
 
-Zerolang is **compiler-quality slop in agent cosplay**: the pitch is semantic certainty for agents; the public evidence is wrong-code and "don't run this" on the default Mac backend.
+Zerolang is **compiler-quality slop in agent cosplay**: the pitch is semantic certainty for agents; the public evidence is wrong-code and "don't run this" on the default Mac backend. Graph-first utopia, segfault-second reality.
 
 ### Hard signals
 - Wrong-code / soundness findings with repros on main (#318)
