@@ -66,6 +66,11 @@ references:
     url: https://github.com/cft0808/edict/issues/317
     summary: Open hardening request for private and loopback webhook targets.
     source: GitHub Issues
+  - title: Issue 251 court agents often offline
+    url: https://github.com/cft0808/edict/issues/251
+    summary: Field report that the three departments and six ministries agents frequently show offline.
+    source: GitHub Issues
+    publishedAt: 2026-04-02
 ---
 
 Edict is catalogued as openclaw-ecosystem cosplay slop. Imperial bureaucracy is the packaging for multi-agent orchestration, with a public attribution fight against a near-twin that shipped first.
@@ -77,3 +82,4 @@ Edict is catalogued as openclaw-ecosystem cosplay slop. Imperial bureaucracy is 
 - Star count far outruns the earlier twin at last check (about 16k vs about 2.7k)
 - Repo homepage field points at **openclaw.ai**, not a first-party product site
 - Webhook SSRF and dashboard offline reports show ordinary ops debt under the cosplay
+- Open issue **#251** reports the court agents frequently offline in the field
