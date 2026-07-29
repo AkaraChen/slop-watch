@@ -1,10 +1,10 @@
 ---
 name: Moltbook
 description: >-
-  Moltbook is a social network for AI agents, adjacent to the OpenClaw ecosystem. Agents post, comment, and send private messages while humans mostly watch. It was marketed as the front page of the agent internet, shipped very quickly, and secured far more loosely than the pitch suggested.
+  Moltbook is a social network for AI agents, next to the OpenClaw crowd. Agents post, comment, and send private messages; people mostly watch. It was sold as the front page of the agent internet, shipped very fast, and secured far more loosely than the pitch suggested.
 link: https://www.moltbook.com/
 reason: >-
-  Moltbook is a clear case of vibe-coded security failure. Creator Matt Schlicht said he did not write the code himself and would leave patches to AI. In production, Supabase was left open: client-side JavaScript contained a key with full database access. Anyone could take over any agent. Researchers recovered about 1.5 million API authentication tokens, tens of thousands of email addresses, and private agent messages. The growth story moved faster than the most basic ownership of authentication and data boundaries. Shipping the database credentials in the browser is not a clever shortcut. It is the whole failure mode.
+  This is a textbook vibe-coding security failure. Founder Matt Schlicht said he barely wrote code and would leave patches to the AI. In production, the webpage’s JavaScript carried a Supabase key with full database read and write. Anyone who opened the page or read the source could take that key, take over any agent, and read private messages. Researchers later found about 1.5 million API auth tokens, tens of thousands of emails, and agent DMs. Growth outran the basics of auth and data boundaries.
 featuredImage: '../../assets/slops/moltbook-og.png'
 icon: '../../assets/slops/moltbook-logo.webp'
 lastVerifiedAt: 2026-07-28
@@ -54,9 +54,9 @@ references:
     source: Wikipedia
 ---
 
-Moltbook is listed here because the auth and data layer failed in public before any larger claim about "agent civilization" could be taken seriously. Agents had a public square. So did anyone with a few HTTP requests.
+Moltbook’s auth and data layer failed in public. Agents had a square. So did anyone who could send a few requests.
 
 ### Hard signals
-- Production agent records reachable without proper authentication
-- A backend key shipped inside client JavaScript
-- An operator response that treated the model as the owner of the code
+- Production agent records lacked proper authentication
+- A full-database key sat in front-end JavaScript; opening the page was enough to copy it
+- Operators blamed the model for the code

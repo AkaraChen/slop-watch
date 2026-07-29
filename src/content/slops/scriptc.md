@@ -1,10 +1,10 @@
 ---
 name: scriptc
 description: >-
-  scriptc is a Vercel Labs compiler that turns TypeScript into native binaries. It routes TypeScript through a C intermediate and aims to run without Node or V8. Launch posts focused on killing cold starts. The first issues focused on Windows, clang, and silent FFI bugs.
+  scriptc is a Vercel Labs compiler that turns TypeScript into native binaries. TypeScript goes through a C intermediate and aims to run without Node or V8. Launch posts talked about killing cold starts. The first issues talked about Windows, clang, and silent FFI bugs.
 link: https://github.com/vercel-labs/scriptc
 reason: >-
-  The compiler shipped with problems that showed up immediately. Windows does not run it cleanly (issues #10 and #25). Real projects hit clang compile failures (#23). Some FFI bugs build successfully and then throw when the program loads (#21). Dynamic re-exports can pass the build with no diagnostics and fail later (#19). At the same time, social posts repeated "TypeScript becomes native" with almost no caveats. That gap is the problem: green builds that do not survive real execution.
+  Problems showed up immediately. Windows does not run cleanly (#10, #25). Real projects hit clang compile failures (#23). Some FFI bugs build green and only throw at load (#21). Dynamic re-exports can pass the build with no diagnosis and fail later (#19). Social posts repeated “TypeScript becomes native” with almost no caveats. Green builds that do not survive real execution are the gap.
 featuredImage: '../../assets/slops/scriptc-og.png'
 icon: '../../assets/slops/scriptc-icon.png'
 lastVerifiedAt: 2026-07-28
@@ -67,9 +67,10 @@ references:
     publishedAt: 2026-07-28
 ---
 
-scriptc is listed as toolchain slop. It is sold as a way to leave JavaScript runtimes behind, while day-one issues already show wrong code and incomplete platform support. Launch posts talk about features. The issue tracker is where the limitations show up.
+scriptc is sold as a way out of JavaScript runtimes. Day-one issues already show wrong code and incomplete platforms. Launch posts talk features. The tracker shows limits.
 
-### Quality angle
-- Builds that pass, then fail at load because of FFI
-- Windows users blocked right away
-- Public posts that optimize for slogans instead of triage
+### Hard signals
+- Incomplete Windows support
+- clang failures on real projects
+- FFI bugs that pass build and fail at load
+- Dynamic re-exports without diagnostics

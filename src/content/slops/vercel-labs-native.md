@@ -1,10 +1,10 @@
 ---
 name: Native SDK (vercel-labs/native)
 description: >-
-  Native SDK is a Vercel Labs toolkit for building native desktop apps with declarative UI and TypeScript. It is aimed at native binaries and is often pitched as a replacement for Electron. In practice, basic desktop pieces like focus, terminals, and WebView observability are still incomplete in the issue tracker.
+  Native SDK is a Vercel Labs toolkit for native desktop apps with declarative UI and TypeScript. It aims at native binaries and is often pitched as an Electron replacement. In practice, basics like focus, terminals, and WebView observability are still incomplete in the issue tracker.
 link: https://github.com/vercel-labs/native
 reason: >-
-  This is an early platform sold as if it were already a finished Electron killer. Marketing talks about no WebView and no JavaScript runtime. The tracker is full of basic primitives that still do not work, including focus, terminals, WebView observability, and layout controls (issues #222 through #226). Stars and agent-automation messaging moved faster than a solid quality bar. If the product still cannot tell which terminal fired an event, it is not a finished revolution. It is a launch announcement with a long homework list.
+  It is an early platform sold as if Electron were already finished. Marketing talks about no WebView and no JavaScript runtime. The tracker is full of primitives that still do not work, including focus, terminals, WebView observability, and layout control (#222–#226). Stars and agent-automation talk outran a solid quality bar. If the product still cannot tell which terminal fired an event, that is not a finished revolution. It is a launch note with a long homework list.
 featuredImage: '../../assets/slops/native-og.png'
 icon: '../../assets/slops/native-icon.png'
 lastVerifiedAt: 2026-07-28
@@ -51,9 +51,9 @@ references:
     publishedAt: 2026-07-20
 ---
 
-Native SDK may improve. Today it is listed as marketing-complete and desktop-incomplete. The pitch is a revolution. The open issues are still about fundamentals. People keep scheduling Electron's funeral. The product still has focus bugs.
+Native SDK may get better. Today the pitch is full and the desktop basics are not. The slogan is a revolution. Open issues are still about fundamentals.
 
 ### Quality angle
-- Issue titles look like a pre-1.0 checklist
-- Social posts rarely mention those gaps
-- Agent-automation claims run into WebView and snapshot blind spots
+- Issue titles read like a pre-1.0 checklist
+- Social posts rarely mention these gaps
+- Agent-automation talk meets WebView and snapshot blind spots
