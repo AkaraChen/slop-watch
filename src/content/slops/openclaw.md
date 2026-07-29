@@ -70,7 +70,7 @@ references:
     source: r/openclaw
 ---
 
-OpenClaw wants your shell and your passwords. It also cannot clear its own issue queue or keep a normal install steady after an upgrade. The star count is huge. Day-to-day use is where people get tired.
+OpenClaw asks you to give it shell access and account passwords. It also cannot clear its own issue queue or keep a normal install steady after an upgrade. The star count is huge. Day-to-day use is where people get tired.
 
 ### Hard signals
 - Thousands of open issues, while new install guides keep shipping

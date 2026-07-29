@@ -9,15 +9,15 @@ description: >-
 link: https://github.com/vercel-labs/zerolang
 reason: >-
   The ad says agents can edit a program safely through a graph. The open
-  issues say something else. On a normal Mac, people have reported wrong code
-  for big integers, stack frames that get cut short and crash, and borrow
-  checks that go missing (see the audit in issue #318). Issue #181 is titled
-  "Low code quality. Don't run this on your machine." Maintainers answered
-  that they knew and were hiring. Separate write-ups also note that pieces of
-  the standard library were baked into the IR, that a "runtime" module still
-  left a lot of that hardcoding in place, and that whole directories vanished
-  after public criticism. The README says do not run it against production.
-  The marketing posts rarely lead with that line.
+  issues say something else. On a normal Mac, people have reported wrong
+  results for big numbers, stack frames that get cut short and crash, and
+  borrow checks that go missing (see the audit in issue #318). Issue #181 is
+  titled "Low code quality. Don't run this on your machine." Maintainers
+  answered that they knew and were hiring. Separate write-ups also note that
+  pieces of the standard library were baked into the IR, that a "runtime"
+  module still left a lot of that hardcoding in place, and that whole
+  directories vanished after public criticism. The README says do not run it
+  against production. The marketing posts rarely lead with that line.
 featuredImage: '../../assets/slops/zerolang-og.png'
 icon: '../../assets/slops/zerolang-icon.png'
 lastVerifiedAt: 2026-07-29
@@ -86,7 +86,7 @@ references:
     publishedAt: 2026-05-19
 ---
 
-Zerolang is sold as a language for agents. People on the issue tracker have also said: do not run this on your own machine. That gap is why it is here.
+Zerolang is sold as a language for agents. People on the issue tracker have also said: do not run this on your own machine. That gap between the pitch and the warnings is the problem.
 
 ### Hard signals
 - Issue #181: "Low code quality. Don't run this on your machine."
