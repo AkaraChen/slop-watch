@@ -144,7 +144,7 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	edict: {
 		zh: {
 			description: `Edict 把一群 AI 助手排成朝廷里的三省六部，前面挂一块会动的看板。它跑在 OpenClaw 上，仓库是 cft0808/edict，主要用 Python 写。开张几个月，GitHub 上大约有一万六颗星。外面介绍时，常拿它和 CrewAI、AutoGen 比。`,
-			reason: `看板里挂着三省六部那些名字。用户在 issue #251 里说：这些 agent 常常不在线，跑起来特别慢，状态也不能正常往下走。差不多同一时期，当皇上在 #55、#94 里说 Edict 抄了设计、也没写来处；Edict 把单子当成非技术讨论关了。两边开张大约只差二十一个小时。仓库主页还指着 openclaw.ai，不像自己的站。Webhook 那边还有 #317、#318 在补。`,
+			reason: `看板上六个部的名字都在，点进去却常常连不上。Issue #251 里有人写：经常三省六部不在线；楼主还说跑起来特别慢，状态也不能正常往下走。差不多同一时期，当皇上在 #55、#94 里说 Edict 抄了设计、也没写来处；Edict 把单子当成非技术讨论关了。两边开张大约只差二十一个小时。仓库主页还指着 openclaw.ai，不像自己的站。Webhook 那边还有 #317、#318 在补。`,
 		},
 		de: {
 			description: `Edict ist ein OpenClaw-Multi-Agent mit Hof-Setting und Live-Board. Repo cft0808/edict, vor allem Python, ~16k Sterne. Oft neben CrewAI und AutoGen beworben.`,
