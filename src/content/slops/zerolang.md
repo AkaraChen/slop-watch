@@ -4,7 +4,16 @@ description: >-
   Zerolang is an experimental Vercel Labs language meant for agents. The semantic graph is treated as the program itself, and .0 files are a human-readable projection. Agents are supposed to patch graph nodes instead of fighting line-based text diffs. The pitch includes native binaries and agent-friendly diagnostics. Host backend quality is still uneven.
 link: https://github.com/vercel-labs/zerolang
 reason: >-
-  It sits in the same Labs wave as scriptc and Native. Marketing says agents can safely edit a semantic graph. Public issues and an 18-bug audit tell another story on default macOS: issue #181 is titled “Low code quality. Don't run this on your machine,” and maintainers agreed and said they were hiring. Technical findings include wrong compare codegen, truncated stacks that segfault, and borrow tracking cleared by dynamic-array set. Long Chinese write-ups add that whole compiler trees were deleted after criticism, and the runtime is thin. Marketing says stale hashes are rejected before write; #425 is about wrong module hash comparison. Those two sit poorly together.
+  It sits in the same Labs wave as scriptc and Native. Marketing says agents
+  can safely edit a program as a graph. Public issues say something else. On a
+  normal Mac, an audit reported wrong results for big numbers, stack frames cut
+  short until the program crashes, and safety checks that disappear (issue
+  #318). Issue #181 is titled “Low code quality. Don't run this on your
+  machine,” and maintainers said they knew and were hiring. Longer write-ups
+  note that whole compiler folders vanished after criticism, and that the
+  runtime stays thin. Ads talk about rejecting stale hashes before a write.
+  Issue #425 is about wrong module hash comparison. Those two claims do not sit
+  well together.
 featuredImage: '../../assets/slops/zerolang-og.png'
 icon: '../../assets/slops/zerolang-icon.png'
 lastVerifiedAt: 2026-07-29
