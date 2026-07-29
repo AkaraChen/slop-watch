@@ -61,7 +61,7 @@ references:
     source: r/openclaw
 ---
 
-OpenClaw asks for your shell and credentials, yet it struggles to keep installs stable or clear its own issue pile. The star count looks loud. Day-to-day reliability does not.
+OpenClaw asks for command-line access on your computer and for login credentials, yet it struggles to keep installs stable or clear its own issue pile. The star count looks loud. Day-to-day reliability does not.
 
 ### Hard signals
 - Thousands of open issues while install marketing continues

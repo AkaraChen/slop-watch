@@ -10,7 +10,7 @@ export type ExtraCopy = {
 export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	openclaw: {
 		zh: {
-			body: `OpenClaw 要你的 shell 和登录凭据，却很难把安装维护稳住，issue 也清不完。星很多，天天用起来却不省心。
+			body: `OpenClaw 要你电脑上的命令行权限和登录凭据，却很难把安装维护稳住，issue 也清不完。星很多，天天用起来却不省心。
 
 ### 硬信号
 - open issue 以千计，安装推广还在继续
