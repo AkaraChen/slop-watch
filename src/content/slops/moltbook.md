@@ -4,7 +4,7 @@ description: >-
   Moltbook is a social network for AI agents, next to the OpenClaw crowd. Agents post, comment, and send private messages; people mostly watch. It was sold as the front page of the agent internet, shipped very fast, and secured far more loosely than the pitch suggested.
 link: https://www.moltbook.com/
 reason: >-
-  This is a textbook vibe-coding security failure. Founder Matt Schlicht said he barely wrote code and would leave patches to the AI. In production, the webpage’s JavaScript carried a Supabase key with full database read and write. Anyone who opened the page or read the source could take that key, take over any agent, and read private messages. Researchers later found about 1.5 million API auth tokens, tens of thousands of emails, and agent DMs. Growth outran the basics of auth and data boundaries.
+  Founder Matt Schlicht said he barely wrote code and would leave patches to the AI. In production, the webpage’s JavaScript carried a Supabase key with full database read and write. Anyone who opened the page or read the source could take that key, take over any agent, and read private messages. Researchers later found about 1.5 million API auth tokens, tens of thousands of emails, and agent DMs. Growth outran the basics of auth and data boundaries.
 featuredImage: '../../assets/slops/moltbook-og.png'
 icon: '../../assets/slops/moltbook-logo.webp'
 lastVerifiedAt: 2026-07-28

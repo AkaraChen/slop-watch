@@ -38,7 +38,7 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	moltbook: {
 		zh: {
 			description: `Moltbook 是给 AI agent 用的社交网络，挨着 OpenClaw 那一圈。agent 可以发帖、评论、私信，人多半只是看着。它被说成 agent 互联网的头版，上线很快，安全松得多。`,
-			reason: `这是典型的 vibe coding 安全事故。创始人 Matt Schlicht 说自己几乎没写代码，补丁也交给 AI。上线后，网页前端的 JavaScript 里带着能直接读写整个数据库的密钥。谁打开网页、谁看源代码，都能拿到这个密钥，也就能接管别人的 agent、读私信。研究者后来拿到了大约一百五十万个 API 认证 token、数万个邮箱，还有 agent 私信。增长跑得比管权限快。`,
+			reason: `创始人 Matt Schlicht 说自己几乎没写代码，补丁也交给 AI。上线后，网页前端的 JavaScript 里带着能直接读写整个数据库的密钥。谁打开网页、谁看源代码，都能拿到这个密钥，也就能接管别人的 agent、读私信。研究者后来拿到了大约一百五十万个 API 认证 token、数万个邮箱，还有 agent 私信。增长跑得比管权限快。`,
 		},
 		de: {
 			description: `Moltbook ist ein soziales Netzwerk für AI-Agenten im Umfeld von OpenClaw. Agenten posten, kommentieren und schreiben Direktnachrichten; Menschen schauen meist zu. Es wurde als Titelseite des Agenten-Internets vermarktet, sehr schnell geshappt und deutlich lockerer abgesichert als die Story nahelegte.`,
@@ -116,7 +116,7 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	zerolang: {
 		zh: {
 			description: `Zerolang 是 Vercel Labs 面向 agent 的实验语言。它把语义图当成程序本身，.0 文件是给人看的投影。agent 理应改图上的节点，而不是和按行的文本 diff 较劲。宣传里有原生二进制，也有更适合 agent 的诊断。宿主后端的质量目前仍不稳。`,
-			reason: `它和 scriptc、Native 是同一波 Labs 产品。宣传说 agent 可以安全改语义图。公开 issue 和一份十八个 bug 的审计，在默认 macOS 上讲了另一回事：有人在 #181 直接写 Low code quality，并劝你别在自己机器上跑；维护者认了，也说在招人。技术细节里还有比较指令发错、栈被截断后崩溃、借用检查被清掉等。知乎长文还写到：批评之后整棵编译树被删，runtime 很薄。宣传说过期哈希会在写入前被拒绝，#425 却是模块哈希比较不正确。两件事放一起，很别扭。`,
+			reason: `它和 scriptc、Native 是同一波 Labs 产品。宣传说 agent 可以安全改语义图。公开 issue 和一份十八个 bug 的审计，在默认 macOS 上讲了另一回事：有人在 #181 直接写代码质量低，并劝你别在自己机器上跑；维护者认了，也说在招人。后面才轮到具体 bug：大数字算错、栈被截断后崩溃、安全检查被清掉等。知乎长文还写到：批评之后整棵编译树被删，runtime 很薄。宣传说过期哈希会在写入前被拒绝，#425 却是模块哈希比较不正确。两件事放一起，很别扭。`,
 		},
 		de: {
 			description: `Zerolang ist eine experimentelle Vercel-Labs-Sprache für Agents. Der semantische Graph gilt als Programmdatenbank, .0-Dateien sind die menschenlesbare Projektion. Agents sollen Graph-Knoten patchen statt zeilenbasierte Text-Diffs zu bekämpfen. Der Pitch umfasst native Binaries und agent-freundliche Diagnostik. Die Host-Backend-Qualität ist noch ungleichmäßig.`,
