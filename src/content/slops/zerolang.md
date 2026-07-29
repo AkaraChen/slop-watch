@@ -1,10 +1,23 @@
 ---
 name: Zerolang
 description: >-
-  Zerolang is an experimental Vercel Labs language meant for agents. The semantic graph is treated as the program database, and .0 files are a human-readable projection. Agents are supposed to patch graph nodes instead of fighting line-based text diffs. The pitch includes native binaries and agent-friendly diagnostics. The host backend quality is still uneven.
+  Zerolang is a Vercel Labs experiment: a programming language aimed at AI
+  agents. The idea is that the program lives as a graph, and .0 files are only
+  a view humans can read. Agents are meant to change the graph, not fight over
+  line numbers in text. The pitch also promises small native programs and
+  diagnostics agents can read easily.
 link: https://github.com/vercel-labs/zerolang
 reason: >-
-  Zerolang sits in the same Labs wave as scriptc and native, and it shows the same pattern. It is marketed as a language where agents edit semantic graphs safely. The public tracker and an 18-bug audit show serious problems on the default macOS host, including i64 compares emitted as 32-bit CMP, stack frames truncated into segfaults, and borrow tracking cleared by dynamic array sets. Community issue #181 is titled "Low code quality. Don't run this on your machine." Maintainers acknowledged the complaint and said they were hiring. Chinese write-ups on Zhihu add more detail: whole trees such as compiler-zero deleted after public critique; time, rand, and fs modeled in the IR instead of a real runtime; a runtime module that mostly covers http and json while hardcoding remains; and an ownership story on top of a thin checker. The pitch says stale hashes are rejected before write. Issue #425 is about incorrect module hash comparison. Those two facts do not sit comfortably next to each other.
+  The ad says agents can edit a program safely through a graph. The open
+  issues say something else. On a normal Mac, people have reported wrong code
+  for big integers, stack frames that get cut short and crash, and borrow
+  checks that go missing (see the audit in issue #318). Issue #181 is titled
+  "Low code quality. Don't run this on your machine." Maintainers answered
+  that they knew and were hiring. Separate write-ups also note that pieces of
+  the standard library were baked into the IR, that a "runtime" module still
+  left a lot of that hardcoding in place, and that whole directories vanished
+  after public criticism. The README says do not run it against production.
+  The marketing posts rarely lead with that line.
 featuredImage: '../../assets/slops/zerolang-og.png'
 icon: '../../assets/slops/zerolang-icon.png'
 lastVerifiedAt: 2026-07-29
@@ -59,28 +72,25 @@ references:
   - title: PL Nerd 迎来惊天大变 · Vibe Coder 喜提 AI 原生（zerolang 扒代码）
     url: https://zhuanlan.zhihu.com/p/2039725076204016063
     summary: >-
-      Chinese long-form roast of Zero/zerolang as an "agent-native" language whose
-      implementation reads like anti-hype performance art — documents crude IR
-      and compiler structure that undercut the graph-first marketing.
+      Chinese long-form review of Zero/zerolang that walks through crude IR and
+      compiler structure and how they undercut the graph-first marketing.
     source: Zhihu / 知乎用户名可以重复吗
     publishedAt: 2026-05-18
   - title: 如何评价 Vercel 近期发布的 Zero 编程语言？（续扒）
     url: https://www.zhihu.com/question/2040211383581685307/answer/2040244239687279555
     summary: >-
-      Follow-up: compiler-zero tree deleted after critique; time/rand/fs still
-      modeled in IR; new "runtime" is mostly http/json while hardcoding remains;
-      giant EmitContext/RuntimePatch surface; ownership/effect-handler fashion on
-      a thin checker — community evidence that agents thrash the tree faster than
-      quality lands.
+      Follow-up notes: compiler-zero tree removed after critique; time/rand/fs
+      still modeled in IR; runtime module mostly http/json while hardcoding
+      remains; large EmitContext/RuntimePatch surface.
     source: Zhihu / 知乎用户名可以重复吗
     publishedAt: 2026-05-19
 ---
 
-Zerolang is compiler-quality slop with an agent story wrapped around it. The pitch is semantic certainty for agents. The public evidence is wrong-code, an explicit "don't run this" warning from the community, and write-ups that find hardcoding under the agent-native marketing.
+Zerolang is sold as a language for agents. People on the issue tracker have also said: do not run this on your own machine. That gap is why it is here.
 
 ### Hard signals
-- Wrong-code and soundness findings with repros on main (#318)
-- Host backend gaps on Apple Silicon (#230)
-- Explicit low-quality acknowledgment from community and maintainers (#181)
-- Chinese deep-dives covering IR-baked stdlib pieces, a thin runtime module, and whole compiler trees deleted after public critique
-- The same Labs packaging pattern as scriptc and native: story first, quality later
+- Issue #181: "Low code quality. Don't run this on your machine."
+- Issue #318: wrong code and crashes reproduced on main, including on Mac
+- Issue #230: missing pieces on the Apple Silicon backend
+- Issue #425: module hash comparison wrong, while ads talk about safe graph edits
+- Public write-ups on baked-in IR pieces and a thin "runtime" that still leaves hardcoding in place

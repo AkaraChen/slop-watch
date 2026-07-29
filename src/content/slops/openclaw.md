@@ -1,13 +1,22 @@
 ---
 name: OpenClaw
 description: >-
-  OpenClaw is a self-hosted personal AI you control from chat apps. It supports multiple models and a skills marketplace. The project has around 380,000 GitHub stars — and a huge backlog of open issues to match.
+  OpenClaw is a personal AI assistant you run yourself and talk to through
+  chat apps. It can use more than one model and install extra skills. On
+  GitHub it has about 380,000 stars. It also has thousands of open issues.
 link: https://openclaw.ai/
 reason: >-
-  OpenClaw grew faster than the maintainers could keep the code under control. The main repository has about 6,600 open issues. Upgrades often break plugins. Agents that look fine in demos frequently fail in real use: the gateway dies, cron jobs do not run, memory drops out, and tasks report as finished when nothing actually finished. Security is part of the problem too. A one-click remote code execution bug is documented as CVE-2026-25253. The marketing still presents OpenClaw as an always-on operator. What the public record shows is a long list of reliability and safety failures.
+  The project grew faster than the people behind it could keep up. The main
+  repo sits near 6,600 open issues. After an upgrade, plugins often break.
+  In demos the agent looks fine. In daily use people report that the gateway
+  dies, scheduled jobs never fire, memory disappears mid-chat, and a task is
+  marked done when nothing finished. Security is not abstract here either:
+  CVE-2026-25253 is a one-click remote code execution bug. Ads still call
+  OpenClaw an always-on helper. The public record is closer to a long list of
+  outages, breakages, and security write-ups.
 featuredImage: '../../assets/slops/openclaw-og.png'
 icon: '../../assets/slops/openclaw-icon.png'
-lastVerifiedAt: 2026-07-28
+lastVerifiedAt: 2026-07-29
 publishedAt: 2026-07-28
 tags:
   - agent
@@ -61,9 +70,9 @@ references:
     source: r/openclaw
 ---
 
-OpenClaw is the clearest bad example in this catalog. It asks for shell access and credentials, but it cannot keep installs stable or work through its own issue backlog. The star count looks impressive. The day-to-day reliability does not.
+OpenClaw wants your shell and your passwords. It also cannot clear its own issue queue or keep a normal install steady after an upgrade. The star count is huge. Day-to-day use is where people get tired.
 
 ### Hard signals
-- Thousands of open issues while the project still pushes new install funnels
-- A documented one-click RCE and a skills ecosystem with real security risk
-- Users reporting silent failures and false "task complete" results
+- Thousands of open issues, while new install guides keep shipping
+- A one-click remote code execution bug (CVE-2026-25253) and risky skills
+- Users saying tasks finish in silence, or finish when nothing ran
