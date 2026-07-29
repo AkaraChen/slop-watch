@@ -22,12 +22,32 @@ const title = t(locale, 'siteTitle');
 			<HeaderLink href={localePath(locale, '/standards/')}>{t(locale, 'navStandards')}</HeaderLink>
 		</div>
 		<div class="end">
-			<label class="theme sr-only" for="theme-select">{t(locale, 'theme')}</label>
-			<select id="theme-select" name="theme" aria-label={t(locale, 'theme')}>
-				<option value="system">{t(locale, 'themeSystem')}</option>
-				<option value="light">{t(locale, 'themeLight')}</option>
-				<option value="dark">{t(locale, 'themeDark')}</option>
-			</select>
+			<button
+				type="button"
+				id="theme-toggle"
+				class="theme-toggle"
+				aria-label={t(locale, 'theme')}
+				data-label-light={t(locale, 'themeLight')}
+				data-label-dark={t(locale, 'themeDark')}
+				data-label-system={t(locale, 'themeSystem')}
+				data-label-theme={t(locale, 'theme')}
+			>
+				<span class="theme-icon" data-mode="light" hidden>
+					<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg
+					>
+				</span>
+				<span class="theme-icon" data-mode="dark" hidden>
+					<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"></path></svg
+					>
+				</span>
+				<span class="theme-icon" data-mode="system" hidden>
+					<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg
+					>
+				</span>
+			</button>
 			<LanguageSwitcher locale={locale} path={path} />
 			<div class="social-links">
 				<a href="https://github.com/AkaraChen/slop-watch" target="_blank" rel="noopener noreferrer">
@@ -45,27 +65,55 @@ const title = t(locale, 'siteTitle');
 	<script is:inline>
 		(function () {
 			const key = 'slop-watch-theme';
+			const order = ['light', 'dark', 'system'];
 			const root = document.documentElement;
-			const select = document.getElementById('theme-select');
+			const btn = document.getElementById('theme-toggle');
+
+			function normalize(mode) {
+				return mode === 'light' || mode === 'dark' || mode === 'system' ? mode : 'system';
+			}
+
+			function labelFor(mode) {
+				if (!btn) return mode;
+				if (mode === 'light') return btn.getAttribute('data-label-light') || mode;
+				if (mode === 'dark') return btn.getAttribute('data-label-dark') || mode;
+				return btn.getAttribute('data-label-system') || mode;
+			}
+
 			function apply(mode) {
+				mode = normalize(mode);
 				if (mode === 'light' || mode === 'dark') {
 					root.setAttribute('data-theme', mode);
 				} else {
 					root.removeAttribute('data-theme');
-					mode = 'system';
 				}
 				try {
 					localStorage.setItem(key, mode);
 				} catch (_) {}
-				if (select) select.value = mode;
+				if (!btn) return;
+				btn.dataset.theme = mode;
+				btn.querySelectorAll('.theme-icon').forEach(function (el) {
+					el.hidden = el.getAttribute('data-mode') !== mode;
+				});
+				var themeWord = btn.getAttribute('data-label-theme') || 'Theme';
+				var current = labelFor(mode);
+				var next = labelFor(order[(order.indexOf(mode) + 1) % order.length]);
+				btn.setAttribute('aria-label', themeWord + ': ' + current);
+				btn.setAttribute('title', current + ' → ' + next);
 			}
-			let initial = 'system';
+
+			var initial = 'system';
 			try {
 				initial = localStorage.getItem(key) || 'system';
 			} catch (_) {}
 			apply(initial);
-			if (select) {
-				select.addEventListener('change', () => apply(select.value));
+
+			if (btn) {
+				btn.addEventListener('click', function () {
+					var cur = normalize(btn.dataset.theme || 'system');
+					var next = order[(order.indexOf(cur) + 1) % order.length];
+					apply(next);
+				});
 			}
 		})();
 	</script>
@@ -123,16 +171,30 @@ const title = t(locale, 'siteTitle');
 		min-width: 0;
 		max-width: 100%;
 	}
-	#theme-select {
-		font: inherit;
-		font-size: 0.75rem;
-		padding: 0.2rem 0.3rem;
-		border-radius: 6px;
+	.theme-toggle {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2rem;
+		height: 2rem;
+		padding: 0;
+		border-radius: 8px;
 		border: 1px solid rgba(var(--gray), 0.35);
-		background: transparent;
-		color: inherit;
-		max-width: 6.5rem;
-		min-width: 0;
+		background: rgb(var(--gray-light));
+		color: rgb(var(--black));
+		cursor: pointer;
+		flex-shrink: 0;
+	}
+	.theme-toggle:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+	}
+	.theme-toggle .theme-icon {
+		display: inline-flex;
+		line-height: 0;
+	}
+	.theme-toggle .theme-icon[hidden] {
+		display: none;
 	}
 	.social-links,
 	.social-links a {
@@ -148,10 +210,6 @@ const title = t(locale, 'siteTitle');
 		}
 		nav {
 			gap: 0.3rem;
-		}
-		#theme-select {
-			max-width: 5.75rem;
-			font-size: 0.7rem;
 		}
 	}
 </style>
