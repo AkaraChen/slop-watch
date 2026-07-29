@@ -68,7 +68,7 @@ references:
     publishedAt: 2026-04-02
 ---
 
-Edict promises a tidy court of agents. What people write in public is less tidy: ministries that will not stay online, work that drags, and a credit fight with 当皇上 that never turned into a calm technical thread.
+Edict puts ministry-named agents on a board. Users say those agents often go offline, runs crawl, and status gets stuck—see issue #251. There is also a credit fight with 当皇上 that never became a calm technical thread.
 
 ### Hard signals
 - Created **2026-02-23 14:35 UTC**; 当皇上 created **2026-02-22 17:17 UTC** (about 21 hours earlier)

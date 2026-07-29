@@ -1340,7 +1340,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	edict: {
 		zh: {
-			body: `Edict 答应给你一支整齐的朝廷。公开记录里，人却常说六部不在线、事情拖、状态卡住。差不多同时，当皇上又说对方抄了、没写来处。
+			body: `Edict 在看板上排好三省六部。用户却说这些 agent 常常不在线，跑起来特别慢，状态也走不动。差不多同时，当皇上又说对方抄了、没写来处。
 
 ### 硬信号
 - 创建 **2026-02-23 14:35 UTC**；当皇上 **2026-02-22 17:17 UTC**（大约晚二十一个小时）
