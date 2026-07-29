@@ -48,11 +48,11 @@ function clampMeta(text: string, max = 155): string {
 const metaDescription = clampMeta(description.replace(/[“”"']/g, ''), 155);
 const metaTitle = clampMeta(title, 70);
 
-// Site-wide default OG illustration (public/og-default.jpg, 1200×632, no text).
+// Site-wide default OG illustration (public/og-default.jpg, 1200×630, no text).
 const defaultOg = {
 	url: new URL('/og-default.jpg', site).href,
 	width: 1200,
-	height: 632,
+	height: 630,
 	type: 'image/jpeg',
 	alt: t(locale, 'siteTitle'),
 };
