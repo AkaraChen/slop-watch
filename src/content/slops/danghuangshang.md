@@ -1,22 +1,10 @@
 ---
 name: "当皇上 (Dang Huang Shang)"
 description: >-
-  当皇上 (wanikua/danghuangshang) is an OpenClaw tutorial and config pack. It
-  turns Discord or Feishu into a Ming-flavored AI court: messengers, a cabinet,
-  six ministries, a censorate, and optional novel-writing agents. Pitch:
-  one-command enthronement in five minutes, 18-plus agents, 60-plus skills.
+  当皇上 (wanikua/danghuangshang) is an OpenClaw tutorial and config pack. With one command it tries to turn Discord or Feishu into a Ming-style court: cabinet, six ministries, and more if you want. The pitch says five minutes to start, eighteen-plus agents, sixty-plus skills.
 link: https://github.com/wanikua/danghuangshang
 reason: >-
-  Funny job titles are not the point. Selling prompts and configs as statecraft
-  is. Install scripts, dynasty templates (Ming, Tang, modern company), and a
-  wall of badges sound like you will always have an imperial staff. Open issues
-  show something else: version drift, stale samples, Docker that will not start,
-  and bot-to-bot storms on Discord when allowBots is wrong. The same week
-  brought twin project Edict (cft0808/edict). Both fight in public over who came
-  first; both are still court skins on the same OpenClaw gateway. Credit drama
-  is loud. Onboarding is brittle. This text does not pick a legal winner. It
-  records the public “they look alike” claims and the parts that do not run
-  cleanly.
+  Funny titles are not the hard part. Getting it running is. Issue #144 says Docker will not start, and the sample OpenClaw config is too old for the image. Issue #131 puts a Ming cabinet file under a Tang folder. If allowBots is wrong, Discord bots can loop each other. In the same week Edict appeared; both sides argued in public about credit (#55). Readers can open the issues and decide for themselves.
 featuredImage: '../../assets/slops/danghuangshang-og.png'
 icon: '../../assets/slops/danghuangshang-icon.png'
 lastVerifiedAt: 2026-07-29
@@ -67,11 +55,11 @@ references:
     source: GitHub Issues
 ---
 
-This one lets you become emperor in one command and fill Discord or Feishu with ministries. When you actually install it, Docker often will not start, and you still get a public fight with the twin repo next door about who copied whom.
+当皇上 sells a quick throne. Install threads more often talk about Docker that will not start, sample configs that lag the image, and a same-week credit quarrel with Edict.
 
 ### Hard signals
-- Created **2026-02-22 17:17 UTC**, about **21 hours** before cft0808/edict
-- Same product shape: court setting, OpenClaw gateway, ministry-named agents, one-shot install
-- In-repo **docs/originality.md** plus Edict **#55 / #94**: public plagiarism claims (claims, not a court ruling)
-- User issues: **stale samples**, **Docker will not start**, **wrong dynasty config path**
-- Discord safety docs exist because multi-bot storms are a known hole in this pack
+- Created **2026-02-22 17:17 UTC**, about **21 hours** before Edict
+- OpenClaw court pack, one-command pitch
+- **docs/originality.md** plus Edict **#55** and **#94**
+- **#144** Docker will not start; **#131** wrong dynasty file
+- Discord notes for multi-bot loops

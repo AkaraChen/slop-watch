@@ -11,8 +11,8 @@ export type SlopCopy = {
 export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	openclaw: {
 		zh: {
-			description: `OpenClaw 是自托管的个人 AI，你从聊天应用里驱动它。它支持多模型和 skills 市场，GitHub 大约有 38 万星，同时也堆着大量未关闭的 issue。`,
-			reason: `OpenClaw 的扩张速度，超过了维护者能稳住代码的速度。主仓库大约有 6600 个 open issues。升级经常把插件弄坏。演示里看起来正常的 agent，真用时经常出问题：网关挂掉、定时任务不跑、记忆丢失、任务显示完成其实没做完。安全问题也很具体，公开记录里有一键远程代码执行漏洞 CVE-2026-25253。宣传里它是全天候助手，公开记录里更多是故障和事故。`,
+			description: `OpenClaw 是装在自己机器上的个人 AI，你从聊天软件里指挥它。它能换模型，也有 skills 市场。GitHub 上大约三十八万颗星，没关掉的 issue 也堆成山。`,
+			reason: `它涨得比维护跟得上的速度快。主仓库大约有六千六百个 open issue。升级常把插件弄坏。演示里还行，真用时网关会挂、定时任务不跑、记忆丢、任务显示做完其实没做完。安全也不轻松：公开记录里有一键远程执行漏洞 CVE-2026-25253。宣传说是全天候助手，公开记录里更多是故障和事故。`,
 		},
 		de: {
 			description: `OpenClaw ist eine selbst gehostete persönliche KI, die man über Chat-Apps steuert. Es gibt Multi-Modell-Routing und einen Skills-Markt. Das Projekt hat etwa 380.000 GitHub-Sterne — und einen sehr großen Berg offener Issues.`,
@@ -37,8 +37,8 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	},
 	moltbook: {
 		zh: {
-			description: `Moltbook 是给 AI agent 用的社交网络，和 OpenClaw 生态挨着。agent 可以发帖、评论、私信，人类多半只是看着。它被宣传成 agent 互联网的头版，上线很快，安全却松得多。`,
-			reason: `这是典型的 vibe coding 安全事故。创始人 Matt Schlicht 说自己几乎没写代码，补丁也交给 AI。生产环境里的 Supabase 却完全敞开：客户端 JavaScript 带着可读写全库的密钥，谁都能接管任意 agent。研究者拿到了大约 150 万个 API 认证 token、数万个邮箱，还有 agent 私信。增长故事跑得比鉴权和数据边界的基本责任更快。把数据库密钥塞进浏览器，不是聪明捷径，就是失败本身。`,
+			description: `Moltbook 是给 AI agent 用的社交网络，挨着 OpenClaw 那一圈。agent 可以发帖、评论、私信，人多半只是看着。它被说成 agent 互联网的头版，上线很快，安全松得多。`,
+			reason: `这是典型的 vibe coding 安全事故。创始人 Matt Schlicht 说自己几乎没写代码，补丁也交给 AI。上线后，网页前端的 JavaScript 里带着能直接读写整个数据库的密钥。谁打开网页、谁看源代码，都能拿到这个密钥，也就能接管别人的 agent、读私信。研究者后来拿到了大约一百五十万个 API 认证 token、数万个邮箱，还有 agent 私信。增长跑得比管权限快。`,
 		},
 		de: {
 			description: `Moltbook ist ein soziales Netzwerk für AI-Agenten im Umfeld von OpenClaw. Agenten posten, kommentieren und schreiben Direktnachrichten; Menschen schauen meist zu. Es wurde als Titelseite des Agenten-Internets vermarktet, sehr schnell geshappt und deutlich lockerer abgesichert als die Story nahelegte.`,
@@ -63,8 +63,8 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	},
 	scriptc: {
 		zh: {
-			description: `scriptc 是 Vercel Labs 的编译器，把 TypeScript 编成原生二进制。TypeScript 会经过 C 中间层，目标是不依赖 Node 或 V8。上线时大家在说冷启动要消失了；第一天的 issue 里，Windows、clang 和静默 FFI 问题却马上出现了。`,
-			reason: `这个编译器一出来就有立刻能看见的问题。Windows 上跑不顺（#10、#25）。真实项目会撞到 clang 编译失败（#23）。有些 FFI 问题构建是绿的，程序加载时才报错（#21）。动态 re-export 可以毫无提示地通过构建，之后再失败（#19）。与此同时，社交平台上重复着「TypeScript 变原生」的说法，几乎不提限制。问题就在这里：构建通过了，真跑起来却过不了。`,
+			description: `scriptc 是 Vercel Labs 的编译器，把 TypeScript 编成原生二进制。TypeScript 会经过一层 C，目标是不依赖 Node 或 V8。上线时有人说冷启动要消失了；第一天的 issue 里，却是 Windows、clang 和静默的 FFI 问题。`,
+			reason: `问题一出来就能看见。Windows 上跑不顺（#10、#25）。真实项目会撞到 clang 编译失败（#23）。有的 FFI 问题构建是绿的，程序加载时才报错（#21）。动态 re-export 可以毫无提示地通过构建，之后再失败（#19）。社交平台上重复着「TypeScript 变原生」，很少提限制。构建通过了，真跑起来却过不了。`,
 		},
 		de: {
 			description: `scriptc ist ein Compiler von Vercel Labs, der TypeScript in native Binaries verwandelt. TypeScript läuft über eine C-Zwischenstufe und soll ohne Node oder V8 auskommen. Launch-Posts sprachen vom Ende der Cold Starts. Die ersten Issues sprachen von Windows, clang und stillen FFI-Bugs.`,
@@ -89,8 +89,8 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	},
 	'vercel-labs-native': {
 		zh: {
-			description: `Native SDK 是 Vercel Labs 做原生桌面应用的工具包，用声明式 UI 和 TypeScript 编写，目标是编出原生二进制。它常被说成 Electron 的替代品。实际上，焦点、终端、WebView 可观测性这些基础能力，在 issue 里仍不完整。`,
-			reason: `这是一个还很早期的平台，却被说成已经能取代 Electron。宣传强调没有 WebView、没有 JavaScript 运行时。跟踪器里却满是还不能用的基础能力，包括焦点、终端、WebView 可观测性和布局控制（#222 到 #226）。星标和 agent 自动化话术，跑得比扎实的质量门槛更快。如果产品还分不清哪个终端触发了事件，那就不是完成的革命，只是一份很长的作业清单。`,
+			description: `Native SDK 是 Vercel Labs 做原生桌面应用的工具包，用声明式 UI 和 TypeScript 写，目标是编出原生二进制。它常被说成 Electron 的替代品。实际上，焦点、终端、WebView 可观测性这些基础能力，在 issue 里仍不完整。`,
+			reason: `产品还很早，话却说得很满。宣传强调没有 WebView、没有 JavaScript 运行时。跟踪器里却满是还不能用的基础能力，包括焦点、终端、WebView 可观测性和布局控制（#222 到 #226）。星标和「agent 自动化」的说法，跑得比扎实的质量快。如果产品还分不清哪个终端触发了事件，那就不是完成的革命，只是一份很长的作业清单。`,
 		},
 		de: {
 			description: `Native SDK ist ein Toolkit von Vercel Labs für native Desktop-Apps mit deklarativer UI und TypeScript. Es zielt auf native Binaries und wird oft als Electron-Ersatz verkauft. In der Praxis sind grundlegende Desktop-Teile wie Fokus, Terminals und WebView-Observability im Issue-Tracker noch unvollständig.`,
@@ -115,8 +115,8 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	},
 	zerolang: {
 		zh: {
-			description: `Zerolang 是 Vercel Labs 面向 agent 的实验性语言。语义图被当作程序数据库，.0 文件是给人看的投影。agent 应该改图上的节点，而不是和按行的文本 diff 较劲。宣传里有原生二进制和更适合 agent 的诊断，宿主后端的质量目前仍不稳定。`,
-			reason: `Zerolang 和 scriptc、native 属于同一波 Labs 产品，模式也类似。它被宣传成 agent 可以安全编辑语义图的语言。公开 issue 和一份 18 个 bug 的审计，在默认 macOS 宿主上讲了另一回事：i64 比较被发成 32 位 CMP，过大的栈帧被静默截断后变成 segfault，动态数组的 set 会清掉 borrow 跟踪。社区 issue #181 的标题就是 “Low code quality. Don't run this on your machine.” 维护者承认了，并表示在招人。知乎上的长文还补充了更多细节：公开批评后，compiler-zero 整棵树被删；time、rand、fs 被直接放进 IR，而不是正经 runtime；所谓 runtime 模块主要覆盖 http 和 json，硬编码仍在；所有权叙事建立在很薄的检查器上。宣传说过期哈希会在写入前被拒绝，issue #425 却是模块哈希比较不正确。这两件事放在一起，很别扭。`,
+			description: `Zerolang 是 Vercel Labs 面向 agent 的实验语言。它把语义图当成程序本身，.0 文件是给人看的投影。agent 理应改图上的节点，而不是和按行的文本 diff 较劲。宣传里有原生二进制，也有更适合 agent 的诊断。宿主后端的质量目前仍不稳。`,
+			reason: `它和 scriptc、Native 是同一波 Labs 产品。宣传说 agent 可以安全改语义图。公开 issue 和一份十八个 bug 的审计，在默认 macOS 上讲了另一回事：有人在 #181 直接写 Low code quality，并劝你别在自己机器上跑；维护者认了，也说在招人。技术细节里还有比较指令发错、栈被截断后崩溃、借用检查被清掉等。知乎长文还写到：批评之后整棵编译树被删，runtime 很薄。宣传说过期哈希会在写入前被拒绝，#425 却是模块哈希比较不正确。两件事放一起，很别扭。`,
 		},
 		de: {
 			description: `Zerolang ist eine experimentelle Vercel-Labs-Sprache für Agents. Der semantische Graph gilt als Programmdatenbank, .0-Dateien sind die menschenlesbare Projektion. Agents sollen Graph-Knoten patchen statt zeilenbasierte Text-Diffs zu bekämpfen. Der Pitch umfasst native Binaries und agent-freundliche Diagnostik. Die Host-Backend-Qualität ist noch ungleichmäßig.`,
@@ -142,8 +142,8 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 
 	edict: {
 		zh: {
-			description: `Edict 把一群 AI agent 排成「三省六部」：有人分活，有人做计划，有人挑刺复核，外面再挂一块实时看板。它跑在 OpenClaw 上，仓库是 cft0808/edict，Python 为主，宣传里常拿 CrewAI、AutoGen 比。创建几个月后，GitHub 大约一万六星。`,
-			reason: `看着像严肃架构，听着像「古代官制管 AI」，拆开多半是 OpenClaw 的安装脚本、角色提示词和仪表盘换了层皮。更热闹的是公开互撕：大约早二十一个小时上线、同样朝廷设定、拼音 agent 名也对得上的「当皇上」，在 issue #55、#94 里说 Edict 抄了且没署名；Edict 以「非技术讨论」关掉，星标照涨。我们收它，不是盯某条 CVE，而是：故事吹得满、两仓互咬、主页却指着 openclaw.ai 不像自家站。用户那边也常见——看板掉线、三省六部经常离线（#251）、webhook 还要防 SSRF。`,
+			description: `Edict 跑在 OpenClaw 上，把一群 agent 排成朝廷里的三省六部，前面挂一块会动的看板。仓库是 cft0808/edict，主要用 Python。开张几个月，GitHub 上大约有一万六颗星。外面介绍时，常拿它和 CrewAI、AutoGen 比。`,
+			reason: `看板上六个部的名字都在，点进去却常常连不上。Issue #251 里有人写：经常三省六部不在线；楼主还说跑起来特别慢，状态也不能正常往下走。差不多同一时期，当皇上在 #55、#94 里说 Edict 抄了设计、也没写来处；Edict 把单子当成非技术讨论关了。两边开张大约只差二十一个小时。仓库主页还指着 openclaw.ai。Webhook 那边还有 #317、#318 在补。`,
 		},
 		de: {
 			description: `Edict stellt eine Truppe AI-Agents wie die drei Departements und sechs Ministerien auf: einer verteilt Arbeit, einer plant, einer prüft, davor ein Live-Kanban. Läuft auf OpenClaw. Repo cft0808/edict, vor allem Python, oft gegen CrewAI und AutoGen vermarktet. Ein paar Monate nach Create lagen etwa 16.000 Sterne auf GitHub.`,
@@ -168,8 +168,8 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	},
 	danghuangshang: {
 		zh: {
-			description: `「当皇上」是一套 OpenClaw 教程加配置包，仓库 wanikua/danghuangshang。它让你在 Discord 或飞书里「一键登基」：内阁、六部、都察院排好，还能挂写小说的 agent。宣传说五分钟上手，号称十八个以上 agent、六十多项 skills。`,
-			reason: `滑稽官名不是重点。重点是把提示词和配置包吹成治国。装的时候另一回事：版本对不上、样例过期、Docker 起不来；allowBots 设错，Discord 里 bot 会互相刷屏。同一周还有孪生项目 Edict，两边公开争谁先做的；拆开看，两边都是同一套 OpenClaw 网关上的朝廷皮。署名官司很满，上手很脆。正文不判谁合法，只记下已经公开的「长得很像」，以及跑起来不稳的那些事。`,
+			description: `「当皇上」是一套 OpenClaw 的教程和配置，仓库是 wanikua/danghuangshang。它想让你在 Discord 或飞书里一键登基：内阁、六部排好，也可以再挂写小说的助手。宣传说五分钟就能上手，agent 十八个以上，skills 六十多项。`,
+			reason: `官名好玩，装起来却不轻松。Issue #144 里，有人说 Docker 根本起不来，示例配置太旧，对不上镜像里的 openclaw。#131 里，唐的目录下塞着明的配置。allowBots 开错了，Discord 上的 bot 还会互相刷。同一周 Edict 也出来了，两边为署名公开吵过（#55）。两边各说各的，读者可以自己去点 issue。`,
 		},
 		de: {
 			description: `„Dang Huang Shang“ ist ein OpenClaw-Tutorial plus Config-Paket, Repo wanikua/danghuangshang. Es lässt dich in Discord oder Feishu mit einem Befehl „Kaiser werden“: Kabinett, sechs Ministerien, Zensorat, optional Roman-Agents. Pitch: fünf Minuten bis live, 18+ Agents, 60+ Skills.`,

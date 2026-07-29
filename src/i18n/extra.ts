@@ -10,12 +10,12 @@ export type ExtraCopy = {
 export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	openclaw: {
 		zh: {
-			body: `OpenClaw 是本目录里最典型的反面例子。它会要你的 shell 和凭据，却很难把安装维护稳定，也清不完自己的 issue。星标看起来很唬人，日常可靠性对不上。
+			body: `OpenClaw 要你的 shell 和登录凭据，却很难把安装维护稳住，issue 也清不完。星很多，天天用起来却不省心。
 
 ### 硬信号
-- open issues 以千计，安装推广却还在继续
-- 已有公开记录的一键 RCE，以及风险不小的 skills 生态
-- 用户反馈静默失败和虚假的「任务完成」`,
+- open issue 以千计，安装推广还在继续
+- 已有公开的一键远程执行漏洞，skills 市场风险也不小
+- 用户说有静默失败，也有「做完了」其实没做完`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw 仓库数据`,
@@ -312,11 +312,11 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	moltbook: {
 		zh: {
-			body: `Moltbook 被收进这里，是因为它的鉴权和数据层在公开场合先垮了，后面任何「agent 文明」的大话都站不住。agent 有广场，会发请求的人也有。
+			body: `Moltbook 的鉴权和数据层在公开场合先垮了。agent 有广场，会发请求的人也有。
 
 ### 硬信号
-- 生产环境的 agent 记录没有得到应有的鉴权保护
-- 后端密钥直接出现在客户端 JavaScript 里
+- 生产环境的 agent 记录没有应有的鉴权保护
+- 网页前端脚本里带着能读写整库的密钥，打开页面就能抄走
 - 运营把代码责任推给模型`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
@@ -494,12 +494,13 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	scriptc: {
 		zh: {
-			body: `scriptc 被收进这里，是因为它作为工具链 slop 很典型。宣传里它是离开 JavaScript 运行时的办法，首日 issue 里已经是错误代码和不完整的平台支持。发布帖在讲功能，issue 区在讲限制。
+			body: `scriptc 被说成离开 JavaScript 运行时的办法。首日 issue 里已经是错误代码和不完整的平台支持。发布帖在讲功能，issue 区在讲限制。
 
-### 质量视角
-- 构建通过，加载时因 FFI 失败
-- Windows 用户一上来就被挡住
-- 公开讨论更关心口号，而不是排障`,
+### 硬信号
+- Windows 支持不完整
+- 真实项目上的 clang 失败
+- 构建通过、加载才炸的 FFI 问题
+- 动态 re-export 无诊断`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc 仓库`,
@@ -796,7 +797,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	'vercel-labs-native': {
 		zh: {
-			body: `Native SDK 以后或许会好起来。今天它更像宣传完整、桌面能力不完整。口号是一场革命，未关闭的 issue 还在讲基本功。人们一直在给 Electron 办葬礼，产品自己还有焦点问题。
+			body: `Native SDK 以后或许会好起来。今天宣传很满，桌面基础却还不齐。口号是一场革命，未关闭的 issue 还在讲基本功。
 
 ### 质量视角
 - issue 标题读起来像 1.0 前的清单
@@ -1050,14 +1051,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	zerolang: {
 		zh: {
-			body: `Zerolang 是包着 agent 故事的编译器质量 slop。宣传讲的是给 agent 的语义确定性。公开证据是错误代码、社区明确的「别在你机器上跑」，以及在 agent 原生宣传底下找到硬编码的文章。
+			body: `Zerolang 包着 agent 的故事。宣传讲安全改图；公开证据里，有人劝你别在自己机器上跑，也有人指出实现和宣传对不上。
 
 ### 硬信号
 - 主干上可复现的错误代码和健全性问题（#318）
-- Apple Silicon 宿主后端的缺口（#230）
-- 社区和维护者都明确承认质量很差（#181）
-- 中文长文写到：stdlib 被烤进 IR、runtime 模块很薄、公开批评后整棵编译器树被删
-- 和 scriptc、native 一样：先讲故事，质量后补`,
+- Apple Silicon 宿主后端缺口（#230）
+- 社区和维护者都承认质量差（#181）
+- 中文长文写到 stdlib 烤进 IR、runtime 很薄、批评后删树
+- 和 scriptc、Native 一样：先讲故事，质量后补`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `README 安全警告`,
@@ -1340,15 +1341,15 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	edict: {
 		zh: {
-			body: `Edict 是 OpenClaw 上又一套「朝廷装」多智能体。故事讲得很满，公开撕得很满。
+			body: `看板上六个部的名字都在，点进去却常常连不上。用户还说跑起来特别慢，状态也走不动。差不多同时，当皇上又说对方抄了、没写来处。
 
 ### 硬信号
-- 创建时间 **2026-02-23 14:35 UTC**；「当皇上」是 **2026-02-22 17:17 UTC**（大约晚二十一个小时）
-- 卖点差不多：当皇帝、三省六部、OpenClaw、一键装
-- **#55**、**#94** 是公开的抄袭/署名工单；维护方按非技术讨论关掉
-- 末次核对：大约 **一万六** 星，对家大约 **两千七**
-- 仓库主页指着 **openclaw.ai**，不像自家产品站
-- 现场：**#251** 三省六部经常离线；webhook 还有 SSRF 加固（#317 / #318）`,
+- 创建 **2026-02-23 14:35 UTC**；当皇上 **2026-02-22 17:17 UTC**（大约晚二十一个小时）
+- 三省六部、OpenClaw、一键安装
+- **#55**、**#94** 谈署名；按非技术讨论关闭
+- 星大约 **一万六**，对家大约 **两千七**
+- 主页指着 **openclaw.ai**
+- **#251** 不在线、慢、状态卡住；webhook **#317**、**#318**`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub 仓库 cft0808/edict`,
@@ -1588,14 +1589,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	danghuangshang: {
 		zh: {
-			body: `这东西让你一键当皇帝，Discord 或飞书里排满六部。真装的时候 Docker 经常起不来，还要和隔壁孪生仓互撕是谁先抄谁。
+			body: `「当皇上」卖的是快登基。装机帖里更常见的，是 Docker 起不来、示例配置过旧，以及和 Edict 为署名公开吵架。
 
 ### 硬信号
-- 创建 **2026-02-22 17:17 UTC**，大约比 Edict **早二十一个小时**
-- 同类货：朝廷设定、OpenClaw、部名 agent、一键装
-- 仓内 **docs/originality.md**，加上 Edict **#55 / #94**：公开互指抄袭（不是法庭判决）
-- 用户骂点：**样例过期**、**Docker 起不来**、**朝代配置塞错目录**
-- 专门写了 Discord 安全说明——多 bot 互刷是已知坑`,
+- 创建 **2026-02-22 17:17 UTC**，大约比 Edict 早 **二十一个小时**
+- OpenClaw 朝廷包，一键安装
+- **docs/originality.md**，以及 Edict 上的 **#55**、**#94**
+- **#144** Docker 起不来；**#131** 朝代文件放错
+- Discord 多 bot 互刷的说明`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub 仓库 wanikua/danghuangshang`,

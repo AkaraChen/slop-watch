@@ -1,24 +1,10 @@
 ---
 name: Edict
 description: >-
-  Edict lines up a pack of AI agents as the Three Departments and Six
-  Ministries: someone hands out work, someone plans, someone reviews, and a
-  live kanban sits in front. It runs on OpenClaw. The repo is cft0808/edict,
-  mostly Python, often pitched against CrewAI and AutoGen. A few months after
-  create, GitHub was around 16k stars.
+  Edict runs on OpenClaw and lines agents up like an imperial court: three departments, six ministries, and a live board. The repo is cft0808/edict, mostly Python. A few months after create, GitHub had about sixteen thousand stars. Marketing often sets it next to CrewAI and AutoGen.
 link: https://github.com/cft0808/edict
 reason: >-
-  It looks like serious architecture and sounds like “ancient bureaucracy runs
-  AI.” Peel it back and you mostly get OpenClaw install scripts, role prompts,
-  and a dashboard with a new skin. The public fight is part of the story:
-  当皇上 (wanikua/danghuangshang) shipped about twenty-one hours earlier with
-  the same court setup and overlapping pinyin agent names, then filed issues
-  #55 and #94 saying Edict copied without credit. Edict closed them as
-  non-technical talk. Stars kept rising. We list it not for one CVE, but
-  because the story is thick, the two repos bite each other in public, and the
-  homepage points at openclaw.ai instead of a first-party product site. Users
-  also report a dead kanban, ministries often offline (#251), and webhook SSRF
-  hardening still in flight.
+  The board shows six ministry names. Open one and it often will not connect. Issue #251 says the ministries stay offline a lot; runs are very slow and status does not move. Around the same time, 当皇上 filed #55 and #94 saying the design was copied without credit; Edict closed those as non-technical. Create times sit about twenty-one hours apart, with 当皇上 first. The homepage field points at openclaw.ai. There is also open webhook safety work (#317, #318).
 featuredImage: '../../assets/slops/edict-og.png'
 icon: '../../assets/slops/edict-icon.png'
 lastVerifiedAt: 2026-07-29
@@ -73,12 +59,12 @@ references:
     publishedAt: 2026-04-02
 ---
 
-Edict is another OpenClaw multi-agent pack dressed as a court. The story is thick. The public fight is thick too.
+The board shows six ministry names. Open one and it often will not connect. Users also say runs are very slow and status gets stuck. Around the same time, 当皇上 said the other side copied without credit.
 
 ### Hard signals
-- GitHub create **2026-02-23 14:35 UTC** vs 当皇上 **2026-02-22 17:17 UTC** (about 21 hours later)
-- Same pitch: you are the emperor, three departments / six ministries, OpenClaw, one-shot install
-- Public issues **#55** and **#94** on plagiarism / credit; maintainer closed them as non-technical
-- Last check: about **16k** stars vs about **2.7k** for the earlier twin
-- Repo homepage field points at **openclaw.ai**, not a first-party product site
-- Field noise: dead kanban, ministries often offline (**#251**), webhook SSRF work (#317 / #318)
+- Created **2026-02-23 14:35 UTC**; 当皇上 **2026-02-22 17:17 UTC** (about 21 hours earlier)
+- Court layout on OpenClaw, one-shot install
+- **#55** and **#94** on credit; closed as non-technical
+- About **16k** stars versus about **2.7k** for the earlier twin
+- Homepage field points at **openclaw.ai**
+- **#251** offline, slow, status stuck; webhook **#317**, **#318**

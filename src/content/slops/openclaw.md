@@ -1,10 +1,10 @@
 ---
 name: OpenClaw
 description: >-
-  OpenClaw is a self-hosted personal AI you control from chat apps. It supports multiple models and a skills marketplace. The project has around 380,000 GitHub stars — and a huge backlog of open issues to match.
+  OpenClaw is a personal AI you host yourself and drive from chat apps. It supports multiple models and a skills marketplace. It has about 380,000 GitHub stars, and a very large pile of open issues to match.
 link: https://openclaw.ai/
 reason: >-
-  OpenClaw grew faster than the maintainers could keep the code under control. The main repository has about 6,600 open issues. Upgrades often break plugins. Agents that look fine in demos frequently fail in real use: the gateway dies, cron jobs do not run, memory drops out, and tasks report as finished when nothing actually finished. Security is part of the problem too. A one-click remote code execution bug is documented as CVE-2026-25253. The marketing still presents OpenClaw as an always-on operator. What the public record shows is a long list of reliability and safety failures.
+  It grew faster than maintainers could keep the code steady. The main repo has about 6,600 open issues. Upgrades often break plugins. Agents that look fine in demos fail in daily use: the gateway dies, cron does not fire, memory drops, tasks say done when nothing finished. Security is concrete too: a one-click remote code execution is recorded as CVE-2026-25253. Marketing talks about an always-on operator. The public record is mostly outages and incidents.
 featuredImage: '../../assets/slops/openclaw-og.png'
 icon: '../../assets/slops/openclaw-icon.png'
 lastVerifiedAt: 2026-07-28
@@ -61,9 +61,9 @@ references:
     source: r/openclaw
 ---
 
-OpenClaw is the clearest bad example in this catalog. It asks for shell access and credentials, but it cannot keep installs stable or work through its own issue backlog. The star count looks impressive. The day-to-day reliability does not.
+OpenClaw asks for your shell and credentials, yet it struggles to keep installs stable or clear its own issue pile. The star count looks loud. Day-to-day reliability does not.
 
 ### Hard signals
-- Thousands of open issues while the project still pushes new install funnels
-- A documented one-click RCE and a skills ecosystem with real security risk
-- Users reporting silent failures and false "task complete" results
+- Thousands of open issues while install marketing continues
+- A documented one-click RCE, and a skills market with real risk
+- Users report silent failures and “done” tasks that are not done
