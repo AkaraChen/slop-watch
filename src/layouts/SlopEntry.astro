@@ -7,6 +7,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { localePath, type Locale } from '../i18n/config';
 import { t } from '../i18n/ui';
+import { publicTags } from '../lib/related';
 
 type RelatedItem = {
 	id: string;
@@ -51,6 +52,7 @@ const pagePath = `/slops/${id}/`;
 const pageUrl = new URL(localePath(locale, pagePath), siteUrl).href;
 const imageUrl = new URL(featuredImage.src, siteUrl).href;
 const catalogUrl = new URL(localePath(locale, '/'), siteUrl).href;
+const tagsOnPage = publicTags(tags);
 
 const jsonLd = [
 	{
@@ -334,9 +336,9 @@ const jsonLd = [
 							)
 						}
 						{
-							tags.length > 0 && (
+							tagsOnPage.length > 0 && (
 								<span class="tags">
-									{tags.map((tag) => (
+									{tagsOnPage.map((tag) => (
 										<span class="tag">{tag}</span>
 									))}
 								</span>

@@ -5,7 +5,7 @@ import FormattedDate from './FormattedDate.astro';
 import { localePath, type Locale } from '../i18n/config';
 import { getSlopCopy } from '../i18n/content';
 import { t } from '../i18n/ui';
-import { collectTags } from '../lib/related';
+import { collectTags, publicTags } from '../lib/related';
 
 interface Props {
 	locale: Locale;
@@ -41,6 +41,8 @@ const tags = collectTags(slops);
 				description: slop.data.description,
 				reason: slop.data.reason,
 			});
+			const shownTags = publicTags(slop.data.tags);
+			// Keep full tag list on the row so filters still match hidden tags if linked.
 			const tagAttr = slop.data.tags.join(' ');
 			return (
 				<li data-tags={tagAttr} data-catalog-item>
@@ -86,7 +88,7 @@ const tags = collectTags(slops);
 										n: slop.data.references.length,
 									})}
 								</span>
-								{slop.data.tags.slice(0, 3).map((tag) => (
+								{shownTags.slice(0, 3).map((tag) => (
 									<button
 										type="button"
 										class="tag-link"
