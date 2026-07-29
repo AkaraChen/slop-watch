@@ -142,8 +142,8 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 
 	edict: {
 		zh: {
-			description: `Edict 挂在 OpenClaw 上，把一群 agent 排成「三省六部」：有人分活，有人做计划，有人做复核，底下再按「部」分工，外面挂一块实时看板。仓库是 cft0808/edict，代码以 Python 为主，对外宣传时常拿 CrewAI、AutoGen 当对照。创建几个月后，GitHub 星标大约到了一万六。`,
-			reason: `它真正卖的不是严谨的系统工程，而是「用古代官制管 AI」这套故事。页面上有强制复核、奏折、军机处看板，看起来像正经架构；拆开看，仍是 OpenClaw 的安装脚本、角色提示词和仪表盘，只是换了一层皮。公开争执也写进标本：大约早二十一个小时上线、同样用朝廷设定、还共用一批拼音 agent 名的「当皇上」（wanikua/danghuangshang），在 issue #55 和 #94 里指控抄袭和未署名。Edict 把工单标成「非技术讨论」关掉，星标继续涨。我们收它，不是盯着某一条 CVE，而是：角色扮演包装得很满，两仓互相指控，仓库主页却指向 openclaw.ai，而不是自己的产品站。用户那边还有看板掉线、三省六部经常离线（#251）、webhook 要防 SSRF 这类很普通的运维问题。`,
+			description: `Edict 把一群 AI agent 排成「三省六部」：有人分活，有人做计划，有人挑刺复核，外面再挂一块实时看板。它跑在 OpenClaw 上，仓库是 cft0808/edict，Python 为主，宣传里常拿 CrewAI、AutoGen 比。创建几个月后，GitHub 大约一万六星。`,
+			reason: `看着像严肃架构，听着像「古代官制管 AI」，拆开多半是 OpenClaw 的安装脚本、角色提示词和仪表盘换了层皮。更热闹的是公开互撕：大约早二十一个小时上线、同样朝廷设定、拼音 agent 名也对得上的「当皇上」，在 issue #55、#94 里说 Edict 抄了且没署名；Edict 以「非技术讨论」关掉，星标照涨。我们收它，不是盯某条 CVE，而是：故事吹得满、两仓互咬、主页却指着 openclaw.ai 不像自家站。用户那边也常见——看板掉线、三省六部经常离线（#251）、webhook 还要防 SSRF。`,
 		},
 		de: {
 			description: `Edict läuft auf OpenClaw und ordnet Agents wie die drei Departements und sechs Ministerien: jemand verteilt Arbeit, andere planen und prüfen, darunter sitzen Agents nach „Ministerium“, davor ein Live-Kanban. Das Repo cft0808/edict ist vor allem Python und wirbt oft mit CrewAI und AutoGen. Nach wenigen Monaten standen etwa 16.000 Sterne auf GitHub.`,
@@ -168,8 +168,8 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	},
 	danghuangshang: {
 		zh: {
-			description: `「当皇上」（仓库 wanikua/danghuangshang）是一套 OpenClaw 教程和配置包。它把 Discord 或飞书收成明朝味道的 AI 朝廷：有人传话，有内阁，有六部，有都察院，也可以再挂上写小说的 agent。宣传口径是一键登基、五分钟上手，并号称有十八个以上 agent、六十多项 skills。`,
-			reason: `问题不在 agent 能不能起滑稽的官名，而在于把提示词和配置包吹成「治国」。安装脚本、朝代模板（明、唐、现代公司）和一排徽章，像是在承诺你永远有一支帝国班底。公开 issue 却是另一幅画面：安装对不上版本，样例配置过期，Docker 起不来；allowBots 设错时，Discord 里的 bot 会互相刷屏。同一周里还出现了三省六部孪生项目 Edict（cft0808/edict），两边在公开场合争署名；拆开看，两边都还是同一套 OpenClaw 网关上的朝廷换皮。署名官司演得很满，上手却脆——质量画像大致如此。正文不替任何一方做法律判决，只记下已经公开的「长得很像」的指控，以及实际跑起来不稳的部分。`,
+			description: `「当皇上」是一套 OpenClaw 教程加配置包，仓库 wanikua/danghuangshang。它让你在 Discord 或飞书里「一键登基」：内阁、六部、都察院排好，还能挂写小说的 agent。宣传说五分钟上手，号称十八个以上 agent、六十多项 skills。`,
+			reason: `滑稽官名不是重点。重点是把提示词和配置包吹成治国。装的时候另一回事：版本对不上、样例过期、Docker 起不来；allowBots 设错，Discord 里 bot 会互相刷屏。同一周还有孪生项目 Edict，两边公开争谁先做的；拆开看，两边都是同一套 OpenClaw 网关上的朝廷皮。署名官司很满，上手很脆。正文不判谁合法，只记下已经公开的「长得很像」，以及跑起来不稳的那些事。`,
 		},
 		de: {
 			description: `„Dang Huang Shang“ (Repo wanikua/danghuangshang) ist ein OpenClaw-Tutorial und Config-Paket. Es macht aus Discord oder Feishu einen KI-Hof im Ming-Geschmack: Boten, Kabinett, sechs Ministerien, Zensorat und optional Roman-Agents. Der Pitch lautet Ein-Kommando-Thron und fünf Minuten bis zum Start, mit 18+ Agents und 60+ Skills.`,

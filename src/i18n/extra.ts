@@ -1340,19 +1340,19 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	edict: {
 		zh: {
-			body: `Edict 出现在这份目录里，是因为 OpenClaw 生态里又多出一套「朝廷」包装的多智能体方案。故事讲得很满，公开争执也同样满。
+			body: `Edict 是 OpenClaw 上又一套「朝廷装」多智能体。故事讲得很满，公开撕得很满。
 
 ### 硬信号
-- GitHub 创建时间是 **2026-02-23 14:35 UTC**；「当皇上」是 **2026-02-22 17:17 UTC**（大约晚二十一个小时）
-- 同一套卖点：用户当皇帝、三省六部、OpenClaw、一键安装
-- 公开工单 **#55**、**#94** 记录抄袭与署名争议；维护方按非技术讨论关闭
-- 末次核对：星标大约 **一万六**，早一步的孪生仓大约 **两千七**
-- 仓库主页字段指向 **openclaw.ai**，不是自家产品站
-- 现场还有看板掉线、**#251** 三省六部经常离线，以及 webhook 的 SSRF 加固（#317 / #318）`,
+- 创建时间 **2026-02-23 14:35 UTC**；「当皇上」是 **2026-02-22 17:17 UTC**（大约晚二十一个小时）
+- 卖点差不多：当皇帝、三省六部、OpenClaw、一键装
+- **#55**、**#94** 是公开的抄袭/署名工单；维护方按非技术讨论关掉
+- 末次核对：大约 **一万六** 星，对家大约 **两千七**
+- 仓库主页指着 **openclaw.ai**，不像自家产品站
+- 现场：**#251** 三省六部经常离线；webhook 还有 SSRF 加固（#317 / #318）`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub 仓库 cft0808/edict`,
-					summary: `用三省六部设定包装的 OpenClaw 多智能体项目。大约一万六星，2026-02-23 UTC 创建，MIT 许可。代码以 Python 为主，宣传里常带 React 看板。`,
+					summary: `三省六部包装的 OpenClaw 多智能体。大约一万六星，2026-02-23 UTC 创建，MIT。Python 为主，宣传常带 React 看板。`,
 				},
 				'https://github.com/cft0808/edict/issues/55': {
 					title: `Issue #55：被指抄袭、未署名`,
@@ -1588,14 +1588,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	danghuangshang: {
 		zh: {
-			body: `「当皇上」出现在这份目录里，是因为这里又多出一套 OpenClaw 朝廷教程。包装吹得很满，真正装起来却脆，还要和孪生项目公开争署名。
+			body: `这东西让你一键当皇帝，Discord 或飞书里排满六部。真装的时候 Docker 经常起不来，还要和隔壁孪生仓互撕是谁先抄谁。
 
 ### 硬信号
-- 创建于 **2026-02-22 17:17 UTC**，大约比 cft0808/edict **早二十一个小时**
-- 同一类产品：朝廷设定、OpenClaw 网关、按部命名的 agent、一键安装
-- 仓内 **docs/originality.md** 加上 Edict 上的 **#55 / #94**，构成公开的抄袭争议（各说各话，不是法庭判决）
-- 用户 issue 指向：**样例过期**、**Docker 起不来**、**朝代配置放错目录**
-- 专门写了 Discord 安全说明，因为多 bot 互刷是这套包里已知的坑`,
+- 创建 **2026-02-22 17:17 UTC**，大约比 Edict **早二十一个小时**
+- 同类货：朝廷设定、OpenClaw、部名 agent、一键装
+- 仓内 **docs/originality.md**，加上 Edict **#55 / #94**：公开互指抄袭（不是法庭判决）
+- 用户骂点：**样例过期**、**Docker 起不来**、**朝代配置塞错目录**
+- 专门写了 Discord 安全说明——多 bot 互刷是已知坑`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub 仓库 wanikua/danghuangshang`,
