@@ -1340,15 +1340,15 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	edict: {
 		zh: {
-			body: `Edict 是 OpenClaw 上又一套「朝廷装」多智能体。故事讲得很满，公开撕得很满。
+			body: `Edict 答应给你一支整齐的朝廷。公开记录里，人却常说六部不在线、事情拖、状态卡住。差不多同时，当皇上又说对方抄了、没写来处。
 
 ### 硬信号
-- 创建时间 **2026-02-23 14:35 UTC**；「当皇上」是 **2026-02-22 17:17 UTC**（大约晚二十一个小时）
-- 卖点差不多：当皇帝、三省六部、OpenClaw、一键装
-- **#55**、**#94** 是公开的抄袭/署名工单；维护方按非技术讨论关掉
-- 末次核对：大约 **一万六** 星，对家大约 **两千七**
-- 仓库主页指着 **openclaw.ai**，不像自家产品站
-- 现场：**#251** 三省六部经常离线；webhook 还有 SSRF 加固（#317 / #318）`,
+- 创建 **2026-02-23 14:35 UTC**；当皇上 **2026-02-22 17:17 UTC**（大约晚二十一个小时）
+- 三省六部、OpenClaw、一键安装
+- **#55**、**#94** 谈署名；按非技术讨论关闭
+- 星大约 **一万六**，对家大约 **两千七**
+- 主页指着 **openclaw.ai**
+- **#251** 不在线、慢、状态卡住；webhook **#317**、**#318**`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub 仓库 cft0808/edict`,
@@ -1376,20 +1376,20 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 				},
 				'https://github.com/cft0808/edict/issues/251': {
 					title: `Issue #251：三省六部经常不在线`,
-					summary: `用户反馈：看板里各个「部」的 agent 经常显示离线。`,
+					summary: `标题「经常三省六部不在线」。楼主：经常不在线，执行特别慢，状态不能正常流转。`,
 				},
 			},
 		},
 		de: {
-			body: `Edict ist ein weiteres OpenClaw-Multi-Agent-Paket im Hof-Kostüm. Die Story ist dick. Der öffentliche Streit auch.
+			body: `#251 ist knallhart: Ministerien oft offline. Erster Post: oft offline, sehr langsam, Status hängt. Gleiche Woche 当皇上; #55/#94 Copy-Streit.
 
 ### Harte Signale
-- Create **2026-02-23 14:35 UTC**; 当皇上 **2026-02-22 17:17 UTC** (etwa 21 Stunden später)
-- Gleicher Pitch: du bist Kaiser, drei Departements / sechs Ministerien, OpenClaw, One-Shot-Install
-- **#55** und **#94** zur Plagiats-/Credit-Frage; Maintainer schloss sie als nicht-technisch
-- Letzter Check: etwa **16k** Sterne vs etwa **2.7k** beim früheren Twin
-- Homepage-Feld zeigt auf **openclaw.ai**, nicht auf ein eigenes Produkt
-- Feld: totes Kanban, Ministerien oft offline (**#251**), Webhook-SSRF (#317 / #318)`,
+- Create **2026-02-23 14:35 UTC** vs 当皇上 **2026-02-22 17:17 UTC** (~21h später)
+- Ministerien + OpenClaw + One-Shot-Install
+- **#55** / **#94** Credit; als nicht-technisch geschlossen
+- Sterne ~**16k** vs ~**2.7k**
+- Homepage → **openclaw.ai**
+- **#251** offline/langsam/hängt; webhook **#317** / **#318**`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub-Repo cft0808/edict`,
@@ -1422,15 +1422,15 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `Edict è un altro pacchetto multi-agent OpenClaw vestito da corte. La storia è spessa. Spessa è anche la lite pubblica.
+			body: `#251 è diretto: ministeri spesso offline. Primo post: offline spesso, lentissimo, stato bloccato. Stessa settimana 当皇上; #55/#94 lite copia.
 
 ### Segnali duri
-- Create **2026-02-23 14:35 UTC**; 当皇上 **2026-02-22 17:17 UTC** (circa 21 ore dopo)
-- Stesso pitch: sei l’imperatore, tre dipartimenti / sei ministeri, OpenClaw, install one-shot
-- **#55** e **#94** su plagio/credito; chiusi come non tecnici
-- Ultimo check: circa **16k** stelle vs circa **2.7k** del twin precedente
-- Homepage punta a **openclaw.ai**, non a un sito proprio
-- Campo: kanban morta, ministeri spesso offline (**#251**), webhook SSRF (#317 / #318)`,
+- Create **2026-02-23 14:35 UTC** vs 当皇上 **2026-02-22 17:17 UTC** (~21h dopo)
+- Ministeri + OpenClaw + install one-shot
+- **#55** / **#94** credito; chiuse come non tecniche
+- Stelle ~**16k** vs ~**2.7k**
+- Homepage → **openclaw.ai**
+- **#251** offline/lento/bloccato; webhook **#317** / **#318**`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `Repo GitHub cft0808/edict`,
@@ -1463,15 +1463,15 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `Edict は OpenClaw 上の、また一つの「朝廷装」マルチエージェントです。物語は厚い。公開の喧嘩も厚い。
+			body: `#251 タイトルそのもの：经常三省六部不在线。本文：よくオフライン、とても遅い、状態が回らない。同週 当皇上。#55/#94 でコピー争い。
 
 ### ハードシグナル
-- 作成 **2026-02-23 14:35 UTC**；当皇上は **2026-02-22 17:17 UTC**（約 21 時間後）
-- 同じ売り：皇帝、三省六部、OpenClaw、ワンコマンド install
-- **#55** と **#94** は剽窃/クレジットの公開 issue；メンテナは非技術としてクローズ
-- 最終確認：約 **1.6 万** star 対 先の双生 約 **2.7k**
-- homepage は **openclaw.ai** を指し、自社サイトではない
-- 現場：看板ダウン、三省六部の頻発オフライン（**#251**）、webhook SSRF（#317 / #318）`,
+- 作成 **2026-02-23 14:35 UTC**；当皇上 **2026-02-22 17:17 UTC**（約 21 時間後）
+- 三省六部 + OpenClaw + ワンショット install
+- **#55** / **#94** クレジット；非技術クローズ
+- star 約 **1.6 万** vs 約 **2.7k**
+- homepage → **openclaw.ai**
+- **#251** オフライン/遅い/固まる；webhook **#317** / **#318**`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub リポジトリ cft0808/edict`,
@@ -1504,15 +1504,15 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `Edict는 OpenClaw 위의 또 다른 「궁정 코스튬」 멀티 에이전트입니다. 이야기는 두껍고 공개 싸움도 두껍습니다.
+			body: `#251 제목 그대로: 经常三省六部不在线. 본문: 자주 오프라인, 매우 느림, 상태 안 돌아감. 같은 주 당황상. #55/#94 베끼기 싸움.
 
 ### 하드 시그널
 - 생성 **2026-02-23 14:35 UTC**; 당황상 **2026-02-22 17:17 UTC**(약 21시간 뒤)
-- 같은 세일즈: 황제, 三省六部, OpenClaw, 원샷 설치
-- **#55**, **#94** 표절/출처 공개 이슈; 메인테이너가 비기술로 닫음
-- 마지막 확인: 약 **1.6만** 스타 vs 앞선 쌍둥이 약 **2.7k**
-- homepage가 **openclaw.ai**를 가리키고 자사 사이트가 아님
-- 현장: 칸반 다운, 육부 잦은 오프라인(**#251**), webhook SSRF(#317 / #318)`,
+- 육부 + OpenClaw + 원샷 설치
+- **#55** / **#94** 출처; 비기술로 닫힘
+- 스타 약 **1.6만** vs 약 **2.7k**
+- homepage → **openclaw.ai**
+- **#251** 오프라인/느림/멈춤; webhook **#317** / **#318**`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub 저장소 cft0808/edict`,
@@ -1545,15 +1545,15 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `Edict es otro paquete multi-agente OpenClaw vestido de corte. La historia es gruesa. Gruesa es también la pelea pública.
+			body: `#251 va al grano: ministerios a menudo offline. Primer post: offline mucho, muy lento, estado atascado. Misma semana 当皇上; #55/#94 pelea de copia.
 
 ### Señales duras
-- Create **2026-02-23 14:35 UTC**; 当皇上 **2026-02-22 17:17 UTC** (unas 21 horas después)
-- Mismo pitch: eres el emperador, tres departamentos / seis ministerios, OpenClaw, install de un tiro
-- **#55** y **#94** de plagio/crédito; cerrados como no técnicos
-- Último check: unas **16k** estrellas vs unas **2.7k** del gemelo anterior
-- La homepage apunta a **openclaw.ai**, no a un sitio propio
-- Campo: kanban muerto, ministerios a menudo offline (**#251**), webhook SSRF (#317 / #318)`,
+- Create **2026-02-23 14:35 UTC** vs 当皇上 **2026-02-22 17:17 UTC** (~21h después)
+- Ministerios + OpenClaw + install de un tiro
+- **#55** / **#94** crédito; cerradas como no técnicas
+- Estrellas ~**16k** vs ~**2.7k**
+- Homepage → **openclaw.ai**
+- **#251** offline/lento/atascado; webhook **#317** / **#318**`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `Repo de GitHub cft0808/edict`,
@@ -1588,14 +1588,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	danghuangshang: {
 		zh: {
-			body: `这东西让你一键当皇帝，Discord 或飞书里排满六部。真装的时候 Docker 经常起不来，还要和隔壁孪生仓互撕是谁先抄谁。
+			body: `「当皇上」卖的是快登基。装机帖里更常见的，是 Docker 起不来、示例配置过旧，以及和 Edict 为署名公开吵架。
 
 ### 硬信号
-- 创建 **2026-02-22 17:17 UTC**，大约比 Edict **早二十一个小时**
-- 同类货：朝廷设定、OpenClaw、部名 agent、一键装
-- 仓内 **docs/originality.md**，加上 Edict **#55 / #94**：公开互指抄袭（不是法庭判决）
-- 用户骂点：**样例过期**、**Docker 起不来**、**朝代配置塞错目录**
-- 专门写了 Discord 安全说明——多 bot 互刷是已知坑`,
+- 创建 **2026-02-22 17:17 UTC**，大约比 Edict 早 **二十一个小时**
+- OpenClaw 朝廷包，一键安装
+- **docs/originality.md**，以及 Edict 上的 **#55**、**#94**
+- **#144** Docker 起不来；**#131** 朝代文件放错
+- Discord 多 bot 互刷的说明`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub 仓库 wanikua/danghuangshang`,
@@ -1611,7 +1611,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 				},
 				'https://github.com/wanikua/danghuangshang/issues/144': {
 					title: `Issue #144：Docker 起不来，样例过期`,
-					summary: `安装失败：样例配置和镜像里的 OpenClaw 对不上。`,
+					summary: `标题「docker 完全无法启动」。sample 老旧，对不上镜像里的 openclaw。`,
 				},
 				'https://github.com/wanikua/danghuangshang/issues/131': {
 					title: `Issue #131：唐目录里放了明配置`,
@@ -1628,14 +1628,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `Das Ding lässt dich mit einem Befehl Kaiser werden und füllt Discord oder Feishu mit Ministerien. Beim echten Install startet Docker oft nicht, und du streitest öffentlich mit dem Twin-Repo nebenan, wer wen kopiert hat.
+			body: `#144 Titel: docker startet überhaupt nicht. Sample zu alt für OpenClaw im Image. Gleiche Woche Edict; #55 Credit-Streit.
 
 ### Harte Signale
-- Create **2026-02-22 17:17 UTC**, etwa **21 Stunden** vor cft0808/edict
-- Gleiche Produktform: Hof-Setting, OpenClaw, ministeriell benannte Agents, One-Shot-Install
-- **docs/originality.md** plus Edict **#55 / #94**: öffentliche Plagiatsclaims (Claims, kein Urteil)
-- Nutzer: **alte Samples**, **Docker startet nicht**, **falsche Dynastie-Config**
-- Discord-Safety-Docs, weil Multi-Bot-Stürme ein bekanntes Loch sind`,
+- Create **2026-02-22 17:17 UTC**, ~**21h** vor Edict
+- OpenClaw-Hof-Pack, One-Shot-Install
+- **docs/originality.md** + Edict **#55** / **#94**
+- **#144** Docker; **#131** falsche Dynastie-Datei
+- Discord Multi-Bot-Doku`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub-Repo wanikua/danghuangshang`,
@@ -1668,14 +1668,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `Questa roba ti fa diventare imperatore con un comando e riempie Discord o Feishu di ministeri. Quando installi davvero, Docker spesso non parte, e resti a litigare in pubblico col repo gemello su chi ha copiato chi.
+			body: `#144 titolo: docker non parte proprio. Sample troppo vecchio per OpenClaw nell’immagine. Stessa settimana Edict; #55 lite credito.
 
 ### Segnali duri
-- Creato **2026-02-22 17:17 UTC**, circa **21 ore** prima di cft0808/edict
-- Stessa forma di prodotto: ambientazione di corte, OpenClaw, agent con nomi di ministeri, install one-shot
-- **docs/originality.md** più Edict **#55 / #94**: claim pubbliche di plagio (claim, non sentenza)
-- Utenti: **sample vecchi**, **Docker non parte**, **config di dinastia sbagliata**
-- Docs Discord perché le tempeste multi-bot sono un buco noto`,
+- Create **2026-02-22 17:17 UTC**, ~**21h** prima di Edict
+- Pack corte OpenClaw, install one-shot
+- **docs/originality.md** + Edict **#55** / **#94**
+- **#144** Docker; **#131** file dinastia sbagliato
+- Docs multi-bot Discord`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `Repo GitHub wanikua/danghuangshang`,
@@ -1708,14 +1708,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `ワンコマンドで皇帝になり、Discord や Feishu に六部を並べる代物です。本当に入れると Docker がよく上がらず、隣の双生リポジトリと「誰が誰をコピーしたか」を公開で争うことになります。
+			body: `#144 タイトル：docker 完全无法启动。sample が古くイメージ内 OpenClaw と合わない。同週 Edict。#55 クレジット争い。
 
 ### ハードシグナル
-- 作成 **2026-02-22 17:17 UTC**、cft0808/edict より約 **21 時間**早い
-- 同じ形：朝廷設定、OpenClaw、部名 agent、ワンショット install
-- **docs/originality.md** と Edict **#55 / #94**：公開の剽窃主張（主張であり判決ではない）
-- ユーザー：**古いサンプル**、**Docker 起動失敗**、**王朝設定の取り違え**
-- Discord 安全ドキュメントがあるのは、マルチ bot 嵐が既知の穴だから`,
+- 作成 **2026-02-22 17:17 UTC**、Edict より約 **21 時間**前
+- OpenClaw 朝廷パック、ワンショット install
+- **docs/originality.md** + Edict **#55** / **#94**
+- **#144** Docker；**#131** 王朝ファイル誤り
+- Discord マルチ bot ドキュメント`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub リポジトリ wanikua/danghuangshang`,
@@ -1748,14 +1748,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `원커맨드로 황제가 되고 Discord나 Feishu에 육부를 채우는 물건입니다. 진짜 설치하면 Docker가 자주 안 뜨고, 옆 쌍둥이 저장소와 누가 누구를 베꼈는지 공개로 싸웁니다.
+			body: `#144 제목: docker 完全无法启动. 샘플이 낡아 이미지 OpenClaw와 안 맞음. 같은 주 Edict. #55 출처 싸움.
 
 ### 하드 시그널
-- 생성 **2026-02-22 17:17 UTC**, cft0808/edict보다 약 **21시간** 앞
-- 같은 형태: 궁정 설정, OpenClaw, 부 이름 에이전트, 원샷 설치
-- **docs/originality.md**와 Edict **#55 / #94**: 공개 표절 주장(주장이지 판결 아님)
-- 사용자: **낡은 샘플**, **Docker 실패**, **왕조 설정 오배치**
-- Discord 안전 문서가 있는 이유: 멀티 봇 폭풍이 알려진 구멍이기 때문`,
+- 생성 **2026-02-22 17:17 UTC**, Edict보다 약 **21시간** 앞
+- OpenClaw 궁정 팩, 원샷 설치
+- **docs/originality.md** + Edict **#55** / **#94**
+- **#144** Docker; **#131** 왕조 파일 오류
+- Discord 멀티 봇 문서`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub 저장소 wanikua/danghuangshang`,
@@ -1788,14 +1788,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `Esto te deja ser emperador con un comando y llena Discord o Feishu de ministerios. Cuando instalas de verdad, Docker a menudo no arranca, y sigues peleando en público con el repo gemelo sobre quién copió a quién.
+			body: `#144 título: docker no arranca en absoluto. Sample demasiado viejo para OpenClaw en la imagen. Misma semana Edict; #55 pelea de crédito.
 
 ### Señales duras
-- Creado **2026-02-22 17:17 UTC**, unas **21 horas** antes que cft0808/edict
-- Misma forma de producto: ambientación de corte, OpenClaw, agentes con nombres de ministerios, install de un tiro
-- **docs/originality.md** más Edict **#55 / #94**: claims públicas de plagio (claims, no sentencia)
-- Usuarios: **samples viejos**, **Docker no arranca**, **config de dinastía mal puesta**
-- Docs de Discord porque las tormentas multi-bot son un agujero conocido`,
+- Create **2026-02-22 17:17 UTC**, ~**21h** antes que Edict
+- Pack de corte OpenClaw, install de un tiro
+- **docs/originality.md** + Edict **#55** / **#94**
+- **#144** Docker; **#131** archivo de dinastía equivocado
+- Docs multi-bot Discord`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `Repo de GitHub wanikua/danghuangshang`,

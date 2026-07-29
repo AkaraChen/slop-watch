@@ -140,56 +140,57 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 		},
 	},
 
+
 	edict: {
 		zh: {
-			description: `Edict 把一群 AI agent 排成「三省六部」：有人分活，有人做计划，有人挑刺复核，外面再挂一块实时看板。它跑在 OpenClaw 上，仓库是 cft0808/edict，Python 为主，宣传里常拿 CrewAI、AutoGen 比。创建几个月后，GitHub 大约一万六星。`,
-			reason: `看着像严肃架构，听着像「古代官制管 AI」，拆开多半是 OpenClaw 的安装脚本、角色提示词和仪表盘换了层皮。更热闹的是公开互撕：大约早二十一个小时上线、同样朝廷设定、拼音 agent 名也对得上的「当皇上」，在 issue #55、#94 里说 Edict 抄了且没署名；Edict 以「非技术讨论」关掉，星标照涨。我们收它，不是盯某条 CVE，而是：故事吹得满、两仓互咬、主页却指着 openclaw.ai 不像自家站。用户那边也常见——看板掉线、三省六部经常离线（#251）、webhook 还要防 SSRF。`,
+			description: `Edict 把一群 AI 助手排成朝廷里的三省六部，前面挂一块会动的看板。它跑在 OpenClaw 上，仓库是 cft0808/edict，主要用 Python 写。开张几个月，GitHub 上大约有一万六颗星。外面介绍时，常拿它和 CrewAI、AutoGen 比。`,
+			reason: `名义上，这是一套认真的官制。实际上，用户说六部常常不在线，事情跑得很慢，状态也走不动，这些都写在 issue #251 里。差不多同一时期，当皇上在 #55、#94 里说 Edict 抄了设计、也没写来处；Edict 把单子当成非技术讨论关了。两边开张大约只差二十一个小时。仓库主页还指着 openclaw.ai，不像自己的站。Webhook 那边还有 #317、#318 在补。`,
 		},
 		de: {
-			description: `Edict stellt eine Truppe AI-Agents wie die drei Departements und sechs Ministerien auf: einer verteilt Arbeit, einer plant, einer prüft, davor ein Live-Kanban. Läuft auf OpenClaw. Repo cft0808/edict, vor allem Python, oft gegen CrewAI und AutoGen vermarktet. Ein paar Monate nach Create lagen etwa 16.000 Sterne auf GitHub.`,
-			reason: `Es wirkt wie ernste Architektur und klingt nach „alte Bürokratie steuert KI“. Darunter sitzen meist OpenClaw-Installskripte, Rollenprompts und ein Dashboard mit neuer Haut. Zum öffentlichen Streit: 当皇上 (wanikua/danghuangshang) war etwa 21 Stunden früher da, gleiches Hof-Setup, überlappende Pinyin-Agent-Namen, und warf in #55 und #94 Plagiat ohne Credit vor. Edict schloss das als nicht-technisch. Sterne stiegen weiter. Wir listen es nicht wegen einer CVE, sondern weil die Story dick ist, die zwei Repos sich öffentlich beißen und die Homepage auf openclaw.ai zeigt statt auf ein eigenes Produkt. Nutzer melden totes Kanban, oft offline Ministerien (#251) und Webhook-SSRF-Härten.`,
+			description: `Edict ist ein OpenClaw-Multi-Agent mit Hof-Setting und Live-Board. Repo cft0808/edict, vor allem Python, ~16k Sterne. Oft neben CrewAI und AutoGen beworben.`,
+			reason: `Nutzer sagen: die Ministerien sind oft offline. #251 heißt genau so; erster Post: oft offline, sehr langsam, Status hängt. Credit-Streit #55/#94 mit 当皇上; als nicht-technisch geschlossen. Create ~21h später. Homepage openclaw.ai. Webhook SSRF #317/#318.`,
 		},
 		it: {
-			description: `Edict mette in fila un pacco di agent AI come i tre dipartimenti e i sei ministeri: qualcuno smista, qualcuno pianifica, qualcuno rivede, davanti una kanban live. Gira su OpenClaw. Repo cft0808/edict, soprattutto Python, spesso venduto contro CrewAI e AutoGen. Pochi mesi dopo la create, GitHub era intorno a 16k stelle.`,
-			reason: `Sembra architettura seria e suona come «la burocrazia antica governa l’AI». Sotto ci sono per lo più script di install OpenClaw, prompt di ruolo e una dashboard con pelle nuova. La lite pubblica: 当皇上 (wanikua/danghuangshang) è uscito circa 21 ore prima, stesso setup di corte, nomi agent pinyin sovrapposti, e in #55 e #94 ha detto che Edict ha copiato senza credito. Edict ha chiuso come non tecnico. Le stelle sono salite. Lo elenchiamo non per un CVE, ma perché la storia è spessa, i due repo si mordono in pubblico e la homepage punta a openclaw.ai invece che a un sito proprio. Gli utenti segnalano anche kanban morta, ministeri spesso offline (#251) e hardening webhook SSRF.`,
+			description: `Edict è un multi-agent OpenClaw da corte con board live. Repo cft0808/edict, soprattutto Python, ~16k stelle. Spesso accostato a CrewAI e AutoGen.`,
+			reason: `Gli utenti dicono che i ministeri restano offline. #251 ha proprio quel titolo; primo post: offline spesso, lentissimo, stato bloccato. Lite credito #55/#94 con 当皇上; chiuse come non tecniche. Create ~21h dopo. Homepage openclaw.ai. Webhook SSRF #317/#318.`,
 		},
 		ja: {
-			description: `Edict は AI agent を「三省六部」のように並べます。誰かが仕事を振り、誰かが計画し、誰かが審査し、前にリアルタイム看板があります。OpenClaw 上で動きます。リポジトリは cft0808/edict、Python 中心で、宣伝では CrewAI や AutoGen とよく比べます。作成から数か月で GitHub の star はおよそ 1.6 万でした。`,
-			reason: `見た目は真面目な設計で、「古い官僚制が AI を回す」話に聞こえます。剥がすと、だいたい OpenClaw のインストールスクリプト、役割プロンプト、皮を貼り替えたダッシュボードです。公開の喧嘩もあります。当皇上（wanikua/danghuangshang）は約 21 時間早く出て、同じ朝廷セットと重なる拼音 agent 名があり、#55 と #94 で Edict がクレジットなしにコピーしたと主張しました。Edict は非技術として閉じ、star は増え続けました。載せる理由は CVE 一つではなく、物語が厚く、二つのリポジトリが公開で噛み合い、ホームページが自社ではなく openclaw.ai を指していることです。ユーザー側では看板が死ぬ、三省六部がよくオフライン（#251）、webhook の SSRF 対策もまだ途中です。`,
+			description: `Edict は OpenClaw 上のマルチエージェントで、三省六部＋看板。リポジトリ cft0808/edict、Python 中心。作成後数か月で star 約 1.6 万。CrewAI や AutoGen と比較されることが多い。`,
+			reason: `ユーザーの言い方がそのまま残っている。#251 タイトルは「经常三省六部不在线」。本文：よくオフライン、実行がとても遅い、状態が回らない。#55/#94 で当皇上側がコピー・未クレジットを主張、Edict は非技術でクローズ。作成は約 21 時間後。homepage は openclaw.ai。webhook は #317/#318。`,
 		},
 		ko: {
-			description: `Edict는 AI 에이전트 무리를 「三省六部」처럼 세웁니다. 누가 일을 나누고, 누가 기획하고, 누가 검토하고, 앞에 실시간 칸반이 있습니다. OpenClaw 위에서 돕니다. 저장소는 cft0808/edict, Python 중심이고 CrewAI·AutoGen과 자주 비교해 팝니다. 생성 후 몇 달 만에 GitHub 스타는 대략 1만 6천이었습니다.`,
-			reason: `겉보기엔 진지한 설계 같고 「옛 관료제가 AI를 돌린다」 소리로 들립니다. 벗겨 보면 대개 OpenClaw 설치 스크립트, 역할 프롬프트, 껍질만 갈아 끼운 대시보드입니다. 공개 싸움도 있습니다. 당황상(wanikua/danghuangshang)이 약 21시간 먼저 나왔고 같은 궁정 세팅에 병음 에이전트 이름이 겹치며, #55·#94에서 Edict가 출처 없이 베꼈다고 했습니다. Edict는 비기술로 닫았고 스타는 계속 올랐습니다. 올린 이유는 CVE 하나가 아니라, 이야기가 두껍고 두 저장소가 공개로 물고, 홈페이지가 자사 사이트가 아니라 openclaw.ai를 가리킨다는 점입니다. 사용자 쪽에서는 칸반이 죽고, 육부가 자주 오프라인(#251), webhook SSRF 보강도 아직 진행 중입니다.`,
+			description: `Edict는 OpenClaw 위 멀티 에이전트, 三省六部+칸반. 저장소 cft0808/edict, Python 중심. 생성 후 수개월에 스타 약 1.6만. CrewAI·AutoGen과 자주 비교됨.`,
+			reason: `유저 말이 더 세다. #251 제목이 「经常三省六部不在线」. 본문: 자주 오프라인, 실행 매우 느림, 상태가 안 돌아감. #55/#94에서 당황상 쪽이 베끼고 출처 없다고 했고 Edict는 비기술로 닫음. 생성 약 21시간 뒤. homepage는 openclaw.ai. webhook #317/#318.`,
 		},
 		es: {
-			description: `Edict alinea un paquete de agentes de IA como los tres departamentos y seis ministerios: alguien reparte trabajo, alguien planifica, alguien revisa, y delante un kanban en vivo. Corre sobre OpenClaw. El repo es cft0808/edict, sobre todo Python, a menudo vendido frente a CrewAI y AutoGen. Unos meses tras el create, GitHub rondaba las 16k estrellas.`,
-			reason: `Parece arquitectura seria y suena a «la burocracia antigua gobierna la IA». Por debajo suele haber scripts de instalación de OpenClaw, prompts de rol y un dashboard con otra piel. La pelea pública: 当皇上 (wanikua/danghuangshang) salió unas 21 horas antes, mismo setup de corte e IDs pinyin solapados, y en #55 y #94 dijo que Edict copió sin crédito. Edict lo cerró como no técnico. Las estrellas siguieron subiendo. Lo listamos no por un CVE, sino porque la historia es gruesa, los dos repos se muerden en público y la homepage apunta a openclaw.ai en vez de a un sitio propio. Los usuarios también reportan kanban muerto, ministerios a menudo offline (#251) y endurecimiento SSRF de webhooks.`,
+			description: `Edict es un multi-agente OpenClaw de corte con tablero en vivo. Repo cft0808/edict, sobre todo Python, ~16k estrellas. A menudo lo comparan con CrewAI y AutoGen.`,
+			reason: `La gente dice que los ministerios se quedan offline. #251 se titula así; primer post: offline mucho, muy lento, el estado no avanza. Pelea de crédito #55/#94 con 当皇上; cerradas como no técnicas. Create ~21h después. Homepage openclaw.ai. Webhook SSRF #317/#318.`,
 		},
 	},
 	danghuangshang: {
 		zh: {
-			description: `「当皇上」是一套 OpenClaw 教程加配置包，仓库 wanikua/danghuangshang。它让你在 Discord 或飞书里「一键登基」：内阁、六部、都察院排好，还能挂写小说的 agent。宣传说五分钟上手，号称十八个以上 agent、六十多项 skills。`,
-			reason: `滑稽官名不是重点。重点是把提示词和配置包吹成治国。装的时候另一回事：版本对不上、样例过期、Docker 起不来；allowBots 设错，Discord 里 bot 会互相刷屏。同一周还有孪生项目 Edict，两边公开争谁先做的；拆开看，两边都是同一套 OpenClaw 网关上的朝廷皮。署名官司很满，上手很脆。正文不判谁合法，只记下已经公开的「长得很像」，以及跑起来不稳的那些事。`,
+			description: `「当皇上」是一套 OpenClaw 的教程和配置，仓库是 wanikua/danghuangshang。它想让你在 Discord 或飞书里一键登基：内阁、六部排好，也可以再挂写小说的助手。宣传说五分钟就能上手，agent 十八个以上，skills 六十多项。`,
+			reason: `官名好玩，装起来却不轻松。Issue #144 里，有人说 Docker 根本起不来，示例配置太旧，对不上镜像里的 openclaw。#131 里，唐的目录下塞着明的配置。allowBots 开错了，Discord 上的 bot 还会互相刷。同一周 Edict 也出来了，两边为署名公开吵过（#55）。这里不替谁下判决，只记下人们已经写在 issue 里的事。`,
 		},
 		de: {
-			description: `„Dang Huang Shang“ ist ein OpenClaw-Tutorial plus Config-Paket, Repo wanikua/danghuangshang. Es lässt dich in Discord oder Feishu mit einem Befehl „Kaiser werden“: Kabinett, sechs Ministerien, Zensorat, optional Roman-Agents. Pitch: fünf Minuten bis live, 18+ Agents, 60+ Skills.`,
-			reason: `Lustige Amtstitel sind nicht der Punkt. Prompts und Configs als Staatskunst zu verkaufen ist es. Beim Install sieht es anders aus: Version driftet, Samples sind alt, Docker startet nicht; allowBots falsch → Bots jagen sich auf Discord. In derselben Woche kam Twin Edict; beide streiten öffentlich, wer zuerst da war. Darunter bleiben beide Hof-Häute auf demselben OpenClaw-Gateway. Credit-Drama laut, Onboarding brüchig. Kein Rechtsurteil hier — nur die öffentlichen „sehen gleich aus“-Claims und was nicht sauber läuft.`,
+			description: `„Dang Huang Shang“ ist OpenClaw-Tutorial+Config (wanikua/danghuangshang). Ein Befehl „Kaiser“ auf Discord/Feishu. Pitch: fünf Minuten, 18+ Agents, 60+ Skills.`,
+			reason: `Install-Issues sind knallhart. #144: docker startet überhaupt nicht; Sample-Config zu alt für OpenClaw im Image. #131 falsche Dynastie-Datei. Bot-Sturm bei falschem allowBots. Credit-Streit mit Edict (#55). Wir listen nur, was schon gepostet ist.`,
 		},
 		it: {
-			description: `«Dang Huang Shang» è un tutorial OpenClaw più config, repo wanikua/danghuangshang. Ti fa «diventare imperatore» con un comando su Discord o Feishu: gabinetto, sei ministeri, censorato, e se serve agent da romanzo. Pitch: cinque minuti e sei online, 18+ agent, 60+ skill.`,
-			reason: `I titoli buffi non sono il punto. Vendere prompt e config come arte di governo lo è. In install è un altro film: versioni che non combaciano, sample vecchi, Docker che non parte; allowBots sbagliato e i bot su Discord si rincorrono. Nella stessa settimana c’è il gemello Edict; litigano in pubblico su chi è arrivato prima. Sotto restano pelli di corte sullo stesso gateway OpenClaw. Dramma sul credito alto, onboarding fragile. Qui non c’è sentenza legale — solo le claim pubbliche del «si somigliano» e le parti che non girano pulite.`,
+			description: `«Dang Huang Shang» è tutorial+config OpenClaw (wanikua/danghuangshang). Un comando e sei «imperatore» su Discord/Feishu. Pitch: cinque minuti, 18+ agent, 60+ skill.`,
+			reason: `Le issue di install sono dirette. #144: docker non parte proprio; sample troppo vecchio per OpenClaw nell’immagine. #131 file di dinastia sbagliato. Tempesta bot se allowBots è sbagliato. Lite credito con Edict (#55). Solo ciò che è già scritto online.`,
 		},
 		ja: {
-			description: `「当皇上」は OpenClaw のチュートリアル兼設定パックで、リポジトリは wanikua/danghuangshang です。Discord や Feishu でワンコマンド「即位」：内閣、六部、都察院、必要なら小説 agent。売りは五分で開始、agent 18 以上、skills 60 以上。`,
-			reason: `面白い官職名が問題なのではありません。プロンプトと設定を治国のように売っていることが問題です。インストールは別の話：バージョンが合わない、サンプルが古い、Docker が上がらない。allowBots を誤ると Discord で bot 同士が嵐になります。同じ週に双生の Edict があり、どちらが先か公開で争います。中身はどちらも同じ OpenClaw ゲートウェイ上の朝廷の皮です。クレジットの演劇は派手、導入は脆い。法的な勝敗は書かない。公開の「似ている」主張と、きれいに動かない部分だけ残す。`,
+			description: `「当皇上」は OpenClaw のチュートリアル＋設定（wanikua/danghuangshang）。ワンコマンド即位、Discord/Feishu に内閣・六部。宣伝は五分、agent 18+、skills 60+。`,
+			reason: `インストール issue がそのまま口語。#144：docker 完全无法启动。sample が古くイメージ内 OpenClaw と合わない。#131 唐フォルダに明設定。allowBots ミスで bot 嵐。同週 Edict と #55 でクレジット争い。判決は書かない。issue に既にあることだけ。`,
 		},
 		ko: {
-			description: `「당황상」은 OpenClaw 튜토리얼+설정 팩이고 저장소는 wanikua/danghuangshang입니다. Discord나 Feishu에서 원커맨드로 「즉위」: 내각, 육부, 도찰원, 원하면 소설 에이전트. 홍보는 5분이면 시작, 에이전트 18개 이상, 스킬 60개 이상.`,
-			reason: `웃긴 관직이 핵심이 아닙니다. 프롬프트와 설정을 국정처럼 파는 게 핵심입니다. 설치는 다른 이야기: 버전이 안 맞고, 샘플이 낡고, Docker가 안 뜹니다. allowBots를 잘못 켜면 Discord에서 봇끼리 폭풍이 납니다. 같은 주에 쌍둥이 Edict가 있고, 누가 먼저인지 공개로 싸웁니다. 둘 다 같은 OpenClaw 게이트웨이 위의 궁정 껍질입니다. 출처 연극은 요란하고 온보딩은 약합니다. 법적 승패는 안 씁니다. 공개된 「닮았다」 주장과 깨끗이 안 도는 부분만 남깁니다.`,
+			description: `「당황상」은 OpenClaw 튜토리얼+설정(wanikua/danghuangshang). 원커맨드 즉위, Discord/Feishu에 내각·육부. 홍보 5분, 에이전트 18+, 스킬 60+.`,
+			reason: `설치 이슈가 말 그대로다. #144: docker 完全无法启动. 샘플이 낡아 이미지 속 OpenClaw와 안 맞음. #131 Tang 경로에 Ming 설정. allowBots 잘못 켜면 봇 폭풍. 같은 주 Edict와 #55 출처 싸움. 판결 안 씀. 이미 올라온 말만.`,
 		},
 		es: {
-			description: `«Dang Huang Shang» es un tutorial OpenClaw más config, repo wanikua/danghuangshang. Te deja «ser emperador» con un comando en Discord o Feishu: gabinete, seis ministerios, censorado y, si hace falta, agentes de novela. Pitch: cinco minutos y estás online, 18+ agentes, 60+ skills.`,
-			reason: `Los cargos graciosos no son el punto. Vender prompts y configs como arte de gobernar sí lo es. Al instalar es otra película: la versión no cuadra, samples viejos, Docker no arranca; allowBots mal y los bots en Discord se persiguen. La misma semana llegó el gemelo Edict; pelean en público quién llegó primero. Debajo siguen pieles de corte en el mismo gateway OpenClaw. Drama de crédito alto, onboarding frágil. Aquí no hay sentencia legal: solo las claims públicas de «se parecen» y lo que no corre limpio.`,
+			description: `«Dang Huang Shang» es tutorial+config OpenClaw (wanikua/danghuangshang). Un comando y «emperador» en Discord/Feishu. Pitch: cinco minutos, 18+ agentes, 60+ skills.`,
+			reason: `Las issues de install van al grano. #144: docker no arranca en absoluto; el sample es viejo y no pega con OpenClaw en la imagen. #131 archivo de dinastía equivocado. Tormenta de bots si allowBots está mal. Pelea de crédito con Edict (#55). Solo lo ya publicado.`,
 		},
 	},
 
