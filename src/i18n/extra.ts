@@ -1340,7 +1340,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	edict: {
 		zh: {
-			body: `Edict 收进本目录，是因为 OpenClaw 生态里又多了一套「朝廷装」的多智能体包装：故事很满，公开争执也很满。
+			body: `Edict 进了这份目录，是因为 OpenClaw 生态里又多了一套「朝廷装」的多智能体包装。故事讲得很满，公开争执也很满。
 
 ### 硬信号
 - GitHub 创建时间 **2026-02-23 14:35 UTC**；对方「当皇上」是 **2026-02-22 17:17 UTC**（大约晚 21 小时）
@@ -1588,7 +1588,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	danghuangshang: {
 		zh: {
-			body: `「当皇上」收进本目录，是因为又一套 OpenClaw 朝廷教程：装得很满，装起来却脆，还和孪生项目公开撕署名。
+			body: `「当皇上」进了这份目录。它是又一套 OpenClaw 朝廷教程：包装吹得很满，装起来却脆，还要和孪生项目公开争署名。
 
 ### 硬信号
 - 创建于 **2026-02-22 17:17 UTC**，大约比 cft0808/edict **早 21 小时**
