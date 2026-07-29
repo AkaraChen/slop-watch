@@ -10,12 +10,12 @@ export type ExtraCopy = {
 export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	openclaw: {
 		zh: {
-			body: `OpenClaw 是本目录里最清晰的 **垃圾标本**：它一边要你的 shell 和凭据，一边连自己的 issue 队列都抽不干，升级也稳不住。星标是人设，可靠性是可选 DLC。
+			body: `OpenClaw 是本目录里最典型的反面例子。它会要你的 shell 和凭据，却很难把安装维护稳定，也清不完自己的 issue。星标看起来很唬人，日常可靠性对不上。
 
 ### 硬信号
-- issue 积压以千计，营销仍在狂推安装漏斗
-- 安全史含一键 RCE 与恶意 skill 分发路径
-- 现场反馈：静默失败与「假完成」任务结果`,
+- open issues 以千计，安装推广却还在继续
+- 已有公开记录的一键 RCE，以及风险不小的 skills 生态
+- 用户反馈静默失败和虚假的「任务完成」`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw 仓库数据`,
@@ -60,12 +60,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `OpenClaw ist das klarste **Müll-Exemplar** im Katalog: Ein Agent, der Shell und Credentials will, aber die eigene Issue-Queue nicht leert und Installs über Upgrades nicht stabil hält. Sterne als Persönlichkeit; Zuverlässigkeit als optionale DLC.
+			body: `OpenClaw ist das klarste schlechte Beispiel in diesem Katalog. Es verlangt Shell und Zugangsdaten, hält Installationen aber kaum stabil und kommt mit dem eigenen Issue-Berg nicht hinterher. Die Sterne wirken beeindruckend. Die Zuverlässigkeit im Alltag nicht.
 
 ### Harte Signale
-- Issue-Rückstand in Tausenden, während Marketing weiter Install-Funnels fährt
-- Sicherheitsgeschichte mit One-Click-RCE und feindlichen Skills
-- Feldberichte: stille Fehler und „falsch fertig“-Tasks`,
+- Tausende offene Issues, während weiter Install-Funnels gebaut werden
+- Dokumentiertes One-Click-RCE und ein riskantes Skills-Ökosystem
+- Nutzer berichten stille Fehler und falsche „Task complete“-Meldungen`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw Repository-Stats`,
@@ -110,12 +110,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `OpenClaw è il **campione di spazzatura** più chiaro del catalogo: un agent che chiede shell e credenziali mentre non svuota la propria coda di issue e non tiene stabili gli install tra upgrade. Le stelle come personalità; l’affidabilità come DLC opzionale.
+			body: `OpenClaw è l’esempio negativo più chiaro di questo catalogo. Chiede shell e credenziali, ma non tiene stabili le installazioni e non smaltisce la propria coda di issue. Le stelle impressionano. L’affidabilità quotidiana no.
 
 ### Segnali duri
-- Backlog di issue a migliaia mentre il marketing spinge ancora i funnel di install
-- Storia di sicurezza con RCE one-click e skill ostili
-- Report sul campo: fallimenti silenziosi e task “falsamente completi”`,
+- Migliaia di issue aperte mentre i funnel di install continuano
+- Un RCE one-click documentato e un ecosistema skills rischioso
+- Utenti che segnalano fallimenti silenziosi e “task complete” falsi`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `Statistiche repo openclaw/openclaw`,
@@ -160,12 +160,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `OpenClaw はカタログでいちばんわかりやすい **ゴミ標本**：シェルと資格情報を要求するのに、自分の issue キューすら捌けず、アップグレードでインストールが壊れ続ける。スター数はキャラ設定、信頼性は有料 DLC 扱い。
+			body: `OpenClaw はこのカタログでいちばんわかりやすい悪い例です。シェルと資格情報を要求するのに、インストールを安定させきれず、自分の issue も片付けられません。star 数は派手です。日常の信頼性は伴っていません。
 
 ### ハードシグナル
-- issue が数千単位で積もる一方、マーケはまだインストール導線を量産
-- ワンクリック RCE や敵対的 skill 配信を含むセキュリティ履歴
-- 現場報告：黙って失敗、「完了したフリ」のタスク結果`,
+- open issues が数千あるのに、インストール導線はまだ増える
+- 公開済みのワンクリック RCE と、リスクのある skills 生態
+- 黙って失敗する、偽の「タスク完了」といった現場報告`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw リポジトリ統計`,
@@ -210,12 +210,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `OpenClaw는 카탈로그에서 가장 선명한 **쓰레기 표본**이다. 셸과 자격 증명을 요구하면서도 자기 issue 큐를 비우지 못하고 업그레이드마다 설치가 흔들린다. 스타 수는 캐릭터 설정, 신뢰성은 선택형 DLC.
+			body: `OpenClaw는 이 목록에서 가장 분명한 나쁜 예입니다. 셸과 자격 증명을 요구하면서도 설치를 안정적으로 유지하지 못하고, 자기 이슈도 처리하지 못합니다. 스타 수는 인상적입니다. 일상적인 신뢰성은 그렇지 않습니다.
 
 ### 하드 시그널
-- issue가 수천 단위로 쌓이는데 마케팅은 여전히 설치 퍼널을 판다
-- 원클릭 RCE와 적대적 skill 배포가 포함된 보안 이력
-- 현장 보고: 조용한 실패, “완료된 척” 하는 태스크 결과`,
+- open issues가 수천 개인데도 설치 유도는 계속됨
+- 문서화된 원클릭 RCE와 위험한 스킬 생태계
+- 조용한 실패와 거짓 “작업 완료” 보고`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw 저장소 통계`,
@@ -260,12 +260,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `OpenClaw es el **espécimen de basura** más claro del catálogo: un agente que pide shell y credenciales mientras no drena su propia cola de issues ni mantiene estables las instalaciones entre upgrades. Las estrellas son personalidad; la fiabilidad, un DLC opcional.
+			body: `OpenClaw es el peor ejemplo más claro de este catálogo. Pide shell y credenciales, pero no mantiene estables las instalaciones ni drena su propia cola de issues. Las estrellas impresionan. La fiabilidad diaria no.
 
 ### Señales duras
-- Backlog de issues por miles mientras el marketing sigue empujando embudos de install
-- Historial de seguridad con RCE de un clic y skills hostiles
-- Reportes de campo: fallos silenciosos y tareas “falsamente completas”`,
+- Miles de issues abiertas mientras siguen los embudos de instalación
+- Un RCE de un clic documentado y un ecosistema de skills con riesgo real
+- Usuarios que reportan fallos silenciosos y “tarea completada” falsas`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `Estadísticas del repo openclaw/openclaw`,
@@ -312,12 +312,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	moltbook: {
 		zh: {
-			body: `Moltbook 被归档为 **事故型 slop**：vibe 速度上线的 agent 社交层，在「agent 文明」话术站稳之前，鉴权与数据面就在公开场合翻车。agent 有广场；每个会 curl 的研究员也有。
+			body: `Moltbook 被收进这里，是因为它的鉴权和数据层在公开场合先垮了，后面任何「agent 文明」的大话都站不住。agent 有广场，会发请求的人也有。
 
 ### 硬信号
-- 生产 agent 记录的未认证 / 过度特权数据库访问
-- 客户端内嵌后端密钥（经典 ship-without-RLS）
-- 运营把代码所有权甩给模型的响应路径`,
+- 生产环境的 agent 记录没有得到应有的鉴权保护
+- 后端密钥直接出现在客户端 JavaScript 里
+- 运营把代码责任推给模型`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `暴露的 Moltbook 数据库可让人接管任意 AI agent`,
@@ -342,12 +342,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `Moltbook ist **Vorfall-Slop**: eine vibe-geschippte Agent-Social-Schicht, deren Auth- und Datenebene öffentlich scheiterte, bevor „Agentenzivilisation“ ernst genommen werden konnte. Die Agents hatten einen Marktplatz. Jeder mit curl auch.
+			body: `Moltbook steht hier, weil Auth und Datenebene öffentlich scheiterten, bevor größere Erzählungen über „Agentenzivilisation“ ernst klingen konnten. Agenten hatten einen öffentlichen Platz. Jeder mit ein paar HTTP-Requests auch.
 
 ### Harte Signale
-- Unauthentifizierter / überprivilegierter DB-Zugriff auf Produktions-Agent-Records
-- Client-eingebetteter Backend-Key (Klassiker ship-without-RLS)
-- Operator-Antwort, die Code-Ownership an das Modell abschiebt`,
+- Produktionsdaten von Agenten ohne ordentliche Authentifizierung erreichbar
+- Ein Backend-Key im Client-JavaScript
+- Eine Operator-Antwort, die dem Modell die Code-Verantwortung zuschiebt`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `Exponierte Moltbook-DB: Übernahme jedes AI-Agents`,
@@ -372,12 +372,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `Moltbook è catalogato come **slop da incidente**: layer social per agent spedito a vibes, la cui auth e data plane sono fallite in pubblico prima che la “civiltà degli agent” potesse essere presa sul serio. Gli agent avevano una piazza. Ogni ricercatore con curl pure.
+			body: `Moltbook è qui perché auth e data plane sono falliti in pubblico prima che qualsiasi racconto di “civiltà degli agent” potesse essere preso sul serio. Gli agent avevano una piazza. Chiunque con qualche richiesta HTTP pure.
 
 ### Segnali duri
-- Accesso DB non autenticato / over-privileged ai record agent in produzione
-- Chiave backend nel client (classico ship-without-RLS)
-- Risposta operativa che scarica la ownership del codice sul modello`,
+- Record di agent in produzione raggiungibili senza autenticazione adeguata
+- Una chiave backend spedita nel JavaScript client
+- Una risposta dell’operatore che tratta il modello come proprietario del codice`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `Database Moltbook esposto: controllo di qualsiasi AI agent`,
@@ -402,12 +402,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `Moltbook は **事故スロップ** として登録されている。バイブ速度で出した agent 向け SNS 層で、「agent 文明」が真面目に語られる前に auth とデータ面が公開の場で崩れた。agent には広場があった。curl できる研究者にも。
+			body: `Moltbook がここに載っている理由は、認証とデータ面が公開の場で先に壊れたからです。そのあとで「エージェント文明」を語っても説得力がありません。エージェントには広場がありました。HTTP を少し叩ける人にもありました。
 
 ### ハードシグナル
-- 本番 agent 記録への未認証 / 過剰権限の DB アクセス
-- クライアント埋め込みのバックエンド鍵（定番の ship-without-RLS）
-- コードの所有をモデルに丸投げする運営レスポンス`,
+- 本番のエージェント記録が十分な認証なしで届いていた
+- バックエンドキーがクライアント JavaScript に入っていた
+- 運営がコードの責任をモデルに預けた`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `露出した Moltbook DB で任意 AI agent を乗っ取れる`,
@@ -432,12 +432,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `Moltbook은 **사고형 슬롭**으로 분류된다. 바이브 속도로 내보낸 에이전트 소셜 레이어로, “에이전트 문명” 얘기가 진지해지기 전에 인증·데이터 평면이 공개적으로 무너졌다. 에이전트에게는 광장이 있었고, curl 하는 연구자에게도 있었다.
+			body: `Moltbook이 여기 있는 이유는 인증과 데이터 계층이 공개적으로 먼저 무너졌기 때문입니다. 그 뒤에 “에이전트 문명”을 말하기는 어렵습니다. 에이전트에게는 광장이 있었고, HTTP 요청 몇 번 할 수 있는 사람에게도 있었습니다.
 
 ### 하드 시그널
-- 프로덕션 에이전트 기록에 대한 미인증/과권한 DB 접근
-- 클라이언트에 박힌 백엔드 키(고전적 ship-without-RLS)
-- 코드 소유를 모델에 떠넘기는 운영 대응`,
+- 프로덕션 에이전트 기록이 제대로 된 인증 없이 접근 가능했음
+- 백엔드 키가 클라이언트 JavaScript에 포함됨
+- 운영이 코드 책임을 모델에 넘긴 대응`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `노출된 Moltbook DB로 임의 AI 에이전트 장악 가능`,
@@ -462,12 +462,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `Moltbook se cataloga como **slop de incidente**: capa social de agentes enviada a velocidad vibe cuya auth y plano de datos fallaron en público antes de que la “civilización de agentes” pudiera tomarse en serio. Los agentes tenían una plaza. Todo investigador con curl también.
+			body: `Moltbook está aquí porque la capa de auth y datos falló en público antes de que cualquier relato de “civilización de agentes” pudiera tomarse en serio. Los agentes tenían una plaza. Cualquiera con unas pocas peticiones HTTP también.
 
 ### Señales duras
-- Acceso a DB no autenticado / sobreprivilegiado a registros de agentes en producción
-- Clave de backend embebida en el cliente (clásico ship-without-RLS)
-- Respuesta del operador que delega la ownership del código al modelo`,
+- Registros de agentes en producción alcanzables sin autenticación adecuada
+- Una clave de backend enviada dentro del JavaScript del cliente
+- Una respuesta del operador que deja la responsabilidad del código en el modelo`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `Base de datos Moltbook expuesta: control de cualquier agente de IA`,
@@ -494,14 +494,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	scriptc: {
 		zh: {
-			body: `scriptc 是 **工具链 slop**：崭新的编译器，营销说消灭 JS 运行时，首日 issue 却是静默错码与残缺平台。发布帖在发功能；issue 区在发真相。
+			body: `scriptc 被收进这里，是因为它作为工具链 slop 很典型。宣传里它是离开 JavaScript 运行时的办法，首日 issue 里已经是错误代码和不完整的平台支持。发布帖在讲功能，issue 区在讲限制。
 
 ### 质量视角
-- 构建绿灯，加载阶段炸（FFI）
-- Windows 用户立刻被挡
-- 社交图谱优化口号，不优化分诊
-
-等 issue 跟踪器稳定——或者它不稳。`,
+- 构建通过，加载时因 FFI 失败
+- Windows 用户一上来就被挡住
+- 公开讨论更关心口号，而不是排障`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc 仓库`,
@@ -546,12 +544,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `scriptc ist **Toolchain-Slop**: brandneuer Compiler, vermarktet als Ende der JS-Runtimes, während Day-one-Issues stille Wrong-Code und unfertige Plattformen zeigen. Der Launch-Thread liefert Features; der Tracker liefert Wahrheit.
+			body: `scriptc steht hier als typischer Toolchain-Slop. Er wird als Weg aus JavaScript-Runtimes verkauft, während Day-one-Issues schon falschen Code und unvollständige Plattformunterstützung zeigen. Launch-Posts reden von Features. Der Issue-Tracker zeigt die Grenzen.
 
 ### Qualitätswinkel
-- Grüne Builds, die beim Laden scheitern (FFI)
-- Windows-Nutzer sofort blockiert
-- Social Graph optimiert Slogans, nicht Triage`,
+- Builds bestehen, scheitern aber beim Laden wegen FFI
+- Windows-Nutzer sind sofort blockiert
+- Öffentliche Posts optimieren Slogans statt Triage`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc Repository`,
@@ -596,12 +594,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `scriptc è **slop da toolchain**: compilatore freschissimo venduto come fine dei runtime JS, mentre le issue del day-one mostrano wrong-code silenzioso e piattaforme incomplete. Il thread di launch spedisce feature; l’issue tracker spedisce verità.
+			body: `scriptc è qui come tipico slop da toolchain. Viene venduto come modo per lasciare i runtime JavaScript, mentre le issue del day-one mostrano già codice sbagliato e supporto piattaforma incompleto. I post di launch parlano di feature. L’issue tracker mostra i limiti.
 
 ### Angolo qualità
-- Build verdi che falliscono al load (FFI)
+- Build che passano e poi falliscono al load per FFI
 - Utenti Windows bloccati subito
-- Il grafo social ottimizza slogan, non il triage`,
+- Post pubblici che ottimizzano slogan, non il triage`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `Repo vercel-labs/scriptc`,
@@ -646,12 +644,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `scriptc は **ツールチェーン・スロップ**：できたてのコンパイラが「JS ランタイム撤廃」と売り、初日の issue は黙って壊れるコードと未完のプラットフォーム。ローンチスレが機能を出し、issue が真実を出す。
+			body: `scriptc がここに載っているのは、典型的なツールチェーンのスロップだからです。JavaScript ランタイムから離れる手段として売られ、初日の issue ではすでに誤ったコードと不完全なプラットフォームが見えます。ローンチ投稿は機能を話し、issue トラッカーは限界を見せます。
 
 ### 品質の切り口
-- ビルドは緑、ロードで落ちる（FFI）
-- Windows ユーザーは即ブロック
-- SNS はスローガン最適化、トリアージではない`,
+- ビルドは通るが、FFI でロード時に落ちる
+- Windows ユーザーが最初から止められる
+- 公開投稿はスローガン優先で、切り分けではない`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc リポジトリ`,
@@ -696,12 +694,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `scriptc는 **툴체인 슬롭**이다. 갓 나온 컴파일러가 JS 런타임 제거를 파는데, 첫날 이슈는 조용한 wrong-code와 미완 플랫폼이다. 런치 스레드는 기능을 팔고, 이슈 트래커는 진실을 판다.
+			body: `scriptc가 여기 있는 이유는 전형적인 툴체인 슬롭이기 때문입니다. JavaScript 런타임을 벗어나는 방법으로 팔리지만, 첫날 이슈에는 이미 잘못된 코드와 불완전한 플랫폼 지원이 있습니다. 출시 글은 기능을 말하고, 이슈 트래커는 한계를 보여 줍니다.
 
 ### 품질 각도
-- 빌드는 초록, 로드에서 터짐(FFI)
-- Windows 사용자는 즉시 막힘
-- 소셜 그래프는 슬로건 최적화, 트리아주가 아님`,
+- 빌드는 통과하고 로드에서 FFI로 실패
+- Windows 사용자가 바로 막힘
+- 공개 글이 슬로건을 최적화하고 트리아주를 하지 않음`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc 저장소`,
@@ -746,12 +744,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `scriptc es **slop de toolchain**: un compilador recién salido vendido como el fin de los runtimes JS, mientras las issues del day-one muestran wrong-code silencioso y plataformas incompletas. El hilo de launch envía features; el tracker envía verdad.
+			body: `scriptc está aquí como slop típico de toolchain. Se vende como forma de dejar atrás los runtimes de JavaScript, mientras las issues del primer día ya muestran código incorrecto y soporte de plataforma incompleto. Los posts de lanzamiento hablan de funciones. El tracker muestra los límites.
 
 ### Ángulo de calidad
-- Builds verdes que fallan al cargar (FFI)
-- Usuarios de Windows bloqueados de inmediato
-- El grafo social optimiza eslóganes, no el triage`,
+- Builds que pasan y luego fallan al cargar por FFI
+- Usuarios de Windows bloqueados de entrada
+- Posts públicos que optimizan eslóganes en vez de triage`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `Repo vercel-labs/scriptc`,
@@ -798,12 +796,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	'vercel-labs-native': {
 		zh: {
-			body: `Native SDK 或许会成熟。今天它被归档为 **营销完成、桌面未完成** 软件——在发革命话术，而基础 UI 管道仍是 open issue。Electron 的葬礼排了期；尸体还有 focus bug。
+			body: `Native SDK 以后或许会好起来。今天它更像宣传完整、桌面能力不完整。口号是一场革命，未关闭的 issue 还在讲基本功。人们一直在给 Electron 办葬礼，产品自己还有焦点问题。
 
 ### 质量视角
-- issue 标题像 pre-1.0 平台清单，不像打磨项
-- 社交帖很少提这些缺口
-- agent 自动化宣传撞上 tracker 里的 WebView/快照盲区`,
+- issue 标题读起来像 1.0 前的清单
+- 社交讨论很少提这些缺口
+- agent 自动化说法碰上 WebView 和快照盲区`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `vercel-labs/native 仓库`,
@@ -840,12 +838,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `Native SDK mag reifen. Heute ist es **marketing-fertig, desktop-unfertig** — Revolution im Pitch, Basis-UI-Plumbing noch Open Issues. Electrons Beerdigung ist terminiert; der Körper hat noch Focus-Bugs.
+			body: `Native SDK kann besser werden. Heute wirkt es marketing-fertig und desktop-unfertig. Der Pitch ist eine Revolution. Die offenen Issues sind noch Grundlagen. Electron wird immer wieder beerdigt. Das Produkt hat immer noch Focus-Bugs.
 
 ### Qualitätswinkel
-- Issue-Titel wie Pre-1.0-Checkliste, nicht Polish
-- Social Posts erwähnen die Lücken selten
-- Agent-Automation-Claims kollidieren mit WebView/Snapshot-Blindspots im Tracker`,
+- Issue-Titel klingen wie eine Pre-1.0-Checkliste
+- Social Posts erwähnen diese Lücken selten
+- Agent-Automation-Claims laufen in WebView- und Snapshot-Blindspots`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `vercel-labs/native Repository`,
@@ -882,12 +880,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `Native SDK forse maturerà. Oggi è software **completo di marketing, incompleto di desktop** — pitch da rivoluzione mentre l’impianto UI di base è ancora open issue. Il funerale di Electron è in agenda; il corpo ha ancora bug di focus.
+			body: `Native SDK può migliorare. Oggi è più completo di marketing che di desktop. Il pitch è una rivoluzione. Le issue aperte parlano ancora di fondamenta. Si continua a organizzare il funerale di Electron. Il prodotto ha ancora bug di focus.
 
 ### Angolo qualità
-- I titoli delle issue sembrano checklist pre-1.0, non polish
+- I titoli delle issue sembrano una checklist pre-1.0
 - I post social raramente citano quei buchi
-- Le claim di automazione agent collidono con i blind spot WebView/snapshot nel tracker`,
+- Le claim di automazione agent finiscono nei blind spot di WebView e snapshot`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `Repo vercel-labs/native`,
@@ -924,12 +922,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `Native SDK はいずれ成熟するかもしれない。今日の分類は **マーケティング完成・デスクトップ未完成**——革命ピッチを出しつつ、基礎 UI 配管は open issue のまま。Electron の葬儀は予定済み；死体にはまだ focus バグがある。
+			body: `Native SDK は今後良くなるかもしれません。今日のところは、宣伝は揃っているがデスクトップとしては未完成、という位置づけです。ピッチは革命です。未解決 issue はまだ基礎の話です。Electron の葬儀は何度も予定されています。製品にはまだフォーカスの不具合があります。
 
 ### 品質の切り口
-- issue タイトルは polish ではなく pre-1.0 チェックリスト
-- SNS 投稿はそれらの穴にほぼ触れない
-- agent 自動化の主張が tracker の WebView/スナップショット盲点と衝突`,
+- issue タイトルが 1.0 前のチェックリストに見える
+- SNS はそれらの穴にほとんど触れない
+- agent 自動化の主張が WebView とスナップショットの死角にぶつかる`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `vercel-labs/native リポジトリ`,
@@ -966,12 +964,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `Native SDK는 언젠가 성숙할지 모른다. 오늘은 **마케팅 완성·데스크톱 미완성** 소프트웨어로 분류된다—혁명 피치를 내면서 기본 UI 배관은 여전히 open issue. Electron 장례는 잡혔고, 시신엔 아직 포커스 버그가 있다.
+			body: `Native SDK는 앞으로 나아질 수 있습니다. 오늘은 마케팅은 갖춰졌고 데스크톱은 아직 부족한 상태로 적습니다. 피치는 혁명입니다. 열린 이슈는 아직 기초입니다. Electron 장례는 계속 잡히고, 제품에는 아직 포커스 버그가 있습니다.
 
 ### 품질 각도
-- 이슈 제목이 polish가 아니라 pre-1.0 체크리스트
-- 소셜 포스트는 그 구멍을 거의 안 말함
-- 에이전트 자동화 주장이 트래커의 WebView/스냅샷 사각과 충돌`,
+- 이슈 제목이 1.0 이전 체크리스트처럼 읽힘
+- 소셜 글은 그 구멍을 거의 말하지 않음
+- 에이전트 자동화 주장이 WebView·스냅샷 사각에 부딪힘`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `vercel-labs/native 저장소`,
@@ -1008,12 +1006,12 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `Native SDK puede madurar. Hoy se cataloga como software **completo de marketing, incompleto de escritorio**: pitch de revolución mientras el fontanería UI básica sigue en issues abiertas. El funeral de Electron está programado; el cuerpo aún tiene bugs de focus.
+			body: `Native SDK puede mejorar. Hoy se lee más completo de marketing que de escritorio. El pitch es una revolución. Las issues abiertas siguen siendo fundamentos. Se sigue organizando el funeral de Electron. El producto aún tiene bugs de focus.
 
 ### Ángulo de calidad
-- Los títulos de issue parecen checklist pre-1.0, no polish
+- Los títulos de issue parecen una checklist pre-1.0
 - Los posts sociales raramente mencionan esos huecos
-- Las claims de automatización de agentes chocan con puntos ciegos de WebView/snapshot en el tracker`,
+- Las claims de automatización de agentes chocan con puntos ciegos de WebView y snapshot`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `Repo vercel-labs/native`,
@@ -1052,14 +1050,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	zerolang: {
 		zh: {
-			body: `Zerolang 是 **披着 agent 皮的编译器质量 slop**：话术是给 agent 语义确定性；公开证据是错码、「别在你机器上跑」，以及社区逆向——agent 原生故事坐在 IR 硬编码与 thrash 树上。
+			body: `Zerolang 是包着 agent 故事的编译器质量 slop。宣传讲的是给 agent 的语义确定性。公开证据是错误代码、社区明确的「别在你机器上跑」，以及在 agent 原生宣传底下找到硬编码的文章。
 
 ### 硬信号
-- 主干上有 repro 的错码 / 健全性发现（#318）
-- 宿主平台后端缺口（#230）
-- 社区与维护者对低质量的明确认账（#181）
-- 知乎深挖：stdlib 砸进 IR、cosmetic runtime 模块、公开吐槽后整棵编译器树被 agent 驱动删除
-- 与 scriptc/native 同套 Labs 包装：叙事优先，排干其次`,
+- 主干上可复现的错误代码和健全性问题（#318）
+- Apple Silicon 宿主后端的缺口（#230）
+- 社区和维护者都明确承认质量很差（#181）
+- 中文长文写到：stdlib 被烤进 IR、runtime 模块很薄、公开批评后整棵编译器树被删
+- 和 scriptc、native 一样：先讲故事，质量后补`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `README 安全警告`,
@@ -1100,14 +1098,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `Zerolang es **slop de calidad de compilador con cosplay de agente**: el pitch es certeza semántica para agentes; la evidencia pública es wrong-code, “don't run this”, e ingeniería inversa de la comunidad que muestra la historia agent-native sentada sobre hardcodes de IR y árboles thrash.
+			body: `Zerolang ist Compiler-Qualitätsslop mit einer Agent-Story darum. Der Pitch ist semantische Sicherheit für Agents. Die öffentliche Evidenz ist Wrong-Code, ein klares „don't run this“ aus der Community und Texte, die Hardcoding unter dem agent-native Marketing finden.
 
-### Señales duras
-- Hallazgos de wrong-code / soundness con repros en main (#318)
-- Huecos del backend host (#230)
-- Reconocimiento explícito de baja calidad por comunidad + maintainers (#181)
-- Deep-dives chinos: stdlib horneada en el IR, módulo runtime cosmético, borrado impulsado por agentes de árboles enteros del compilador tras asados públicos
-- Mismo packaging Labs que scriptc/native (narrativa primero, drenaje después)`,
+### Harte Signale
+- Wrong-Code- und Soundness-Funde mit Repros auf main (#318)
+- Host-Backend-Lücken auf Apple Silicon (#230)
+- Explizites Eingeständnis niedriger Qualität von Community und Maintainern (#181)
+- Chinesische Deep-Dives zu IR-eingebrannter Stdlib, dünnem Runtime-Modul und gelöschten Compiler-Bäumen nach öffentlicher Kritik
+- Dasselbe Labs-Muster wie scriptc und native: zuerst die Story, Qualität später`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `README-Sicherheitswarnung`,
@@ -1148,14 +1146,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `Zerolang è **slop di qualità del compilatore in cosplay da agent**: il pitch è certezza semantica per gli agent; l'evidenza pubblica è wrong-code, “don't run this”, e reverse-engineering di comunità che mostra la storia agent-native seduta su hardcode IR e alberi thrash.
+			body: `Zerolang è slop di qualità del compilatore con una storia da agent avvolta intorno. Il pitch è certezza semantica per gli agent. L’evidenza pubblica è wrong-code, un esplicito “don't run this” della community e pezzi che trovano hardcoding sotto il marketing agent-native.
 
 ### Segnali duri
-- Finding di wrong-code / soundness con repro su main (#318)
-- Buchi del backend host (#230)
-- Ammissione esplicita di bassa qualità da community + maintainer (#181)
-- Deep-dive cinesi: stdlib cotta nell'IR, modulo runtime cosmetico, delete agent-driven di interi alberi del compilatore dopo roast pubblici
-- Stesso packaging Labs di scriptc/native (narrativa prima, drain dopo)`,
+- Finding di wrong-code e soundness con repro su main (#318)
+- Buchi del backend host su Apple Silicon (#230)
+- Riconoscimento esplicito di bassa qualità da community e maintainer (#181)
+- Deep-dive cinesi su stdlib cotta nell’IR, modulo runtime sottile e alberi interi del compilatore cancellati dopo critiche pubbliche
+- Lo stesso schema Labs di scriptc e native: prima la storia, la qualità dopo`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `Avviso di sicurezza del README`,
@@ -1196,14 +1194,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `Zerolang は **エージェントのコスプレをしたコンパイラ品質スロップ**：売りは agent 向け意味的確実性；公開証拠は誤コードと「自分のマシンで走らせるな」、そしてコミュニティのリバース——agent ネイティブ物語が IR ハードコードと thrash ツリーの上に座っていること。
+			body: `Zerolang は、エージェントの物語をまとったコンパイラ品質のスロップです。売りはエージェント向けの意味的な確実性です。公開証拠は誤ったコード、コミュニティの明確な「実行するな」、そして agent ネイティブ宣伝の下にハードコードを見つける文章です。
 
 ### ハードシグナル
-- main 上で repro 付きの wrong-code / soundness 発見（#318）
-- ホスト基盤バックエンドの穴（#230）
-- 低品質に対するコミュニティとメンテナの明示的認（#181）
-- 中国語の深掘り：IR に焼き込まれた stdlib、cosmetic な runtime モジュール、公開批判後に agent 駆動でコンパイラツリー丸ごと削除
-- scriptc/native と同じ Labs 包装：ナラティブ優先、掃除は後回し`,
+- main 上で再現できる wrong-code と soundness の問題（#318）
+- Apple Silicon ホスト backend の穴（#230）
+- コミュニティとメンテナ双方の低品質の明示（#181）
+- 中国語の長文：IR に焼き込まれた stdlib、薄い runtime、公開批判後のコンパイラツリー削除
+- scriptc や native と同じ Labs の型：先に物語、品質は後`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `README 安全警告`,
@@ -1244,14 +1242,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `Zerolang은 **에이전트 코스프레를 한 컴파일러 품질 슬롭**이다. 피치는 에이전트를 위한 의미적 확실성; 공개 증거는 wrong-code와 “네 머신에서 돌리지 마”, 그리고 커뮤니티 리버스—에이전트 네이티브 스토리가 IR 하드코딩과 thrash 트리 위에 앉아 있다는 것.
+			body: `Zerolang은 에이전트 이야기를 두른 컴파일러 품질 슬롭입니다. 피치는 에이전트를 위한 의미적 확실성입니다. 공개 증거는 wrong-code, 커뮤니티의 분명한 “실행하지 마”, 그리고 에이전트 네이티브 마케팅 아래 하드코딩을 찾아내는 글입니다.
 
 ### 하드 시그널
-- main에서 repro 있는 wrong-code/사운드니스 발견(#318)
-- 호스트 플랫폼 백엔드 구멍(#230)
-- 커뮤니티+메인테이너의 저품질 명시 인정(#181)
-- 중국어 딥다이브: IR에 구운 stdlib, 화장용 runtime 모듈, 공개 비판 후 에이전트 주도로 컴파일러 트리 통째 삭제
-- scriptc/native과 같은 Labs 패키징: 내러티브 먼저, 정리는 나중`,
+- main에서 재현되는 wrong-code와 사운드니스 문제(#318)
+- Apple Silicon 호스트 백엔드 구멍(#230)
+- 커뮤니티와 메인테이너의 저품질 명시(#181)
+- 중국어 장문: IR에 구운 stdlib, 얇은 runtime, 공개 비판 후 컴파일러 트리 삭제
+- scriptc·native과 같은 Labs 패턴: 이야기 먼저, 품질은 나중`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `README 안전 경고`,
@@ -1292,14 +1290,14 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `Zerolang es **slop de calidad de compilador con cosplay de agente**: el pitch es certeza semántica para agentes; la evidencia pública es wrong-code, “don't run this”, e ingeniería inversa de la comunidad que muestra la historia agent-native sentada sobre hardcodes de IR y árboles thrash.
+			body: `Zerolang es slop de calidad de compilador con una historia de agente alrededor. El pitch es certeza semántica para agentes. La evidencia pública es wrong-code, un “no lo ejecutes” explícito de la comunidad y textos que encuentran hardcoding bajo el marketing agent-native.
 
 ### Señales duras
-- Hallazgos de wrong-code / soundness con repros en main (#318)
-- Huecos del backend host (#230)
-- Reconocimiento explícito de baja calidad por comunidad + maintainers (#181)
-- Deep-dives chinos: stdlib horneada en el IR, módulo runtime cosmético, borrado impulsado por agentes de árboles enteros del compilador tras asados públicos
-- Mismo packaging Labs que scriptc/native (narrativa primero, drenaje después)`,
+- Hallazgos de wrong-code y soundness con repros en main (#318)
+- Huecos del backend host en Apple Silicon (#230)
+- Reconocimiento explícito de baja calidad por comunidad y maintainers (#181)
+- Textos largos en chino sobre stdlib en el IR, runtime delgado y árboles enteros del compilador borrados tras críticas públicas
+- El mismo patrón Labs que scriptc y native: primero la historia, la calidad después`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `Advertencia de seguridad del README`,

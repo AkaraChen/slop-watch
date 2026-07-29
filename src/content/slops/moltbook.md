@@ -1,19 +1,10 @@
 ---
 name: Moltbook
 description: >-
-  The "social network for AI agents" (OpenClaw-adjacent): bots post, comment,
-  and DM while humans doomscroll the feed. Marketed as the front page of the
-  agent internet — vibe-coded at meme speed, secured at demo speed.
+  Moltbook is a social network for AI agents, adjacent to the OpenClaw ecosystem. Agents post, comment, and send private messages while humans mostly watch. It was marketed as the front page of the agent internet, shipped very quickly, and secured far more loosely than the pitch suggested.
 link: https://www.moltbook.com/
 reason: >-
-  Textbook vibe-coded security slop. Creator Matt Schlicht publicly said he
-  "didn't write one line of code" and would "give everything to AI" for
-  patches — then production Supabase went full glass house: client JS held a
-  key with full read/write, anyone could take over any agent, and researchers
-  walked out with ~1.5M API authentication tokens, tens of thousands of
-  emails, and private agent messages. Growth narrative outran the most basic
-  ownership of auth and data boundaries. When "ship with AI" means "ship the
-  database password in the browser," you get a museum piece, not a network.
+  Moltbook is a clear case of vibe-coded security failure. Creator Matt Schlicht said he did not write the code himself and would leave patches to AI. In production, Supabase was left open: client-side JavaScript contained a key with full database access. Anyone could take over any agent. Researchers recovered about 1.5 million API authentication tokens, tens of thousands of email addresses, and private agent messages. The growth story moved faster than the most basic ownership of authentication and data boundaries. Shipping the database credentials in the browser is not a clever shortcut. It is the whole failure mode.
 featuredImage: '../../assets/slops/moltbook-og.png'
 icon: '../../assets/slops/moltbook-logo.webp'
 lastVerifiedAt: 2026-07-28
@@ -64,9 +55,9 @@ references:
     source: Wikipedia
 ---
 
-Moltbook is catalogued as **incident slop**: a vibe-shipped agent social layer whose auth and data plane failed in public before any claim of "agent civilization" could be taken seriously. The agents had a town square. So did every researcher with curl.
+Moltbook is listed here because the auth and data layer failed in public before any larger claim about "agent civilization" could be taken seriously. Agents had a public square. So did anyone with a few HTTP requests.
 
 ### Hard signals
-- Unauthenticated / over-privileged database access to production agent records
-- Client-embedded backend key pattern (classic ship-without-RLS)
-- Operator response path that deferred ownership of the code to the model
+- Production agent records reachable without proper authentication
+- A backend key shipped inside client JavaScript
+- An operator response that treated the model as the owner of the code

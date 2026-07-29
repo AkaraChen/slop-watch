@@ -1,17 +1,10 @@
 ---
 name: scriptc
 description: >-
-  Vercel Labs TypeScript→native compiler: TS through a C intermediate, no
-  Node/V8 at runtime — day-one X thread says cold starts are dead; day-one
-  issues say Windows, clang, and silent FFI bugs are very much alive.
+  scriptc is a Vercel Labs compiler that turns TypeScript into native binaries. It routes TypeScript through a C intermediate and aims to run without Node or V8. Launch posts focused on killing cold starts. The first issues focused on Windows, clang, and silent FFI bugs.
 link: https://github.com/vercel-labs/scriptc
 reason: >-
-  Fresh compiler drop already exhibiting demo-quality edges: Windows cannot
-  run it cleanly (#10/#25), clang compile failures (#23), silent FFI bugs that
-  build green then throw at load (#21), and dynamic re-export holes with no
-  diagnostics (#19) — while X is wall-to-wall "TS becomes native, cold starts
-  die" engagement bait. That gap between meme and toolchain reliability is
-  the slop: green checkmarks that fail when you actually execute them.
+  The compiler shipped with problems that showed up immediately. Windows does not run it cleanly (issues #10 and #25). Real projects hit clang compile failures (#23). Some FFI bugs build successfully and then throw when the program loads (#21). Dynamic re-exports can pass the build with no diagnostics and fail later (#19). At the same time, social posts repeated "TypeScript becomes native" with almost no caveats. That gap is the problem: green builds that do not survive real execution.
 featuredImage: '../../assets/slops/scriptc-og.png'
 icon: '../../assets/slops/scriptc-icon.png'
 lastVerifiedAt: 2026-07-28
@@ -75,9 +68,9 @@ references:
     publishedAt: 2026-07-28
 ---
 
-scriptc is **toolchain slop**: a brand-new compiler marketed as eliminating JS runtimes while day-one issues show silent wrong code and incomplete platforms. The launch thread ships features; the issue tracker ships truth.
+scriptc is listed as toolchain slop. It is sold as a way to leave JavaScript runtimes behind, while day-one issues already show wrong code and incomplete platform support. Launch posts talk about features. The issue tracker is where the limitations show up.
 
 ### Quality angle
-- Green builds that fail at load (FFI)
-- Windows users blocked immediately
-- Social graph optimizes for slogans, not issue triage
+- Builds that pass, then fail at load because of FFI
+- Windows users blocked right away
+- Public posts that optimize for slogans instead of triage

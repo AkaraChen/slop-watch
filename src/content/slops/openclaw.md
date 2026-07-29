@@ -1,19 +1,10 @@
 ---
 name: OpenClaw
 description: >-
-  Self-hosted "personal AI operator" you drive from chat apps — multi-model
-  routing, skills marketplace, ~380k GitHub stars… and a matching landfill of
-  open issues. The lobster that asked for your shell and then forgot how to
-  keep the lights on.
+  OpenClaw is a self-hosted personal AI you control from chat apps. It supports multiple models and a skills marketplace. The project has around 380,000 GitHub stars — and a huge backlog of open issues to match.
 link: https://openclaw.ai/
 reason: >-
-  Peak quality slop. Growth completely outran ownership of the codebase:
-  ~6.6k open issues on the main repo, upgrade paths that nuke plugins,
-  demo-ready agents that go silent under real use (gateway/cron/memory/false
-  "task complete"), and high-severity security debt including one-click RCE
-  (CVE-2026-25253). Marketed as your always-on operator while users and
-  researchers keep filing accident reports — the issue tracker is the product
-  roadmap, and the roadmap is on fire.
+  OpenClaw grew faster than the maintainers could keep the code under control. The main repository has about 6,600 open issues. Upgrades often break plugins. Agents that look fine in demos frequently fail in real use: the gateway dies, cron jobs do not run, memory drops out, and tasks report as finished when nothing actually finished. Security is part of the problem too. A one-click remote code execution bug is documented as CVE-2026-25253. The marketing still presents OpenClaw as an always-on operator. What the public record shows is a long list of reliability and safety failures.
 featuredImage: '../../assets/slops/openclaw-og.png'
 icon: '../../assets/slops/openclaw-icon.png'
 lastVerifiedAt: 2026-07-28
@@ -71,9 +62,9 @@ references:
     source: r/openclaw
 ---
 
-OpenClaw is the catalog's clearest **garbage specimen**: an agent that asks for shell and credentials while the project cannot drain its own issue queue or keep installs stable across upgrades. Star count as a personality; reliability as an optional DLC.
+OpenClaw is the clearest bad example in this catalog. It asks for shell access and credentials, but it cannot keep installs stable or work through its own issue backlog. The star count looks impressive. The day-to-day reliability does not.
 
 ### Hard signals
-- Issue backlog measured in thousands while marketing still ships install funnels
-- Security history that includes one-click RCE and hostile skills distribution
-- Field reports of silent failure and "false complete" task results
+- Thousands of open issues while the project still pushes new install funnels
+- A documented one-click RCE and a skills ecosystem with real security risk
+- Users reporting silent failures and false "task complete" results

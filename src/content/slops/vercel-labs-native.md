@@ -1,19 +1,10 @@
 ---
 name: Native SDK (vercel-labs/native)
 description: >-
-  Vercel Labs toolkit for building native desktop apps with declarative UI and
-  TypeScript that "compiles toward native" — sold as the Electron funeral,
-  currently still arguing with focus, terminals, and WebView observability in
-  the issue tracker.
+  Native SDK is a Vercel Labs toolkit for building native desktop apps with declarative UI and TypeScript. It is aimed at native binaries and is often pitched as a replacement for Electron. In practice, basic desktop pieces like focus, terminals, and WebView observability are still incomplete in the issue tracker.
 link: https://github.com/vercel-labs/native
 reason: >-
-  Early-platform slop dressed as a finished Electron killer. Public discourse
-  sells "no WebView / no JS runtime" while the tracker is full of basic
-  desktop primitives that still do not work (focus, terminals, WebView
-  observability, layout knobs — see #222–#226). Star velocity and
-  agent-automation marketing outrun a coherent quality bar. If your revolution
-  still cannot tell which terminal fired an event, it is not a revolution —
-  it is a launch thread with homework.
+  This is an early platform sold as if it were already a finished Electron killer. Marketing talks about no WebView and no JavaScript runtime. The tracker is full of basic primitives that still do not work, including focus, terminals, WebView observability, and layout controls (issues #222 through #226). Stars and agent-automation messaging moved faster than a solid quality bar. If the product still cannot tell which terminal fired an event, it is not a finished revolution. It is a launch announcement with a long homework list.
 featuredImage: '../../assets/slops/native-og.png'
 icon: '../../assets/slops/native-icon.png'
 lastVerifiedAt: 2026-07-28
@@ -61,9 +52,9 @@ references:
     publishedAt: 2026-07-20
 ---
 
-Native SDK may mature. Today it is catalogued as **marketing-complete, desktop-incomplete** software — the slop is shipping a revolution pitch while fundamental UI plumbing is still open issues. The funeral for Electron has been scheduled; the body still has focus bugs.
+Native SDK may improve. Today it is listed as marketing-complete and desktop-incomplete. The pitch is a revolution. The open issues are still about fundamentals. People keep scheduling Electron's funeral. The product still has focus bugs.
 
 ### Quality angle
-- Issue titles read like a pre-1.0 platform checklist, not polish
+- Issue titles look like a pre-1.0 checklist
 - Social posts rarely mention those gaps
-- Agent automation claims collide with WebView/snapshot blind spots in the tracker
+- Agent-automation claims run into WebView and snapshot blind spots

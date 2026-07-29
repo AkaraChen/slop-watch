@@ -1,28 +1,10 @@
 ---
 name: Zerolang
 description: >-
-  Vercel Labs' experimental "programming language for agents": the semantic
-  graph is the program database, .0 files are just the human-readable
-  projection, and agents are supposed to patch nodes instead of fighting text
-  diffs. Systems-language cosplay for native binaries — with agent-friendly
-  diagnostics and, so far, host-backend honesty issues.
+  Zerolang is an experimental Vercel Labs language meant for agents. The semantic graph is treated as the program database, and .0 files are a human-readable projection. Agents are supposed to patch graph nodes instead of fighting line-based text diffs. The pitch includes native binaries and agent-friendly diagnostics. The host backend quality is still uneven.
 link: https://github.com/vercel-labs/zerolang
 reason: >-
-  Heavyweight agent-toolchain slop from the same Labs wave as scriptc/native.
-  Marketed as the language where agents edit semantic graphs, not fragile text —
-  while the public tracker and a 18-bug audit show wrong-code and soundness
-  holes on the default macOS host (i64 compares emitted as 32-bit CMP,
-  oversized frames silently truncated into segfaults, borrow tracking cleared
-  by dynamic array sets). Community issue #181 is literally titled "Low code
-  quality. Don't run this on your machine"; maintainers acknowledged and said
-  they are hiring. Chinese PL deep-dives (Zhihu) further document agent-driven
-  thrash (whole trees like compiler-zero deleted after critique), stdlib
-  primitives (time/rand/fs) hammered into the IR instead of a real runtime, a
-  "runtime" module that still only covers http/json while the hardcoding stays,
-  and an ownership story implemented with a thin checker.c-style approach —
-  fashion features (effect handlers) on top of comedy plumbing. When your pitch
-  is "stale hashes get rejected before write" and #425 is "incorrect module
-  hash comparison," the comedy writes itself.
+  Zerolang sits in the same Labs wave as scriptc and native, and it shows the same pattern. It is marketed as a language where agents edit semantic graphs safely. The public tracker and an 18-bug audit show serious problems on the default macOS host, including i64 compares emitted as 32-bit CMP, stack frames truncated into segfaults, and borrow tracking cleared by dynamic array sets. Community issue #181 is titled "Low code quality. Don't run this on your machine." Maintainers acknowledged the complaint and said they were hiring. Chinese write-ups on Zhihu add more detail: whole trees such as compiler-zero deleted after public critique; time, rand, and fs modeled in the IR instead of a real runtime; a runtime module that mostly covers http and json while hardcoding remains; and an ownership story on top of a thin checker. The pitch says stale hashes are rejected before write. Issue #425 is about incorrect module hash comparison. Those two facts do not sit comfortably next to each other.
 featuredImage: '../../assets/slops/zerolang-og.png'
 icon: '../../assets/slops/zerolang-icon.png'
 lastVerifiedAt: 2026-07-29
@@ -95,11 +77,11 @@ references:
     publishedAt: 2026-05-19
 ---
 
-Zerolang is **compiler-quality slop in agent cosplay**: the pitch is semantic certainty for agents; the public evidence is wrong-code, "don't run this," and community reverse-engineering that shows the agent-native story sitting on IR hardcodes and thrashy trees.
+Zerolang is compiler-quality slop with an agent story wrapped around it. The pitch is semantic certainty for agents. The public evidence is wrong-code, an explicit "don't run this" warning from the community, and write-ups that find hardcoding under the agent-native marketing.
 
 ### Hard signals
-- Wrong-code / soundness findings with repros on main (#318)
-- Host platform backend gaps (#230)
-- Explicit community + maintainer acknowledgment of low quality (#181)
-- Chinese deep-dives: IR-baked stdlib, cosmetic runtime module, agent-driven delete of whole compiler trees after public roast
-- Same Labs packaging pattern as scriptc/native (narrative first, drain later)
+- Wrong-code and soundness findings with repros on main (#318)
+- Host backend gaps on Apple Silicon (#230)
+- Explicit low-quality acknowledgment from community and maintainers (#181)
+- Chinese deep-dives covering IR-baked stdlib pieces, a thin runtime module, and whole compiler trees deleted after public critique
+- The same Labs packaging pattern as scriptc and native: story first, quality later
