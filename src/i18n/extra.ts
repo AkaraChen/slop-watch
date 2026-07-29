@@ -316,7 +316,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 
 ### 硬信号
 - 生产环境的 agent 记录没有得到应有的鉴权保护
-- 后端密钥直接出现在客户端 JavaScript 里
+- 网页前端脚本里带着能读写整库的密钥，打开页面就能抄走
 - 运营把代码责任推给模型`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {

@@ -38,7 +38,7 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	moltbook: {
 		zh: {
 			description: `Moltbook 是给 AI agent 用的社交网络，和 OpenClaw 生态挨着。agent 可以发帖、评论、私信，人类多半只是看着。它被宣传成 agent 互联网的头版，上线很快，安全却松得多。`,
-			reason: `这是典型的 vibe coding 安全事故。创始人 Matt Schlicht 说自己几乎没写代码，补丁也交给 AI。生产环境里的 Supabase 却完全敞开：客户端 JavaScript 带着可读写全库的密钥，谁都能接管任意 agent。研究者拿到了大约 150 万个 API 认证 token、数万个邮箱，还有 agent 私信。增长故事跑得比鉴权和数据边界的基本责任更快。把数据库密钥塞进浏览器，不是聪明捷径，就是失败本身。`,
+			reason: `这是典型的 vibe coding 安全事故。创始人 Matt Schlicht 说自己几乎没写代码，补丁也交给 AI。生产环境里的 Supabase 却完全敞开：客户端 JavaScript 带着可读写全库的密钥，谁都能接管任意 agent。研究者拿到了大约 150 万个 API 认证 token、数万个邮箱，还有 agent 私信。增长故事跑得比鉴权和数据边界的基本责任更快。网页前端的 JavaScript 里，带着能直接读写整个数据库的密钥。谁打开网页、谁看源代码，都能拿到这个密钥，也就能接管别人的 agent、读私信。这不是省事，是出事。`,
 		},
 		de: {
 			description: `Moltbook ist ein soziales Netzwerk für AI-Agenten im Umfeld von OpenClaw. Agenten posten, kommentieren und schreiben Direktnachrichten; Menschen schauen meist zu. Es wurde als Titelseite des Agenten-Internets vermarktet, sehr schnell geshappt und deutlich lockerer abgesichert als die Story nahelegte.`,
@@ -170,7 +170,7 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 	danghuangshang: {
 		zh: {
 			description: `「当皇上」是一套 OpenClaw 的教程和配置，仓库是 wanikua/danghuangshang。它想让你在 Discord 或飞书里一键登基：内阁、六部排好，也可以再挂写小说的助手。宣传说五分钟就能上手，agent 十八个以上，skills 六十多项。`,
-			reason: `官名好玩，装起来却不轻松。Issue #144 里，有人说 Docker 根本起不来，示例配置太旧，对不上镜像里的 openclaw。#131 里，唐的目录下塞着明的配置。allowBots 开错了，Discord 上的 bot 还会互相刷。同一周 Edict 也出来了，两边为署名公开吵过（#55）。这里不替谁下判决，只记下人们已经写在 issue 里的事。`,
+			reason: `官名好玩，装起来却不轻松。Issue #144 里，有人说 Docker 根本起不来，示例配置太旧，对不上镜像里的 openclaw。#131 里，唐的目录下塞着明的配置。allowBots 开错了，Discord 上的 bot 还会互相刷。同一周 Edict 也出来了，两边为署名公开吵过（#55）。两边各说各的，读者可以自己去点 issue。`,
 		},
 		de: {
 			description: `„Dang Huang Shang“ ist OpenClaw-Tutorial+Config (wanikua/danghuangshang). Ein Befehl „Kaiser“ auf Discord/Feishu. Pitch: fünf Minuten, 18+ Agents, 60+ Skills.`,
