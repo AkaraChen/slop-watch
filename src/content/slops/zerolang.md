@@ -75,12 +75,3 @@ references:
     source: Zhihu / 知乎用户名可以重复吗
     publishedAt: 2026-05-19
 ---
-
-Zerolang wraps an agent story around a compiler. The pitch is safe graph edits. Public evidence includes an explicit “don’t run this on your machine,” and write-ups that the implementation does not match the marketing.
-
-### Hard signals
-- Reproducible wrong-code and soundness issues on main (#318)
-- Host backend gaps on Apple Silicon (#230)
-- Community and maintainers both admit poor quality (#181)
-- Chinese long-forms on thin runtime and deleted trees after criticism
-- Same Labs pattern as scriptc and Native: story first, quality later

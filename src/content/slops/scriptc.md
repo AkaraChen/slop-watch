@@ -66,11 +66,3 @@ references:
     source: X / @0x_Missy22
     publishedAt: 2026-07-28
 ---
-
-scriptc is sold as a way out of JavaScript runtimes. Day-one issues already show wrong code and incomplete platforms. Launch posts talk features. The tracker shows limits.
-
-### Hard signals
-- Incomplete Windows support
-- clang failures on real projects
-- FFI bugs that pass build and fail at load
-- Dynamic re-exports without diagnostics

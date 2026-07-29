@@ -58,13 +58,3 @@ references:
     source: GitHub Issues
     publishedAt: 2026-04-02
 ---
-
-The board shows six ministry names. Open one and it often will not connect. Users also say runs are very slow and status gets stuck. Around the same time, 当皇上 said the other side copied without credit.
-
-### Hard signals
-- Created **2026-02-23 14:35 UTC**; 当皇上 **2026-02-22 17:17 UTC** (about 21 hours earlier)
-- Court layout on OpenClaw, one-shot install
-- **#55** and **#94** on credit; closed as non-technical
-- About **16k** stars versus about **2.7k** for the earlier twin
-- Homepage field points at **openclaw.ai**
-- **#251** offline, slow, status stuck; webhook **#317**, **#318**

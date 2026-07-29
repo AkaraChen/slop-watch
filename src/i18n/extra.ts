@@ -2,20 +2,13 @@ import type { Locale } from './config';
 
 export type RefOverlay = { title: string; summary: string };
 export type ExtraCopy = {
-	body: string;
 	references: Record<string, RefOverlay>;
 };
 
-/** Body + reference title/summary overlays (EN lives in content collections). */
+/** Reference title/summary overlays (EN lives in content collections). */
 export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	openclaw: {
 		zh: {
-			body: `OpenClaw 要你的 shell 和登录凭据，却很难把安装维护稳住，issue 也清不完。星很多，天天用起来却不省心。
-
-### 硬信号
-- open issue 以千计，安装推广还在继续
-- 已有公开的一键远程执行漏洞，skills 市场风险也不小
-- 用户说有静默失败，也有「做完了」其实没做完`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw 仓库数据`,
@@ -60,12 +53,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `OpenClaw ist das klarste schlechte Beispiel in diesem Katalog. Es verlangt Shell und Zugangsdaten, hält Installationen aber kaum stabil und kommt mit dem eigenen Issue-Berg nicht hinterher. Die Sterne wirken beeindruckend. Die Zuverlässigkeit im Alltag nicht.
-
-### Harte Signale
-- Tausende offene Issues, während weiter Install-Funnels gebaut werden
-- Dokumentiertes One-Click-RCE und ein riskantes Skills-Ökosystem
-- Nutzer berichten stille Fehler und falsche „Task complete“-Meldungen`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw Repository-Stats`,
@@ -110,12 +97,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `OpenClaw è l’esempio negativo più chiaro di questo catalogo. Chiede shell e credenziali, ma non tiene stabili le installazioni e non smaltisce la propria coda di issue. Le stelle impressionano. L’affidabilità quotidiana no.
-
-### Segnali duri
-- Migliaia di issue aperte mentre i funnel di install continuano
-- Un RCE one-click documentato e un ecosistema skills rischioso
-- Utenti che segnalano fallimenti silenziosi e “task complete” falsi`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `Statistiche repo openclaw/openclaw`,
@@ -160,12 +141,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `OpenClaw はこのカタログでいちばんわかりやすい悪い例です。シェルと資格情報を要求するのに、インストールを安定させきれず、自分の issue も片付けられません。star 数は派手です。日常の信頼性は伴っていません。
-
-### ハードシグナル
-- open issues が数千あるのに、インストール導線はまだ増える
-- 公開済みのワンクリック RCE と、リスクのある skills 生態
-- 黙って失敗する、偽の「タスク完了」といった現場報告`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw リポジトリ統計`,
@@ -210,12 +185,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `OpenClaw는 이 목록에서 가장 분명한 나쁜 예입니다. 셸과 자격 증명을 요구하면서도 설치를 안정적으로 유지하지 못하고, 자기 이슈도 처리하지 못합니다. 스타 수는 인상적입니다. 일상적인 신뢰성은 그렇지 않습니다.
-
-### 하드 시그널
-- open issues가 수천 개인데도 설치 유도는 계속됨
-- 문서화된 원클릭 RCE와 위험한 스킬 생태계
-- 조용한 실패와 거짓 “작업 완료” 보고`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `openclaw/openclaw 저장소 통계`,
@@ -260,12 +229,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `OpenClaw es el peor ejemplo más claro de este catálogo. Pide shell y credenciales, pero no mantiene estables las instalaciones ni drena su propia cola de issues. Las estrellas impresionan. La fiabilidad diaria no.
-
-### Señales duras
-- Miles de issues abiertas mientras siguen los embudos de instalación
-- Un RCE de un clic documentado y un ecosistema de skills con riesgo real
-- Usuarios que reportan fallos silenciosos y “tarea completada” falsas`,
 			references: {
 				'https://github.com/openclaw/openclaw': {
 					title: `Estadísticas del repo openclaw/openclaw`,
@@ -312,12 +275,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	moltbook: {
 		zh: {
-			body: `Moltbook 的鉴权和数据层在公开场合先垮了。agent 有广场，会发请求的人也有。
-
-### 硬信号
-- 生产环境的 agent 记录没有应有的鉴权保护
-- 网页前端脚本里带着能读写整库的密钥，打开页面就能抄走
-- 运营把代码责任推给模型`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `暴露的 Moltbook 数据库可让人接管任意 AI agent`,
@@ -342,12 +299,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `Moltbook steht hier, weil Auth und Datenebene öffentlich scheiterten, bevor größere Erzählungen über „Agentenzivilisation“ ernst klingen konnten. Agenten hatten einen öffentlichen Platz. Jeder mit ein paar HTTP-Requests auch.
-
-### Harte Signale
-- Produktionsdaten von Agenten ohne ordentliche Authentifizierung erreichbar
-- Ein Backend-Key im Client-JavaScript
-- Eine Operator-Antwort, die dem Modell die Code-Verantwortung zuschiebt`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `Exponierte Moltbook-DB: Übernahme jedes AI-Agents`,
@@ -372,12 +323,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `Moltbook è qui perché auth e data plane sono falliti in pubblico prima che qualsiasi racconto di “civiltà degli agent” potesse essere preso sul serio. Gli agent avevano una piazza. Chiunque con qualche richiesta HTTP pure.
-
-### Segnali duri
-- Record di agent in produzione raggiungibili senza autenticazione adeguata
-- Una chiave backend spedita nel JavaScript client
-- Una risposta dell’operatore che tratta il modello come proprietario del codice`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `Database Moltbook esposto: controllo di qualsiasi AI agent`,
@@ -402,12 +347,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `Moltbook がここに載っている理由は、認証とデータ面が公開の場で先に壊れたからです。そのあとで「エージェント文明」を語っても説得力がありません。エージェントには広場がありました。HTTP を少し叩ける人にもありました。
-
-### ハードシグナル
-- 本番のエージェント記録が十分な認証なしで届いていた
-- バックエンドキーがクライアント JavaScript に入っていた
-- 運営がコードの責任をモデルに預けた`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `露出した Moltbook DB で任意 AI agent を乗っ取れる`,
@@ -432,12 +371,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `Moltbook이 여기 있는 이유는 인증과 데이터 계층이 공개적으로 먼저 무너졌기 때문입니다. 그 뒤에 “에이전트 문명”을 말하기는 어렵습니다. 에이전트에게는 광장이 있었고, HTTP 요청 몇 번 할 수 있는 사람에게도 있었습니다.
-
-### 하드 시그널
-- 프로덕션 에이전트 기록이 제대로 된 인증 없이 접근 가능했음
-- 백엔드 키가 클라이언트 JavaScript에 포함됨
-- 운영이 코드 책임을 모델에 넘긴 대응`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `노출된 Moltbook DB로 임의 AI 에이전트 장악 가능`,
@@ -462,12 +395,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `Moltbook está aquí porque la capa de auth y datos falló en público antes de que cualquier relato de “civilización de agentes” pudiera tomarse en serio. Los agentes tenían una plaza. Cualquiera con unas pocas peticiones HTTP también.
-
-### Señales duras
-- Registros de agentes en producción alcanzables sin autenticación adecuada
-- Una clave de backend enviada dentro del JavaScript del cliente
-- Una respuesta del operador que deja la responsabilidad del código en el modelo`,
 			references: {
 				'https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/': {
 					title: `Base de datos Moltbook expuesta: control de cualquier agente de IA`,
@@ -494,13 +421,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	scriptc: {
 		zh: {
-			body: `scriptc 被说成离开 JavaScript 运行时的办法。首日 issue 里已经是错误代码和不完整的平台支持。发布帖在讲功能，issue 区在讲限制。
-
-### 硬信号
-- Windows 支持不完整
-- 真实项目上的 clang 失败
-- 构建通过、加载才炸的 FFI 问题
-- 动态 re-export 无诊断`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc 仓库`,
@@ -545,12 +465,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `scriptc steht hier als typischer Toolchain-Slop. Er wird als Weg aus JavaScript-Runtimes verkauft, während Day-one-Issues schon falschen Code und unvollständige Plattformunterstützung zeigen. Launch-Posts reden von Features. Der Issue-Tracker zeigt die Grenzen.
-
-### Qualitätswinkel
-- Builds bestehen, scheitern aber beim Laden wegen FFI
-- Windows-Nutzer sind sofort blockiert
-- Öffentliche Posts optimieren Slogans statt Triage`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc Repository`,
@@ -595,12 +509,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `scriptc è qui come tipico slop da toolchain. Viene venduto come modo per lasciare i runtime JavaScript, mentre le issue del day-one mostrano già codice sbagliato e supporto piattaforma incompleto. I post di launch parlano di feature. L’issue tracker mostra i limiti.
-
-### Angolo qualità
-- Build che passano e poi falliscono al load per FFI
-- Utenti Windows bloccati subito
-- Post pubblici che ottimizzano slogan, non il triage`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `Repo vercel-labs/scriptc`,
@@ -645,12 +553,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `scriptc がここに載っているのは、典型的なツールチェーンのスロップだからです。JavaScript ランタイムから離れる手段として売られ、初日の issue ではすでに誤ったコードと不完全なプラットフォームが見えます。ローンチ投稿は機能を話し、issue トラッカーは限界を見せます。
-
-### 品質の切り口
-- ビルドは通るが、FFI でロード時に落ちる
-- Windows ユーザーが最初から止められる
-- 公開投稿はスローガン優先で、切り分けではない`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc リポジトリ`,
@@ -695,12 +597,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `scriptc가 여기 있는 이유는 전형적인 툴체인 슬롭이기 때문입니다. JavaScript 런타임을 벗어나는 방법으로 팔리지만, 첫날 이슈에는 이미 잘못된 코드와 불완전한 플랫폼 지원이 있습니다. 출시 글은 기능을 말하고, 이슈 트래커는 한계를 보여 줍니다.
-
-### 품질 각도
-- 빌드는 통과하고 로드에서 FFI로 실패
-- Windows 사용자가 바로 막힘
-- 공개 글이 슬로건을 최적화하고 트리아주를 하지 않음`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `vercel-labs/scriptc 저장소`,
@@ -745,12 +641,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `scriptc está aquí como slop típico de toolchain. Se vende como forma de dejar atrás los runtimes de JavaScript, mientras las issues del primer día ya muestran código incorrecto y soporte de plataforma incompleto. Los posts de lanzamiento hablan de funciones. El tracker muestra los límites.
-
-### Ángulo de calidad
-- Builds que pasan y luego fallan al cargar por FFI
-- Usuarios de Windows bloqueados de entrada
-- Posts públicos que optimizan eslóganes en vez de triage`,
 			references: {
 				'https://github.com/vercel-labs/scriptc': {
 					title: `Repo vercel-labs/scriptc`,
@@ -797,12 +687,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	'vercel-labs-native': {
 		zh: {
-			body: `Native SDK 以后或许会好起来。今天宣传很满，桌面基础却还不齐。口号是一场革命，未关闭的 issue 还在讲基本功。
-
-### 质量视角
-- issue 标题读起来像 1.0 前的清单
-- 社交讨论很少提这些缺口
-- agent 自动化说法碰上 WebView 和快照盲区`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `vercel-labs/native 仓库`,
@@ -839,12 +723,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `Native SDK kann besser werden. Heute wirkt es marketing-fertig und desktop-unfertig. Der Pitch ist eine Revolution. Die offenen Issues sind noch Grundlagen. Electron wird immer wieder beerdigt. Das Produkt hat immer noch Focus-Bugs.
-
-### Qualitätswinkel
-- Issue-Titel klingen wie eine Pre-1.0-Checkliste
-- Social Posts erwähnen diese Lücken selten
-- Agent-Automation-Claims laufen in WebView- und Snapshot-Blindspots`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `vercel-labs/native Repository`,
@@ -881,12 +759,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `Native SDK può migliorare. Oggi è più completo di marketing che di desktop. Il pitch è una rivoluzione. Le issue aperte parlano ancora di fondamenta. Si continua a organizzare il funerale di Electron. Il prodotto ha ancora bug di focus.
-
-### Angolo qualità
-- I titoli delle issue sembrano una checklist pre-1.0
-- I post social raramente citano quei buchi
-- Le claim di automazione agent finiscono nei blind spot di WebView e snapshot`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `Repo vercel-labs/native`,
@@ -923,12 +795,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `Native SDK は今後良くなるかもしれません。今日のところは、宣伝は揃っているがデスクトップとしては未完成、という位置づけです。ピッチは革命です。未解決 issue はまだ基礎の話です。Electron の葬儀は何度も予定されています。製品にはまだフォーカスの不具合があります。
-
-### 品質の切り口
-- issue タイトルが 1.0 前のチェックリストに見える
-- SNS はそれらの穴にほとんど触れない
-- agent 自動化の主張が WebView とスナップショットの死角にぶつかる`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `vercel-labs/native リポジトリ`,
@@ -965,12 +831,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `Native SDK는 앞으로 나아질 수 있습니다. 오늘은 마케팅은 갖춰졌고 데스크톱은 아직 부족한 상태로 적습니다. 피치는 혁명입니다. 열린 이슈는 아직 기초입니다. Electron 장례는 계속 잡히고, 제품에는 아직 포커스 버그가 있습니다.
-
-### 품질 각도
-- 이슈 제목이 1.0 이전 체크리스트처럼 읽힘
-- 소셜 글은 그 구멍을 거의 말하지 않음
-- 에이전트 자동화 주장이 WebView·스냅샷 사각에 부딪힘`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `vercel-labs/native 저장소`,
@@ -1007,12 +867,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `Native SDK puede mejorar. Hoy se lee más completo de marketing que de escritorio. El pitch es una revolución. Las issues abiertas siguen siendo fundamentos. Se sigue organizando el funeral de Electron. El producto aún tiene bugs de focus.
-
-### Ángulo de calidad
-- Los títulos de issue parecen una checklist pre-1.0
-- Los posts sociales raramente mencionan esos huecos
-- Las claims de automatización de agentes chocan con puntos ciegos de WebView y snapshot`,
 			references: {
 				'https://github.com/vercel-labs/native': {
 					title: `Repo vercel-labs/native`,
@@ -1051,14 +905,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	zerolang: {
 		zh: {
-			body: `Zerolang 包着 agent 的故事。宣传讲安全改图；公开证据里，有人劝你别在自己机器上跑，也有人指出实现和宣传对不上。
-
-### 硬信号
-- 主干上可复现的错误代码和健全性问题（#318）
-- Apple Silicon 宿主后端缺口（#230）
-- 社区和维护者都承认质量差（#181）
-- 中文长文写到 stdlib 烤进 IR、runtime 很薄、批评后删树
-- 和 scriptc、Native 一样：先讲故事，质量后补`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `README 安全警告`,
@@ -1099,14 +945,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `Zerolang ist Compiler-Qualitätsslop mit einer Agent-Story darum. Der Pitch ist semantische Sicherheit für Agents. Die öffentliche Evidenz ist Wrong-Code, ein klares „don't run this“ aus der Community und Texte, die Hardcoding unter dem agent-native Marketing finden.
-
-### Harte Signale
-- Wrong-Code- und Soundness-Funde mit Repros auf main (#318)
-- Host-Backend-Lücken auf Apple Silicon (#230)
-- Explizites Eingeständnis niedriger Qualität von Community und Maintainern (#181)
-- Chinesische Deep-Dives zu IR-eingebrannter Stdlib, dünnem Runtime-Modul und gelöschten Compiler-Bäumen nach öffentlicher Kritik
-- Dasselbe Labs-Muster wie scriptc und native: zuerst die Story, Qualität später`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `README-Sicherheitswarnung`,
@@ -1147,14 +985,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `Zerolang è slop di qualità del compilatore con una storia da agent avvolta intorno. Il pitch è certezza semantica per gli agent. L’evidenza pubblica è wrong-code, un esplicito “don't run this” della community e pezzi che trovano hardcoding sotto il marketing agent-native.
-
-### Segnali duri
-- Finding di wrong-code e soundness con repro su main (#318)
-- Buchi del backend host su Apple Silicon (#230)
-- Riconoscimento esplicito di bassa qualità da community e maintainer (#181)
-- Deep-dive cinesi su stdlib cotta nell’IR, modulo runtime sottile e alberi interi del compilatore cancellati dopo critiche pubbliche
-- Lo stesso schema Labs di scriptc e native: prima la storia, la qualità dopo`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `Avviso di sicurezza del README`,
@@ -1195,14 +1025,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `Zerolang は、エージェントの物語をまとったコンパイラ品質のスロップです。売りはエージェント向けの意味的な確実性です。公開証拠は誤ったコード、コミュニティの明確な「実行するな」、そして agent ネイティブ宣伝の下にハードコードを見つける文章です。
-
-### ハードシグナル
-- main 上で再現できる wrong-code と soundness の問題（#318）
-- Apple Silicon ホスト backend の穴（#230）
-- コミュニティとメンテナ双方の低品質の明示（#181）
-- 中国語の長文：IR に焼き込まれた stdlib、薄い runtime、公開批判後のコンパイラツリー削除
-- scriptc や native と同じ Labs の型：先に物語、品質は後`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `README 安全警告`,
@@ -1243,14 +1065,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `Zerolang은 에이전트 이야기를 두른 컴파일러 품질 슬롭입니다. 피치는 에이전트를 위한 의미적 확실성입니다. 공개 증거는 wrong-code, 커뮤니티의 분명한 “실행하지 마”, 그리고 에이전트 네이티브 마케팅 아래 하드코딩을 찾아내는 글입니다.
-
-### 하드 시그널
-- main에서 재현되는 wrong-code와 사운드니스 문제(#318)
-- Apple Silicon 호스트 백엔드 구멍(#230)
-- 커뮤니티와 메인테이너의 저품질 명시(#181)
-- 중국어 장문: IR에 구운 stdlib, 얇은 runtime, 공개 비판 후 컴파일러 트리 삭제
-- scriptc·native과 같은 Labs 패턴: 이야기 먼저, 품질은 나중`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `README 안전 경고`,
@@ -1291,14 +1105,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `Zerolang es slop de calidad de compilador con una historia de agente alrededor. El pitch es certeza semántica para agentes. La evidencia pública es wrong-code, un “no lo ejecutes” explícito de la comunidad y textos que encuentran hardcoding bajo el marketing agent-native.
-
-### Señales duras
-- Hallazgos de wrong-code y soundness con repros en main (#318)
-- Huecos del backend host en Apple Silicon (#230)
-- Reconocimiento explícito de baja calidad por comunidad y maintainers (#181)
-- Textos largos en chino sobre stdlib en el IR, runtime delgado y árboles enteros del compilador borrados tras críticas públicas
-- El mismo patrón Labs que scriptc y native: primero la historia, la calidad después`,
 			references: {
 				'https://github.com/vercel-labs/zerolang': {
 					title: `Advertencia de seguridad del README`,
@@ -1341,15 +1147,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	edict: {
 		zh: {
-			body: `看板上六个部的名字都在，点进去却常常连不上。用户还说跑起来特别慢，状态也走不动。差不多同时，当皇上又说对方抄了、没写来处。
-
-### 硬信号
-- 创建 **2026-02-23 14:35 UTC**；当皇上 **2026-02-22 17:17 UTC**（大约晚二十一个小时）
-- 三省六部、OpenClaw、一键安装
-- **#55**、**#94** 谈署名；按非技术讨论关闭
-- 星大约 **一万六**，对家大约 **两千七**
-- 主页指着 **openclaw.ai**
-- **#251** 不在线、慢、状态卡住；webhook **#317**、**#318**`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub 仓库 cft0808/edict`,
@@ -1382,15 +1179,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `Edict ist ein weiteres OpenClaw-Multi-Agent-Paket im Hof-Kostüm. Die Story ist dick. Der öffentliche Streit auch.
-
-### Harte Signale
-- Create **2026-02-23 14:35 UTC**; 当皇上 **2026-02-22 17:17 UTC** (etwa 21 Stunden später)
-- Gleicher Pitch: du bist Kaiser, drei Departements / sechs Ministerien, OpenClaw, One-Shot-Install
-- **#55** und **#94** zur Plagiats-/Credit-Frage; Maintainer schloss sie als nicht-technisch
-- Letzter Check: etwa **16k** Sterne vs etwa **2.7k** beim früheren Twin
-- Homepage-Feld zeigt auf **openclaw.ai**, nicht auf ein eigenes Produkt
-- Feld: totes Kanban, Ministerien oft offline (**#251**), Webhook-SSRF (#317 / #318)`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub-Repo cft0808/edict`,
@@ -1423,15 +1211,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `Edict è un altro pacchetto multi-agent OpenClaw vestito da corte. La storia è spessa. Spessa è anche la lite pubblica.
-
-### Segnali duri
-- Create **2026-02-23 14:35 UTC**; 当皇上 **2026-02-22 17:17 UTC** (circa 21 ore dopo)
-- Stesso pitch: sei l’imperatore, tre dipartimenti / sei ministeri, OpenClaw, install one-shot
-- **#55** e **#94** su plagio/credito; chiusi come non tecnici
-- Ultimo check: circa **16k** stelle vs circa **2.7k** del twin precedente
-- Homepage punta a **openclaw.ai**, non a un sito proprio
-- Campo: kanban morta, ministeri spesso offline (**#251**), webhook SSRF (#317 / #318)`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `Repo GitHub cft0808/edict`,
@@ -1464,15 +1243,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `Edict は OpenClaw 上の、また一つの「朝廷装」マルチエージェントです。物語は厚い。公開の喧嘩も厚い。
-
-### ハードシグナル
-- 作成 **2026-02-23 14:35 UTC**；当皇上は **2026-02-22 17:17 UTC**（約 21 時間後）
-- 同じ売り：皇帝、三省六部、OpenClaw、ワンコマンド install
-- **#55** と **#94** は剽窃/クレジットの公開 issue；メンテナは非技術としてクローズ
-- 最終確認：約 **1.6 万** star 対 先の双生 約 **2.7k**
-- homepage は **openclaw.ai** を指し、自社サイトではない
-- 現場：看板ダウン、三省六部の頻発オフライン（**#251**）、webhook SSRF（#317 / #318）`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub リポジトリ cft0808/edict`,
@@ -1505,15 +1275,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `Edict는 OpenClaw 위의 또 다른 「궁정 코스튬」 멀티 에이전트입니다. 이야기는 두껍고 공개 싸움도 두껍습니다.
-
-### 하드 시그널
-- 생성 **2026-02-23 14:35 UTC**; 당황상 **2026-02-22 17:17 UTC**(약 21시간 뒤)
-- 같은 세일즈: 황제, 三省六部, OpenClaw, 원샷 설치
-- **#55**, **#94** 표절/출처 공개 이슈; 메인테이너가 비기술로 닫음
-- 마지막 확인: 약 **1.6만** 스타 vs 앞선 쌍둥이 약 **2.7k**
-- homepage가 **openclaw.ai**를 가리키고 자사 사이트가 아님
-- 현장: 칸반 다운, 육부 잦은 오프라인(**#251**), webhook SSRF(#317 / #318)`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub 저장소 cft0808/edict`,
@@ -1546,15 +1307,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `Edict es otro paquete multi-agente OpenClaw vestido de corte. La historia es gruesa. Gruesa es también la pelea pública.
-
-### Señales duras
-- Create **2026-02-23 14:35 UTC**; 当皇上 **2026-02-22 17:17 UTC** (unas 21 horas después)
-- Mismo pitch: eres el emperador, tres departamentos / seis ministerios, OpenClaw, install de un tiro
-- **#55** y **#94** de plagio/crédito; cerrados como no técnicos
-- Último check: unas **16k** estrellas vs unas **2.7k** del gemelo anterior
-- La homepage apunta a **openclaw.ai**, no a un sitio propio
-- Campo: kanban muerto, ministerios a menudo offline (**#251**), webhook SSRF (#317 / #318)`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `Repo de GitHub cft0808/edict`,
@@ -1589,14 +1341,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	danghuangshang: {
 		zh: {
-			body: `「当皇上」卖的是快登基。装机帖里更常见的，是 Docker 起不来、示例配置过旧，以及和 Edict 为署名公开吵架。
-
-### 硬信号
-- 创建 **2026-02-22 17:17 UTC**，大约比 Edict 早 **二十一个小时**
-- OpenClaw 朝廷包，一键安装
-- **docs/originality.md**，以及 Edict 上的 **#55**、**#94**
-- **#144** Docker 起不来；**#131** 朝代文件放错
-- Discord 多 bot 互刷的说明`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub 仓库 wanikua/danghuangshang`,
@@ -1629,14 +1373,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `Das Ding lässt dich mit einem Befehl Kaiser werden und füllt Discord oder Feishu mit Ministerien. Beim echten Install startet Docker oft nicht, und du streitest öffentlich mit dem Twin-Repo nebenan, wer wen kopiert hat.
-
-### Harte Signale
-- Create **2026-02-22 17:17 UTC**, etwa **21 Stunden** vor cft0808/edict
-- Gleiche Produktform: Hof-Setting, OpenClaw, ministeriell benannte Agents, One-Shot-Install
-- **docs/originality.md** plus Edict **#55 / #94**: öffentliche Plagiatsclaims (Claims, kein Urteil)
-- Nutzer: **alte Samples**, **Docker startet nicht**, **falsche Dynastie-Config**
-- Discord-Safety-Docs, weil Multi-Bot-Stürme ein bekanntes Loch sind`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub-Repo wanikua/danghuangshang`,
@@ -1669,14 +1405,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `Questa roba ti fa diventare imperatore con un comando e riempie Discord o Feishu di ministeri. Quando installi davvero, Docker spesso non parte, e resti a litigare in pubblico col repo gemello su chi ha copiato chi.
-
-### Segnali duri
-- Creato **2026-02-22 17:17 UTC**, circa **21 ore** prima di cft0808/edict
-- Stessa forma di prodotto: ambientazione di corte, OpenClaw, agent con nomi di ministeri, install one-shot
-- **docs/originality.md** più Edict **#55 / #94**: claim pubbliche di plagio (claim, non sentenza)
-- Utenti: **sample vecchi**, **Docker non parte**, **config di dinastia sbagliata**
-- Docs Discord perché le tempeste multi-bot sono un buco noto`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `Repo GitHub wanikua/danghuangshang`,
@@ -1709,14 +1437,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `ワンコマンドで皇帝になり、Discord や Feishu に六部を並べる代物です。本当に入れると Docker がよく上がらず、隣の双生リポジトリと「誰が誰をコピーしたか」を公開で争うことになります。
-
-### ハードシグナル
-- 作成 **2026-02-22 17:17 UTC**、cft0808/edict より約 **21 時間**早い
-- 同じ形：朝廷設定、OpenClaw、部名 agent、ワンショット install
-- **docs/originality.md** と Edict **#55 / #94**：公開の剽窃主張（主張であり判決ではない）
-- ユーザー：**古いサンプル**、**Docker 起動失敗**、**王朝設定の取り違え**
-- Discord 安全ドキュメントがあるのは、マルチ bot 嵐が既知の穴だから`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub リポジトリ wanikua/danghuangshang`,
@@ -1749,14 +1469,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `원커맨드로 황제가 되고 Discord나 Feishu에 육부를 채우는 물건입니다. 진짜 설치하면 Docker가 자주 안 뜨고, 옆 쌍둥이 저장소와 누가 누구를 베꼈는지 공개로 싸웁니다.
-
-### 하드 시그널
-- 생성 **2026-02-22 17:17 UTC**, cft0808/edict보다 약 **21시간** 앞
-- 같은 형태: 궁정 설정, OpenClaw, 부 이름 에이전트, 원샷 설치
-- **docs/originality.md**와 Edict **#55 / #94**: 공개 표절 주장(주장이지 판결 아님)
-- 사용자: **낡은 샘플**, **Docker 실패**, **왕조 설정 오배치**
-- Discord 안전 문서가 있는 이유: 멀티 봇 폭풍이 알려진 구멍이기 때문`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub 저장소 wanikua/danghuangshang`,
@@ -1789,14 +1501,6 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `Esto te deja ser emperador con un comando y llena Discord o Feishu de ministerios. Cuando instalas de verdad, Docker a menudo no arranca, y sigues peleando en público con el repo gemelo sobre quién copió a quién.
-
-### Señales duras
-- Creado **2026-02-22 17:17 UTC**, unas **21 horas** antes que cft0808/edict
-- Misma forma de producto: ambientación de corte, OpenClaw, agentes con nombres de ministerios, install de un tiro
-- **docs/originality.md** más Edict **#55 / #94**: claims públicas de plagio (claims, no sentencia)
-- Usuarios: **samples viejos**, **Docker no arranca**, **config de dinastía mal puesta**
-- Docs de Discord porque las tormentas multi-bot son un agujero conocido`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `Repo de GitHub wanikua/danghuangshang`,

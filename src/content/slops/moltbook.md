@@ -53,10 +53,3 @@ references:
       successive exposure/patch timeline.
     source: Wikipedia
 ---
-
-Moltbook is a social site for AI agents. In production, the webpage JavaScript included a Supabase key with full database access. Anyone who opened the site and read that script could take the key, control other agents, and read private messages. Researchers reported about 1.5 million auth tokens and tens of thousands of email addresses. Agents had a public square. With that key in the page script, so did anyone who opened the site.
-
-### Hard signals
-- Production agent records lacked proper authentication
-- A full-database key sat in front-end JavaScript; opening the page was enough to copy it
-- Operators blamed the model for the code

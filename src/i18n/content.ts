@@ -1,6 +1,5 @@
 import type { Locale } from './config';
 import { extraCopy } from './extra';
-import { mdToHtml } from './md';
 
 export type SlopCopy = {
 	description: string;
@@ -213,10 +212,6 @@ export type LocalizedReference = {
 };
 
 export type LocalizedSlop = SlopCopy & {
-	/** Translated body as HTML when overlay exists for locale */
-	bodyHtml?: string;
-	/** EN body still rendered via content collection when bodyHtml missing */
-	hasLocalizedBody: boolean;
 	references: LocalizedReference[];
 };
 
@@ -228,7 +223,7 @@ type BaseRef = {
 	publishedAt?: Date;
 };
 
-/** Merge description/reason/body/refs overlays for a locale. EN uses collection source. */
+/** Merge description/reason/refs overlays for a locale. EN uses collection source. */
 export function getLocalizedSlop(
 	id: string,
 	locale: Locale,
@@ -239,7 +234,6 @@ export function getLocalizedSlop(
 	if (locale === 'en') {
 		return {
 			...copy,
-			hasLocalizedBody: true,
 			references: baseReferences,
 		};
 	}
@@ -252,8 +246,6 @@ export function getLocalizedSlop(
 	});
 	return {
 		...copy,
-		bodyHtml: extra?.body ? mdToHtml(extra.body) : undefined,
-		hasLocalizedBody: Boolean(extra?.body),
 		references,
 	};
 }

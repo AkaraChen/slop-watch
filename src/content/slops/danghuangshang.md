@@ -54,12 +54,3 @@ references:
     summary: Community thread on the credit fight with more public links.
     source: GitHub Issues
 ---
-
-当皇上 sells a quick throne. Install threads more often talk about Docker that will not start, sample configs that lag the image, and a same-week credit quarrel with Edict.
-
-### Hard signals
-- Created **2026-02-22 17:17 UTC**, about **21 hours** before Edict
-- OpenClaw court pack, one-command pitch
-- **docs/originality.md** plus Edict **#55** and **#94**
-- **#144** Docker will not start; **#131** wrong dynasty file
-- Discord notes for multi-bot loops

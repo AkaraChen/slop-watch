@@ -50,10 +50,3 @@ references:
     source: X / @crazibeat1
     publishedAt: 2026-07-20
 ---
-
-Native SDK may get better. Today the pitch is full and the desktop basics are not. The slogan is a revolution. Open issues are still about fundamentals.
-
-### Quality angle
-- Issue titles read like a pre-1.0 checklist
-- Social posts rarely mention these gaps
-- Agent-automation talk meets WebView and snapshot blind spots

@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection, render } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
 import SlopEntry from '../../../layouts/SlopEntry.astro';
 import { defaultLocale, locales, type Locale } from '../../../i18n/config';
 import { getLocalizedSlop, getSlopCopy } from '../../../i18n/content';
@@ -23,7 +23,6 @@ type Props = {
 };
 
 const { slop, locale, all } = Astro.props;
-const { Content } = await render(slop);
 const loc = getLocalizedSlop(
 	slop.id,
 	locale,
@@ -50,9 +49,5 @@ const related = relatedSlops(slop, all, 3).map((entry) => {
 	description={loc.description}
 	reason={loc.reason}
 	references={loc.references}
-	bodyHtml={loc.bodyHtml}
 	related={related}
-	showBodyFallbackNote={!loc.hasLocalizedBody}
->
-	{!loc.bodyHtml && <Content />}
-</SlopEntry>
+/>

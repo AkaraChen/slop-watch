@@ -31,8 +31,6 @@ export type UiKey =
 	| 'footer'
 	| 'specimenTitle'
 	| 'language'
-	| 'hardSignals'
-	| 'bodyFallbackNote'
 	| 'lastVerified'
 	| 'copyLink'
 	| 'copied'
@@ -93,8 +91,6 @@ const en: Record<UiKey, string> = {
 	footer: '© {year} Slop Watch. A catalog of AI products that went wrong.',
 	specimenTitle: '{name} · on Slop Watch',
 	language: 'Language',
-	hardSignals: 'What people reported',
-	bodyFallbackNote: 'The long text below is still in English until we finish a full translation.',
 	lastVerified: 'Evidence checked {date}',
 	copyLink: 'Copy link',
 	copied: 'Copied',
@@ -155,8 +151,6 @@ const zh: Record<UiKey, string> = {
 	footer: '© {year} Slop Watch. 出问题的 AI 产品名录。',
 	specimenTitle: '{name} · 收录于 Slop Watch',
 	language: '语言',
-	hardSignals: '大家反馈过的问题',
-	bodyFallbackNote: '下面的长文暂时还是英文，译完了再换。',
 	lastVerified: '证据核验 {date}',
 	copyLink: '复制链接',
 	copied: '已复制',
@@ -218,8 +212,6 @@ const de: Record<UiKey, string> = {
 	footer: '© {year} Slop Watch. Katalog von AI Slop.',
 	specimenTitle: '{name} · AI-Slop-Exemplar im Slop Watch Katalog',
 	language: 'Sprache',
-	hardSignals: 'Harte Signale',
-	bodyFallbackNote: 'Der Fließtext unten ist vorerst auf Englisch, bis eine volle Übersetzung vorliegt.',
 	lastVerified: 'Belege geprüft {date}',
 	copyLink: 'Link kopieren',
 	copied: 'Kopiert',
@@ -281,8 +273,6 @@ const it: Record<UiKey, string> = {
 	footer: '© {year} Slop Watch. Catalogo di AI Slop.',
 	specimenTitle: '{name} · esemplare AI Slop nel catalogo Slop Watch',
 	language: 'Lingua',
-	hardSignals: 'Segnali duri',
-	bodyFallbackNote: 'Il corpo del testo sotto è in inglese finché non c’è una traduzione completa.',
 	lastVerified: 'Prove verificate {date}',
 	copyLink: 'Copia link',
 	copied: 'Copiato',
@@ -344,8 +334,6 @@ const ja: Record<UiKey, string> = {
 	footer: '© {year} Slop Watch. AIスロップのカタログ。',
 	specimenTitle: '{name} · AIスロップ標本 · Slop Watch カタログ',
 	language: '言語',
-	hardSignals: 'ハードシグナル',
-	bodyFallbackNote: '本文は完全翻訳まで英語で表示します。',
 	lastVerified: '証拠確認 {date}',
 	copyLink: 'リンクをコピー',
 	copied: 'コピー済み',
@@ -406,8 +394,6 @@ const ko: Record<UiKey, string> = {
 	footer: '© {year} Slop Watch. AI 슬롭 목록.',
 	specimenTitle: '{name} · AI 슬롭 표본 · Slop Watch 목록',
 	language: '언어',
-	hardSignals: '하드 시그널',
-	bodyFallbackNote: '본문은 전체 번역 전까지 영어로 표시됩니다.',
 	lastVerified: '증거 확인 {date}',
 	copyLink: '링크 복사',
 	copied: '복사됨',
@@ -469,8 +455,6 @@ const es: Record<UiKey, string> = {
 	footer: '© {year} Slop Watch. Catálogo de AI Slop.',
 	specimenTitle: '{name} · ejemplar AI Slop en el catálogo Slop Watch',
 	language: 'Idioma',
-	hardSignals: 'Señales duras',
-	bodyFallbackNote: 'El cuerpo del texto se muestra en inglés hasta que haya traducción completa.',
 	lastVerified: 'Pruebas verificadas {date}',
 	copyLink: 'Copiar enlace',
 	copied: 'Copiado',
