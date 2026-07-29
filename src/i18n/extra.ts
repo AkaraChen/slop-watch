@@ -1340,133 +1340,133 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 	},
 	edict: {
 		zh: {
-			body: `Edict 进了这份目录，是因为 OpenClaw 生态里又多了一套「朝廷装」的多智能体包装。故事讲得很满，公开争执也很满。
+			body: `Edict 出现在这份目录里，是因为 OpenClaw 生态里又多出一套「朝廷」包装的多智能体方案。故事讲得很满，公开争执也同样满。
 
 ### 硬信号
-- GitHub 创建时间 **2026-02-23 14:35 UTC**；对方「当皇上」是 **2026-02-22 17:17 UTC**（大约晚 21 小时）
+- GitHub 创建时间是 **2026-02-23 14:35 UTC**；「当皇上」是 **2026-02-22 17:17 UTC**（大约晚二十一个小时）
 - 同一套卖点：用户当皇帝、三省六部、OpenClaw、一键安装
-- 公开工单 **#55**、**#94** 记录抄袭/署名争议；维护方按非技术讨论关闭
-- 末次核对：星标大约 **1.6 万**，早一步的孪生仓大约 **2.7k**
+- 公开工单 **#55**、**#94** 记录抄袭与署名争议；维护方按非技术讨论关闭
+- 末次核对：星标大约 **一万六**，早一步的孪生仓大约 **两千七**
 - 仓库主页字段指向 **openclaw.ai**，不是自家产品站
 - 现场还有看板掉线、**#251** 三省六部经常离线，以及 webhook 的 SSRF 加固（#317 / #318）`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub 仓库 cft0808/edict`,
-					summary: `三省六部设定的 OpenClaw 多智能体项目。大约 1.6 万星，2026-02-23 UTC 创建，MIT。Python 为主，带 React 看板宣传。`,
+					summary: `用三省六部设定包装的 OpenClaw 多智能体项目。大约一万六星，2026-02-23 UTC 创建，MIT 许可。代码以 Python 为主，宣传里常带 React 看板。`,
 				},
 				'https://github.com/cft0808/edict/issues/55': {
 					title: `Issue #55：被指抄袭、未署名`,
-					summary: `当皇上作者 wanikua 称核心设定和 agent 设计来自自己更早的教程。时间线显示 Edict 晚大约 21 小时。工单被标成非技术讨论后关闭。`,
+					summary: `「当皇上」作者 wanikua 称核心设定和 agent 设计来自自己更早的教程。时间线显示 Edict 大约晚了二十一个小时。工单被标成非技术讨论后关闭。`,
 				},
 				'https://github.com/cft0808/edict/issues/94': {
-					title: `Issue #94：原创争议跟进`,
-					summary: `同一作者的第二张工单，继续升级署名争议，同样已关闭。`,
+					title: `Issue #94：署名争议的跟进`,
+					summary: `同一作者的第二张工单，继续升级署名争议，同样已经关闭。`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
-					title: `对方仓库的原创声明`,
-					summary: `当皇上列出与 Edict 相似的部制划分、拼音 agent 名（如 bingbu），以及同类竞品对比写法。文中日期写 2025；GitHub 创建时间是 2026。`,
+					title: `对方仓库里的原创声明`,
+					summary: `「当皇上」列出与 Edict 相似的部制划分、拼音 agent 名（例如 bingbu），以及相近的竞品对比写法。文中日期写成 2025 年；GitHub 上的创建时间是 2026 年。`,
 				},
 				'https://github.com/cft0808/edict/issues/318': {
-					title: `Issue #318：通用 webhook 的 SSRF 加固`,
-					summary: `朝廷界面里 webhook 地址校验相关的安全修改（CWE-918）。`,
+					title: `Issue #318：给通用 webhook 做 SSRF 加固`,
+					summary: `朝廷界面里，webhook 地址校验相关的安全修改（CWE-918）。`,
 				},
 				'https://github.com/cft0808/edict/issues/317': {
-					title: `Issue #317：限制 webhook 打内网`,
-					summary: `希望禁止 webhook 指向内网、本机回环等地址。`,
+					title: `Issue #317：别让 webhook 打进内网`,
+					summary: `希望禁止 webhook 指向内网地址或本机回环。`,
 				},
 				'https://github.com/cft0808/edict/issues/251': {
 					title: `Issue #251：三省六部经常不在线`,
-					summary: `用户反馈看板里各「部」agent 频繁显示离线。`,
+					summary: `用户反馈：看板里各个「部」的 agent 经常显示离线。`,
 				},
 			},
 		},
 		de: {
-			body: `Edict steht hier, weil im OpenClaw-Umfeld wieder ein Multi-Agent-Produkt im Hof-Kostüm auftritt: viel Story, viel öffentlicher Streit.
+			body: `Edict steht in diesem Katalog, weil im OpenClaw-Umfeld wieder ein Multi-Agent-Produkt im Hof-Kostüm auftaucht. Die Story ist dick, der öffentliche Streit auch.
 
 ### Harte Signale
-- GitHub-Create **2026-02-23 14:35 UTC**; Gegenstück Dang Huang Shang **2026-02-22 17:17 UTC** (etwa 21 Stunden später)
-- Derselbe Pitch: Nutzer als Kaiser, drei Departements / sechs Ministerien, OpenClaw, One-Shot-Install
-- Öffentliche Tickets **#55** und **#94** zum Plagiats-/Namensstreit; Maintainer schloss sie als nicht-technisch
-- Letzter Check: etwa **16k** Sterne vs. etwa **2.7k** beim früheren Zwilling
-- Homepage-Feld zeigt auf **openclaw.ai**, nicht auf ein eigenes Produkt
-- Nutzer melden offline Kanban, oft offline Ministerien (**#251**), Webhook-SSRF-Härten (#317 / #318)`,
+- GitHub-Create **2026-02-23 14:35 UTC**; Dang Huang Shang **2026-02-22 17:17 UTC** (etwa 21 Stunden später)
+- Derselbe Pitch: Nutzer als Kaiser, drei Departements und sechs Ministerien, OpenClaw, One-Shot-Install
+- Öffentliche Tickets **#55** und **#94** zum Plagiats- und Namensstreit; Maintainer schloss sie als nicht-technisch
+- Letzter Check: etwa **16.000** Sterne gegen etwa **2.700** beim früheren Zwilling
+- Das Homepage-Feld zeigt auf **openclaw.ai**, nicht auf ein eigenes Produkt
+- Nutzer melden offline Kanban, oft offline Ministerien (**#251**) und Webhook-SSRF-Härten (#317 / #318)`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub-Repo cft0808/edict`,
-					summary: `OpenClaw-Multi-Agent-Projekt im Hof-Kostüm. Etwa 16k Sterne, erstellt 2026-02-23 UTC, MIT. Python-lastig, React-Kanban im Pitch.`,
+					summary: `OpenClaw-Multi-Agent-Projekt im Hof-Kostüm. Etwa 16.000 Sterne, erstellt am 2026-02-23 UTC, MIT. Vor allem Python, oft mit React-Kanban im Pitch.`,
 				},
 				'https://github.com/cft0808/edict/issues/55': {
-					title: `Issue #55: Plagiats- und Attributionsvorwurf`,
-					summary: `wanikua (Dang Huang Shang) behauptet, Konzept und Agent-Design stammten aus ihrem früheren Tutorial. Timeline: Edict ~21h später. Als nicht-technisch geschlossen.`,
+					title: `Issue #55: Plagiat und fehlende Attribution`,
+					summary: `wanikua (Dang Huang Shang) sagt, Konzept und Agent-Design stammten aus dem früheren Tutorial. Timeline: Edict etwa 21 Stunden später. Als nicht-technisch geschlossen.`,
 				},
 				'https://github.com/cft0808/edict/issues/94': {
-					title: `Issue #94: Follow-up zur Originalität`,
-					summary: `Zweites geschlossenes Ticket desselben Autors.`,
+					title: `Issue #94: Follow-up zum Namensstreit`,
+					summary: `Zweites Ticket desselben Autors; weiter eskaliert, ebenfalls geschlossen.`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
 					title: `Originalitätsnotiz im Gegen-Repo`,
-					summary: `Listet ähnliche Ministerien-Maps, Pinyin-Agent-IDs und denselben Vergleichs-Pitch. Prosa mit 2025-Daten; GitHub-Create ist 2026.`,
+					summary: `Listet ähnliche Ministerien-Maps, Pinyin-Agent-Namen (z. B. bingbu) und denselben Vergleichs-Pitch. Im Text steht 2025; GitHub-Create ist 2026.`,
 				},
 				'https://github.com/cft0808/edict/issues/318': {
 					title: `Issue #318: SSRF-Härten am Webhook`,
-					summary: `URL-Validierung für Webhooks in der Hof-UI (CWE-918).`,
+					summary: `Sicherheitsarbeit an der Webhook-URL-Prüfung in der Hof-UI (CWE-918).`,
 				},
 				'https://github.com/cft0808/edict/issues/317': {
 					title: `Issue #317: Webhook nicht ins Intranet`,
-					summary: `Offene Bitte, private und Loopback-Ziele zu sperren.`,
+					summary: `Bitte, private und Loopback-Ziele zu sperren.`,
 				},
 				'https://github.com/cft0808/edict/issues/251': {
-					title: `Issue #251: Ministeriums-Agents oft offline`,
+					title: `Issue #251: Ministerien oft offline`,
 					summary: `Nutzer: Agents im Kanban stehen oft auf offline.`,
 				},
 			},
 		},
 		it: {
-			body: `Edict è qui perché nell’ecosistema OpenClaw c’è un altro multi-agent in costume di corte: tanta storia, tanta lite pubblica.
+			body: `Edict è in questo catalogo perché nell’ecosistema OpenClaw c’è un altro multi-agent in costume di corte. La storia è piena, e piena è anche la lite pubblica.
 
 ### Segnali duri
-- Create GitHub **2026-02-23 14:35 UTC**; la controparte Dang Huang Shang **2026-02-22 17:17 UTC** (circa 21 ore dopo)
-- Stesso pitch: utente-imperatore, tre dipartimenti / sei ministeri, OpenClaw, install one-shot
-- Ticket pubblici **#55** e **#94** su plagio/attribuzione; chiusi come non tecnici
-- Ultimo check: circa **16k** stelle vs circa **2.7k** del twin precedente
-- Homepage punta a **openclaw.ai**, non a un sito proprio
+- Create GitHub **2026-02-23 14:35 UTC**; Dang Huang Shang **2026-02-22 17:17 UTC** (circa 21 ore dopo)
+- Stesso pitch: utente-imperatore, tre dipartimenti e sei ministeri, OpenClaw, install one-shot
+- Ticket pubblici **#55** e **#94** su plagio e attribuzione; chiusi come non tecnici
+- Ultimo check: circa **16 mila** stelle contro circa **2,7 mila** del twin precedente
+- La homepage punta a **openclaw.ai**, non a un sito proprio
 - In campo: kanban offline, ministeri spesso offline (**#251**), hardening webhook SSRF (#317 / #318)`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `Repo GitHub cft0808/edict`,
-					summary: `Multi-agent OpenClaw in costume di corte. Circa 16k stelle, creato 2026-02-23 UTC, MIT. Soprattutto Python, kanban React nel pitch.`,
+					summary: `Progetto multi-agent OpenClaw in costume di corte. Circa 16 mila stelle, creato il 2026-02-23 UTC, MIT. Soprattutto Python, spesso con kanban React nel pitch.`,
 				},
 				'https://github.com/cft0808/edict/issues/55': {
-					title: `Issue #55: accusa di plagio / attribuzione`,
-					summary: `wanikua dice che concetto e design agent vengono dal loro tutorial precedente. Timeline: Edict ~21h dopo. Chiusa come non tecnica.`,
+					title: `Issue #55: plagio e attribuzione mancante`,
+					summary: `wanikua (Dang Huang Shang) dice che concetto e design agent vengono dal tutorial precedente. Timeline: Edict circa 21 ore dopo. Chiusa come non tecnica.`,
 				},
 				'https://github.com/cft0808/edict/issues/94': {
-					title: `Issue #94: seguito sulla originalità`,
-					summary: `Seconda issue chiusa dello stesso autore.`,
+					title: `Issue #94: seguito sul nome`,
+					summary: `Seconda issue dello stesso autore; disputa alzata e chiusa di nuovo.`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
 					title: `Nota di originalità nel repo opposto`,
-					summary: `Elenca mappe di ministeri simili, ID agent pinyin e lo stesso pitch di confronto. Date 2025 nel testo; create GitHub è 2026.`,
+					summary: `Elenca mappe di ministeri simili, nomi agent pinyin (es. bingbu) e lo stesso pitch di confronto. Nel testo compare il 2025; la create GitHub è 2026.`,
 				},
 				'https://github.com/cft0808/edict/issues/318': {
 					title: `Issue #318: hardening SSRF sul webhook`,
-					summary: `Validazione URL webhook nella UI di corte (CWE-918).`,
+					summary: `Lavoro di sicurezza sulla validazione URL del webhook nella UI di corte (CWE-918).`,
 				},
 				'https://github.com/cft0808/edict/issues/317': {
-					title: `Issue #317: webhook non verso la rete interna`,
-					summary: `Richiesta di bloccare target privati e loopback.`,
+					title: `Issue #317: niente webhook verso la rete interna`,
+					summary: `Richiesta di bloccare destinazioni private e loopback.`,
 				},
 				'https://github.com/cft0808/edict/issues/251': {
-					title: `Issue #251: agent dei ministeri spesso offline`,
-					summary: `Utenti: gli agent risultano spesso offline sulla kanban.`,
+					title: `Issue #251: ministeri spesso offline`,
+					summary: `Utenti: gli agent sulla kanban risultano spesso offline.`,
 				},
 			},
 		},
 		ja: {
-			body: `Edict がここに載っているのは、OpenClaw 周辺にまた一つ「朝廷コスプレ」のマルチエージェントが出たからです。物語も公開の争いも厚いです。
+			body: `Edict がこのディレクトリに載っているのは、OpenClaw 周辺にまた一つ「朝廷」の皮を被ったマルチエージェントが出たからです。物語は厚く、公開の争いも厚いです。
 
 ### ハードシグナル
-- GitHub 作成 **2026-02-23 14:35 UTC**；相手「当皇上」は **2026-02-22 17:17 UTC**（約 21 時間後）
+- GitHub 作成は **2026-02-23 14:35 UTC**；「当皇上」は **2026-02-22 17:17 UTC**（約 21 時間後）
 - 同じ売り：ユーザーが皇帝、三省六部、OpenClaw、ワンコマンド install
 - 公開 issue **#55** と **#94** が剽窃・帰属の争い；メンテナは非技術としてクローズ
 - 最終確認：star 約 **1.6 万**、先の双生は約 **2.7k**
@@ -1475,26 +1475,26 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub リポジトリ cft0808/edict`,
-					summary: `朝廷モチーフの OpenClaw マルチエージェント。約 1.6 万 star、2026-02-23 UTC 作成、MIT。Python 中心。`,
+					summary: `三省六部の設定で包んだ OpenClaw マルチエージェント。star 約 1.6 万、2026-02-23 UTC 作成、MIT。Python 中心で、宣伝に React 看板がよく出る。`,
 				},
 				'https://github.com/cft0808/edict/issues/55': {
 					title: `Issue #55：剽窃・帰属の主張`,
-					summary: `当皇上の wanikua が中核設定と agent 設計は自分の先のチュートリアル由来だと主張。Edict は約 21 時間後。非技術としてクローズ。`,
+					summary: `「当皇上」の wanikua が、中核設定と agent 設計は自分の先のチュートリアル由来だと主張。タイムライン上 Edict は約 21 時間後。非技術としてクローズ。`,
 				},
 				'https://github.com/cft0808/edict/issues/94': {
-					title: `Issue #94：オリジナリティの続報`,
-					summary: `同一作者の二通目。帰属争いを続け、同様にクローズ。`,
+					title: `Issue #94：帰属争いの続報`,
+					summary: `同一作者の二通目。争いを続け、同様にクローズ。`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
 					title: `相手リポの originality 文書`,
-					summary: `似た部制マップ、拼音 agent 名、同種の比較宣伝を列挙。本文の年は 2025、GitHub 作成は 2026。`,
+					summary: `似た部制マップ、拼音 agent 名（例：bingbu）、同種の比較宣伝を列挙。本文の年は 2025、GitHub 作成は 2026。`,
 				},
 				'https://github.com/cft0808/edict/issues/318': {
 					title: `Issue #318：webhook の SSRF 対策`,
-					summary: `朝廷 UI 上の webhook URL 検証（CWE-918）。`,
+					summary: `朝廷 UI 上の webhook URL 検証まわりの安全改修（CWE-918）。`,
 				},
 				'https://github.com/cft0808/edict/issues/317': {
-					title: `Issue #317：内網向け webhook の制限`,
+					title: `Issue #317：内網向け webhook を止めたい`,
 					summary: `プライベートや loopback 宛を禁じたいという要望。`,
 				},
 				'https://github.com/cft0808/edict/issues/251': {
@@ -1504,38 +1504,38 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `Edict가 여기 있는 이유는 OpenClaw 주변에 또 하나의 「궁정 코스프레」 멀티 에이전트가 나왔기 때문입니다. 이야기도 공개 분쟁도 두껍습니다.
+			body: `Edict가 이 목록에 있는 이유는 OpenClaw 주변에 또 하나의 「궁정」 껍질 멀티 에이전트가 나왔기 때문입니다. 이야기도 두껍고 공개 분쟁도 두껍습니다.
 
 ### 하드 시그널
-- GitHub 생성 **2026-02-23 14:35 UTC**; 상대 「당황상」은 **2026-02-22 17:17 UTC**(약 21시간 뒤)
+- GitHub 생성 **2026-02-23 14:35 UTC**; 「당황상」은 **2026-02-22 17:17 UTC**(약 21시간 뒤)
 - 같은 세일즈: 사용자가 황제, 三省六部, OpenClaw, 원커맨드 설치
 - 공개 이슈 **#55**, **#94**가 표절·출처 분쟁; 메인테이너가 비기술로 닫음
-- 마지막 확인: 스타 약 **1.6만**, 앞선 쌍둥이는 약 **2.7k**
+- 마지막 확인: 스타 약 **1만 6천**, 앞선 쌍둥이는 약 **2.7k**
 - 저장소 homepage가 **openclaw.ai**를 가리키고 자사 사이트가 아님
 - 현장: 칸반 다운, 육부 잦은 오프라인(**#251**), webhook SSRF 보강(#317 / #318)`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `GitHub 저장소 cft0808/edict`,
-					summary: `궁정 설정 OpenClaw 멀티 에이전트. 약 1.6만 스타, 2026-02-23 UTC 생성, MIT. Python 중심.`,
+					summary: `三省六部 설정으로 포장한 OpenClaw 멀티 에이전트. 스타 약 1만 6천, 2026-02-23 UTC 생성, MIT. Python 중심, 홍보에 React 칸반이 자주 등장.`,
 				},
 				'https://github.com/cft0808/edict/issues/55': {
 					title: `Issue #55: 표절·출처 미표기 주장`,
-					summary: `당황상 쪽 wanikua가 핵심 설정과 에이전트 설계가 자신들의 이전 튜토리얼에서 왔다고 주장. Edict는 약 21시간 뒤. 비기술로 닫힘.`,
+					summary: `「당황상」 쪽 wanikua가 핵심 설정과 에이전트 설계가 자신들의 이전 튜토리얼에서 왔다고 주장. 타임라인상 Edict는 약 21시간 뒤. 비기술로 닫힘.`,
 				},
 				'https://github.com/cft0808/edict/issues/94': {
-					title: `Issue #94: 독창성 후속`,
-					summary: `같은 작성자의 두 번째 이슈.`,
+					title: `Issue #94: 출처 분쟁 후속`,
+					summary: `같은 작성자의 두 번째 이슈. 분쟁을 이어 가고 다시 닫힘.`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
 					title: `상대 저장소 originality 문서`,
-					summary: `비슷한 부제 맵, 병음 에이전트 이름, 같은 식의 비교 홍보. 본문 연도 2025, GitHub 생성 2026.`,
+					summary: `비슷한 부제 맵, 병음 에이전트 이름(예: bingbu), 같은 식의 비교 홍보를 나열. 본문 연도는 2025, GitHub 생성은 2026.`,
 				},
 				'https://github.com/cft0808/edict/issues/318': {
 					title: `Issue #318: webhook SSRF 보강`,
-					summary: `궁정 UI의 webhook URL 검증(CWE-918).`,
+					summary: `궁정 UI의 webhook URL 검증 관련 보안 수정(CWE-918).`,
 				},
 				'https://github.com/cft0808/edict/issues/317': {
-					title: `Issue #317: 내부망 webhook 제한`,
+					title: `Issue #317: 내부망으로 가는 webhook 제한`,
 					summary: `사설·loopback 대상을 막고 싶다는 요청.`,
 				},
 				'https://github.com/cft0808/edict/issues/251': {
@@ -1545,81 +1545,81 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `Edict está aquí porque en el entorno OpenClaw aparece otro multi-agente disfrazado de corte: mucha historia, mucha pelea pública.
+			body: `Edict está en este catálogo porque en el entorno OpenClaw aparece otro multi-agente disfrazado de corte. La historia va llena, y llena va también la pelea pública.
 
 ### Señales duras
-- Create en GitHub **2026-02-23 14:35 UTC**; la contraparte Dang Huang Shang **2026-02-22 17:17 UTC** (unas 21 horas después)
-- Mismo pitch: usuario-emperador, tres departamentos / seis ministerios, OpenClaw, install de un comando
-- Tickets públicos **#55** y **#94** de plagio/atribución; cerrados como no técnicos
-- Último check: unas **16k** estrellas vs unas **2.7k** del gemelo anterior
+- Create en GitHub **2026-02-23 14:35 UTC**; Dang Huang Shang **2026-02-22 17:17 UTC** (unas 21 horas después)
+- Mismo pitch: usuario-emperador, tres departamentos y seis ministerios, OpenClaw, install de un comando
+- Tickets públicos **#55** y **#94** de plagio y atribución; cerrados como no técnicos
+- Último check: unas **16 mil** estrellas frente a unas **2,7 mil** del gemelo anterior
 - La homepage apunta a **openclaw.ai**, no a un sitio propio
 - En campo: kanban caído, ministerios a menudo offline (**#251**), endurecimiento SSRF de webhooks (#317 / #318)`,
 			references: {
 				'https://github.com/cft0808/edict': {
 					title: `Repo de GitHub cft0808/edict`,
-					summary: `Multi-agente OpenClaw con disfraz de corte. Unas 16k estrellas, creado 2026-02-23 UTC, MIT. Sobre todo Python.`,
+					summary: `Multi-agente OpenClaw con disfraz de corte. Unas 16 mil estrellas, creado el 2026-02-23 UTC, MIT. Sobre todo Python; el pitch suele llevar kanban React.`,
 				},
 				'https://github.com/cft0808/edict/issues/55': {
-					title: `Issue #55: plagio / atribución`,
-					summary: `wanikua dice que el concepto y el diseño de agentes vienen de su tutorial anterior. Timeline: Edict ~21h después. Cerrada como no técnica.`,
+					title: `Issue #55: plagio y falta de atribución`,
+					summary: `wanikua (Dang Huang Shang) dice que el concepto y el diseño de agentes vienen de su tutorial anterior. Timeline: Edict unas 21 horas después. Cerrada como no técnica.`,
 				},
 				'https://github.com/cft0808/edict/issues/94': {
-					title: `Issue #94: seguimiento de originalidad`,
-					summary: `Segunda issue cerrada del mismo autor.`,
+					title: `Issue #94: seguimiento del nombre`,
+					summary: `Segunda issue del mismo autor; la disputa sube y también se cierra.`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
 					title: `Aviso de originality en el repo contrario`,
-					summary: `Lista mapas de ministerios parecidos, IDs pinyin y el mismo pitch de comparación. Fechas 2025 en el texto; create de GitHub es 2026.`,
+					summary: `Lista mapas de ministerios parecidos, nombres de agente pinyin (p. ej. bingbu) y el mismo pitch de comparación. En el texto aparece 2025; el create de GitHub es 2026.`,
 				},
 				'https://github.com/cft0808/edict/issues/318': {
-					title: `Issue #318: endurecer SSRF en webhook`,
-					summary: `Validación de URL de webhook en la UI de corte (CWE-918).`,
+					title: `Issue #318: endurecer SSRF en el webhook`,
+					summary: `Trabajo de seguridad en la validación de URL del webhook en la UI de corte (CWE-918).`,
 				},
 				'https://github.com/cft0808/edict/issues/317': {
-					title: `Issue #317: no dejar webhook a la red interna`,
+					title: `Issue #317: que el webhook no entre a la red interna`,
 					summary: `Piden bloquear destinos privados y loopback.`,
 				},
 				'https://github.com/cft0808/edict/issues/251': {
 					title: `Issue #251: ministerios a menudo offline`,
-					summary: `Usuarios: los agentes salen offline en el kanban con frecuencia.`,
+					summary: `Usuarios: los agentes del kanban salen offline con frecuencia.`,
 				},
 			},
 		},
 	},
 	danghuangshang: {
 		zh: {
-			body: `「当皇上」进了这份目录。它是又一套 OpenClaw 朝廷教程：包装吹得很满，装起来却脆，还要和孪生项目公开争署名。
+			body: `「当皇上」出现在这份目录里，是因为这里又多出一套 OpenClaw 朝廷教程。包装吹得很满，真正装起来却脆，还要和孪生项目公开争署名。
 
 ### 硬信号
-- 创建于 **2026-02-22 17:17 UTC**，大约比 cft0808/edict **早 21 小时**
-- 同一类产品：朝廷隐喻、OpenClaw 网关、部名 agent、一键安装
-- 仓内 **docs/originality.md** 加上 Edict **#55 / #94**，构成公开的抄袭争议（各说各话，不是法庭判决）
-- 用户 issue：**样例过期**、**Docker 起不来**、**朝代配置放错目录**
+- 创建于 **2026-02-22 17:17 UTC**，大约比 cft0808/edict **早二十一个小时**
+- 同一类产品：朝廷设定、OpenClaw 网关、按部命名的 agent、一键安装
+- 仓内 **docs/originality.md** 加上 Edict 上的 **#55 / #94**，构成公开的抄袭争议（各说各话，不是法庭判决）
+- 用户 issue 指向：**样例过期**、**Docker 起不来**、**朝代配置放错目录**
 - 专门写了 Discord 安全说明，因为多 bot 互刷是这套包里已知的坑`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub 仓库 wanikua/danghuangshang`,
-					summary: `OpenClaw 朝廷教程与配置。2026-02-22 17:17 UTC 创建（大约比 Edict 早 21 小时）。约 2.7k 星。TypeScript + 配置包。站点 danghuangshang.com。`,
+					summary: `OpenClaw 朝廷教程与配置。2026-02-22 17:17 UTC 创建（大约比 Edict 早二十一个小时）。大约两千七星。TypeScript 加配置包。站点 danghuangshang.com。`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
-					title: `仓内原创声明`,
-					summary: `自称先做，并列出与 Edict 的多处设计相似和拼音 agent 名。文中年份写 2025；GitHub 记录是 2026-02-22。`,
+					title: `仓库里的原创声明`,
+					summary: `自称先做，并列出与 Edict 的多处设计相似，以及拼音 agent 名。文中年份写成 2025；GitHub 记录是 2026-02-22。`,
 				},
 				'https://github.com/cft0808/edict/issues/55': {
 					title: `在 Edict 上开的 #55`,
-					summary: `公开要求署名，附时间线和对 Edict 创建日流量的说法。`,
+					summary: `公开要求署名，附上时间线，以及对 Edict 创建日流量的说法。`,
 				},
 				'https://github.com/wanikua/danghuangshang/issues/144': {
-					title: `Issue #144：Docker 起不来、样例过期`,
+					title: `Issue #144：Docker 起不来，样例过期`,
 					summary: `安装失败：样例配置和镜像里的 OpenClaw 对不上。`,
 				},
 				'https://github.com/wanikua/danghuangshang/issues/131': {
-					title: `Issue #131：唐目录里装了明配置`,
-					summary: `模板打包错误，朝代路径和内容不一致。`,
+					title: `Issue #131：唐目录里放了明配置`,
+					summary: `模板打包出错，朝代路径和内容对不上。`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/discord-safety.md': {
 					title: `Discord 多 bot 安全说明`,
-					summary: `文档写明：allowBots 打开时，多个 bot 可能互相刷屏。`,
+					summary: `文档写明：打开 allowBots 时，多个 bot 可能互相刷屏。`,
 				},
 				'https://github.com/wanikua/danghuangshang/issues/136': {
 					title: `Issue #136：MIT 不是抄袭通行证`,
@@ -1628,26 +1628,26 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		de: {
-			body: `„Dang Huang Shang“ steht hier, weil wieder ein OpenClaw-Hof-Tutorial viel verspricht, brüchig startet und öffentlich um Attribution mit dem Twin streitet.
+			body: `„Dang Huang Shang“ steht in diesem Katalog, weil hier wieder ein OpenClaw-Hof-Tutorial auftaucht. Die Verpackung ist dick, die Installation brüchig, und öffentlich streitet man mit dem Twin um den Namen.
 
 ### Harte Signale
 - Erstellt **2026-02-22 17:17 UTC**, etwa **21 Stunden** vor cft0808/edict
-- Dieselbe Produktklasse: Hof-Metapher, OpenClaw-Gateway, Ministeriums-Agents, One-Shot-Install
+- Dieselbe Produktklasse: Hof-Setting, OpenClaw-Gateway, ministeriell benannte Agents, One-Shot-Install
 - **docs/originality.md** plus Edict **#55 / #94** = öffentlicher Plagiatsstreit (Claims, kein Urteil)
 - Nutzer-Issues: **veraltete Samples**, **Docker startet nicht**, **falsche Dynastie-Config**
 - Eigene Discord-Safety-Docs, weil Multi-Bot-Loops ein bekanntes Loch des Packs sind`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub-Repo wanikua/danghuangshang`,
-					summary: `OpenClaw-Hof-Tutorial und Config. Erstellt 2026-02-22 17:17 UTC (etwa 21h vor Edict). Etwa 2.7k Sterne. TypeScript + Config. Site danghuangshang.com.`,
+					summary: `OpenClaw-Hof-Tutorial und Config. Erstellt 2026-02-22 17:17 UTC (etwa 21 Stunden vor Edict). Etwa 2.700 Sterne. TypeScript plus Config. Site danghuangshang.com.`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
 					title: `Originalitätsnotiz im Repo`,
-					summary: `Beansprucht First-Mover, listet Ähnlichkeiten zu Edict und Pinyin-Agent-Namen. Prosa mit 2025; GitHub sagt 2026-02-22.`,
+					summary: `Beansprucht First-Mover und listet Ähnlichkeiten zu Edict sowie Pinyin-Agent-Namen. Im Text steht 2025; GitHub sagt 2026-02-22.`,
 				},
 				'https://github.com/cft0808/edict/issues/55': {
 					title: `#55 auf Edict`,
-					summary: `Öffentliche Attributionsforderung mit Timeline und Traffic-Claims.`,
+					summary: `Öffentliche Attributionsforderung mit Timeline und Traffic-Claims zum Create-Tag.`,
 				},
 				'https://github.com/wanikua/danghuangshang/issues/144': {
 					title: `Issue #144: Docker startet nicht`,
@@ -1655,7 +1655,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 				},
 				'https://github.com/wanikua/danghuangshang/issues/131': {
 					title: `Issue #131: Tang-Ordner mit Ming-Config`,
-					summary: `Falsche Dynastie-Datei im Tang-Pfad.`,
+					summary: `Packaging-Fehler: falsche Dynastie-Datei unter dem Tang-Pfad.`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/discord-safety.md': {
 					title: `Discord Multi-Bot-Hinweis`,
@@ -1668,22 +1668,22 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		it: {
-			body: `«Dang Huang Shang» è qui perché un altro tutorial OpenClaw da corte promette tanto, si installa in modo fragile e litiga in pubblico sull’attribuzione con il gemello.
+			body: `«Dang Huang Shang» è in questo catalogo perché qui c’è un altro tutorial OpenClaw da corte. La confezione è piena, l’install è fragile, e in pubblico si litiga con il gemello sul nome.
 
 ### Segnali duri
 - Creato **2026-02-22 17:17 UTC**, circa **21 ore** prima di cft0808/edict
-- Stessa classe di prodotto: metafora di corte, gateway OpenClaw, agent con nomi di ministeri, install one-shot
+- Stessa classe di prodotto: ambientazione di corte, gateway OpenClaw, agent con nomi di ministeri, install one-shot
 - **docs/originality.md** più Edict **#55 / #94** = disputa pubblica di plagio (claims, non sentenza)
 - Issue utenti: **sample vecchi**, **Docker che non parte**, **config di dinastia sbagliata**
 - Documentazione Discord dedicata, perché i loop multi-bot sono un buco noto del pack`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `Repo GitHub wanikua/danghuangshang`,
-					summary: `Tutorial e config OpenClaw da corte. Creato 2026-02-22 17:17 UTC (circa 21h prima di Edict). Circa 2.7k stelle. TypeScript + config. Sito danghuangshang.com.`,
+					summary: `Tutorial e config OpenClaw da corte. Creato 2026-02-22 17:17 UTC (circa 21 ore prima di Edict). Circa 2,7 mila stelle. TypeScript più config. Sito danghuangshang.com.`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
 					title: `Nota di originalità nel repo`,
-					summary: `Rivendica first-mover, elenca somiglianze con Edict e nomi agent pinyin. Date 2025 nel testo; GitHub dice 2026-02-22.`,
+					summary: `Rivendica first-mover e elenca somiglianze con Edict e nomi agent pinyin. Nel testo c’è il 2025; GitHub dice 2026-02-22.`,
 				},
 				'https://github.com/cft0808/edict/issues/55': {
 					title: `#55 su Edict`,
@@ -1691,11 +1691,11 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 				},
 				'https://github.com/wanikua/danghuangshang/issues/144': {
 					title: `Issue #144: Docker non parte`,
-					summary: `Install fallisce: sample non combacia con OpenClaw nell’immagine.`,
+					summary: `Install fallisce: il sample non combacia con OpenClaw nell’immagine.`,
 				},
 				'https://github.com/wanikua/danghuangshang/issues/131': {
 					title: `Issue #131: cartella Tang con config Ming`,
-					summary: `File di dinastia sbagliato sotto il path Tang.`,
+					summary: `Errore di packaging: dinastia sbagliata sotto il path Tang.`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/discord-safety.md': {
 					title: `Avviso multi-bot Discord`,
@@ -1708,18 +1708,18 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ja: {
-			body: `「当皇上」がここに載っているのは、また一つの OpenClaw 朝廷チュートリアルが、約束は厚く導入は脆く、双生プロジェクトと公開で帰属を争っているからです。
+			body: `「当皇上」がこのディレクトリに載っているのは、また一つの OpenClaw 朝廷チュートリアルが出たからです。包装は厚く、導入は脆く、双生プロジェクトと公開で帰属を争っています。
 
 ### ハードシグナル
 - 作成 **2026-02-22 17:17 UTC**、cft0808/edict より約 **21 時間**早い
-- 同じ種類：朝廷メタファー、OpenClaw ゲートウェイ、部名 agent、ワンコマンド install
-- **docs/originality.md** と Edict **#55 / #94** が公開の剽窃争い（主張同士であり判決ではない）
+- 同じ種類：朝廷設定、OpenClaw ゲートウェイ、部名 agent、ワンコマンド install
+- **docs/originality.md** と Edict の **#55 / #94** が公開の剽窃争い（主張同士であり判決ではない）
 - ユーザー issue：**古いサンプル**、**Docker 起動失敗**、**王朝設定の取り違え**
 - Discord 安全ドキュメントがあるのは、マルチ bot ループがこのパックの既知の落とし穴だから`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub リポジトリ wanikua/danghuangshang`,
-					summary: `OpenClaw 朝廷チュートリアルと設定。2026-02-22 17:17 UTC 作成（Edict より約 21 時間前）。約 2.7k star。TypeScript + 設定。サイト danghuangshang.com。`,
+					summary: `OpenClaw 朝廷チュートリアルと設定。2026-02-22 17:17 UTC 作成（Edict より約 21 時間前）。star 約 2.7k。TypeScript と設定パック。サイト danghuangshang.com。`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
 					title: `リポジトリ内の originality 文書`,
@@ -1731,11 +1731,11 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 				},
 				'https://github.com/wanikua/danghuangshang/issues/144': {
 					title: `Issue #144：Docker が上がらない`,
-					summary: `インストール失敗。サンプル設定がイメージ内 OpenClaw と不一致。`,
+					summary: `インストール失敗。サンプル設定がイメージ内 OpenClaw と合わない。`,
 				},
 				'https://github.com/wanikua/danghuangshang/issues/131': {
 					title: `Issue #131：唐フォルダに明の設定`,
-					summary: `王朝パスと中身が食い違う梱包ミス。`,
+					summary: `梱包ミス。王朝パスと中身が食い違う。`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/discord-safety.md': {
 					title: `Discord マルチ bot 注意`,
@@ -1748,18 +1748,18 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		ko: {
-			body: `「당황상」이 여기 있는 이유는 또 하나의 OpenClaw 궁정 튜토리얼이 약속은 두껍고 설치는 약하며, 쌍둥이 프로젝트와 공개로 출처를 다투기 때문입니다.
+			body: `「당황상」이 이 목록에 있는 이유는 또 하나의 OpenClaw 궁정 튜토리얼이 나왔기 때문입니다. 포장은 두껍고 설치는 약하며, 쌍둥이 프로젝트와 공개로 출처를 다툽니다.
 
 ### 하드 시그널
 - 생성 **2026-02-22 17:17 UTC**, cft0808/edict보다 약 **21시간** 앞
-- 같은 종류: 궁정 은유, OpenClaw 게이트웨이, 부 이름 에이전트, 원커맨드 설치
+- 같은 종류: 궁정 설정, OpenClaw 게이트웨이, 부 이름 에이전트, 원커맨드 설치
 - **docs/originality.md**와 Edict **#55 / #94** = 공개 표절 분쟁(주장이지 판결 아님)
 - 사용자 이슈: **낡은 샘플**, **Docker 실패**, **왕조 설정 오배치**
 - Discord 안전 문서가 있는 이유: 멀티 봇 루프가 이 팩의 알려진 함정이기 때문`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `GitHub 저장소 wanikua/danghuangshang`,
-					summary: `OpenClaw 궁정 튜토리얼·설정. 2026-02-22 17:17 UTC 생성(Edict보다 약 21시간 앞). 약 2.7k 스타. TypeScript + 설정. 사이트 danghuangshang.com.`,
+					summary: `OpenClaw 궁정 튜토리얼·설정. 2026-02-22 17:17 UTC 생성(Edict보다 약 21시간 앞). 스타 약 2.7k. TypeScript + 설정. 사이트 danghuangshang.com.`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
 					title: `저장소 originality 문서`,
@@ -1775,7 +1775,7 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 				},
 				'https://github.com/wanikua/danghuangshang/issues/131': {
 					title: `Issue #131: Tang 폴더에 Ming 설정`,
-					summary: `왕조 경로와 내용이 어긋난 패키징 실수.`,
+					summary: `패키징 실수. 왕조 경로와 내용이 어긋남.`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/discord-safety.md': {
 					title: `Discord 멀티 봇 주의`,
@@ -1788,22 +1788,22 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 		es: {
-			body: `«Dang Huang Shang» está aquí porque otro tutorial OpenClaw de corte promete mucho, se instala frágil y pelea en público la atribución con el gemelo.
+			body: `«Dang Huang Shang» está en este catálogo porque aquí aparece otro tutorial OpenClaw de corte. El empaque va lleno, la instalación es frágil y en público pelea el nombre con el gemelo.
 
 ### Señales duras
 - Creado **2026-02-22 17:17 UTC**, unas **21 horas** antes que cft0808/edict
-- Misma clase de producto: metáfora de corte, gateway OpenClaw, agentes con nombres de ministerios, install de un comando
+- Misma clase de producto: ambientación de corte, gateway OpenClaw, agentes con nombres de ministerios, install de un comando
 - **docs/originality.md** más Edict **#55 / #94** = disputa pública de plagio (claims, no sentencia)
 - Issues de usuarios: **samples viejos**, **Docker no arranca**, **config de dinastía mal colocada**
 - Docs de seguridad de Discord porque los bucles multi-bot son un agujero conocido del pack`,
 			references: {
 				'https://github.com/wanikua/danghuangshang': {
 					title: `Repo de GitHub wanikua/danghuangshang`,
-					summary: `Tutorial y config OpenClaw de corte. Creado 2026-02-22 17:17 UTC (unas 21h antes que Edict). Unas 2.7k estrellas. TypeScript + config. Sitio danghuangshang.com.`,
+					summary: `Tutorial y config OpenClaw de corte. Creado 2026-02-22 17:17 UTC (unas 21 horas antes que Edict). Unas 2,7 mil estrellas. TypeScript más config. Sitio danghuangshang.com.`,
 				},
 				'https://github.com/wanikua/danghuangshang/blob/main/docs/originality.md': {
 					title: `Aviso de originality en el repo`,
-					summary: `Reclama first-mover y lista parecidos con Edict e IDs pinyin. Años 2025 en el texto; GitHub dice 2026-02-22.`,
+					summary: `Reclama first-mover y lista parecidos con Edict e IDs pinyin. En el texto aparece 2025; GitHub dice 2026-02-22.`,
 				},
 				'https://github.com/cft0808/edict/issues/55': {
 					title: `#55 en Edict`,
