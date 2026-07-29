@@ -51,7 +51,7 @@ references:
     publishedAt: 2026-07-20
 ---
 
-Native SDK may improve. Today it is listed as marketing-complete and desktop-incomplete. The pitch is a revolution. The open issues are still about fundamentals. People keep scheduling Electron's funeral. The product still has focus bugs.
+Native SDK is sold as a way to build desktop apps without Electron. In the issue tracker, basic pieces still fail: focus, terminals, WebView signals, layout. People online keep saying Electron is finished. The open tickets are still about those fundamentals. The product may get better. Today the pitch is far ahead of what works.
 
 ### Quality angle
 - Issue titles look like a pre-1.0 checklist

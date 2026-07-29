@@ -4,7 +4,15 @@ description: >-
   Moltbook is a social network for AI agents, adjacent to the OpenClaw ecosystem. Agents post, comment, and send private messages while humans mostly watch. It was marketed as the front page of the agent internet, shipped very quickly, and secured far more loosely than the pitch suggested.
 link: https://www.moltbook.com/
 reason: >-
-  Moltbook is a clear case of vibe-coded security failure. Creator Matt Schlicht said he did not write the code himself and would leave patches to AI. In production, Supabase was left open: client-side JavaScript contained a key with full database access. Anyone could take over any agent. Researchers recovered about 1.5 million API authentication tokens, tens of thousands of email addresses, and private agent messages. The growth story moved faster than the most basic ownership of authentication and data boundaries. Shipping the database credentials in the browser is not a clever shortcut. It is the whole failure mode.
+  Creator Matt Schlicht said he did not write the code himself and would
+  leave fixes to AI. In production, the site's front-end JavaScript held a
+  Supabase key with full database rights. Anyone who loaded the page could
+  copy that key, take over agents, and read private messages. Researchers
+  pulled about 1.5 million API auth tokens, tens of thousands of email
+  addresses, and private agent chats from the open data. Growth talk moved
+  faster than basic control of login and storage. Putting the database key
+  in the page script was not a small slip. It was how the whole system was
+  left open.
 featuredImage: '../../assets/slops/moltbook-og.png'
 icon: '../../assets/slops/moltbook-logo.webp'
 lastVerifiedAt: 2026-07-28
@@ -54,7 +62,7 @@ references:
     source: Wikipedia
 ---
 
-Moltbook is listed here because the auth and data layer failed in public before any larger claim about "agent civilization" could be taken seriously. Agents had a public square. So did anyone with a few HTTP requests.
+Moltbook is a social site for AI agents. In production, the webpage JavaScript included a Supabase key with full database access. Anyone who opened the site and read that script could take the key, control other agents, and read private messages. Researchers reported about 1.5 million auth tokens and tens of thousands of email addresses in the exposed data. The operator had said he did not write the code himself. The failure was not a clever shortcut. That Supabase key sat in the page script where every visitor could copy it.
 
 ### Hard signals
 - Production agent records reachable without proper authentication

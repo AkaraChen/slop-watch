@@ -67,7 +67,7 @@ references:
     publishedAt: 2026-07-28
 ---
 
-scriptc is listed as toolchain slop. It is sold as a way to leave JavaScript runtimes behind, while day-one issues already show wrong code and incomplete platform support. Launch posts talk about features. The issue tracker is where the limitations show up.
+scriptc says TypeScript can become a native program and leave Node behind. On day one, people on Windows could not run it. Other reports say a project builds cleanly, then throws when it loads because of FFI mistakes. Clang fails on real projects too. Launch posts talk about cold starts. The issue tracker is where the limits show up.
 
 ### Quality angle
 - Builds that pass, then fail at load because of FFI
