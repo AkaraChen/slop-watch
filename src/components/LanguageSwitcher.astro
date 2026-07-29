@@ -45,7 +45,8 @@ const options = locales.map((code) => ({
 		padding: 0.25rem 1.5rem 0.25rem 0.45rem;
 		border: 1px solid rgba(var(--gray), 0.35);
 		border-radius: 8px;
-		background-color: white;
+		/* Theme tokens only — no hardcoded white (breaks dark mode contrast) */
+		background-color: rgb(var(--gray-light));
 		background-image: linear-gradient(45deg, transparent 50%, rgb(var(--gray)) 50%),
 			linear-gradient(135deg, rgb(var(--gray)) 50%, transparent 50%);
 		background-position:
@@ -55,13 +56,17 @@ const options = locales.map((code) => ({
 			5px 5px,
 			5px 5px;
 		background-repeat: no-repeat;
-		color: rgb(var(--gray-dark));
+		color: rgb(var(--black));
 		cursor: pointer;
 		appearance: none;
 		-webkit-appearance: none;
 		min-width: 0;
 		max-width: 8.5rem;
 		width: auto;
+	}
+	select option {
+		background-color: rgb(var(--gray-light));
+		color: rgb(var(--black));
 	}
 	@media (max-width: 720px) {
 		select {

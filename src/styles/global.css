@@ -159,8 +159,15 @@ hr {
 html {
 	color-scheme: light dark;
 }
+html[data-theme='light'] {
+	color-scheme: light;
+}
+html[data-theme='dark'] {
+	color-scheme: dark;
+}
 @media (prefers-color-scheme: dark) {
 	html:not([data-theme='light']) {
+		color-scheme: dark;
 		--accent: #7b8cff;
 		--accent-dark: #c5ccff;
 		--black: 235, 238, 245;
