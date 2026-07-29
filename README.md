@@ -31,7 +31,6 @@ Add Markdown/MDX files under `src/content/slops/`. The file name becomes the URL
 | `publishedAt` | yes | Catalog date (sorting) |
 | `icon` | no | Small icon |
 | `tags` | no | e.g. `image`, `seo-farm`, `chatbot` |
-| `status` | no | `featured` \| `listed` \| `archived` (default `listed`) |
 | `references` | no | `{ title, url, summary, source?, publishedAt? }[]` |
 
 Schema lives in `src/content.config.ts`.

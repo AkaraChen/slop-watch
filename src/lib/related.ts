@@ -12,7 +12,7 @@ export function relatedSlops(
 	if (mine.size === 0) return [];
 
 	return all
-		.filter((s) => s.id !== current.id && s.data.status !== 'archived')
+		.filter((s) => s.id !== current.id)
 		.map((s) => {
 			const shared = s.data.tags.filter((t) => mine.has(t.toLowerCase())).length;
 			return { s, shared };

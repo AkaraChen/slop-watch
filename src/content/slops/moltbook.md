@@ -15,7 +15,6 @@ tags:
   - vibe-coded
   - incident
   - openclaw-ecosystem
-status: featured
 references:
   - title: Exposed Moltbook database let anyone take control of any AI agent
     url: https://www.404media.co/exposed-moltbook-database-let-anyone-take-control-of-any-ai-agent-on-the-site/

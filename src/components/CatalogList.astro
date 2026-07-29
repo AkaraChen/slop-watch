@@ -70,7 +70,6 @@ const tags = collectTags(slops);
 							</p>
 							<p class="desc">{copy.description}</p>
 							<div class="meta-row">
-								<span class:list={['badge', slop.data.status]}>{slop.data.status}</span>
 								{slop.data.lastVerifiedAt && (
 									<span class="verified-mini">
 										{t(locale, 'lastVerified', {
@@ -224,19 +223,6 @@ const tags = collectTags(slops);
 		align-items: center;
 		font-size: 0.8rem;
 		color: rgb(var(--gray));
-	}
-	.badge {
-		display: inline-block;
-		padding: 0.08rem 0.45rem;
-		border-radius: 999px;
-		background: rgba(var(--gray-light), 0.95);
-		text-transform: uppercase;
-		letter-spacing: 0.02em;
-		font-size: 0.72rem;
-	}
-	.badge.featured {
-		background: color-mix(in srgb, var(--accent) 18%, white);
-		color: var(--accent-dark);
 	}
 	.tag-link {
 		appearance: none;

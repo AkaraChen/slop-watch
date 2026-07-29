@@ -23,7 +23,6 @@ const slops = defineCollection({
 			publishedAt: z.coerce.date(),
 			lastVerifiedAt: z.coerce.date().optional(),
 			tags: z.array(z.string()).default([]),
-			status: z.enum(['featured', 'listed', 'archived']).default('listed'),
 			references: z.array(referenceSchema).default([]),
 		}),
 });

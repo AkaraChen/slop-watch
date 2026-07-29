@@ -8,7 +8,6 @@ export async function GET(context) {
 	const cutoff = Date.now() - MS_WEEK;
 	const all = await getCollection('slops');
 	const weekly = all
-		.filter((s) => s.data.status !== 'archived')
 		.filter((s) => s.data.publishedAt.valueOf() >= cutoff)
 		.sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
 
@@ -18,7 +17,6 @@ export async function GET(context) {
 		weekly.length > 0
 			? weekly
 			: all
-					.filter((s) => s.data.status !== 'archived')
 					.sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
 					.slice(0, 3);
 

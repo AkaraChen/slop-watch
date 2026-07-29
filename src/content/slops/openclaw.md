@@ -14,7 +14,6 @@ tags:
   - quality
   - reliability
   - security
-status: featured
 references:
   - title: openclaw/openclaw repository stats
     url: https://github.com/openclaw/openclaw

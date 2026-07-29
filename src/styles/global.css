@@ -204,18 +204,16 @@ html[data-theme='dark'] ul.catalog a.card {
 	background: #1a1e2a !important;
 }
 
-/* Tag / chip / badge contrast in dark mode (avoid mid-gray on dark panels) */
+/* Tag / chip contrast in dark mode (avoid mid-gray on dark panels) */
 @media (prefers-color-scheme: dark) {
 	html:not([data-theme='light']) .tag,
 	html:not([data-theme='light']) .tag-link,
-	html:not([data-theme='light']) .chip,
-	html:not([data-theme='light']) .badge {
+	html:not([data-theme='light']) .chip {
 		color: #e8ecf8;
 		border-color: rgba(180, 190, 220, 0.55);
 		background: rgba(70, 78, 110, 0.55);
 	}
-	html:not([data-theme='light']) .chip.is-active,
-	html:not([data-theme='light']) .badge.featured {
+	html:not([data-theme='light']) .chip.is-active {
 		color: #f0f3ff;
 		border-color: color-mix(in srgb, var(--accent) 55%, #fff);
 		background: color-mix(in srgb, var(--accent) 32%, #1a1e2a);
@@ -226,14 +224,12 @@ html[data-theme='dark'] ul.catalog a.card {
 }
 html[data-theme='dark'] .tag,
 html[data-theme='dark'] .tag-link,
-html[data-theme='dark'] .chip,
-html[data-theme='dark'] .badge {
+html[data-theme='dark'] .chip {
 	color: #e8ecf8;
 	border-color: rgba(180, 190, 220, 0.55);
 	background: rgba(70, 78, 110, 0.55);
 }
-html[data-theme='dark'] .chip.is-active,
-html[data-theme='dark'] .badge.featured {
+html[data-theme='dark'] .chip.is-active {
 	color: #f0f3ff;
 	border-color: color-mix(in srgb, var(--accent) 55%, #fff);
 	background: color-mix(in srgb, var(--accent) 32%, #1a1e2a);

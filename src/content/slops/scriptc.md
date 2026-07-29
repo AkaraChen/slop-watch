@@ -15,7 +15,6 @@ tags:
   - vercel-labs
   - typescript
   - quality
-status: featured
 references:
   - title: vercel-labs/scriptc repository
     url: https://github.com/vercel-labs/scriptc

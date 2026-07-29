@@ -16,7 +16,6 @@ tags:
   - compiler
   - quality
   - soundness
-status: listed
 references:
   - title: vercel-labs/zerolang repository
     url: https://github.com/vercel-labs/zerolang

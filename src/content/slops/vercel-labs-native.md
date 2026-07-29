@@ -14,7 +14,6 @@ tags:
   - devtools
   - vercel-labs
   - quality
-status: featured
 references:
   - title: vercel-labs/native repository
     url: https://github.com/vercel-labs/native
