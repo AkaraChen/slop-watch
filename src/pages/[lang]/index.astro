@@ -18,7 +18,7 @@ const locale = Astro.params.lang as Locale;
 const slops = (await getCollection('slops'))
 	.sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
 
-const siteUrl = Astro.site?.href ?? 'https://slop-watch.vercel.app/';
+const siteUrl = Astro.site?.href ?? 'https://slop-watch.akr.moe/';
 const siteTitle = t(locale, 'siteTitle');
 const siteDescription = t(locale, 'siteDescription');
 const jsonLd = [

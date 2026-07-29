@@ -46,7 +46,7 @@ const {
 
 const pageTitle = t(locale, 'specimenTitle', { name });
 const metaDescription = description;
-const siteUrl = Astro.site?.href ?? 'https://slop-watch.vercel.app/';
+const siteUrl = Astro.site?.href ?? 'https://slop-watch.akr.moe/';
 const pagePath = `/slops/${id}/`;
 const pageUrl = new URL(localePath(locale, pagePath), siteUrl).href;
 const imageUrl = new URL(featuredImage.src, siteUrl).href;

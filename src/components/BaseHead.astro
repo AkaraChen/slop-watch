@@ -29,7 +29,7 @@ const {
 	jsonLd,
 } = Astro.props;
 
-const site = Astro.site ?? new URL('https://slop-watch.vercel.app');
+const site = Astro.site ?? new URL('https://slop-watch.akr.moe');
 const canonicalURL = new URL(localePath(locale, path), site);
 const absolutePageUrl = canonicalURL.href;
 const jsonLdPayload = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : null;

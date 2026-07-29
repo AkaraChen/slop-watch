@@ -6,7 +6,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://slop-watch.vercel.app',
+	site: 'https://slop-watch.akr.moe',
 	i18n: {
 		defaultLocale: 'en',
 		locales: ['en', 'zh', 'de', 'it', 'ja', 'ko', 'es'],
