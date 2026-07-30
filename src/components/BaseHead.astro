@@ -35,6 +35,27 @@ const absolutePageUrl = canonicalURL.href;
 const jsonLdPayload = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : null;
 const siteTitle = t(locale, 'siteTitle');
 
+/** Prefer clean Markdown mirrors for AI crawlers (GEO). */
+function markdownAlternateHref(locale: Locale, path: string): string | null {
+	const clean = path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path;
+	// Specimen: /slops/{id}/ → /slops/{id}.md (en) or /{locale}/slops/{id}.md
+	const specimen = clean.match(/^\/slops\/([^/]+)$/);
+	if (specimen) {
+		const file = `/slops/${specimen[1]}.md`;
+		return new URL(locale === 'en' ? file : `/${locale}${file}`, site).href;
+	}
+	// Home, about, standards (en + zh home only for now)
+	if (clean === '/' || clean === '') {
+		return new URL(locale === 'en' ? '/index.md' : `/${locale}/index.md`, site).href;
+	}
+	if (clean === '/about' || clean === '/standards') {
+		if (locale !== 'en') return null;
+		return new URL(`${clean}.md`, site).href;
+	}
+	return null;
+}
+const markdownAlternate = markdownAlternateHref(locale, path);
+
 /** SERP-safe meta length (UTF-16 code units ≈ display budget for most engines). */
 function clampMeta(text: string, max = 155): string {
 	const normalized = text.replace(/\s+/g, ' ').trim();
@@ -75,6 +96,10 @@ const ogImage = image
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" href="/favicon.ico" />
 <link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="alternate" type="text/plain" title="llms.txt" href={new URL('/llms.txt', site).href} />
+{markdownAlternate && (
+	<link rel="alternate" type="text/markdown" title="Markdown" href={markdownAlternate} />
+)}
 <link
 	rel="alternate"
 	type="application/rss+xml"

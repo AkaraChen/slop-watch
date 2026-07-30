@@ -1,4 +1,61 @@
+# Slop Watch — https://slop-watch.akr.moe
+# Search/retrieval AI crawlers: allow
+# Training crawlers: block
+# Policy pattern from common GEO practice
+
 User-agent: *
 Allow: /
 
-Sitemap: https://slop-watch.vercel.app/sitemap-index.xml
+# --- Search & retrieval (allow) ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- User-triggered fetch (allow) ---
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Agent
+Allow: /
+
+# --- Training (block) ---
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# --- Undeclared / bulk scrapers (block) ---
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://slop-watch.akr.moe/sitemap-index.xml
