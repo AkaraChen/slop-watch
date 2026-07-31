@@ -46,6 +46,10 @@ Schema lives in `src/content.config.ts`.
 Locales: `en` (default, no prefix), `zh`, `de`, `it`, `ja`, `ko`, `es`.
 UI strings: `src/i18n/ui.ts`. Content overlays: `src/i18n/content.ts`.
 
+## Contributing
+
+How to propose entries (issue or PR), and how product authors can request removal or wording changes: see [CONTRIBUTING.md](./CONTRIBUTING.md).
+
 ## License
 
 Content and code for the Slop Watch project.
