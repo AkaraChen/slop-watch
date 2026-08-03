@@ -1,8 +1,12 @@
 # Slop Watch
 
+[![LINUX DO](https://img.shields.io/badge/LINUX%20DO-%E8%AE%A4%E5%8F%AF-red?style=flat-square)](https://linux.do)
+
 A showcase catalog of **AI Slop** — each entry is a named specimen with display assets, a primary link, description, selection reason, and supporting references.
 
 Built with **Astro** (latest stable) and **Content Collections**.
+
+本项目积极参与并认可 [LINUX DO](https://linux.do) 社区。
 
 ## Requirements
 
