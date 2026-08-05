@@ -1533,4 +1533,246 @@ export const extraCopy: Record<string, Partial<Record<Locale, ExtraCopy>>> = {
 			},
 		},
 	},
+	litellm: {
+		zh: {
+			references: {
+				'https://github.com/BerriAI/litellm': {
+					title: `BerriAI/litellm 仓库`,
+					summary: `开源 AI 网关与 LLM 代理。2026-08-05 快照：约 55,589 星、1,641 个 open issues（只计 issue）、3,134 个 open PR。`,
+				},
+				'https://docs.litellm.ai/blog/security-update-march-2026': {
+					title: `安全更新：疑似供应链事件（2026 年 3 月）`,
+					summary: `官方说明：PyPI 上 litellm 1.82.7 与 1.82.8 在 2026-03-24 被投毒（约 10:39 UTC 起约 40 分钟）；载荷窃云凭证；官方称 Proxy Docker 路径未以同样方式受影响。`,
+				},
+				'https://www.trendmicro.com/en_us/research/26/c/inside-litellm-supply-chain-compromise.html': {
+					title: `LiteLLM 供应链投毒内幕`,
+					summary: `第三方对 2026 年 3 月 PyPI 投毒与发布管线风险的复盘。`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42208': {
+					title: `CVE-2026-42208 — 鉴权路径 SQL 注入`,
+					summary: `LiteLLM 代理 token 校验路径上的未认证 SQL 注入；公开材料写密钥与库暴露风险。`,
+				},
+				'https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc': {
+					title: `GHSA-r75f-5x8p-qvmc — SQL 注入公告`,
+					summary: `鉴权路径 SQL 注入（CVE-2026-42208）的厂商公告。`,
+				},
+				'https://www.sysdig.com/blog/cve-2026-42208-targeted-sql-injection-against-litellms-authentication-path-discovered-36-hours-following-vulnerability-disclosure': {
+					title: `CVE-2026-42208：披露约 36 小时后出现针对性利用`,
+					summary: `Sysdig：漏洞公开约 36 小时后观察到针对性利用。`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42271': {
+					title: `CVE-2026-42271 — 经 MCP 测试接口的命令注入`,
+					summary: `LiteLLM MCP 测试路径上的命令注入；受影响版本上属网关级远程执行风险。`,
+				},
+				'https://labs.cloudsecurityalliance.org/research/csa-research-note-litellm-cve-2026-42271-ai-gateway-exploita/': {
+					title: `CSA：CVE-2026-42271 利用情况说明`,
+					summary: `写到 CISA KEV 收录与 MCP 命令注入的在野利用报道。`,
+				},
+				'https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html': {
+					title: `LiteLLM 漏洞 CVE-2026-42271 遭利用（KEV 报道）`,
+					summary: `行业报道 42271 的利用与 CISA KEV；公开材料亦提到与 Host 头绕过路径在脆弱部署上的串链。`,
+				},
+			},
+		},
+		de: {
+			references: {
+				'https://github.com/BerriAI/litellm': {
+					title: `BerriAI/litellm Repository`,
+					summary: `Open-Source-AI-Gateway und LLM-Proxy. Snapshot 2026-08-05: ca. 55.589 Sterne, 1.641 offene Issues (nur Issues), 3.134 offene PRs.`,
+				},
+				'https://docs.litellm.ai/blog/security-update-march-2026': {
+					title: `Security Update — vermuteter Supply-Chain-Vorfall (März 2026)`,
+					summary: `Offizieller Post: litellm 1.82.7 und 1.82.8 auf PyPI am 24.03.2026 kompromittiert (~40 Min ab ~10:39 UTC); Credential-Stealer; Proxy-Docker-Pfad laut Post nicht denselben Weg betroffen.`,
+				},
+				'https://www.trendmicro.com/en_us/research/26/c/inside-litellm-supply-chain-compromise.html': {
+					title: `Inside the LiteLLM supply chain compromise`,
+					summary: `Unabhängige Analyse der PyPI-Vergiftung März 2026 und Publishing-Risiken.`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42208': {
+					title: `CVE-2026-42208 — SQL-Injection auf dem Auth-Pfad`,
+					summary: `Pre-Auth-SQL-Injection in der Token-Prüfung des LiteLLM-Proxys; öffentliche Texte zu Key-/DB-Risiko.`,
+				},
+				'https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc': {
+					title: `GHSA-r75f-5x8p-qvmc — SQL-Injection-Advisory`,
+					summary: `Vendor-Advisory zur Auth-Pfad-SQL-Injection (CVE-2026-42208).`,
+				},
+				'https://www.sysdig.com/blog/cve-2026-42208-targeted-sql-injection-against-litellms-authentication-path-discovered-36-hours-following-vulnerability-disclosure': {
+					title: `CVE-2026-42208: Exploitation ~36 Stunden nach Disclosure`,
+					summary: `Sysdig: gezielte Exploitation etwa 36 Stunden nach der Veröffentlichung.`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42271': {
+					title: `CVE-2026-42271 — Command Injection über MCP-Test-Endpunkte`,
+					summary: `Command Injection in LiteLLM-MCP-Testpfaden; Gateway-RCE-Risiko auf betroffenen Versionen.`,
+				},
+				'https://labs.cloudsecurityalliance.org/research/csa-research-note-litellm-cve-2026-42271-ai-gateway-exploita/': {
+					title: `CSA-Notiz zu CVE-2026-42271-Exploitation`,
+					summary: `Nennt CISA-KEV-Eintrag und Active-Exploitation-Berichte zur MCP-Command-Injection.`,
+				},
+				'https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html': {
+					title: `LiteLLM-Lücke CVE-2026-42271 ausgenutzt (KEV-Berichterstattung)`,
+					summary: `Branchenbericht zu Exploitation von CVE-2026-42271 und CISA-KEV; öffentliche Texte erwähnen auch Host-Header-Bypass-Ketten.`,
+				},
+			},
+		},
+		it: {
+			references: {
+				'https://github.com/BerriAI/litellm': {
+					title: `Repository BerriAI/litellm`,
+					summary: `AI gateway e proxy LLM open source. Snapshot 2026-08-05: circa 55.589 stelle, 1.641 issue aperte (solo issue), 3.134 PR aperte.`,
+				},
+				'https://docs.litellm.ai/blog/security-update-march-2026': {
+					title: `Security update — sospetto incidente supply chain (marzo 2026)`,
+					summary: `Post ufficiale: litellm 1.82.7 e 1.82.8 su PyPI compromessi il 2026-03-24 (~40 min da ~10:39 UTC); stealer di credenziali; percorso Proxy Docker descritto come non colpito allo stesso modo.`,
+				},
+				'https://www.trendmicro.com/en_us/research/26/c/inside-litellm-supply-chain-compromise.html': {
+					title: `Inside the LiteLLM supply chain compromise`,
+					summary: `Analisi indipendente del poisoning PyPI di marzo 2026 e del rischio di publishing.`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42208': {
+					title: `CVE-2026-42208 — SQL injection sul percorso auth`,
+					summary: `SQL injection pre-auth nella verifica token del proxy LiteLLM; write-up pubblici sul rischio chiavi/DB.`,
+				},
+				'https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc': {
+					title: `GHSA-r75f-5x8p-qvmc — advisory SQL injection`,
+					summary: `Advisory vendor per la SQL injection sul percorso auth (CVE-2026-42208).`,
+				},
+				'https://www.sysdig.com/blog/cve-2026-42208-targeted-sql-injection-against-litellms-authentication-path-discovered-36-hours-following-vulnerability-disclosure': {
+					title: `CVE-2026-42208: sfruttamento ~36 ore dopo la disclosure`,
+					summary: `Sysdig: sfruttamento mirato osservato circa 36 ore dopo la disclosure.`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42271': {
+					title: `CVE-2026-42271 — command injection via endpoint di test MCP`,
+					summary: `Command injection nei path di test MCP di LiteLLM; rischio RCE di classe gateway sulle versioni colpite.`,
+				},
+				'https://labs.cloudsecurityalliance.org/research/csa-research-note-litellm-cve-2026-42271-ai-gateway-exploita/': {
+					title: `Nota CSA su sfruttamento CVE-2026-42271`,
+					summary: `Segnala elenco CISA KEV e report di sfruttamento attivo per la command injection MCP.`,
+				},
+				'https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html': {
+					title: `Falla LiteLLM CVE-2026-42271 sfruttata (copertura KEV)`,
+					summary: `Report di settore su sfruttamento di CVE-2026-42271 e CISA KEV; copertura pubblica anche su catene con bypass Host header.`,
+				},
+			},
+		},
+		ja: {
+			references: {
+				'https://github.com/BerriAI/litellm': {
+					title: `BerriAI/litellm リポジトリ`,
+					summary: `オープンソース AI ゲートウェイ / LLM プロキシ。2026-08-05 時点：約 55,589 star、open issues 1,641（issue のみ）、open PR 3,134。`,
+				},
+				'https://docs.litellm.ai/blog/security-update-march-2026': {
+					title: `セキュリティ更新：サプライチェーン疑い（2026 年 3 月）`,
+					summary: `公式：PyPI の litellm 1.82.7 / 1.82.8 が 2026-03-24 に侵害（~10:39 UTC から約 40 分）；資格情報窃取；Proxy Docker 経路は同経路では影響なしと記載。`,
+				},
+				'https://www.trendmicro.com/en_us/research/26/c/inside-litellm-supply-chain-compromise.html': {
+					title: `LiteLLM サプライチェーン侵害の内幕`,
+					summary: `2026 年 3 月 PyPI 汚染と公開パイプラインリスクの第三者解説。`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42208': {
+					title: `CVE-2026-42208 — 認証経路の SQL インジェクション`,
+					summary: `LiteLLM プロキシの token 検証における pre-auth SQL インジェクション；鍵・DB 露出リスクの公開記述。`,
+				},
+				'https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc': {
+					title: `GHSA-r75f-5x8p-qvmc — SQL インジェクション勧告`,
+					summary: `認証経路 SQL インジェクション（CVE-2026-42208）のベンダー勧告。`,
+				},
+				'https://www.sysdig.com/blog/cve-2026-42208-targeted-sql-injection-against-litellms-authentication-path-discovered-36-hours-following-vulnerability-disclosure': {
+					title: `CVE-2026-42208：開示約 36 時間後の標的型悪用`,
+					summary: `Sysdig：公開から約 36 時間後に標的型悪用を観測。`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42271': {
+					title: `CVE-2026-42271 — MCP テスト経路のコマンドインジェクション`,
+					summary: `LiteLLM MCP テスト経路のコマンドインジェクション；該当版ではゲートウェイ級 RCE リスク。`,
+				},
+				'https://labs.cloudsecurityalliance.org/research/csa-research-note-litellm-cve-2026-42271-ai-gateway-exploita/': {
+					title: `CSA：CVE-2026-42271 悪用に関するノート`,
+					summary: `CISA KEV 登録と MCP コマンドインジェクションの実害用報告に触れる。`,
+				},
+				'https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html': {
+					title: `LiteLLM の CVE-2026-42271 が悪用（KEV 報道）`,
+					summary: `42271 の悪用と CISA KEV の業界報道；Host ヘッダ迂回との連鎖にも触れる公開記事。`,
+				},
+			},
+		},
+		ko: {
+			references: {
+				'https://github.com/BerriAI/litellm': {
+					title: `BerriAI/litellm 저장소`,
+					summary: `오픈소스 AI 게이트웨이·LLM 프록시. 2026-08-05 스냅샷: 약 55,589 스타, open issues 1,641(이슈만), open PR 3,134.`,
+				},
+				'https://docs.litellm.ai/blog/security-update-march-2026': {
+					title: `보안 업데이트 — 의심 공급망 사고(2026년 3월)`,
+					summary: `공식: PyPI litellm 1.82.7·1.82.8이 2026-03-24 침해(~10:39 UTC부터 약 40분); 자격 증명 절도; Proxy Docker 경로는 같은 방식으로 영향 없다고 기술.`,
+				},
+				'https://www.trendmicro.com/en_us/research/26/c/inside-litellm-supply-chain-compromise.html': {
+					title: `LiteLLM 공급망 침해 내부`,
+					summary: `2026년 3월 PyPI 오염과 배포 파이프라인 위험의 독립 분석.`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42208': {
+					title: `CVE-2026-42208 — 인증 경로 SQL 인젝션`,
+					summary: `LiteLLM 프록시 토큰 검증 경로 pre-auth SQL 인젝션; 키·DB 노출 위험의 공개 글.`,
+				},
+				'https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc': {
+					title: `GHSA-r75f-5x8p-qvmc — SQL 인젝션 권고`,
+					summary: `인증 경로 SQL 인젝션(CVE-2026-42208) 벤더 권고.`,
+				},
+				'https://www.sysdig.com/blog/cve-2026-42208-targeted-sql-injection-against-litellms-authentication-path-discovered-36-hours-following-vulnerability-disclosure': {
+					title: `CVE-2026-42208: 공개 약 36시간 후 표적 악용`,
+					summary: `Sysdig: 취약점 공개 약 36시간 뒤 표적 악용 관측.`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42271': {
+					title: `CVE-2026-42271 — MCP 테스트 경로 명령 인젝션`,
+					summary: `LiteLLM MCP 테스트 경로 명령 인젝션; 영향 버전에서 게이트웨이급 RCE 위험.`,
+				},
+				'https://labs.cloudsecurityalliance.org/research/csa-research-note-litellm-cve-2026-42271-ai-gateway-exploita/': {
+					title: `CSA: CVE-2026-42271 악용 노트`,
+					summary: `CISA KEV 등재와 MCP 명령 인젝션 실제 악용 보고를 적음.`,
+				},
+				'https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html': {
+					title: `LiteLLM CVE-2026-42271 악용(KEV 보도)`,
+					summary: `42271 악용과 CISA KEV 업계 보도; Host 헤더 우회 연쇄도 언급.`,
+				},
+			},
+		},
+		es: {
+			references: {
+				'https://github.com/BerriAI/litellm': {
+					title: `Repositorio BerriAI/litellm`,
+					summary: `AI gateway y proxy LLM open source. Snapshot 2026-08-05: unas 55.589 estrellas, 1.641 issues abiertas (solo issues), 3.134 PRs abiertas.`,
+				},
+				'https://docs.litellm.ai/blog/security-update-march-2026': {
+					title: `Actualización de seguridad — posible incidente de cadena de suministro (marzo 2026)`,
+					summary: `Post oficial: litellm 1.82.7 y 1.82.8 en PyPI comprometidos el 2026-03-24 (~40 min desde ~10:39 UTC); robo de credenciales; ruta Proxy Docker descrita como no impactada del mismo modo.`,
+				},
+				'https://www.trendmicro.com/en_us/research/26/c/inside-litellm-supply-chain-compromise.html': {
+					title: `Dentro del compromiso de la cadena de suministro de LiteLLM`,
+					summary: `Análisis independiente del envenenamiento PyPI de marzo 2026 y del riesgo de publicación.`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42208': {
+					title: `CVE-2026-42208 — inyección SQL en la ruta de auth`,
+					summary: `Inyección SQL pre-auth en la verificación de tokens del proxy LiteLLM; write-ups públicos sobre riesgo de claves/DB.`,
+				},
+				'https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc': {
+					title: `GHSA-r75f-5x8p-qvmc — aviso de inyección SQL`,
+					summary: `Aviso del proveedor sobre la inyección SQL en la ruta de auth (CVE-2026-42208).`,
+				},
+				'https://www.sysdig.com/blog/cve-2026-42208-targeted-sql-injection-against-litellms-authentication-path-discovered-36-hours-following-vulnerability-disclosure': {
+					title: `CVE-2026-42208: explotación ~36 h tras la disclosure`,
+					summary: `Sysdig: explotación dirigida observada unas 36 horas después de la disclosure.`,
+				},
+				'https://nvd.nist.gov/vuln/detail/CVE-2026-42271': {
+					title: `CVE-2026-42271 — inyección de comandos por endpoints de prueba MCP`,
+					summary: `Inyección de comandos en rutas de prueba MCP de LiteLLM; riesgo RCE de clase gateway en versiones afectadas.`,
+				},
+				'https://labs.cloudsecurityalliance.org/research/csa-research-note-litellm-cve-2026-42271-ai-gateway-exploita/': {
+					title: `Nota CSA sobre explotación de CVE-2026-42271`,
+					summary: `Menciona el listado CISA KEV y reportes de explotación activa de la inyección de comandos MCP.`,
+				},
+				'https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html': {
+					title: `Fallo LiteLLM CVE-2026-42271 explotado (cobertura KEV)`,
+					summary: `Reportaje sobre explotación de CVE-2026-42271 y CISA KEV; la cobertura pública también menciona cadenas con bypass de Host header.`,
+				},
+			},
+		},
+	},
 };

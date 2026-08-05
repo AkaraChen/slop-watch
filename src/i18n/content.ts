@@ -191,6 +191,32 @@ export const slopCopy: Record<string, Partial<Record<Locale, SlopCopy>>> = {
 			reason: `Los cargos graciosos no son el punto. Vender prompts y configs como arte de gobernar sí lo es. Al instalar es otra película: la versión no cuadra, samples viejos, Docker no arranca; allowBots mal y los bots en Discord se persiguen. La misma semana llegó el gemelo Edict; pelean en público quién llegó primero. Debajo siguen pieles de corte en el mismo gateway OpenClaw. Drama de crédito alto, onboarding frágil. Aquí no hay sentencia legal: solo las claims públicas de «se parecen» y lo que no corre limpio.`,
 		},
 	},
+	litellm: {
+		zh: {
+			description: `LiteLLM 是 BerriAI 的开源 AI 网关和 LLM 代理。它用一套接近 OpenAI 的接口去接很多家模型，还带计费、负载均衡和日志。很多人把 Python SDK 和代理服务放在真实流量和真实密钥中间。`,
+			reason: `公开记录上有两条线，要分开看。2026 年 3 月 24 日，PyPI 上的 litellm 1.82.7 和 1.82.8 大约上线四十分钟，包里带着偷云凭证的恶意代码；项目发了完整说明。另一条是产品与依赖上的洞：CVE-2026-42208 是鉴权路径上的未认证 SQL 注入；CVE-2026-42271 是经 MCP 测试接口的命令注入，进了 CISA KEV，还有在野利用报道；CVE-2026-48710 是 Starlette 的 Host 头认证绕过，公开研究常把它和 42271 串成未授权远程执行。2026-08-05 核对仓库时，大约 55,589 星、1,641 个未关闭 issue（只计 issue，不含 PR）。收录它，是因为网关压着密钥和流量时的安全债，不是因为 if-else 多。`,
+		},
+		de: {
+			description: `LiteLLM ist ein Open-Source-AI-Gateway und LLM-Proxy von BerriAI. Eine OpenAI-kompatible Oberfläche erreicht viele Modellanbieter, mit Kostentracking, Lastverteilung und Logging. Teams legen das Python-SDK und den Proxy mitten in echten Traffic und echte Schlüssel.`,
+			reason: `Zwei öffentliche Spuren liegen nebeneinander. Am 24.03.2026 waren die PyPI-Versionen litellm 1.82.7 und 1.82.8 etwa vierzig Minuten live mit unautorisierten Schadpaketen, die Cloud-Credentials stahlen; das Projekt veröffentlichte einen vollen Bericht. Getrennt davon schlagen Produkt- und Dependency-Bugs hart zu. CVE-2026-42208 ist Pre-Auth-SQL-Injection auf dem Auth-Pfad. CVE-2026-42271 ist Command Injection über MCP-Test-Endpunkte und landete mit Active-Exploitation-Berichten in der CISA-KEV. CVE-2026-48710 ist ein Starlette-Host-Header-Bypass, den Research mit 42271 zu unauthentifiziertem RCE auf verwundbaren Bäumen verkettet. Am 05.08.2026 hatte das Hauptrepo etwa 55.589 Sterne und 1.641 offene Issues (nur Issues, ohne PRs). Wir listen es wegen der Security-Schuld eines Gateways auf Keys und Traffic — nicht wegen einer großen if-else-Matrix.`,
+		},
+		it: {
+			description: `LiteLLM è un AI gateway e proxy LLM open source di BerriAI. Una superficie compatibile OpenAI raggiunge molti provider, con tracking dei costi, bilanciamento e logging. I team mettono l’SDK Python e il proxy in mezzo a traffico e chiavi reali.`,
+			reason: `Due tracce pubbliche stanno affiancate. Il 24 marzo 2026 le versioni PyPI litellm 1.82.7 e 1.82.8 sono state online circa quaranta minuti con pacchetti malevoli non autorizzati che rubavano credenziali cloud; il progetto ha pubblicato un post completo. A parte, i bug di prodotto e dipendenza colpiscono duro. CVE-2026-42208 è SQL injection pre-auth sul percorso di autenticazione. CVE-2026-42271 è command injection tramite endpoint di test MCP; è entrata nella CISA KEV con segnalazioni di sfruttamento attivo. CVE-2026-48710 è un bypass Host header di Starlette che la ricerca concatena con 42271 verso RCE non autenticato su alberi vulnerabili. Il 5 agosto 2026 il repo principale aveva circa 55.589 stelle e 1.641 issue aperte (solo issue, senza PR). Lo elenchiamo per il debito di sicurezza di un gateway su chiavi e traffico — non per una grande matrice if-else.`,
+		},
+		ja: {
+			description: `LiteLLM は BerriAI のオープンソース AI ゲートウェイ兼 LLM プロキシです。OpenAI 互換の一つの入口から多くのモデル提供者に届き、コスト追跡・負荷分散・ログがあります。Python SDK とプロキシを、本物のトラフィックと鍵の真ん中に置くチームが多いです。`,
+			reason: `公開記録には二本の線があり、分けて見ます。2026-03-24、PyPI の litellm 1.82.7 と 1.82.8 が約四十分間公開され、クラウド資格情報を盗む不正パッケージでした。プロジェクトは全文の説明を出しました。別線として製品と依存の穴が重いです。CVE-2026-42208 は認証経路の pre-auth SQL インジェクション。CVE-2026-42271 は MCP テスト経路のコマンドインジェクションで、CISA KEV に入り、実際の悪用報道もあります。CVE-2026-48710 は Starlette の Host ヘッダ認証迂回で、公開研究では 42271 とつなぎ未認証 RCE にします。2026-08-05 時点の本体リポジトリは約 55,589 star、open issues は 1,641（issue のみ、PR を含まない）。載せる理由は、鍵とトラフィックを預かるゲートウェイのセキュリティ負債であり、if-else が多いことではありません。`,
+		},
+		ko: {
+			description: `LiteLLM은 BerriAI의 오픈소스 AI 게이트웨이·LLM 프록시입니다. OpenAI 호환 한 면으로 많은 모델 제공자를 붙이고, 비용 추적·부하 분산·로그를 둡니다. 팀은 Python SDK와 프록시를 실제 트래픽과 실제 키 한가운데에 둡니다.`,
+			reason: `공개 기록에는 두 줄이 나란히 있습니다. 2026-03-24 PyPI의 litellm 1.82.7과 1.82.8이 약 40분 동안 올라가 있었고, 클라우드 자격 증명을 훔치는 무단 악성 패키지였습니다. 프로젝트는 전체 글을 냈습니다. 따로, 제품·의존성 버그가 셉니다. CVE-2026-42208은 인증 경로 pre-auth SQL 인젝션입니다. CVE-2026-42271은 MCP 테스트 엔드포인트 명령 인젝션이며 CISA KEV에 들어갔고 실제 악용 보고가 있습니다. CVE-2026-48710은 Starlette Host 헤더 인증 우회로, 연구 글은 42271과 묶어 취약 트리에서 미인증 RCE로 갑니다. 2026-08-05 기준 메인 저장소는 약 55,589 스타, open issues 1,641개(이슈만, PR 제외)였습니다. 올리는 이유는 키와 트래픽을 앉히는 게이트웨이의 보안 부채이지, if-else가 많아서가 아닙니다.`,
+		},
+		es: {
+			description: `LiteLLM es un AI gateway y proxy LLM de código abierto de BerriAI. Una superficie compatible con OpenAI llega a muchos proveedores, con seguimiento de costes, balanceo y logs. Los equipos ponen el SDK de Python y el proxy en medio del tráfico y las claves reales.`,
+			reason: `Hay dos pistas públicas una al lado de la otra. El 24 de marzo de 2026, las versiones PyPI litellm 1.82.7 y 1.82.8 estuvieron vivas unos cuarenta minutos con paquetes maliciosos no autorizados que robaban credenciales cloud; el proyecto publicó un post completo. Por separado, los fallos de producto y de dependencia golpean fuerte. CVE-2026-42208 es inyección SQL pre-auth en la ruta de autenticación. CVE-2026-42271 es inyección de comandos por endpoints de prueba MCP; entró en CISA KEV con reportes de explotación activa. CVE-2026-48710 es un bypass de Host header de Starlette que la investigación encadena con 42271 hacia RCE no autenticado en árboles vulnerables. El 5 de agosto de 2026 el repo principal tenía unas 55.589 estrellas y 1.641 issues abiertas (solo issues, sin PRs). Lo listamos por la deuda de seguridad de un gateway sobre claves y tráfico — no por una gran matriz if-else.`,
+		},
+	},
 
 };
 
